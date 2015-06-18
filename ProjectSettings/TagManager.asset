@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerSelection
   - EnemySelection
+  - Rock
   layers:
   - Default
   - TransparentFX

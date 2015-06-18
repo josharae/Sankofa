@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{9FEDFA7D-7E1D-F8CE-E626-8D010AF16392}") = "Sankofa", "Assembly-CSharp-firstpass-vs.csproj", "{0734CEA0-E4E9-2D6C-E355-36C598107468}"
 EndProject
+Project("{9FEDFA7D-7E1D-F8CE-E626-8D010AF16392}") = "Sankofa", "Assembly-CSharp-vs.csproj", "{773D9A4D-632C-2747-8A55-F5BC9B43E700}"
+EndProject
 Project("{9FEDFA7D-7E1D-F8CE-E626-8D010AF16392}") = "Sankofa", "Assembly-CSharp-Editor-vs.csproj", "{71C446FF-426C-F796-DD27-C141490934D4}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{0734CEA0-E4E9-2D6C-E355-36C598107468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0734CEA0-E4E9-2D6C-E355-36C598107468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0734CEA0-E4E9-2D6C-E355-36C598107468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773D9A4D-632C-2747-8A55-F5BC9B43E700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773D9A4D-632C-2747-8A55-F5BC9B43E700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773D9A4D-632C-2747-8A55-F5BC9B43E700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773D9A4D-632C-2747-8A55-F5BC9B43E700}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71C446FF-426C-F796-DD27-C141490934D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71C446FF-426C-F796-DD27-C141490934D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71C446FF-426C-F796-DD27-C141490934D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-							GlobalSection(MonoDevelopProperties) = preSolution
+																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
