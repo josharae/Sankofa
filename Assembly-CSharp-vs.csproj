@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Charge.cs" />
      <Compile Include="Assets\Scripts\CreateSpiritFromTree.cs" />
+     <Compile Include="Assets\Scripts\MarketplaceBarrier.cs" />
      <Compile Include="Assets\Scripts\ThrowObject.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
