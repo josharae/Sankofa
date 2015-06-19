@@ -9,6 +9,7 @@ TagManager:
   - Rock
   - MarketBarrier
   - Barrier
+  - Collectible
   layers:
   - Default
   - TransparentFX

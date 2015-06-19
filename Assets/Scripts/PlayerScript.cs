@@ -62,9 +62,13 @@ public class PlayerScript : MonoBehaviour {
 	public void getObject(GameObject bone){
         if (!hasObj)
         {
-            hasObj = true;
-			Item = bone;
-            ChangeBoneRigidBody();
+			if(bone.tag == Tags.Collectible)
+				this.GetComponent<InventoryScript>().AddItem(bone);
+			else {
+	            hasObj = true;
+				Item = bone;
+	            ChangeBoneRigidBody();
+			}
         }
 	}
 
