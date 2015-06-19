@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour {
 	public GameObject camera;
 	public GameObject Hand;
 	int DownLimit = 50, UpLimit = -30;
-	GameObject Bone;
+	GameObject Item;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
 
@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void FixedUpdate () {
 			if (hasObj) //move bone with player
-				Bone.transform.position = Hand.transform.position;
+				Item.transform.position = Hand.transform.position;
 
 			//rotation
 			float mouseHorizontal = Input.GetAxis ("Mouse X");
@@ -49,19 +49,32 @@ public class PlayerScript : MonoBehaviour {
 			ChangeBoneRigidBody (true);
 			hasObj = false;
 		}
+		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
+			Throw ();
+		}
 	}
 
 	public void ChangeBoneRigidBody(bool Active = false){
-		Bone.GetComponent<Rigidbody> ().useGravity = Active;
-		Bone.GetComponent<Rigidbody> ().detectCollisions = Active;
+		Item.GetComponent<Rigidbody> ().useGravity = Active;
+		Item.GetComponent<Rigidbody> ().detectCollisions = Active;
 	}
 
 	public void getObject(GameObject bone){
         if (!hasObj)
         {
             hasObj = true;
-            Bone = bone;
+			Item = bone;
             ChangeBoneRigidBody();
         }
+	}
+
+	public GameObject getObject(){
+		return Item;
+	}
+
+	void Throw()
+	{
+		hasObj = false;
+		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * speed);
 	}
 }
