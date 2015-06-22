@@ -46,8 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BoneScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\CreateSpiritFromTree.cs" />
+     <Compile Include="Assets\Scripts\GiwaAttack (unfinished).cs" />
+     <Compile Include="Assets\Scripts\InventoryScript.cs" />
      <Compile Include="Assets\Scripts\MarketplaceBarrier.cs" />
+     <Compile Include="Assets\Scripts\Missions\MarketScript.cs" />
+     <Compile Include="Assets\Scripts\Missions\MissionManager.cs" />
+     <Compile Include="Assets\Scripts\Missions\MissionScript.cs" />
+     <Compile Include="Assets\Scripts\Missions\TutorialMission.cs" />
+     <Compile Include="Assets\Scripts\ObjectScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\SaveLoadScript.cs" />
+     <Compile Include="Assets\Scripts\StaticVariables.cs" />
      <Compile Include="Assets\Scripts\ThrowObject.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
