@@ -3,14 +3,15 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 	private float speed = 2000f;
-	public GameObject camera;
-	public GameObject Hand;
+	public GameObject camera, Hand;
+	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
 
 	void Start () {
+		GameManager = GameObject.Find ("GameManager");
 	}
 
 	void FixedUpdate () {
@@ -59,14 +60,16 @@ public class PlayerScript : MonoBehaviour {
 		Item.GetComponent<Rigidbody> ().detectCollisions = Active;
 	}
 
-	public void getObject(GameObject bone){
+	public void getObject(GameObject newItem){
         if (!hasObj)
         {
-			if(bone.tag == Tags.Collectible)
-				this.GetComponent<InventoryScript>().AddItem(bone);
+			if(newItem.tag == Tags.Collectible){
+				GameManager.GetComponent<ItemPanelScript>().ShowItemPanel(newItem);
+				this.GetComponent<InventoryScript>().AddItem(newItem);
+			}
 			else {
 	            hasObj = true;
-				Item = bone;
+				Item = newItem;
 	            ChangeBoneRigidBody();
 			}
         }
