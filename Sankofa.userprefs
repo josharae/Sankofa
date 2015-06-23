@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Documents\Unity\Test\Assets\Scripts\GiwaAttack.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InventoryScript.cs">
     <Files>
-      <File FileName="..\..\..\Documents\Unity\Test\Assets\Scripts\GiwaAttack.cs" Line="67" Column="25" />
+      <File FileName="Assets\Scripts\InventoryScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EarthSpiritAction.cs" Line="38" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

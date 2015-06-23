@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\BoneScript.cs" />
      <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\CreateSpiritFromTree.cs" />
+     <Compile Include="Assets\Scripts\EarthSpiritAction.cs" />
      <Compile Include="Assets\Scripts\GiwaAttack (unfinished).cs" />
      <Compile Include="Assets\Scripts\InventoryScript.cs" />
      <Compile Include="Assets\Scripts\MarketplaceBarrier.cs" />

@@ -10,6 +10,8 @@ TagManager:
   - MarketBarrier
   - Barrier
   - Collectible
+  - Player
+  - EarthAffectedObject
   layers:
   - Default
   - TransparentFX
