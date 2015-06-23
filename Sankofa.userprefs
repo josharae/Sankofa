@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Documents\Unity\Test\Assets\Scripts\GiwaAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ItemPanelScript.cs">
     <Files>
-      <File FileName="..\..\..\Documents\Unity\Test\Assets\Scripts\GiwaAttack.cs" Line="67" Column="25" />
+      <File FileName="Assets\Scripts\PlayerScript.cs" Line="67" Column="46" />
+      <File FileName="Assets\ItemPanelScript.cs" Line="18" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
