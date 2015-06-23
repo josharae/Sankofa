@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ThrowObject : MonoBehaviour {
-
-	public GameObject obj;
+	
 	private Rigidbody rb;
 	private float speed;
 
@@ -11,7 +10,7 @@ public class ThrowObject : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		rb = obj.GetComponent<Rigidbody> ();
+		rb = this.GetComponent<Rigidbody> ();
 		speed = 5.0f;;
 	}
 	
@@ -24,7 +23,7 @@ public class ThrowObject : MonoBehaviour {
 
 	void Throw()
 	{
-		Vector3 vector = new Vector3 (0.0f, 5.0f, 10.0f);
+		Vector3 vector = new Vector3 (-10.0f, 5.0f, 0);
 		rb.AddForce (vector * speed);
 	}
 }
