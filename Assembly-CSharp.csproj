@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\SaveLoadScript.cs" />
      <Compile Include="Assets\Scripts\StaticVariables.cs" />
      <Compile Include="Assets\Scripts\ThrowObject.cs" />
+     <Compile Include="Assets\Scripts\WaterSpiritScripts\WaterSpiritGiwa.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

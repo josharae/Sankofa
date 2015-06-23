@@ -12,6 +12,7 @@ TagManager:
   - Collectible
   - Player
   - EarthAffectedObject
+  - Giwa
   layers:
   - Default
   - TransparentFX
