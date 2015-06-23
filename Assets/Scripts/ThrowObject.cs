@@ -5,6 +5,7 @@ public class ThrowObject : MonoBehaviour {
 	
 	private Rigidbody rb;
 	private float speed;
+	private bool hasBeenThrown;
 
 
 	// Use this for initialization
@@ -12,6 +13,7 @@ public class ThrowObject : MonoBehaviour {
 	{
 		rb = this.GetComponent<Rigidbody> ();
 		speed = 5.0f;;
+		hasBeenThrown = false;
 	}
 	
 	// Update is called once per frame
@@ -25,5 +27,10 @@ public class ThrowObject : MonoBehaviour {
 	{
 		Vector3 vector = new Vector3 (-10.0f, 5.0f, 0);
 		rb.AddForce (vector * speed);
+		hasBeenThrown = true;
+	}
+
+	public bool CheckIfHasBeenThrown(){
+		return hasBeenThrown;
 	}
 }

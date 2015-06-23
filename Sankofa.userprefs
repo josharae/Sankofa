@@ -1,16 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WaterSpiritScripts\WaterSpiritGiwa.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OniniScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\WaterSpiritScripts\WaterSpiritGiwa.cs" Line="4" Column="29" />
-=======
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ItemPanelScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\PlayerScript.cs" Line="67" Column="46" />
-      <File FileName="Assets\ItemPanelScript.cs" Line="18" Column="25" />
->>>>>>> 6b6fb3baa0a5e0e89af21c53531aa5e14df12303
+      <File FileName="Assets\Scripts\OniniScript.cs" Line="38" Column="16" />
+      <File FileName="Assets\Scripts\MusicSpiritAction.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

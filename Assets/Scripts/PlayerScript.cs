@@ -55,7 +55,8 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	public void ChangeBoneRigidBody(bool Active = false){
+	public void ChangeBoneRigidBody(bool Active){
+		Active = false;
 		Item.GetComponent<Rigidbody> ().useGravity = Active;
 		Item.GetComponent<Rigidbody> ().detectCollisions = Active;
 	}
@@ -70,7 +71,7 @@ public class PlayerScript : MonoBehaviour {
 			else {
 	            hasObj = true;
 				Item = newItem;
-	            ChangeBoneRigidBody();
+	            ChangeBoneRigidBody(false);
 			}
         }
 	}
