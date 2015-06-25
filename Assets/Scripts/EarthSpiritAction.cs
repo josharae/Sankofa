@@ -30,9 +30,8 @@ public class EarthSpiritAction : MonoBehaviour {
 
 	private void Pull(GameObject obj) {
 		if (Mathf.Abs(player.transform.position.x - obj.transform.position.x) > 0.5f && Mathf.Abs(player.transform.position.z - obj.transform.position.z) > 0.5f) {
-			Vector3 startVector = new Vector3(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
 			Vector3 targetVector = new Vector3(player.transform.position.x, obj.transform.position.y, player.transform.position.z);
-			obj.transform.position = Vector3.Lerp (startVector, targetVector, 0.015f);
+			obj.transform.position = Vector3.Lerp (transform.position, targetVector, 0.015f);
 		}
 		else {
 			isMoving = false;

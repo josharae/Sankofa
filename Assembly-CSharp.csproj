@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\MusicSpiritAction.cs" />
      <Compile Include="Assets\Scripts\ObjectScript.cs" />
      <Compile Include="Assets\Scripts\OniniScript.cs" />
+     <Compile Include="Assets\Scripts\OwareGame\MovingMarbles.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\SaveLoadScript.cs" />
      <Compile Include="Assets\Scripts\StaticVariables.cs" />
