@@ -18,5 +18,10 @@ public class ItemPanelScript : MonoBehaviour {
 		Debug.Log (Item.name);
 		ItemSprite.overrideSprite = (Sprite) newSprite;
 		Panel.GetComponentInChildren<Text> ().text = Item.name;
+		Invoke ("DisablePanel", 2f);
+	}
+
+	private void DisablePanel(){
+		Panel.gameObject.SetActive (false);
 	}
 }
