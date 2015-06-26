@@ -608,6 +608,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22484502, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484502, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484502, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484502, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -91
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485694, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e48a0fb186d3baa40b03bfca15850aca, type: 2}
   m_IsPrefabParent: 0
@@ -1720,6 +1740,7 @@ GameObject:
   - 224: {fileID: 1954508619}
   - 222: {fileID: 1954508618}
   - 114: {fileID: 1954508617}
+  - 114: {fileID: 1954508620}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1766,6 +1787,17 @@ RectTransform:
   m_AnchoredPosition: {x: 754.022583, y: 208.329956}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &1954508620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954508616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03d325840b98ff4e9fd0922a5d35595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2019006248
 GameObject:
   m_ObjectHideFlags: 0

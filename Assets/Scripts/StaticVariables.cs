@@ -21,3 +21,9 @@ public static class Tags
 	public const string MisteriousEgg = "MisteriousEgg";
 	public const string PickupItem = "PickupItem";
 }
+
+
+public class Game{
+	public  const bool isPaused = false;
+
+}
