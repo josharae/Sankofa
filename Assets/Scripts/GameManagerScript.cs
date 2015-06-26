@@ -3,10 +3,11 @@ using System.Collections;
 
 public class GameManagerScript : MonoBehaviour {
 	bool isPaused = false;
-	GameObject EventSystem;
+	GameObject[] InGameButtons;
+	public GameObject PausePanel;
 	// Use this for initialization
 	void Start () {
-		EventSystem = GameObject.Find ("EventSystem");
+		InGameButtons = GameObject.FindGameObjectsWithTag ("InGameButtons");
 	}
 	
 	// Update is called once per frame
@@ -16,9 +17,11 @@ public class GameManagerScript : MonoBehaviour {
 		}
 	}
 
-	private void PauseGame(){
+	public void PauseGame(){
 		isPaused = !isPaused;
-		EventSystem.SetActive (!isPaused);
+		foreach (GameObject button in InGameButtons)
+			button.SetActive (!isPaused);
+		PausePanel.SetActive (isPaused);
 		Time.timeScale = isPaused ? 0 : 1;
 	}
 

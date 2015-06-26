@@ -1,16 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OwareGame\MovingMarbles.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StaticVariables.cs">
     <Files>
-      <File FileName="Assets\Scripts\OwareGame\MovingMarbles.cs" Line="120" Column="54" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ItemPanelScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\ItemPanelScript.cs" Line="28" Column="1" />
-      <File FileName="Assets\Scripts\MusicSpiritAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OniniScript.cs" Line="1" Column="1" />
->>>>>>> 8f3ec41ad7b186436ed98414c25980dec44692cb
+      <File FileName="Assets\Scripts\StaticVariables.cs" Line="27" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
