@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: 39321f07e35e8dd4c9eeecd7cb22f00e
-timeCreated: 1435194023
-licenseType: Free
+guid: 9c4978ff6447f9040b84acc89b0bbdc8
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
@@ -9,4 +7,3 @@ MonoImporter:
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
-  assetBundleVariant: 
