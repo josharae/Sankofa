@@ -57,6 +57,7 @@ AnimatorController:
     m_IKPass: 1
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+  m_MultiThreadedStateMachine: 1
 --- !u!206 &20600000
 BlendTree:
   m_ObjectHideFlags: 1
@@ -631,7 +632,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -655,7 +659,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -682,7 +689,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -706,7 +716,10 @@ AnimatorStateTransition:
   m_TransitionOffset: .0180516355
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -730,7 +743,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -754,7 +770,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -781,7 +800,10 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
+<<<<<<< HEAD
   m_HasFixedDuration: 0
+=======
+>>>>>>> origin/master
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
