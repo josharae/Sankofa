@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	private float speed = 2000f;
+	private float speed = 15f;
 	public GameObject camera, Hand;
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
@@ -37,11 +37,10 @@ public class PlayerScript : MonoBehaviour {
 			//movement
 			float moveVertical = Input.GetAxis ("Vertical");
 			float moveHorizontal = Input.GetAxis ("Horizontal");
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-
-			GetComponent<Rigidbody> ().velocity = Vector3.zero;
-
-			GetComponent<Rigidbody> ().AddRelativeForce (movement * speed);
+			
+			Vector3 movement = transform.forward * moveVertical * speed;
+			movement.y = GetComponent<Rigidbody> ().velocity.y;
+			GetComponent<Rigidbody> ().velocity =  (movement);
 
 	}
 
