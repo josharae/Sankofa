@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityStandardAssets.Characters.FirstPerson;
 public class GameManagerScript : MonoBehaviour {
+
 	bool isPaused = false;
 	GameObject[] InGameButtons;
 	public GameObject PausePanel;
@@ -23,6 +24,7 @@ public class GameManagerScript : MonoBehaviour {
 			button.SetActive (!isPaused);
 		PausePanel.SetActive (isPaused);
 		Time.timeScale = isPaused ? 0 : 1;
+		GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = !isPaused;
 	}
 
 }
