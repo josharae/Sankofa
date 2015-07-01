@@ -3,21 +3,21 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Inventory : MonoBehaviour
+public class shivam_InventoryScript: MonoBehaviour
 {
 
 	public List<GameObject> Slots = new List<GameObject> ();
-	public List<Item> Items = new List<Item> ();
+	public List<ItemScript> Items = new List<ItemScript> ();
 	
 	public GameObject slots;
 	public GameObject tooltip;
 	
 	public GameObject draggedItemGameObject;
 	public bool draggingItem = false;
-	public Item draggedItem;
+	public ItemScript draggedItem;
 	public int indexOfDraggedItem;
 	
-	ItemDatabase database;
+	ItemDatabaseScript database;
 	
 	int x = -110;
 	int y = 110;
@@ -33,14 +33,14 @@ public class Inventory : MonoBehaviour
 	}
 
 
-	public void showTooltip (Vector3 toolPosition, Item item)
+	public void showTooltip (Vector3 toolPosition, ItemScript item)
 	{
 		tooltip.SetActive (true);
 		tooltip.GetComponent<RectTransform> ().localPosition = new Vector3 (toolPosition.x + 360, toolPosition.y, toolPosition.z);
 	}
 	
 	
-	public void ShowDraggedItem (Item item, int slotNumber)
+	public void ShowDraggedItem (ItemScript item, int slotNumber)
 	{
 		indexOfDraggedItem = slotNumber;
 		closeTooltip ();
@@ -70,14 +70,14 @@ public class Inventory : MonoBehaviour
 
 		int slot_amount = 0;
 
-		database = GameObject.FindGameObjectWithTag ("ItemDatabase").GetComponent<ItemDatabase> ();
+		database = GameObject.FindGameObjectWithTag ("ItemDatabase").GetComponent<ItemDatabaseScript> ();
 
 		for (int i = 1; i < 6; i++) {
 			for (int k = 1; k < 6; k++) {
 				GameObject slot = (GameObject)Instantiate (slots);
 				slot.GetComponent<SlotScript> ().slot_number = slot_amount;
 				Slots.Add (slot);
-				Items.Add (new Item ());
+				Items.Add (new ItemScript ());
 				slot.transform.parent = this.gameObject.transform;
 				slot.name = "Slot" + i + "." + k; 
 				slot.GetComponent<RectTransform> ().localPosition = new Vector3 (x, y, 0);
@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
 	{
 		for (int i = 0; i < database.items.Count; i++) {
 			if (database.items [i].item_id == id) {
-				Item item = database.items [i];
+				ItemScript item = database.items [i];
 				addItemAtEmptySlot (item);
 				break;
 			}
@@ -114,7 +114,7 @@ public class Inventory : MonoBehaviour
 	}
 
 
-	void addItemAtEmptySlot (Item item)
+	void addItemAtEmptySlot (ItemScript item)
 	{
 		for (int i = 0; i < Items.Count; i++) {
 			if (Items [i].item_name == null) {

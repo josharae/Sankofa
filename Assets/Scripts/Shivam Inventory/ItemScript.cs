@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Item 
+public class ItemScript
 {
 
 	public string item_name;
@@ -26,7 +26,7 @@ public class Item
 		Animal
 	}
 
-	public Item (string name,int id,string desc, int power, int speed, int value, ItemType type)
+	public ItemScript (string name,int id,string desc, int power, int speed, int value, ItemType type)
 	{
 		item_name = name;
 		item_id = id;
@@ -37,7 +37,7 @@ public class Item
 		item_icon = Resources.Load<Sprite> ("" + name);
 	}
 
-	public Item()
+	public ItemScript()
 	{
 
 	}

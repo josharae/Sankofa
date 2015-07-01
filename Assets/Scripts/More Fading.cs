@@ -8,8 +8,9 @@ public class MoreFading : MonoBehaviour
 	IEnumerator ChangeLEvel ()
 	{
 		float fadeTime = GameObject.Find ("").GetComponent<Fading> ().BeginFade (1);
-		yield return new WaitForSeconds (fadeT1me);
+		yield return new WaitForSeconds (fadeTime);
 		Application.LoadLevel (Application.loadedLevel + 1);
 	
 		//Need  to put the name of the class here and then go to file build settings and then set the order
 	}
+}

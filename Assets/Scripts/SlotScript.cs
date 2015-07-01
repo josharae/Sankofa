@@ -4,10 +4,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class SlotScript : MonoBehaviour,IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler,IDragHandler
 {
-	public Item item;
+	public ItemScript item;
 	Image item_image;
 	public int slot_number;
-	Inventory inventory;
+	shivam_InventoryScript inventory;
 	
 	Text itemAmount;
 
@@ -15,7 +15,7 @@ public class SlotScript : MonoBehaviour,IPointerDownHandler, IPointerEnterHandle
 	void Start ()
 	{
 		itemAmount = gameObject.transform.GetChild (1).GetComponent<Text> ();
-		inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
+		inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<shivam_InventoryScript> ();
 		item_image = gameObject.transform.GetChild (0).GetComponent<Image> ();
 	}
 		
@@ -27,7 +27,7 @@ public class SlotScript : MonoBehaviour,IPointerDownHandler, IPointerEnterHandle
 			item = inventory.Items [slot_number];
 			item_image.enabled = true;
 			item_image.sprite = inventory.Items [slot_number].item_icon;
-			if (inventory.Items [slot_number].item_type == Item.ItemType.Consumable) {
+			if (inventory.Items [slot_number].item_type == ItemScript.ItemType.Consumable) {
 				itemAmount.enabled = true;
 				itemAmount.text = "" + inventory.Items [slot_number].item_value;
 			}
@@ -70,7 +70,7 @@ public class SlotScript : MonoBehaviour,IPointerDownHandler, IPointerEnterHandle
 	{
 		if (inventory.Items [slot_number].item_name != null) {
 			inventory.ShowDraggedItem (inventory.Items [slot_number], slot_number);
-			inventory.Items [slot_number] = new Item ();
+			inventory.Items [slot_number] = new ItemScript ();
 		}	
 	}
 		
