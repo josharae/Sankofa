@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class MovingMarbles : MonoBehaviour {
+public class Oware_Script_Game : MonoBehaviour {
 
 	private int playerScore;
 	private int opponentScore;
 	private int moves;
 	private bool isMoving;
+	private bool isCollecting;
 	private bool isPlayerTurn;
 	private string slot;
 	private Vector3 playerScoreHouse;
@@ -36,6 +37,7 @@ public class MovingMarbles : MonoBehaviour {
 	public GameObject b6;
 	private List<Transform> b6children = new List<Transform>();
 	private List<List<Transform>> groups = new List<List<Transform>> ();
+	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
 
@@ -45,6 +47,7 @@ public class MovingMarbles : MonoBehaviour {
 		opponentScore = 0;
 		moves = 0;
 		isMoving = false;
+		isCollecting = false;
 		isPlayerTurn = false;
 		slot = null;
 		playerScoreHouse = new Vector3 (103.0f, 2.0f, 0.0f);
@@ -73,6 +76,7 @@ public class MovingMarbles : MonoBehaviour {
 		groups.Add (b5children);
 		b6children = createArray (b6, b6children);
 		groups.Add (b6children);
+		scoredMarbles = new List<Transform> ();
 		topLocations = SetTopLocations ();
 		pitLocations = SetPitLocations ();
 	}
@@ -80,7 +84,10 @@ public class MovingMarbles : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isPlayerTurn) {
-			if (!isMoving) {
+			if (isCollecting){
+				MoveCollectedOpponentMarbles(scoredMarbles);
+			}
+			else if (!isMoving) {
 				if (Input.GetKey (KeyCode.A)) {
 					isMoving = true;
 					slot = "1";
@@ -115,7 +122,10 @@ public class MovingMarbles : MonoBehaviour {
 					MoveA6 ();
 			}
 		} else {
-			if (!isMoving) {
+			if (isCollecting){
+				MoveCollectedPlayerMarbles(scoredMarbles);
+			}
+			else if (!isMoving) {
 				if (Input.GetKey (KeyCode.Y)) {
 					isMoving = true;
 					slot = "7";
@@ -204,11 +214,11 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-23;
 			    }
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a1children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
+			
 		}
 	}
 
@@ -258,11 +268,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-22;
 				}
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a2children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
 		}
 	}
 
@@ -312,11 +321,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-21;
 				}
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a3children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
 		}
 	}
 
@@ -359,11 +367,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-20;
 				}
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a4children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
 		}
 	}
 
@@ -406,11 +413,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-19;
 				}
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a5children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
 		}
 	}
 
@@ -453,11 +459,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-18;
 				}
 			}
+			moves = 0;
 			CollectOpponentMarbles(index);
 			a6children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = false;
 		}
 	}
 
@@ -507,11 +512,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-17;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b1children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 	
@@ -561,11 +565,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-16;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b2children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 	
@@ -615,11 +618,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-15;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b3children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 	
@@ -662,11 +664,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-14;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b4children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 	
@@ -709,11 +710,10 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-13;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b5children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 	
@@ -756,50 +756,94 @@ public class MovingMarbles : MonoBehaviour {
 					index = i-24;
 				}
 			}
+			moves = 0;
 			CollectPlayerMarbles(index);
 			b6children.Clear();
-			moves = 0;
 			isMoving = false;
-			isPlayerTurn = true;
 		}
 	}
 
 	private void CollectOpponentMarbles(int index){
 		if (index != null) {
 			bool isCollectable = true;
+			List<Transform> collectedMarbles = new List<Transform>();
 			while (index > 5 && index <= 11 && isCollectable) {
 				List<Transform> list = groups [index];
 				int size = list.Count;
 				if (size == 2 || size == 3){
 					playerScore += size;
-					for (int i = 0; i < size; i++){
-						list [i].gameObject.transform.position = playerScoreHouse;
-					}
+					collectedMarbles.AddRange(list);
 					list.Clear();
+					isCollecting = true;
 				}
-				else
+				else{
 					isCollectable = false;
+				}
 				index--;
 			}
+			if (isCollecting){
+				scoredMarbles = collectedMarbles;
+			}
+			else {
+				isPlayerTurn = false;
+			}
+		}
+	}
+
+	private void MoveCollectedOpponentMarbles(List<Transform> list){
+		int size = list.Count;
+		if (moves < size * 100) {
+			for (int i = 0; i < size; i++) {
+				if (moves >= i * 100 && moves < i * 100 + 100) {
+					list [i].position = Vector3.Lerp (list [i].position, playerScoreHouse, 0.05f);
+				}
+			}
+		} else {
+			isPlayerTurn = false;
+			isCollecting = false;
+			moves = 0;
 		}
 	}
 
 	private void CollectPlayerMarbles(int index){
 		if (index != null) {
 			bool isCollectable = true;
+			List<Transform> collectedMarbles = new List<Transform>();
 			while (index >= 0 && index <= 5 && isCollectable) {
 				List<Transform> list = groups [index];
 				int size = list.Count;
 				if (size == 2 || size == 3) {
 					opponentScore += size;
-					for (int i = 0; i < size; i++) {
-						list [i].gameObject.transform.position = opponentScoreHouse;
-					}
+					collectedMarbles.AddRange(list);
 					list.Clear ();
-				} else
+					isCollecting = true;
+				} else{
 					isCollectable = false;
+					isPlayerTurn = true;
+				}
 				index--;
 			}
+			if (isCollecting){
+				scoredMarbles = collectedMarbles;
+			}
+			else {
+				isPlayerTurn = true;
+			}
+		}
+	}
+
+	private void MoveCollectedPlayerMarbles(List<Transform> list){
+		int size = list.Count;
+		if (moves < size * 100) {
+			for (int i = 0; i < size; i++) {
+				if (moves >= i * 100 && moves < i * 100 + 100) {
+					list[i].position = Vector3.Lerp (list[i].position, opponentScoreHouse, 0.05f);
+				}
+			}
+		} else {
+			isPlayerTurn = true;
+			isCollecting = false;
+			moves = 0;
 		}
 	}
 
