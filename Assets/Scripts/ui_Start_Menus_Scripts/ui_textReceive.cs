@@ -2,13 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScriptyScript : MonoBehaviour {
+public class ui_textReceive : MonoBehaviour {
 
 	public string name;
 	public InputField test;
 
-	public string display()
+	public void display()
 	{
-		return test.textComponent.text;
+		name = test.textComponent.text;
+		Debug.Log (name);
 	}
 }

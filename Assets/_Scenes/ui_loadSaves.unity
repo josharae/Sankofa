@@ -809,6 +809,9 @@ GameObject:
   - 224: {fileID: 657965005}
   - 114: {fileID: 657965004}
   - 114: {fileID: 657965003}
+  - 114: {fileID: 657965006}
+  - 114: {fileID: 657965008}
+  - 114: {fileID: 657965007}
   m_Layer: 5
   m_Name: _Manager
   m_TagString: Untagged
@@ -855,6 +858,44 @@ RectTransform:
   m_AnchoredPosition: {x: 153, y: 337}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &657965006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657965002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c61670add4c814a85aa6434899109c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+--- !u!114 &657965007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657965002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7baaf3f81f21ea419da0c4bab590793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatGiwa: 0
+  beatOnini: 0
+  beatDeath: 0
+  oware: 0
+--- !u!114 &657965008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657965002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0284aed239f09d444ba017de9907cd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700257268
 GameObject:
   m_ObjectHideFlags: 0
