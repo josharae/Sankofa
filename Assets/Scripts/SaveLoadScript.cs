@@ -35,4 +35,13 @@ class PlayerData{
 	public float exp;
 
 }
-		                           
+
+[Serializable]
+class GameProgress{
+	public bool beatGiwa;
+	public float exp;
+
+	GameProgress(bool test, bool test2){
+		this.beatGiwa = test;
+	}
+}
