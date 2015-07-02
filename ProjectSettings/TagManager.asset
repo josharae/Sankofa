@@ -15,6 +15,8 @@ TagManager:
   - Giwa
   - MusicAffectedObject
   - InGameButtons
+  - Fire
+  - Ground
   layers:
   - Default
   - TransparentFX
