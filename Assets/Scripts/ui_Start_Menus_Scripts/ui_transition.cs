@@ -5,7 +5,7 @@ public class ui_transition : MonoBehaviour {
 	
 	void Update () {
 		if (Input.anyKeyDown) {
-			Application.LoadLevel (1);
+			Application.LoadLevel (Scenes.StartMenu);
 		}
 	}
 }

@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/ui_startMenu.unity
   - enabled: 1
     path: Assets/_Scenes/ui_loadScreen.unity
+  - enabled: 1
+    path: Assets/_Scenes/terrainScene_onini.unity
+  - enabled: 1
+    path: Assets/_Scenes/terrainScene.unity
