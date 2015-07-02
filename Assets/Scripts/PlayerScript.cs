@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	private float speed = 15f;
+	private float speed = 2000f;
 	public GameObject camera, Hand;
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
+
 
 	void Start () {
 		GameManager = GameObject.Find ("GameManager");
@@ -37,10 +38,11 @@ public class PlayerScript : MonoBehaviour {
 			//movement
 			float moveVertical = Input.GetAxis ("Vertical");
 			float moveHorizontal = Input.GetAxis ("Horizontal");
-			
-			Vector3 movement = transform.forward * moveVertical * speed;
-			movement.y = GetComponent<Rigidbody> ().velocity.y;
-			GetComponent<Rigidbody> ().velocity =  (movement);
+			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+
+			GetComponent<Rigidbody> ().velocity = Vector3.zero;
+
+			GetComponent<Rigidbody> ().AddRelativeForce (movement * speed);
 
 	}
 
@@ -55,7 +57,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	public void ChangeBoneRigidBody(bool Active){
-		Active = false;
+		Item.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		Item.GetComponent<Rigidbody> ().useGravity = Active;
 		Item.GetComponent<Rigidbody> ().detectCollisions = Active;
 	}
@@ -82,6 +84,9 @@ public class PlayerScript : MonoBehaviour {
 	void Throw()
 	{
 		hasObj = false;
-		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * speed);
+		ChangeBoneRigidBody(true);
+		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
+		BoneScript bs = Item.GetComponent<BoneScript> ();
+		bs.SetThrownBool (true);
 	}
 }
