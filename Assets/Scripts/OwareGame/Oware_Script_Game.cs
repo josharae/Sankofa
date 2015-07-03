@@ -11,7 +11,9 @@ public class Oware_Script_Game : MonoBehaviour {
 	private bool isPlayerTurn;
 	private string slot;
 	private Vector3 playerScoreHouse;
+	private Vector3 abovePlayerScoreHouse;
 	private Vector3 opponentScoreHouse;
+	private Vector3 aboveOpponentScoreHouse;
 	public GameObject a1;
 	private List<Transform> a1children = new List<Transform> ();
 	public GameObject a2;
@@ -50,8 +52,10 @@ public class Oware_Script_Game : MonoBehaviour {
 		isCollecting = false;
 		isPlayerTurn = false;
 		slot = null;
-		playerScoreHouse = new Vector3 (103.0f, 2.0f, 0.0f);
-		opponentScoreHouse = new Vector3 (-105.0f, 2.0f, 0.0f);
+		playerScoreHouse = new Vector3 (-103.0f, 2.0f, 0.0f);
+		abovePlayerScoreHouse = new Vector3 (-103.0f, 30.0f, 0.0f);
+		opponentScoreHouse = new Vector3 (105.0f, 2.0f, 0.0f);
+		aboveOpponentScoreHouse = new Vector3 (105.0f, 30.0f, 0.0f);
 		a1children = createArray (a1, a1children);
 		groups.Add (a1children);
 		a2children = createArray (a2, a2children);
@@ -198,24 +202,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexa1 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a1children[i];
 				if (i < 11){
 					groups[i+1].Add(tran);
-					index = i+1;
+					indexa1 = i+1;
 				}
 				else if (i >= 11 && i < 23)  {
 					groups[i-11].Add(tran);
-					index = i-11;
+					indexa1 = i-11;
 				}
 				else {
 					groups[i-23].Add(tran);
-					index = i-23;
+					indexa1 = i-23;
 			    }
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa1);
 			a1children.Clear();
 			isMoving = false;
 			
@@ -252,24 +256,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexa2 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a2children[i];
 				if (i < 10){
 					groups[i+2].Add(tran);
-					index = i+2;
+					indexa2 = i+2;
 				}
 				else if (i >= 10 && i < 22)  {
 					groups[i-10].Add(tran);
-					index = i-10;
+					indexa2 = i-10;
 				}
 				else {
 					groups[i-22].Add(tran);
-					index = i-22;
+					indexa2 = i-22;
 				}
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa2);
 			a2children.Clear();
 			isMoving = false;
 		}
@@ -305,24 +309,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexa3 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a3children[i];
 				if (i < 9){
 					groups[i+3].Add(tran);
-					index = i+3;
+					indexa3 = i+3;
 				}
 				else if (i >= 9 && i < 21)  {
 					groups[i-9].Add(tran);
-					index = i-9;
+					indexa3 = i-9;
 				}
 				else {
 					groups[i-21].Add(tran);
-					index = i-21;
+					indexa3 = i-21;
 				}
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa3);
 			a3children.Clear();
 			isMoving = false;
 		}
@@ -353,22 +357,22 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexa4 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a4children [i];
 				if (i < 8) {
 					groups [i + 4].Add (tran);
-					index = i+4;
+					indexa4 = i+4;
 				} else if (i >= 4 && i < 20) {
 					groups [i - 8].Add (tran);
-					index = i-8;
+					indexa4 = i-8;
 				} else {
 					groups [i - 20].Add (tran);
-					index = i-20;
+					indexa4 = i-20;
 				}
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa4);
 			a4children.Clear();
 			isMoving = false;
 		}
@@ -399,22 +403,22 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexa5 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a5children [i];
 				if (i < 7) {
 					groups [i + 5].Add (tran);
-					index = i+5;
+					indexa5 = i+5;
 				} else if (i >= 7 && i < 19) {
 					groups [i - 7].Add (tran);
-					index = i-7;
+					indexa5 = i-7;
 				} else {
 					groups [i - 19].Add (tran);
-					index = i-19;
+					indexa5 = i-19;
 				}
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa5);
 			a5children.Clear();
 			isMoving = false;
 		}
@@ -445,22 +449,22 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexa6 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = a6children [i];
 				if (i < 6) {
 					groups [i + 6].Add (tran);
-					index = i+6;
+					indexa6 = i+6;
 				} else if (i >= 6 && i < 18) {
 					groups [i - 6].Add (tran);
-					index = i-6;
+					indexa6 = i-6;
 				} else {
 					groups [i - 18].Add (tran);
-					index = i-18;
+					indexa6 = i-18;
 				}
 			}
 			moves = 0;
-			CollectOpponentMarbles(index);
+			CollectOpponentMarbles(indexa6);
 			a6children.Clear();
 			isMoving = false;
 		}
@@ -496,24 +500,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexb1 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b1children[i];
 				if (i < 5){
 					groups[i+7].Add(tran);
-					index = i+7;
+					indexb1 = i+7;
 				}
 				else if (i >= 7 && i < 17)  {
 					groups[i-5].Add(tran);
-					index = i-5;
+					indexb1 = i-5;
 				}
 				else {
 					groups[i-17].Add(tran);
-					index = i-17;
+					indexb1 = i-17;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb1);
 			b1children.Clear();
 			isMoving = false;
 		}
@@ -549,24 +553,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexb2 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b2children[i];
 				if (i < 4){
 					groups[i+8].Add(tran);
-					index = i+8;
+					indexb2 = i+8;
 				}
 				else if (i >= 4 && i < 16)  {
 					groups[i-4].Add(tran);
-					index = i-4;
+					indexb2 = i-4;
 				}
 				else {
 					groups[i-16].Add(tran);
-					index = i-16;
+					indexb2 = i-16;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb2);
 			b2children.Clear();
 			isMoving = false;
 		}
@@ -602,24 +606,24 @@ public class Oware_Script_Game : MonoBehaviour {
 			moves++;
 		}
 		else{
-			int index = 0;
+			int indexb3 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b3children[i];
 				if (i < 3){
 					groups[i+9].Add(tran);
-					index = i+9;
+					indexb3 = i+9;
 				}
 				else if (i >= 3 && i < 15)  {
 					groups[i-3].Add(tran);
-					index = i-3;
+					indexb3 = i-3;
 				}
 				else {
 					groups[i-15].Add(tran);
-					index = i-15;
+					indexb3 = i-15;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb3);
 			b3children.Clear();
 			isMoving = false;
 		}
@@ -650,22 +654,22 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexb4 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b4children [i];
 				if (i < 2) {
 					groups [i + 10].Add (tran);
-					index = i+10;
+					indexb4 = i+10;
 				} else if (i >= 2 && i < 14) {
 					groups [i - 2].Add (tran);
-					index = i-2;
+					indexb4 = i-2;
 				} else {
 					groups [i - 14].Add (tran);
-					index = i-14;
+					indexb4 = i-14;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb4);
 			b4children.Clear();
 			isMoving = false;
 		}
@@ -696,22 +700,22 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexb5 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b5children [i];
 				if (i < 1) {
 					groups [i + 11].Add (tran);
-					index = i+11;
+					indexb5 = i+11;
 				} else if (i >= 1 && i < 13) {
 					groups [i - 1].Add (tran);
-					index = i-1;
+					indexb5 = i-1;
 				} else {
 					groups [i - 13].Add (tran);
-					index = i-13;
+					indexb5 = i-13;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb5);
 			b5children.Clear();
 			isMoving = false;
 		}
@@ -742,33 +746,33 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 			moves++;
 		} else {
-			int index = 0;
+			int indexb6 = 0;
 			for (int i = 0; i < size; i++) {
 				Transform tran = b6children [i];
 				if (i < 12) {
 					groups [i].Add (tran);
-					index = i;
+					indexb6 = i;
 				} else if (i >= 12 && i < 24) {
 					groups [i - 12].Add (tran);
-					index = i-12;
+					indexb6 = i-12;
 				} else {
 					groups [i - 24].Add (tran);
-					index = i-24;
+					indexb6 = i-24;
 				}
 			}
 			moves = 0;
-			CollectPlayerMarbles(index);
+			CollectPlayerMarbles(indexb6);
 			b6children.Clear();
 			isMoving = false;
 		}
 	}
 
-	private void CollectOpponentMarbles(int index){
-		if (index != null) {
+	private void CollectOpponentMarbles(int indexCOM){
+		if (indexCOM != null) {
 			bool isCollectable = true;
 			List<Transform> collectedMarbles = new List<Transform>();
-			while (index > 5 && index <= 11 && isCollectable) {
-				List<Transform> list = groups [index];
+			while (indexCOM > 5 && indexCOM <= 11 && isCollectable) {
+				List<Transform> list = groups [indexCOM];
 				int size = list.Count;
 				if (size == 2 || size == 3){
 					playerScore += size;
@@ -779,7 +783,7 @@ public class Oware_Script_Game : MonoBehaviour {
 				else{
 					isCollectable = false;
 				}
-				index--;
+				indexCOM--;
 			}
 			if (isCollecting){
 				scoredMarbles = collectedMarbles;
@@ -794,10 +798,17 @@ public class Oware_Script_Game : MonoBehaviour {
 		int size = list.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
-				if (moves >= i * 100 && moves < i * 100 + 100) {
+				if (moves >= i * 100 && moves < i * 100 + 75) {
+					Vector3 apsh = abovePlayerScoreHouse;
+					list [i].position = Vector3.Lerp (list [i].position, abovePlayerScoreHouse, 0.05f);
+					Vector3 lp = list[i].position;
+					int fla = 0;
+				}
+				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
 					list [i].position = Vector3.Lerp (list [i].position, playerScoreHouse, 0.05f);
 				}
 			}
+			moves++;
 		} else {
 			isPlayerTurn = false;
 			isCollecting = false;
@@ -805,12 +816,12 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	private void CollectPlayerMarbles(int index){
-		if (index != null) {
+	private void CollectPlayerMarbles(int indexCPM){
+		if (indexCPM != null) {
 			bool isCollectable = true;
 			List<Transform> collectedMarbles = new List<Transform>();
-			while (index >= 0 && index <= 5 && isCollectable) {
-				List<Transform> list = groups [index];
+			while (indexCPM >= 0 && indexCPM <= 5 && isCollectable) {
+				List<Transform> list = groups [indexCPM];
 				int size = list.Count;
 				if (size == 2 || size == 3) {
 					opponentScore += size;
@@ -819,9 +830,8 @@ public class Oware_Script_Game : MonoBehaviour {
 					isCollecting = true;
 				} else{
 					isCollectable = false;
-					isPlayerTurn = true;
 				}
-				index--;
+				indexCPM--;
 			}
 			if (isCollecting){
 				scoredMarbles = collectedMarbles;
@@ -836,10 +846,18 @@ public class Oware_Script_Game : MonoBehaviour {
 		int size = list.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
-				if (moves >= i * 100 && moves < i * 100 + 100) {
+				if (moves >= i * 100 && moves < i * 100 + 75) {
+					Vector3 aosh = abovePlayerScoreHouse;
+					Vector3 lp = list[i].position;
+					list [i].position = Vector3.Lerp (list [i].position, aboveOpponentScoreHouse, 0.05f);
+					lp = list[i].position;
+					int fla = 0;
+				}
+				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
 					list[i].position = Vector3.Lerp (list[i].position, opponentScoreHouse, 0.05f);
 				}
 			}
+			moves++;
 		} else {
 			isPlayerTurn = true;
 			isCollecting = false;
