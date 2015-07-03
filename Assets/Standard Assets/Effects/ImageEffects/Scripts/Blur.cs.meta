@@ -1,10 +1,9 @@
 fileFormatVersion: 2
 guid: 4ea8ee804b204bf4a8935c625cf6550d
-timeCreated: 1435194023
-licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
