@@ -9,6 +9,7 @@ public class save_triggerer : MonoBehaviour {
 			Debug.Log ("Saved Game");
 		}
 	}
+		
 	
 	
 }

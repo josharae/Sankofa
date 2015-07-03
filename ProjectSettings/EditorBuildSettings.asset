@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/terrainScene_onini.unity
   - enabled: 1
     path: Assets/_Scenes/terrainScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/fading scene.unity

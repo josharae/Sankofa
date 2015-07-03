@@ -51,7 +51,7 @@ public class PlayerScript2 : MonoBehaviour {
 			ChangeBoneRigidBody (true);
 			hasObj = false;
 		}
-		if (Input.GetKeyDown (KeyCode.T) && hasObj) {
+		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
 			Throw ();
 		}
 	}

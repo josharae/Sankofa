@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
 using System.Collections;
 
@@ -9,9 +8,6 @@ public class BoneScript2 : MonoBehaviour {
 	Vector3 OriginalPosition;
 	public Animator Explosion;
 	private bool hasBeenThrown;
-	private bool hasBeenThrownAudio;
-	private AudioSource audio;
-
 	void Start () {
 		player = GameObject.Find ("Player");
 		OriginalPosition = this.transform.position;
@@ -25,16 +21,14 @@ public class BoneScript2 : MonoBehaviour {
 			player.GetComponent<PlayerScript2>().getObject(this.gameObject);
 		}
 	}
-
-
-
+	
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.CompareTag ("Ground") && hasBeenThrown) {
-			this.GetComponent<AudioSource>().Play();
 			Explosion.SetBool("Explode", true);
 		}
 	}
-
+	
+	
 	public void TeleportBack(){
 		this.transform.position = OriginalPosition;
 	}
