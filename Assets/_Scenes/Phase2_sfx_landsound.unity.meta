@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/_Scenes/Phase2_sfx_landsound.unity.meta
 guid: 4fc71cd88b670da4198abc2a9a1dc396
 timeCreated: 1435884946
+=======
+guid: 47f560804dc2c3346812056c4f10d983
+timeCreated: 1435883817
+>>>>>>> origin/master:Assets/_Scenes/Phase2_sfx_landsound.unity.meta
 licenseType: Free
 DefaultImporter:
   userData: 
