@@ -698,7 +698,7 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-4].Add(tran);
 					indexb2 = i-4;
 				}
-				else if (i >= 16 ** i < 28) {
+				else if (i >= 16 && i < 28) {
 					groups[i-16].Add(tran);
 					indexb2 = i-16;
 				}
