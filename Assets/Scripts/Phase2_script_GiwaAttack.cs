@@ -46,6 +46,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 
 	void FixedUpdate()
 	{
-
+        //useless
 	}
 }
