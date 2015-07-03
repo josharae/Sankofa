@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 171438}
-  Hand: {fileID: 0}
+  Hand: {fileID: 187228}
   hasObj: 0
 --- !u!124 &12400140
 Behaviour:
