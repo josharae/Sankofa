@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GiwaAttack : MonoBehaviour
+public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	public GameObject Player;
 		
