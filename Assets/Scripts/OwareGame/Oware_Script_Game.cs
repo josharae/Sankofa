@@ -87,7 +87,7 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (PlayerWins || OpponentWins) {
+		if (PlayerWins() || OpponentWins()) {
 			// game ends
 		} else {
 			if (isPlayerTurn) {
