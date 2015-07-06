@@ -87,88 +87,150 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isPlayerTurn) {
-			if (isCollecting){
-				MoveCollectedOpponentMarbles(scoredMarbles);
-			}
-			else if (!isMoving) {
-				if (Input.GetKey (KeyCode.A)) {
-					isMoving = true;
-					slot = "1";
-				} else if (Input.GetKey (KeyCode.S)) {
-					isMoving = true;
-					slot = "2";
-				} else if (Input.GetKey (KeyCode.D)) {
-					isMoving = true;
-					slot = "3";
-				} else if (Input.GetKey (KeyCode.F)) {
-					isMoving = true;
-					slot = "4";
-				} else if (Input.GetKey (KeyCode.G)) {
-					isMoving = true;
-					slot = "5";
-				} else if (Input.GetKey (KeyCode.H)) {
-					isMoving = true;
-					slot = "6";
+		if (PlayerWins || OpponentWins) {
+			// game ends
+		} else {
+			if (isPlayerTurn) {
+				if (isCollecting){
+					MoveCollectedOpponentMarbles(scoredMarbles);
+				}
+				else if (!isMoving) {
+					if (Input.GetKey (KeyCode.A)) {
+						if (a1children.Count > 0){
+							isMoving = true;
+							slot = "1";
+						}
+					} else if (Input.GetKey (KeyCode.S)) {
+						if (a2children.Count > 0){
+							isMoving = true;
+							slot = "2";
+						}
+					} else if (Input.GetKey (KeyCode.D)) {
+						if (a3children.Count > 0){
+							isMoving = true;
+							slot = "3";
+						}
+					} else if (Input.GetKey (KeyCode.F)) {
+						if (a4children.Count > 0){
+							isMoving = true;
+							slot = "4";
+						};
+					} else if (Input.GetKey (KeyCode.G)) {
+						if (a5children.Count > 0){
+							isMoving = true;
+							slot = "5";
+						}
+					} else if (Input.GetKey (KeyCode.H)) {
+						if (a6children.Count > 0){
+							isMoving = true;
+							slot = "6";
+						}
+					}
+				} else {
+					if (slot == "1")
+						MoveA1 ();
+					else if (slot == "2")
+						MoveA2 ();
+					else if (slot == "3")
+						MoveA3 ();
+					else if (slot == "4")
+						MoveA4 ();
+					else if (slot == "5")
+						MoveA5 ();
+					else if (slot == "6")
+						MoveA6 ();
 				}
 			} else {
-				if (slot == "1")
-					MoveA1 ();
-				else if (slot == "2")
-					MoveA2 ();
-				else if (slot == "3")
-					MoveA3 ();
-				else if (slot == "4")
-					MoveA4 ();
-				else if (slot == "5")
-					MoveA5 ();
-				else if (slot == "6")
-					MoveA6 ();
+				if (isCollecting){
+					MoveCollectedPlayerMarbles(scoredMarbles);
+				}
+				else if (!isMoving) {
+					if (Input.GetKey (KeyCode.Y)) {
+						if (b1children.Count > 0){
+							isMoving = true;
+							slot = "7";
+						}
+					}
+					else if (Input.GetKey (KeyCode.T)) {
+						if (b2children.Count > 0){
+							isMoving = true;
+							slot = "8";
+						}
+					}
+					else if (Input.GetKey (KeyCode.R)) {
+						if (b3children.Count > 0){
+							isMoving = true;
+							slot = "9";
+						}
+					}
+					else if (Input.GetKey (KeyCode.E)) {
+						if (b4children.Count > 0){
+							isMoving = true;
+							slot = "10";
+						}
+					}
+					else if (Input.GetKey (KeyCode.W)) {
+						if (b5children.Count > 0){
+							isMoving = true;
+							slot = "11";
+						}
+					}
+					else if (Input.GetKey (KeyCode.Q)) {
+						if (b6children.Count > 0){
+							isMoving = true;
+							slot = "12";
+						}
+					}
+				}
+				else {
+					if (slot == "7")
+						MoveB1 ();
+					else if (slot == "8")
+						MoveB2 ();
+					else if (slot == "9")
+						MoveB3 ();
+					else if (slot == "10")
+						MoveB4 ();
+					else if (slot == "11")
+						MoveB5 ();
+					else if (slot == "12")
+						MoveB6 ();
+				}
 			}
+		}
+	}
+
+	private bool PlayerWins(){
+		if (playerScore >= 25) {
+			return true;
 		} else {
-			if (isCollecting){
-				MoveCollectedPlayerMarbles(scoredMarbles);
-			}
-			else if (!isMoving) {
-				if (Input.GetKey (KeyCode.Y)) {
-					isMoving = true;
-					slot = "7";
-				}
-				else if (Input.GetKey (KeyCode.T)) {
-					isMoving = true;
-					slot = "8";
-				}
-				else if (Input.GetKey (KeyCode.R)) {
-					isMoving = true;
-					slot = "9";
-				}
-				else if (Input.GetKey (KeyCode.E)) {
-					isMoving = true;
-					slot = "10";
-				}
-				else if (Input.GetKey (KeyCode.W)) {
-					isMoving = true;
-					slot = "11";
-				}
-				else if (Input.GetKey (KeyCode.Q)) {
-					isMoving = true;
-					slot = "12";
+			bool win = false;
+			int empty = 0;
+			for (int i = 6; i < 12; i++){
+				if (groups[i].Count == 0){
+					empty++;
 				}
 			}
-			else {
-				if (slot == "7")
-					MoveB1 ();
-				else if (slot == "8")
-					MoveB2 ();
-				else if (slot == "9")
-					MoveB3 ();
-				else if (slot == "10")
-					MoveB4 ();
-				else if (slot == "11")
-					MoveB5 ();
-				else if (slot == "12")
-					MoveB6 ();
+			if (empty == 6)
+				win = true;
+			return win;
+		}
+	}
+
+	private bool OpponentWins(){
+		if (opponentScore >= 25) {
+			return true;
+		} else {
+			bool win = false;
+			int empty = 0;
+			for (int i = 0; i < 6; i++){
+				if (groups[i].Count == 0){
+					empty++;
+				}
 			}
+			if (empty == 6)
+				win = true;
+			return win;
 		}
 	}
 
@@ -1122,5 +1184,9 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 		}
 		return locs;
+	}
+
+	public bool PLayersTurn(){
+		return isPlayerTurn;
 	}
 }
