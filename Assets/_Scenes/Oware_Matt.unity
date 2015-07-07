@@ -5197,6 +5197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd5c227f9dbc194caf9b0f967ce96fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
   a1: {fileID: 579004701}
   a1children: []
   a2: {fileID: 1035176619}
