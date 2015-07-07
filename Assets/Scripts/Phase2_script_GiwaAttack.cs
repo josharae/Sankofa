@@ -3,31 +3,32 @@ using System.Collections;
 
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
-	public GameObject Player;
+	GameObject Player;
 		
-	private float MaxSpeed = 25;
-	private GameObject Target = new GameObject();	
+	private float MaxSpeed = 25000;
+	//private GameObject Target = new GameObject();	
 	private bool isSlowing = false;
 	//private bool charge = true;
 	//private int IntHits = 0;
-
-	private void slowing()
-	{
-		Rigidbody rb = GetComponent<Rigidbody> ();
-		if (rb.velocity.magnitude >= ((Target.transform.position) - (transform.position)).magnitude)
-			isSlowing = true;
-		isSlowing = false;
-	}
-
 	void Start()
 	{
+		Player = GameObject.Find ("Player");
 		//Target = new GameObject();
 		//Target.transform.position.Set (Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
 	}
 
+	private void slowing()
+	{
+		Rigidbody rb = GetComponent<Rigidbody> ();
+		if (rb.velocity.magnitude >= ((Player.transform.position) - (transform.position)).magnitude)
+			isSlowing = true;
+		isSlowing = false;
+	}
+
+
 	void Update()
 	{
-		Target.transform.position.Set(Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
+//		Target.transform.position.Set(Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
 		slowing ();
 		Rigidbody rb = GetComponent<Rigidbody> ();
 		//if (rb.velocity <= (new Vector3 (25, 25, 25)))
@@ -37,9 +38,9 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 			Vector3 val = rb.velocity;
 			rb.AddForce(Vector3.SmoothDamp(Vector3.forward,new Vector3(0,0,0),ref val,2F)); // HOW TO MAKE A REF
 		}
-		else //if(!isSlowing)//(charge) // What is the charging condition    (NOT SLOWING)
+		else if(Vector3.Distance(this.transform.position,Player.transform.position) < 150)//(charge) // What is the charging condition    (NOT SLOWING)
 		{
-			transform.LookAt(Target.transform);
+			transform.LookAt(Player.transform);
 			rb.AddRelativeForce (Vector3.forward * MaxSpeed * Time.smoothDeltaTime);
 		}
 	}
