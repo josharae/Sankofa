@@ -5,7 +5,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	public GameObject Player;
 		
-	private float MaxSpeed = 25;
+	private float MaxSpeed = 250;
 	private GameObject Target = new GameObject();	
 	private bool isSlowing = false;
 	//private bool charge = true;
