@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class Oware_Script_Game : MonoBehaviour {
 
+	public int gameOver;
+
 	private int playerScore;
 	private int opponentScore;
 	private int moves;
@@ -38,13 +40,16 @@ public class Oware_Script_Game : MonoBehaviour {
 	public List<Transform> b5children = new List<Transform>();
 	public GameObject b6;
 	public List<Transform> b6children = new List<Transform>();
-	private List<List<Transform>> groups = new List<List<Transform>> ();
+	public List<List<Transform>> groups = new List<List<Transform>> ();
 	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
 
 	// Use this for initialization
 	void Start () {
+		//matt's stuff
+		gameOver = 0;
+
 		playerScore = 0;
 		opponentScore = 0;
 		moves = 0;
@@ -87,8 +92,11 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (PlayerWins() || OpponentWins()) {
-			// game ends
+		if (PlayerWins ()) {
+			gameOver = 1;
+		}
+		else if(OpponentWins(){
+			gameOver = -1;
 		} else {
 			if (isPlayerTurn) {
 				if (isCollecting){

@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 884630358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70965fdaad797b4aa2be32c4e96c143, type: 3}
+  m_Script: {fileID: 11500000, guid: b09f006739c30f74fb06cf6990415027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fields:
@@ -3602,7 +3602,7 @@ MonoBehaviour:
   - {fileID: 1110264739}
   - {fileID: 632674370}
   - {fileID: 1056476413}
-  PositionHolder: {fileID: 226208596}
+  PositionHolder: {fileID: 0}
   OwareObject: {fileID: 1281367343}
   listHolder: []
   TurnText: {fileID: 1161873022}
@@ -5198,17 +5198,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   a1: {fileID: 579004701}
+  a1children: []
   a2: {fileID: 1035176619}
+  a2children: []
   a3: {fileID: 306266325}
+  a3children: []
   a4: {fileID: 1969942368}
+  a4children: []
   a5: {fileID: 558463680}
+  a5children: []
   a6: {fileID: 1111914932}
+  a6children: []
   b1: {fileID: 1011976846}
+  b1children: []
   b2: {fileID: 458879837}
+  b2children: []
   b3: {fileID: 531042568}
+  b3children: []
   b4: {fileID: 1808705530}
+  b4children: []
   b5: {fileID: 625995206}
+  b5children: []
   b6: {fileID: 1092750381}
+  b6children: []
 --- !u!1 &1284990928
 GameObject:
   m_ObjectHideFlags: 0
