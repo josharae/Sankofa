@@ -1362,7 +1362,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: .5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3031,9 +3031,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ec99892694a49be45b56e5aaa5417760, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .231000006
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: .319999993
@@ -3073,7 +3073,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: .555555582
+      value: .5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
