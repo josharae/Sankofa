@@ -10,7 +10,7 @@ public class SpiritObjectScript : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.Find ("Player");
-		OriginalPosition = this.transform.position;
+		//OriginalPosition = this.transform.position;
 		Glow = GetComponent<Animator> ();
 		isGlowing = true;
 		Glow.SetBool("Glow", true);
