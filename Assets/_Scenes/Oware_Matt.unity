@@ -161,19 +161,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8340455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 884630359}
-        m_MethodName: ClickTaken
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &8340455
@@ -3602,7 +3590,6 @@ MonoBehaviour:
   - {fileID: 1110264739}
   - {fileID: 632674370}
   - {fileID: 1056476413}
-  PositionHolder: {fileID: 0}
   OwareObject: {fileID: 1281367343}
   listHolder: []
   TurnText: {fileID: 1161873022}
@@ -5198,6 +5185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  playerScore: 0
+  opponentScore: 0
+  isPlayerTurn: 0
   a1: {fileID: 579004701}
   a1children: []
   a2: {fileID: 1035176619}
