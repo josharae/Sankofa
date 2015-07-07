@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: 322fdeb1cbedd3545bdbea32cda84b57
-timeCreated: 1435872857
+<<<<<<< HEAD:Assets/_Scenes/Phase2_sfx_snakewaterfall.unity.meta
+guid: 620c29edffcaac94584f08cf03979e30
+timeCreated: 1435884946
+=======
+guid: 58621341688110f4a9a46ef126169f0b
+timeCreated: 1435883817
+>>>>>>> origin/master:Assets/_Scenes/Phase2_sfx_snakewaterfall.unity.meta
 licenseType: Free
 DefaultImporter:
   userData: 
