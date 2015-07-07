@@ -8,7 +8,8 @@ public class oware_ui_manager : MonoBehaviour {
 	public List<Text> fields;
 	private int pScore;
 	private int dScore;
-	
+
+	public Oware_Script_Game gScript;
 	public GameObject PositionHolder;
 	public GameObject OwareObject;
 	public List<GameObject> listHolder;
@@ -26,6 +27,7 @@ public class oware_ui_manager : MonoBehaviour {
 		playerTurn = "Your Turn";
 		TurnText.text = deathTurn;
 		Score (0);
+		gScript = OwareObject.GetComponent<Oware_Script_Game> ();
 	}
 	
 	// Update is called once per frame
