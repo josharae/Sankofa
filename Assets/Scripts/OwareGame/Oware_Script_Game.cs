@@ -95,7 +95,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		if (PlayerWins ()) {
 			gameOver = 1;
 		}
-		else if(OpponentWins(){
+		else if(OpponentWins()){
 			gameOver = -1;
 		} else {
 			if (isPlayerTurn) {
@@ -207,6 +207,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 		}
 	}
+
 
 	private bool PlayerWins(){
 		if (playerScore >= 25) {
