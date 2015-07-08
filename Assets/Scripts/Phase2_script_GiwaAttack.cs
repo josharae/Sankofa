@@ -36,13 +36,15 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 				//transform.LookAt(player.transform);
 				Vector3 target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
 				transform.LookAt(target);
+              //  Quaternion.LookRotation(new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z) - this.transform.position);
 				currentRate+=Time.deltaTime;
 				float vel = Mathf.Lerp(0,MaxSpeed,currentRate);
 				Vector3 movement = transform.forward * vel;
 				Debug.Log(vel);
 				movement.y = GetComponent<Rigidbody> ().velocity.y;
-				//GetComponent<Rigidbody> ().velocity =  movement;
-				transform.Translate(MaxSpeed*Vector3.forward*Time.deltaTime);
+				//GetComponent<Rigidbody> ().AddRelativeForce(movement);
+                transform.position += MaxSpeed * transform.forward * Time.deltaTime;
+				//transform.Translate(MaxSpeed*Vector3.forward*Time.deltaTime);
 			}
 			//	this.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * MaxSpeed);
 		}

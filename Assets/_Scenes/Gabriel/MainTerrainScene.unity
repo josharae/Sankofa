@@ -2144,7 +2144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d42310bebd4734481fe31f25c34d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaPosition: {fileID: 0}
+  arenaPosition: {fileID: 1086970230}
 --- !u!4 &597039830 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
