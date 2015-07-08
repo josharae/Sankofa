@@ -20,6 +20,8 @@ public static class Tags
 	public const string Collectible = "Collectible";
 	public const string MisteriousEgg = "MisteriousEgg";
 	public const string PickupItem = "PickupItem";
+	public const string Boulder = "Boulder";
+	public const string WaterSpirit = "WaterSpirit";
 }
 
 
