@@ -14,7 +14,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			DeathMarbles.Add(osg.groups[i]);
 		}
 		for (int j = 0; j < 6; j++) {
-			PlayerMarbles.Add(osg.groups[i]);
+			PlayerMarbles.Add(osg.groups[j]);
 		}
 	}
 	
@@ -107,7 +107,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 	}
 
 	public List<Transform> FindBestOption(){
-		List<Transform> nextMove;
+		List<Transform> nextMove = null;
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = osg.groups[i];
@@ -118,10 +118,6 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 				nextMove = list;
 			}
 		}
-		if (bestScore > 0) {
-			return nextMove;
-		} else {
-			return null;
-		}
+		return nextMove;
 	}
 }
