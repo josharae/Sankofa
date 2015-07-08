@@ -1,16 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class Oware_Script_Game : MonoBehaviour {
 
-	public int gameOver;
-
-	public int playerScore;//oware ui uses this
-	public int opponentScore;//oware ui uses this
+	public int playerScore;
+	public int opponentScore;
 	private int moves;
 	private bool isMoving;
 	private bool isCollecting;
-	public bool isPlayerTurn;//oware ui uses this
+	public bool isPlayerTurn;
+	public int gameOver;
 	private string slot;
 	private Vector3 playerScoreHouse;
 	private Vector3 abovePlayerScoreHouse;
@@ -40,16 +39,13 @@ public class Oware_Script_Game : MonoBehaviour {
 	public List<Transform> b5children = new List<Transform>();
 	public GameObject b6;
 	public List<Transform> b6children = new List<Transform>();
-	public List<List<Transform>> groups = new List<List<Transform>> ();
+	private List<List<Transform>> groups = new List<List<Transform>> ();
 	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
 
 	// Use this for initialization
 	void Start () {
-		//matt's stuff
-		gameOver = 0;
-
 		playerScore = 0;
 		opponentScore = 0;
 		moves = 0;
@@ -94,8 +90,7 @@ public class Oware_Script_Game : MonoBehaviour {
 	void Update () {
 		if (PlayerWins ()) {
 			gameOver = 1;
-		}
-		else if(OpponentWins()){
+		} else if (OpponentWins ()) {
 			gameOver = -1;
 		} else {
 			if (isPlayerTurn) {
@@ -208,7 +203,6 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-
 	private bool PlayerWins(){
 		if (playerScore >= 25) {
 			return true;
@@ -241,6 +235,10 @@ public class Oware_Script_Game : MonoBehaviour {
 				win = true;
 			return win;
 		}
+	}
+
+	void MoveDown(Transform marble){
+		marble.position = Vector3.Lerp (marble.position, Vector3.down, 0.0005f);
 	}
 
 	void MoveA1 () {
@@ -280,6 +278,9 @@ public class Oware_Script_Game : MonoBehaviour {
 					else {
 						a1children[i].position = Vector3.Lerp(a1children[i].position, pitLocations[i-47], 0.05f);
 					}
+				}
+				else{
+					MoveDown(a1children[i]);
 				}
 			}
 			moves++;
@@ -355,6 +356,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						a2children[i].position = Vector3.Lerp(a2children[i].position, pitLocations[i-46], 0.05f);
 					}
 				}
+				else{
+					MoveDown(a2children[i]);
+				}
 			}
 			moves++;
 		}
@@ -428,6 +432,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						a3children[i].position = Vector3.Lerp(a3children[i].position, pitLocations[i-45], 0.05f);
 					}
 				}
+				else{
+					MoveDown(a3children[i]);
+				}
 			}
 			moves++;
 		}
@@ -493,6 +500,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i - 44], 0.05f);
 					}
 				}
+				else{
+					MoveDown(a4children[i]);
+				}
 			}
 			moves++;
 		} else {
@@ -553,6 +563,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i - 43], 0.05f);
 					}
 				}
+				else{
+					MoveDown(a5children[i]);
+				}
 			}
 			moves++;
 		} else {
@@ -612,6 +625,9 @@ public class Oware_Script_Game : MonoBehaviour {
 					} else {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 42], 0.05f);
 					}
+				}
+				else{
+					MoveDown(a6children[i]);
 				}
 			}
 			moves++;
@@ -680,6 +696,9 @@ public class Oware_Script_Game : MonoBehaviour {
 					else {
 						b1children[i].position = Vector3.Lerp(b1children[i].position, pitLocations[i-41], 0.05f);
 					}
+				}
+				else{
+					MoveDown(b1children[i]);
 				}
 			}
 			moves++;
@@ -754,6 +773,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						b2children[i].position = Vector3.Lerp(b2children[i].position, pitLocations[i-40], 0.05f);
 					}
 				}
+				else{
+					MoveDown(b2children[i]);
+				}
 			}
 			moves++;
 		}
@@ -827,6 +849,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						b3children[i].position = Vector3.Lerp(b3children[i].position, pitLocations[i-39], 0.05f);
 					}
 				}
+				else{
+					MoveDown(b3children[i]);
+				}
 			}
 			moves++;
 		}
@@ -892,6 +917,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i - 38], 0.05f);
 					}
 				}
+				else{
+					MoveDown(b4children[i]);
+				}
 			}
 			moves++;
 		} else {
@@ -952,6 +980,9 @@ public class Oware_Script_Game : MonoBehaviour {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i - 37], 0.05f);
 					}
 				}
+				else{
+					MoveDown(b5children[i]);
+				}
 			}
 			moves++;
 		} else {
@@ -1011,6 +1042,9 @@ public class Oware_Script_Game : MonoBehaviour {
 					} else {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i - 48], 0.05f);
 					}
+				}
+				else{
+					MoveDown(b6children[i]);
 				}
 			}
 			moves++;
