@@ -6,8 +6,8 @@ public class Oware_Script_Game : MonoBehaviour {
 	public int playerScore;
 	public int opponentScore;
 	private int moves;
-	private bool isMoving;
-	private bool isCollecting;
+	public bool isMoving;
+	public bool isCollecting;
 	public bool isPlayerTurn;
 	public int gameOver;
 	private string slot;
@@ -39,7 +39,7 @@ public class Oware_Script_Game : MonoBehaviour {
 	public List<Transform> b5children = new List<Transform>();
 	public GameObject b6;
 	public List<Transform> b6children = new List<Transform>();
-	private List<List<Transform>> groups = new List<List<Transform>> ();
+	public List<List<Transform>> groups = new List<List<Transform>> ();
 	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
@@ -214,7 +214,7 @@ public class Oware_Script_Game : MonoBehaviour {
 					empty++;
 				}
 			}
-			if (empty == 6)
+			if (empty == 6 && !isPlayerTurn)
 				win = true;
 			return win;
 		}
@@ -231,7 +231,7 @@ public class Oware_Script_Game : MonoBehaviour {
 					empty++;
 				}
 			}
-			if (empty == 6)
+			if (empty == 6 && isPlayerTurn)
 				win = true;
 			return win;
 		}
@@ -241,7 +241,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		marble.position = Vector3.Lerp (marble.position, Vector3.down, 0.0005f);
 	}
 
-	void MoveA1 () {
+	public void MoveA1 () {
 		int size = a1children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -318,7 +318,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveA2 () {
+	public void MoveA2 () {
 		int size = a2children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -394,7 +394,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveA3 () {
+	public void MoveA3 () {
 		int size = a3children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -470,7 +470,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveA4 () {
+	public void MoveA4 () {
 		int size = a4children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -533,7 +533,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveA5 () {
+	public void MoveA5 () {
 		int size = a5children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -596,7 +596,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveA6 () {
+	public void MoveA6 () {
 		int size = a6children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -659,7 +659,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 
-	void MoveB1 () {
+	public void MoveB1 () {
 		int size = b1children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -735,7 +735,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 	
-	void MoveB2 () {
+	public void MoveB2 () {
 		int size = b2children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -811,7 +811,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 	
-	void MoveB3 () {
+	public void MoveB3 () {
 		int size = b3children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -887,7 +887,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 	
-	void MoveB4 () {
+	public void MoveB4 () {
 		int size = b4children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -950,7 +950,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 	
-	void MoveB5 () {
+	public void MoveB5 () {
 		int size = b5children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
@@ -1013,7 +1013,7 @@ public class Oware_Script_Game : MonoBehaviour {
 		}
 	}
 	
-	void MoveB6 () {
+	public void MoveB6 () {
 		int size = b6children.Count;
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
