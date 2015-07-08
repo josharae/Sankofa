@@ -5,12 +5,12 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public int gameOver;
 
-	private int playerScore;
-	private int opponentScore;
+	public int playerScore;//oware ui uses this
+	public int opponentScore;//oware ui uses this
 	private int moves;
 	private bool isMoving;
 	private bool isCollecting;
-	private bool isPlayerTurn;
+	public bool isPlayerTurn;//oware ui uses this
 	private string slot;
 	private Vector3 playerScoreHouse;
 	private Vector3 abovePlayerScoreHouse;
