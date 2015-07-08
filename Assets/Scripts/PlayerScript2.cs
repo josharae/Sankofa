@@ -19,40 +19,38 @@ public class PlayerScript2 : MonoBehaviour {
 		if (hasObj) //move bone with player
 			Item.transform.position = Hand.transform.position;
 		
-//		//rotation
-//		float mouseHorizontal = Input.GetAxis ("Mouse X");
-//		float mouseVertical = Input.GetAxis ("Mouse Y");
-//		yRotation += mouseHorizontal;
-//		xRotation += mouseVertical * -1;
-//		transform.eulerAngles = new Vector3 (0, yRotation, 0);
-//		
-//		if (xRotation <= DownLimit && xRotation >= UpLimit) {
-//			camera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
-//		} else {
-//			if (xRotation > DownLimit)
-//				xRotation = DownLimit;
-//			if (xRotation < UpLimit)
-//				xRotation = UpLimit;
-//		}
-//		
-//		//movement
-//		float moveVertical = Input.GetAxis ("Vertical");
-//		float moveHorizontal = Input.GetAxis ("Horizontal");
-//		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-//		
-//		GetComponent<Rigidbody> ().velocity = Vector3.zero;
-//		
-//		GetComponent<Rigidbody> ().AddRelativeForce (movement * speed);
+		//		//rotation
+		//		float mouseHorizontal = Input.GetAxis ("Mouse X");
+		//		float mouseVertical = Input.GetAxis ("Mouse Y");
+		//		yRotation += mouseHorizontal;
+		//		xRotation += mouseVertical * -1;
+		//		transform.eulerAngles = new Vector3 (0, yRotation, 0);
+		//		
+		//		if (xRotation <= DownLimit && xRotation >= UpLimit) {
+		//			camera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
+		//		} else {
+		//			if (xRotation > DownLimit)
+		//				xRotation = DownLimit;
+		//			if (xRotation < UpLimit)
+		//				xRotation = UpLimit;
+		//		}
+		//		
+		//		//movement
+		//		float moveVertical = Input.GetAxis ("Vertical");
+		//		float moveHorizontal = Input.GetAxis ("Horizontal");
+		//		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		//		
+		//		GetComponent<Rigidbody> ().velocity = Vector3.zero;
+		//		
+		//		GetComponent<Rigidbody> ().AddRelativeForce (movement * speed);
 		
 	}
 	
 	void Update(){
-		//drop
 		if (Input.GetMouseButtonDown(1) && hasObj) {
 			ChangeBoneRigidBody (true);
 			hasObj = false;
 		}
-		//throw
 		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
 			Throw ();
 		}
@@ -67,12 +65,10 @@ public class PlayerScript2 : MonoBehaviour {
 	public void getObject(GameObject newItem){
 		if (!hasObj)
 		{
-			//item to inventory
 			if(newItem.tag == Tags.Collectible){
 				GameManager.GetComponent<ItemPanelScript>().ShowItemPanel(newItem);
 				this.GetComponent<InventoryScript>().AddItem(newItem);
 			}
-			//item to hand
 			else {
 				hasObj = true;
 				Item = newItem;

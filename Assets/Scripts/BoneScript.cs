@@ -34,7 +34,6 @@ public class BoneScript : MonoBehaviour {
 	Vector3 OriginalPosition;
 	public Animator Explosion;
 	private bool hasBeenThrown;
-	public AudioClip audioClip;
 	private AudioSource audio;
 
 	void Start () {
@@ -53,8 +52,9 @@ public class BoneScript : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.CompareTag ("Ground") && hasBeenThrown) {
+			this.GetComponent<AudioSource>().Play();
 			Explosion.SetBool("Explode", true);
-			audio.PlayOneShot(audioClip);
+
 
 		}
 	}
