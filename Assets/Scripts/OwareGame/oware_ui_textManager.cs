@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class oware_ui_manager : MonoBehaviour {
+public class oware_ui_textManager : MonoBehaviour {
 	
 	public List<Text> fields;
 	//private int pScore;

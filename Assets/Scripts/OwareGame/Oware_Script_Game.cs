@@ -47,8 +47,7 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//matt's stuff
-		gameOver = 0;
+		gameOver = 0;//oware ui uses this
 
 		playerScore = 0;
 		opponentScore = 0;
