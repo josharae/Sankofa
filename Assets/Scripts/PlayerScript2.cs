@@ -47,10 +47,12 @@ public class PlayerScript2 : MonoBehaviour {
 	}
 	
 	void Update(){
+		//drop
 		if (Input.GetMouseButtonDown(1) && hasObj) {
 			ChangeBoneRigidBody (true);
 			hasObj = false;
 		}
+		//throw
 		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
 			Throw ();
 		}
@@ -65,10 +67,12 @@ public class PlayerScript2 : MonoBehaviour {
 	public void getObject(GameObject newItem){
 		if (!hasObj)
 		{
+			//item to inventory
 			if(newItem.tag == Tags.Collectible){
 				GameManager.GetComponent<ItemPanelScript>().ShowItemPanel(newItem);
 				this.GetComponent<InventoryScript>().AddItem(newItem);
 			}
+			//item to hand
 			else {
 				hasObj = true;
 				Item = newItem;

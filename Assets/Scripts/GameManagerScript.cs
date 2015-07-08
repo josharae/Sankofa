@@ -14,17 +14,20 @@ public class GameManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.P)){
-			PauseGame();
+			pauseGame();
 		}
 	}
 
-	public void PauseGame(){
+	public void pauseGame(){
 		isPaused = !isPaused;
-		foreach (GameObject button in InGameButtons)
-			button.SetActive (!isPaused);
+			foreach (GameObject button in InGameButtons)
+				button.SetActive (!isPaused);
 		PausePanel.SetActive (isPaused);
 		Time.timeScale = isPaused ? 0 : 1;
-		GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = !isPaused;
+	}
+
+	public void quitGame(){
+		Application.Quit ();
 	}
 
 }

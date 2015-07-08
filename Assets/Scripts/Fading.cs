@@ -16,7 +16,7 @@ public class Fading : MonoBehaviour
 		alpha += fadeDir * fadeSpeed * Time.deltaTime;
 		// force (clamp) the  number between 0 and 1 because GUI.color uses alpha values between 0 and 1
 		alpha = Mathf.Clamp01 (alpha);
-	
+		
 		// set color of our GUI (in thes case our texture). All color values remain the some & the Alpha is set to the alpha variable
 		GUI.color = new Color (GUI.color.r, GUI.color.b, alpha); // set the alpha value
 		GUI.depth = drawDepth; // make sure black texture render on top (drawn last)

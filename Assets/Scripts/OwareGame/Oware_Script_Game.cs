@@ -3,48 +3,53 @@ using System.Collections.Generic;
 
 public class Oware_Script_Game : MonoBehaviour {
 
-	private int playerScore;
-	private int opponentScore;
+	public int gameOver;
+
+	public int playerScore;//oware ui uses this
+	public int opponentScore;//oware ui uses this
 	private int moves;
 	private bool isMoving;
 	private bool isCollecting;
-	private bool isPlayerTurn;
+	public bool isPlayerTurn;//oware ui uses this
 	private string slot;
 	private Vector3 playerScoreHouse;
 	private Vector3 abovePlayerScoreHouse;
 	private Vector3 opponentScoreHouse;
 	private Vector3 aboveOpponentScoreHouse;
 	public GameObject a1;
-	private List<Transform> a1children = new List<Transform> ();
+	public List<Transform> a1children = new List<Transform> ();
 	public GameObject a2;
-	private List<Transform> a2children = new List<Transform>();
+	public List<Transform> a2children = new List<Transform>();
 	public GameObject a3;
-	private List<Transform> a3children = new List<Transform>();
+	public List<Transform> a3children = new List<Transform>();
 	public GameObject a4;
-	private List<Transform> a4children = new List<Transform>();
+	public List<Transform> a4children = new List<Transform>();
 	public GameObject a5;
-	private List<Transform> a5children = new List<Transform>();
+	public List<Transform> a5children = new List<Transform>();
 	public GameObject a6;
-	private List<Transform> a6children = new List<Transform>();
+	public List<Transform> a6children = new List<Transform>();
 	public GameObject b1;
-	private List<Transform> b1children = new List<Transform>();
+	public List<Transform> b1children = new List<Transform>();
 	public GameObject b2;
-	private List<Transform> b2children = new List<Transform>();
+	public List<Transform> b2children = new List<Transform>();
 	public GameObject b3;
-	private List<Transform> b3children = new List<Transform>();
+	public List<Transform> b3children = new List<Transform>();
 	public GameObject b4;
-	private List<Transform> b4children = new List<Transform>();
+	public List<Transform> b4children = new List<Transform>();
 	public GameObject b5;
-	private List<Transform> b5children = new List<Transform>();
+	public List<Transform> b5children = new List<Transform>();
 	public GameObject b6;
-	private List<Transform> b6children = new List<Transform>();
-	private List<List<Transform>> groups = new List<List<Transform>> ();
+	public List<Transform> b6children = new List<Transform>();
+	public List<List<Transform>> groups = new List<List<Transform>> ();
 	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
 
 	// Use this for initialization
 	void Start () {
+		//matt's stuff
+		gameOver = 0;
+
 		playerScore = 0;
 		opponentScore = 0;
 		moves = 0;
@@ -87,88 +92,154 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isPlayerTurn) {
-			if (isCollecting){
-				MoveCollectedOpponentMarbles(scoredMarbles);
-			}
-			else if (!isMoving) {
-				if (Input.GetKey (KeyCode.A)) {
-					isMoving = true;
-					slot = "1";
-				} else if (Input.GetKey (KeyCode.S)) {
-					isMoving = true;
-					slot = "2";
-				} else if (Input.GetKey (KeyCode.D)) {
-					isMoving = true;
-					slot = "3";
-				} else if (Input.GetKey (KeyCode.F)) {
-					isMoving = true;
-					slot = "4";
-				} else if (Input.GetKey (KeyCode.G)) {
-					isMoving = true;
-					slot = "5";
-				} else if (Input.GetKey (KeyCode.H)) {
-					isMoving = true;
-					slot = "6";
+		if (PlayerWins ()) {
+			gameOver = 1;
+		}
+		else if(OpponentWins()){
+			gameOver = -1;
+		} else {
+			if (isPlayerTurn) {
+				if (isCollecting){
+					MoveCollectedOpponentMarbles(scoredMarbles);
+				}
+				else if (!isMoving) {
+					if (Input.GetKey (KeyCode.A)) {
+						if (a1children.Count > 0){
+							isMoving = true;
+							slot = "1";
+						}
+					} else if (Input.GetKey (KeyCode.S)) {
+						if (a2children.Count > 0){
+							isMoving = true;
+							slot = "2";
+						}
+					} else if (Input.GetKey (KeyCode.D)) {
+						if (a3children.Count > 0){
+							isMoving = true;
+							slot = "3";
+						}
+					} else if (Input.GetKey (KeyCode.F)) {
+						if (a4children.Count > 0){
+							isMoving = true;
+							slot = "4";
+						};
+					} else if (Input.GetKey (KeyCode.G)) {
+						if (a5children.Count > 0){
+							isMoving = true;
+							slot = "5";
+						}
+					} else if (Input.GetKey (KeyCode.H)) {
+						if (a6children.Count > 0){
+							isMoving = true;
+							slot = "6";
+						}
+					}
+				} else {
+					if (slot == "1")
+						MoveA1 ();
+					else if (slot == "2")
+						MoveA2 ();
+					else if (slot == "3")
+						MoveA3 ();
+					else if (slot == "4")
+						MoveA4 ();
+					else if (slot == "5")
+						MoveA5 ();
+					else if (slot == "6")
+						MoveA6 ();
 				}
 			} else {
-				if (slot == "1")
-					MoveA1 ();
-				else if (slot == "2")
-					MoveA2 ();
-				else if (slot == "3")
-					MoveA3 ();
-				else if (slot == "4")
-					MoveA4 ();
-				else if (slot == "5")
-					MoveA5 ();
-				else if (slot == "6")
-					MoveA6 ();
+				if (isCollecting){
+					MoveCollectedPlayerMarbles(scoredMarbles);
+				}
+				else if (!isMoving) {
+					if (Input.GetKey (KeyCode.Y)) {
+						if (b1children.Count > 0){
+							isMoving = true;
+							slot = "7";
+						}
+					}
+					else if (Input.GetKey (KeyCode.T)) {
+						if (b2children.Count > 0){
+							isMoving = true;
+							slot = "8";
+						}
+					}
+					else if (Input.GetKey (KeyCode.R)) {
+						if (b3children.Count > 0){
+							isMoving = true;
+							slot = "9";
+						}
+					}
+					else if (Input.GetKey (KeyCode.E)) {
+						if (b4children.Count > 0){
+							isMoving = true;
+							slot = "10";
+						}
+					}
+					else if (Input.GetKey (KeyCode.W)) {
+						if (b5children.Count > 0){
+							isMoving = true;
+							slot = "11";
+						}
+					}
+					else if (Input.GetKey (KeyCode.Q)) {
+						if (b6children.Count > 0){
+							isMoving = true;
+							slot = "12";
+						}
+					}
+				}
+				else {
+					if (slot == "7")
+						MoveB1 ();
+					else if (slot == "8")
+						MoveB2 ();
+					else if (slot == "9")
+						MoveB3 ();
+					else if (slot == "10")
+						MoveB4 ();
+					else if (slot == "11")
+						MoveB5 ();
+					else if (slot == "12")
+						MoveB6 ();
+				}
 			}
+		}
+	}
+
+
+	private bool PlayerWins(){
+		if (playerScore >= 25) {
+			return true;
 		} else {
-			if (isCollecting){
-				MoveCollectedPlayerMarbles(scoredMarbles);
-			}
-			else if (!isMoving) {
-				if (Input.GetKey (KeyCode.Y)) {
-					isMoving = true;
-					slot = "7";
-				}
-				else if (Input.GetKey (KeyCode.T)) {
-					isMoving = true;
-					slot = "8";
-				}
-				else if (Input.GetKey (KeyCode.R)) {
-					isMoving = true;
-					slot = "9";
-				}
-				else if (Input.GetKey (KeyCode.E)) {
-					isMoving = true;
-					slot = "10";
-				}
-				else if (Input.GetKey (KeyCode.W)) {
-					isMoving = true;
-					slot = "11";
-				}
-				else if (Input.GetKey (KeyCode.Q)) {
-					isMoving = true;
-					slot = "12";
+			bool win = false;
+			int empty = 0;
+			for (int i = 6; i < 12; i++){
+				if (groups[i].Count == 0){
+					empty++;
 				}
 			}
-			else {
-				if (slot == "7")
-					MoveB1 ();
-				else if (slot == "8")
-					MoveB2 ();
-				else if (slot == "9")
-					MoveB3 ();
-				else if (slot == "10")
-					MoveB4 ();
-				else if (slot == "11")
-					MoveB5 ();
-				else if (slot == "12")
-					MoveB6 ();
+			if (empty == 6)
+				win = true;
+			return win;
+		}
+	}
+
+	private bool OpponentWins(){
+		if (opponentScore >= 25) {
+			return true;
+		} else {
+			bool win = false;
+			int empty = 0;
+			for (int i = 0; i < 6; i++){
+				if (groups[i].Count == 0){
+					empty++;
+				}
 			}
+			if (empty == 6)
+				win = true;
+			return win;
 		}
 	}
 
@@ -183,8 +254,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 11 && i < 23) {
 						a1children[i].position = Vector3.Lerp(a1children[i].position, topLocations[i-11], 0.05f);
 					}
-					else {
+					else if (i>= 23 && i < 35) {
 						a1children[i].position = Vector3.Lerp(a1children[i].position, topLocations[i-23], 0.05f);
+					}
+					else if (i >= 35 && i < 47){
+						a1children[i].position = Vector3.Lerp(a1children[i].position, topLocations[i-35], 0.05f);
+					}
+					else {
+						a1children[i].position = Vector3.Lerp(a1children[i].position, topLocations[i-47], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -194,8 +271,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 11 && i < 23) {
 						a1children[i].position = Vector3.Lerp(a1children[i].position, pitLocations[i-11], 0.05f);
 					}
-					else {
+					else if (i>= 23 && i < 35) {
 						a1children[i].position = Vector3.Lerp(a1children[i].position, pitLocations[i-23], 0.05f);
+					}
+					else if (i >= 35 && i < 47){
+						a1children[i].position = Vector3.Lerp(a1children[i].position, pitLocations[i-35], 0.05f);
+					}
+					else {
+						a1children[i].position = Vector3.Lerp(a1children[i].position, pitLocations[i-47], 0.05f);
 					}
 				}
 			}
@@ -213,10 +296,18 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-11].Add(tran);
 					indexa1 = i-11;
 				}
-				else {
+				else if (i >= 23 && i < 35) {
 					groups[i-23].Add(tran);
 					indexa1 = i-23;
 			    }
+				else if (i >= 35 && i < 47){
+					groups[i-35].Add(tran);
+					indexa1 = i-35;
+				}
+				else{
+					groups[i-47].Add(tran);
+					indexa1 = i-47;
+				}
 			}
 			moves = 0;
 			CollectOpponentMarbles(indexa1);
@@ -237,8 +328,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 10 && i < 22) {
 						a2children[i].position = Vector3.Lerp(a2children[i].position, topLocations[i-10], 0.05f);
 					}
-					else {
+					else if (i >= 22 && i < 34){
 						a2children[i].position = Vector3.Lerp(a2children[i].position, topLocations[i-22], 0.05f);
+					}
+					else if (i >= 34 && i < 46){
+						a2children[i].position = Vector3.Lerp(a2children[i].position, topLocations[i-34], 0.05f);
+					}
+					else{
+						a2children[i].position = Vector3.Lerp(a2children[i].position, topLocations[i-46], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -248,8 +345,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 10 && i < 22) {
 						a2children[i].position = Vector3.Lerp(a2children[i].position, pitLocations[i-10], 0.05f);
 					}
-					else {
+					else if (i >= 22 && i < 34){
 						a2children[i].position = Vector3.Lerp(a2children[i].position, pitLocations[i-22], 0.05f);
+					}
+					else if (i >= 34 && i < 46){
+						a2children[i].position = Vector3.Lerp(a2children[i].position, pitLocations[i-34], 0.05f);
+					}
+					else{
+						a2children[i].position = Vector3.Lerp(a2children[i].position, pitLocations[i-46], 0.05f);
 					}
 				}
 			}
@@ -267,9 +370,17 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-10].Add(tran);
 					indexa2 = i-10;
 				}
-				else {
+				else if (i >= 22 && i < 34) {
 					groups[i-22].Add(tran);
 					indexa2 = i-22;
+				}
+				else if (i >= 34 && i < 46) {
+					groups[i-34].Add(tran);
+					indexa2 = i-34;
+				}
+				else {
+					groups[i-46].Add(tran);
+					indexa2 = i-46;
 				}
 			}
 			moves = 0;
@@ -290,8 +401,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 9 && i < 21) {
 						a3children[i].position = Vector3.Lerp(a3children[i].position, topLocations[i-9], 0.05f);
 					}
-					else {
+					else if (i >= 21 && i < 33) {
 						a3children[i].position = Vector3.Lerp(a3children[i].position, topLocations[i-21], 0.05f);
+					}
+					else if (i >= 33 && i < 45) {
+						a3children[i].position = Vector3.Lerp(a3children[i].position, topLocations[i-33], 0.05f);
+					}
+					else {
+						a3children[i].position = Vector3.Lerp(a3children[i].position, topLocations[i-45], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -301,8 +418,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 9 && i < 21) {
 						a3children[i].position = Vector3.Lerp(a3children[i].position, pitLocations[i-9], 0.05f);
 					}
-					else {
+					else if (i >= 21 && i < 33) {
 						a3children[i].position = Vector3.Lerp(a3children[i].position, pitLocations[i-21], 0.05f);
+					}
+					else if (i >= 33 && i < 45) {
+						a3children[i].position = Vector3.Lerp(a3children[i].position, pitLocations[i-33], 0.05f);
+					}
+					else {
+						a3children[i].position = Vector3.Lerp(a3children[i].position, pitLocations[i-45], 0.05f);
 					}
 				}
 			}
@@ -320,9 +443,17 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-9].Add(tran);
 					indexa3 = i-9;
 				}
+				else if (i >= 21 && i < 33) {
+					groups[i-33].Add(tran);
+					indexa3 = i-33;
+				}
+				else if (i >= 33 && i < 45)  {
+					groups[i-33].Add(tran);
+					indexa3 = i-33;
+				}
 				else {
-					groups[i-21].Add(tran);
-					indexa3 = i-21;
+					groups[i-45].Add(tran);
+					indexa3 = i-45;
 				}
 			}
 			moves = 0;
@@ -341,8 +472,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, topLocations [i + 4], 0.05f);
 					} else if (i >= 8 && i < 20) {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, topLocations [i - 8], 0.05f);
-					} else {
+					} else if (i >= 20 && i < 32) {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, topLocations [i - 20], 0.05f);
+					} else if (i >= 32 && i < 44) {
+						a4children [i].position = Vector3.Lerp (a4children [i].position, topLocations [i - 32], 0.05f);
+					} else {
+						a4children [i].position = Vector3.Lerp (a4children [i].position, topLocations [i - 44], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
@@ -350,8 +485,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i + 4], 0.05f);
 					} else if (i >= 8 && i < 20) {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i - 8], 0.05f);
-					} else {
+					} else if (i >= 20 && i < 32) {
 						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i - 20], 0.05f);
+					} else if (i >= 32 && i < 44) {
+						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i - 32], 0.05f);
+					} else {
+						a4children [i].position = Vector3.Lerp (a4children [i].position, pitLocations [i - 44], 0.05f);
 					}
 				}
 			}
@@ -366,9 +505,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 4 && i < 20) {
 					groups [i - 8].Add (tran);
 					indexa4 = i-8;
-				} else {
+				} else if (i >= 20 && i < 32) {
 					groups [i - 20].Add (tran);
 					indexa4 = i-20;
+				} else if (i >= 32 && i < 44) {
+					groups [i - 32].Add (tran);
+					indexa4 = i-32;
+				} else {
+					groups [i - 44].Add (tran);
+					indexa4 = i-44;
 				}
 			}
 			moves = 0;
@@ -387,8 +532,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, topLocations [i + 5], 0.05f);
 					} else if (i >= 7 && i < 19) {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, topLocations [i - 7], 0.05f);
-					} else {
+					} else if (i >= 19 && i < 31) {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, topLocations [i - 19], 0.05f);
+					} else if (i >= 31 && i < 43) {
+						a5children [i].position = Vector3.Lerp (a5children [i].position, topLocations [i - 31], 0.05f);
+					} else {
+						a5children [i].position = Vector3.Lerp (a5children [i].position, topLocations [i - 43], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
@@ -396,8 +545,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i + 5], 0.05f);
 					} else if (i >= 7 && i < 19) {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i - 7], 0.05f);
-					} else {
+					} else if (i >= 19 && i < 31) {
 						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i - 19], 0.05f);
+					} else if (i >= 31 && i < 43) {
+						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i - 31], 0.05f);
+					} else {
+						a5children [i].position = Vector3.Lerp (a5children [i].position, pitLocations [i - 43], 0.05f);
 					}
 				}
 			}
@@ -412,9 +565,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 7 && i < 19) {
 					groups [i - 7].Add (tran);
 					indexa5 = i-7;
-				} else {
+				} else if (i >= 19 && i < 31) {
 					groups [i - 19].Add (tran);
 					indexa5 = i-19;
+				} else if (i >= 31 && i < 43) {
+					groups [i - 31].Add (tran);
+					indexa5 = i-31;
+				} else {
+					groups [i - 43].Add (tran);
+					indexa5 = i-43;
 				}
 			}
 			moves = 0;
@@ -433,17 +592,25 @@ public class Oware_Script_Game : MonoBehaviour {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, topLocations [i + 6], 0.05f);
 					} else if (i >= 6 && i < 18) {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, topLocations [i - 6], 0.05f);
-					} else {
+					} else if (i >= 18 && i < 30) {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, topLocations [i - 18], 0.05f);
+					} else if (i >= 30 && i < 42) {
+						a6children [i].position = Vector3.Lerp (a6children [i].position, topLocations [i - 30], 0.05f);
+					} else {
+						a6children [i].position = Vector3.Lerp (a6children [i].position, topLocations [i - 42], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
 					if (i < 6) {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i + 6], 0.05f);
 					} else if (i >= 6 && i < 18) {
-						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 5], 0.05f);
-					} else {
+						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 6], 0.05f);
+					} else if (i >= 18 && i < 30) {
 						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 18], 0.05f);
+					} else if (i >= 30 && i < 42) {
+						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 30], 0.05f);
+					} else {
+						a6children [i].position = Vector3.Lerp (a6children [i].position, pitLocations [i - 42], 0.05f);
 					}
 				}
 			}
@@ -458,9 +625,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 6 && i < 18) {
 					groups [i - 6].Add (tran);
 					indexa6 = i-6;
-				} else {
+				} else if (i >= 18 && i < 30) {
 					groups [i - 18].Add (tran);
 					indexa6 = i-18;
+				} else if (i >= 30 && i < 42) {
+					groups [i - 30].Add (tran);
+					indexa6 = i-30;
+				} else {
+					groups [i - 42].Add (tran);
+					indexa6 = i-42;
 				}
 			}
 			moves = 0;
@@ -481,8 +654,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 5 && i < 17) {
 						b1children[i].position = Vector3.Lerp(b1children[i].position, topLocations[i-5], 0.05f);
 					}
-					else {
+					else if (i >= 17 && i < 29) {
 						b1children[i].position = Vector3.Lerp(b1children[i].position, topLocations[i-17], 0.05f);
+					}
+					else if (i >= 29 && i < 41) {
+						b1children[i].position = Vector3.Lerp(b1children[i].position, topLocations[i-29], 0.05f);
+					}
+					else {
+						b1children[i].position = Vector3.Lerp(b1children[i].position, topLocations[i-41], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -492,8 +671,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 5 && i < 17) {
 						b1children[i].position = Vector3.Lerp(b1children[i].position, pitLocations[i-5], 0.05f);
 					}
-					else {
+					else if (i >= 17 && i < 29) {
 						b1children[i].position = Vector3.Lerp(b1children[i].position, pitLocations[i-17], 0.05f);
+					}
+					else if (i >= 29 && i < 41) {
+						b1children[i].position = Vector3.Lerp(b1children[i].position, pitLocations[i-29], 0.05f);
+					}
+					else {
+						b1children[i].position = Vector3.Lerp(b1children[i].position, pitLocations[i-41], 0.05f);
 					}
 				}
 			}
@@ -507,13 +692,21 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i+7].Add(tran);
 					indexb1 = i+7;
 				}
-				else if (i >= 7 && i < 17)  {
+				else if (i >= 5 && i < 17)  {
 					groups[i-5].Add(tran);
 					indexb1 = i-5;
 				}
-				else {
+				else if (i >= 17 && i < 29) {
 					groups[i-17].Add(tran);
 					indexb1 = i-17;
+				}
+				else if (i >= 29 && i < 41)  {
+					groups[i-29].Add(tran);
+					indexb1 = i-29;
+				}
+				else {
+					groups[i-41].Add(tran);
+					indexb1 = i-41;
 				}
 			}
 			moves = 0;
@@ -534,8 +727,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 4 && i < 16) {
 						b2children[i].position = Vector3.Lerp(b2children[i].position, topLocations[i-4], 0.05f);
 					}
-					else {
+					else if (i >= 16 && i < 28) {
 						b2children[i].position = Vector3.Lerp(b2children[i].position, topLocations[i-16], 0.05f);
+					}
+					else if (i >= 28 && i < 40) {
+						b2children[i].position = Vector3.Lerp(b2children[i].position, topLocations[i-28], 0.05f);
+					}
+					else {
+						b2children[i].position = Vector3.Lerp(b2children[i].position, topLocations[i-40], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -545,8 +744,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 4 && i < 16) {
 						b2children[i].position = Vector3.Lerp(b2children[i].position, pitLocations[i-4], 0.05f);
 					}
-					else {
+					else if (i >= 16 && i < 28) {
 						b2children[i].position = Vector3.Lerp(b2children[i].position, pitLocations[i-16], 0.05f);
+					}
+					else if (i >= 28 && i < 40) {
+						b2children[i].position = Vector3.Lerp(b2children[i].position, pitLocations[i-28], 0.05f);
+					}
+					else {
+						b2children[i].position = Vector3.Lerp(b2children[i].position, pitLocations[i-40], 0.05f);
 					}
 				}
 			}
@@ -564,9 +769,17 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-4].Add(tran);
 					indexb2 = i-4;
 				}
-				else {
+				else if (i >= 16 && i < 28) {
 					groups[i-16].Add(tran);
 					indexb2 = i-16;
+				}
+				else if (i >= 28 && i < 40)  {
+					groups[i-28].Add(tran);
+					indexb2 = i-28;
+				}
+				else {
+					groups[i-40].Add(tran);
+					indexb2 = i-40;
 				}
 			}
 			moves = 0;
@@ -587,8 +800,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 3 && i < 15) {
 						b3children[i].position = Vector3.Lerp(b3children[i].position, topLocations[i-3], 0.05f);
 					}
-					else {
+					else if (i >= 15 && i < 27) {
 						b3children[i].position = Vector3.Lerp(b3children[i].position, topLocations[i-15], 0.05f);
+					}
+					else if (i >= 27 && i < 39) {
+						b3children[i].position = Vector3.Lerp(b3children[i].position, topLocations[i-27], 0.05f);
+					}
+					else {
+						b3children[i].position = Vector3.Lerp(b3children[i].position, topLocations[i-39], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100){
@@ -598,8 +817,14 @@ public class Oware_Script_Game : MonoBehaviour {
 					else if (i >= 3 && i < 15) {
 						b3children[i].position = Vector3.Lerp(b3children[i].position, pitLocations[i-3], 0.05f);
 					}
-					else {
+					else if (i >= 15 && i < 27) {
 						b3children[i].position = Vector3.Lerp(b3children[i].position, pitLocations[i-15], 0.05f);
+					}
+					else if (i >= 27 && i < 39) {
+						b3children[i].position = Vector3.Lerp(b3children[i].position, pitLocations[i-27], 0.05f);
+					}
+					else {
+						b3children[i].position = Vector3.Lerp(b3children[i].position, pitLocations[i-39], 0.05f);
 					}
 				}
 			}
@@ -617,9 +842,17 @@ public class Oware_Script_Game : MonoBehaviour {
 					groups[i-3].Add(tran);
 					indexb3 = i-3;
 				}
+				else if (i >= 15 && i < 27) {
+					groups[i-27].Add(tran);
+					indexb3 = i-27;
+				}
+				else if (i >= 27 && i < 39)  {
+					groups[i-27].Add(tran);
+					indexb3 = i-27;
+				}
 				else {
-					groups[i-15].Add(tran);
-					indexb3 = i-15;
+					groups[i-39].Add(tran);
+					indexb3 = i-39;
 				}
 			}
 			moves = 0;
@@ -638,8 +871,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, topLocations [i + 10], 0.05f);
 					} else if (i >= 2 && i < 14) {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, topLocations [i - 2], 0.05f);
-					} else {
+					} else if (i >= 14 && i < 26) {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, topLocations [i - 14], 0.05f);
+					} else if (i >= 26 && i < 38) {
+						b4children [i].position = Vector3.Lerp (b4children [i].position, topLocations [i - 26], 0.05f);
+					} else {
+						b4children [i].position = Vector3.Lerp (b4children [i].position, topLocations [i - 38], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
@@ -647,8 +884,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i + 10], 0.05f);
 					} else if (i >= 2 && i < 14) {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i - 2], 0.05f);
-					} else {
+					} else if (i >= 14 && i < 26) {
 						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i - 14], 0.05f);
+					} else if (i >= 26 && i < 38) {
+						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i - 26], 0.05f);
+					} else {
+						b4children [i].position = Vector3.Lerp (b4children [i].position, pitLocations [i - 38], 0.05f);
 					}
 				}
 			}
@@ -663,9 +904,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 2 && i < 14) {
 					groups [i - 2].Add (tran);
 					indexb4 = i-2;
-				} else {
+				} else if (i >= 14 && i < 26) {
 					groups [i - 14].Add (tran);
 					indexb4 = i-14;
+				} else if (i >= 26 && i < 38) {
+					groups [i - 26].Add (tran);
+					indexb4 = i-26;
+				} else {
+					groups [i - 38].Add (tran);
+					indexb4 = i-38;
 				}
 			}
 			moves = 0;
@@ -684,8 +931,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, topLocations [i + 11], 0.05f);
 					} else if (i >= 1 && i < 13) {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, topLocations [i - 1], 0.05f);
-					} else {
+					} else if (i >= 13 && i < 25) {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, topLocations [i - 13], 0.05f);
+					} else if (i >= 25 && i < 37) {
+						b5children [i].position = Vector3.Lerp (b5children [i].position, topLocations [i - 25], 0.05f);
+					} else {
+						b5children [i].position = Vector3.Lerp (b5children [i].position, topLocations [i - 37], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
@@ -693,8 +944,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i + 11], 0.05f);
 					} else if (i >= 1 && i < 13) {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i - 1], 0.05f);
-					} else {
+					} else if (i >= 13 && i < 25) {
 						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i - 13], 0.05f);
+					} else if (i >= 25 && i < 37) {
+						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i - 25], 0.05f);
+					} else {
+						b5children [i].position = Vector3.Lerp (b5children [i].position, pitLocations [i - 37], 0.05f);
 					}
 				}
 			}
@@ -709,9 +964,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 1 && i < 13) {
 					groups [i - 1].Add (tran);
 					indexb5 = i-1;
-				} else {
+				} else if (i >= 13 && i < 25) {
 					groups [i - 13].Add (tran);
 					indexb5 = i-13;
+				} else if (i >= 25 && i < 37) {
+					groups [i - 25].Add (tran);
+					indexb5 = i-25;
+				} else {
+					groups [i - 37].Add (tran);
+					indexb5 = i-37;
 				}
 			}
 			moves = 0;
@@ -730,8 +991,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, topLocations [i], 0.05f);
 					} else if (i >= 12 && i < 24) {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, topLocations [i - 12], 0.05f);
-					} else {
+					} else if (i >= 24 && i < 36) {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, topLocations [i - 24], 0.05f);
+					} else if (i >= 38 && i < 48) {
+						b6children [i].position = Vector3.Lerp (b6children [i].position, topLocations [i - 36], 0.05f);
+					} else {
+						b6children [i].position = Vector3.Lerp (b6children [i].position, topLocations [i - 48], 0.05f);
 					}
 				}
 				else if (moves >= i * 100 + 75 && moves < i * 100 + 100) {
@@ -739,8 +1004,12 @@ public class Oware_Script_Game : MonoBehaviour {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i], 0.05f);
 					} else if (i >= 12 && i < 24) {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i - 12], 0.05f);
-					} else {
+					} else if (i >= 24 && i < 36) {
 						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i - 24], 0.05f);
+					} else if (i >= 38 && i < 48) {
+						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i - 36], 0.05f);
+					} else {
+						b6children [i].position = Vector3.Lerp (b6children [i].position, pitLocations [i - 48], 0.05f);
 					}
 				}
 			}
@@ -755,9 +1024,15 @@ public class Oware_Script_Game : MonoBehaviour {
 				} else if (i >= 12 && i < 24) {
 					groups [i - 12].Add (tran);
 					indexb6 = i-12;
-				} else {
+				} else if (i >= 24 && i < 36){
 					groups [i - 24].Add (tran);
 					indexb6 = i-24;
+				} else if (i >= 36 && i < 48) {
+					groups [i - 36].Add (tran);
+					indexb6 = i-36;
+				} else {
+					groups [i - 48].Add (tran);
+					indexb6 = i-48;
 				}
 			}
 			moves = 0;
@@ -918,5 +1193,9 @@ public class Oware_Script_Game : MonoBehaviour {
 			}
 		}
 		return locs;
+	}
+
+	public bool PLayersTurn(){
+		return isPlayerTurn;
 	}
 }
