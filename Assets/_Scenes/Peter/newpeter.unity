@@ -3632,6 +3632,7 @@ Terrain:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TreeDistance: 1978
   m_TreeBillboardDistance: 83
   m_TreeCrossFadeLength: 5
@@ -3644,6 +3645,13 @@ Terrain:
   m_TreeMaximumFullLODCount: 505
   m_DetailObjectDistance: 20
 >>>>>>> origin/master
+=======
+  m_TreeDistance: 20
+  m_TreeBillboardDistance: 83
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 20
+  m_DetailObjectDistance: 20
+>>>>>>> parent of 587b7f6... terrain changes
 =======
   m_TreeDistance: 20
   m_TreeBillboardDistance: 83
@@ -4760,6 +4768,7 @@ Prefab:
       value: Player
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 170172, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_TagString
       value: Player
@@ -4769,6 +4778,8 @@ Prefab:
       value: 0
 >>>>>>> origin/master
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 587b7f6... terrain changes
 =======
 >>>>>>> parent of 587b7f6... terrain changes
 =======
