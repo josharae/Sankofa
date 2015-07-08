@@ -5,7 +5,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	GameObject player;
 	public GameObject arenaPosition;
-	private float MaxSpeed = 30;
+	private float MaxSpeed = 20;
 	private bool isStunned = false, isSleeping = true, isChasing = false;
 	Vector3 originalPosition;
 	Quaternion originalRotation;
@@ -59,8 +59,8 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 				Vector3 movement = transform.forward * vel;
 				Debug.Log(vel);
 				movement.y = GetComponent<Rigidbody> ().velocity.y;
-				//GetComponent<Rigidbody> ().velocity =  movement;
-				transform.Translate(MaxSpeed*Vector3.forward*Time.deltaTime);
+				GetComponent<Rigidbody> ().velocity =  movement;
+				//transform.Translate(MaxSpeed*Vector3.forward*Time.deltaTime);
 			}
 			//	this.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * MaxSpeed);
 		}
