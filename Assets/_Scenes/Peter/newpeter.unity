@@ -2262,6 +2262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d42310bebd4734481fe31f25c34d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arenaPosition: {fileID: 0}
 --- !u!4 &863929984 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 70c0e594753144fac91d3875758ceb6b, type: 2}
@@ -2726,7 +2727,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 425610, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 903.599976
+      value: 916
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2734,7 +2735,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 73.4000015
+      value: 135.300003
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2754,7 +2755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
