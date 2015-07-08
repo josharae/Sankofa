@@ -446,7 +446,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: c647fe7900b624719bacfe0cfa4108c9, type: 2}
-  m_TreeDistance: 20
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -547,7 +547,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 8bac004438f0044a0ac1eff386591cdf, type: 2}
-  m_TreeDistance: 20
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -1345,7 +1345,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 6bf349656637b4653a9a83ac9b413e13, type: 2}
-  m_TreeDistance: 20
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -1626,6 +1626,9 @@ MonoBehaviour:
   m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &449691052
 Prefab:
   m_ObjectHideFlags: 0
@@ -2038,7 +2041,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 9d785c78180b54bbbb6ade8b33c8af27, type: 2}
-  m_TreeDistance: 20
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -3177,10 +3180,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
   m_PrefabInternal: {fileID: 15188982}
---- !u!4 &1305490989 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_PrefabInternal: {fileID: 1966828646}
 --- !u!4 &1322871574 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e349b6a927183154d9bf449b09b8e413, type: 2}
@@ -3189,26 +3188,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e349b6a927183154d9bf449b09b8e413, type: 2}
   m_PrefabInternal: {fileID: 1240131312}
---- !u!1 &1361213721 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 171438, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
-  m_PrefabInternal: {fileID: 1851757979}
---- !u!114 &1361213727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1361213721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1305490989}
-  distance: 10
-  height: 1
-  rotationDamping: 5
-  heightDamping: 10
 --- !u!1001 &1371815253
 Prefab:
   m_ObjectHideFlags: 0
@@ -3624,7 +3603,6 @@ GameObject:
   - 4: {fileID: 1486456497}
   - 218: {fileID: 1486456496}
   - 154: {fileID: 1486456495}
-  - 114: {fileID: 1486456498}
   m_Layer: 0
   m_Name: main terrain
   m_TagString: Untagged
@@ -3652,6 +3630,7 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 8fd1521ea300d49219698f1e8c16d714, type: 2}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TreeDistance: 1978
   m_TreeBillboardDistance: 83
   m_TreeCrossFadeLength: 5
@@ -3664,6 +3643,13 @@ Terrain:
   m_TreeMaximumFullLODCount: 505
   m_DetailObjectDistance: 20
 >>>>>>> origin/master
+=======
+  m_TreeDistance: 20
+  m_TreeBillboardDistance: 83
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 20
+  m_DetailObjectDistance: 20
+>>>>>>> parent of 587b7f6... terrain changes
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -3695,20 +3681,6 @@ Transform:
   - {fileID: 316857455}
   m_Father: {fileID: 284170183}
   m_RootOrder: 0
---- !u!114 &1486456498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1486456494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3326e4e3334004698b7e5a47c408b6fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 1486456496}
-  minScale: .800000012
-  maxScale: 1.5
 --- !u!1001 &1486654481
 Prefab:
   m_ObjectHideFlags: 0
@@ -4769,6 +4741,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 409854, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_LocalPosition.y
       value: .606999993
@@ -4787,6 +4760,8 @@ Prefab:
       value: 0
 >>>>>>> origin/master
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 587b7f6... terrain changes
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
   m_IsPrefabParent: 0
@@ -5091,68 +5066,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79bce83937e43d042843a359e671ca99, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1966828646
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .532675207
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .0703404546
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: .836132765
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -.110415146
-      objectReference: {fileID: 0}
-    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_MoveSpeedMultiplier
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1974637611
 Prefab:
