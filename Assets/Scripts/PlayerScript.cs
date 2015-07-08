@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour {
 		yRotation += mouseHorizontal;
 		xRotation += mouseVertical * -1;
 		transform.eulerAngles = new Vector3 (0, yRotation, 0);
-		
+
 		if (xRotation <= DownLimit && xRotation >= UpLimit) {
 			camera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
 		} else {
