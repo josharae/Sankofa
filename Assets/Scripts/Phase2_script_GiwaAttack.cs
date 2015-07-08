@@ -4,9 +4,8 @@ using System.Collections;
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	public GameObject Player;
-		
-	private float MaxSpeed = 250;
-	private GameObject Target = new GameObject();	
+	private float MaxSpeed = 30000;
+	public GameObject Target;	
 	private bool isSlowing = false;
 	//private bool charge = true;
 	//private int IntHits = 0;
@@ -16,7 +15,8 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		Rigidbody rb = GetComponent<Rigidbody> ();
 		if (rb.velocity.magnitude >= ((Target.transform.position) - (transform.position)).magnitude)
 			isSlowing = true;
-		isSlowing = false;
+		else
+			isSlowing = false;
 	}
 
 	void Start()
@@ -27,8 +27,8 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 
 	void Update()
 	{
-		Target.transform.position.Set(Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
-		slowing ();
+//		Target.transform.position.Set(Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
+//		slowing ();
 		Rigidbody rb = GetComponent<Rigidbody> ();
 		//if (rb.velocity <= (new Vector3 (25, 25, 25)))
 		//	charge = true;
@@ -40,7 +40,8 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		else //if(!isSlowing)//(charge) // What is the charging condition    (NOT SLOWING)
 		{
 			transform.LookAt(Target.transform);
-			rb.AddRelativeForce (Vector3.forward * MaxSpeed * Time.smoothDeltaTime);
+			Vector3 localVel = transform.InverseTransformDirection(rb.velocity);
+			rb.AddForce (new Vector3(localVel.x, 0.0f, localVel.z) * MaxSpeed * Time.smoothDeltaTime);
 		}
 	}
 
