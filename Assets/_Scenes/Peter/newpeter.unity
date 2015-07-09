@@ -499,7 +499,7 @@ Transform:
   - {fileID: 863929984}
   - {fileID: 1455761557}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &101215352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3055,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -250
+      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4826,7 +4826,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 8fd1521ea300d49219698f1e8c16d714, type: 2}
-  m_TreeDistance: 100
+  m_TreeDistance: 151
   m_TreeBillboardDistance: 98
   m_TreeCrossFadeLength: 12.3000002
   m_TreeMaximumFullLODCount: 505
