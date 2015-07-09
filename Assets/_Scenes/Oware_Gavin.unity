@@ -3359,6 +3359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScore: 0
   opponentScore: 0
+  isMoving: 0
+  isCollecting: 0
   isPlayerTurn: 0
   gameOver: 0
   a1: {fileID: 579004701}

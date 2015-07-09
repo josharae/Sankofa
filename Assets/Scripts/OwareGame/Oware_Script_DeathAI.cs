@@ -22,26 +22,29 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 	void Update () {
 		if (!osg.isPlayerTurn) {
 			if (!osg.isMoving && !osg.isCollecting){
-				List<Transform> nextMove = FindBestOption();
-				if (nextMove != null){
-					if (nextMove == osg.b1children){
-						osg.MoveB1();
-					}
-					else if (nextMove == osg.b2children){
-						osg.MoveB2();
-					}
-					else if (nextMove == osg.b3children){
-						osg.MoveB3();
-					}
-					else if (nextMove == osg.b4children){
-						osg.MoveB4();
-					}
-					else if (nextMove == osg.b5children){
-						osg.MoveB5();
-					}
-					else if (nextMove == osg.b6children){
-						osg.MoveB6();
-					}
+				List<Transform> nextMove = null;
+				int deathScore = FindBestScore();
+				int playerScore = GetPossibleLoss();
+				if (deathScore > playerScore){
+					nextMove = FindBestOffensiveMove();
+				}
+				if (nextMove == osg.b1children){
+					osg.MoveB1();
+				}
+				else if (nextMove == osg.b2children){
+					osg.MoveB2();
+				}
+				else if (nextMove == osg.b3children){
+					osg.MoveB3();
+				}
+				else if (nextMove == osg.b4children){
+					osg.MoveB4();
+				}
+				else if (nextMove == osg.b5children){
+					osg.MoveB5();
+				}
+				else if (nextMove == osg.b6children){
+					osg.MoveB6();
 				}
 			}
 		}
@@ -68,6 +71,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 				newBoard[i-47].Add(nextMove[i]);
 			}
 		}
+		newBoard [index].Clear ();
 		return newBoard;
 	}
 
@@ -106,7 +110,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		return possibleScore;
 	}
 
-	public List<Transform> FindBestOption(){
+	public List<Transform> FindBestOffensiveMove(){
 		List<Transform> nextMove = null;
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
@@ -119,5 +123,46 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			}
 		}
 		return nextMove;
+	}
+
+	public int FindBestScore(){
+		int bestScore = 0;
+		for (int i = 6; i < 12; i++) {
+			List<Transform> list = osg.groups[i];
+			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
+			int possibleScore = GetPossibleScore(possibleBoard, list);
+			if (possibleScore > bestScore){
+				bestScore = possibleScore;
+			}
+		}
+		return bestScore;
+	}
+
+	public int GetPossibleLoss(List<List<Transform>> firstBoard){
+		int bestPlayerScore = 0;
+		for (int i = 0; i < 6; i++){
+			List<Transform> playerMove = firstBoard[i];
+			List<List<Transform>> secondBoard = GetPossibleBoard(playerMove);
+			int playerPoints = GetPossibleScore(secondBoard, playerMove);
+			if (bestPlayerScore < playerPoints){
+				bestPlayerScore = playerPoints;
+			}
+		}
+		return bestPlayerScore;
+	}
+
+	public List<Transform> GetBestPlayerMove(List<List<Transform>> firstBoard){
+		int bestPlayerScore = 0;
+		List<Transform> bestPlayerMove = null;
+		for (int i = 0; i < 6; i++){
+			List<Transform> playerMove = firstBoard[i];
+			List<List<Transform>> secondBoard = GetPossibleBoard(playerMove);
+			int playerPoints = GetPossibleScore(secondBoard, playerMove);
+			if (bestPlayerScore < playerPoints){
+				bestPlayerScore = playerPoints;
+				bestPlayerMove = playerMove;
+			}
+		}
+		return bestPlayerMove;
 	}
 }
