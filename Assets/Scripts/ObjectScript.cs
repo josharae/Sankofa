@@ -10,7 +10,7 @@ public class ObjectScript : MonoBehaviour {
 	Vector3 OriginalPosition;
 	public Animator Explosion;
 	public bool hasBeenThrown;
-	private AudioSource audio;
+	//private AudioSource audio;
 
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -20,7 +20,8 @@ public class ObjectScript : MonoBehaviour {
 	
 	void OnMouseDown(){
 		if (Vector3.Distance (transform.position, player.transform.position) < 20 && !isCollected){
-			player.GetComponent<PlayerScript>().getObject(this.gameObject);
+			player.GetComponent<TutorialPlayer>().getObject(this.gameObject);
+
 		}
 	}
 	
