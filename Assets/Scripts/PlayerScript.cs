@@ -85,8 +85,7 @@ public class PlayerScript : MonoBehaviour {
 		hasObj = false;
 		ChangeBoneRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
-		BoneScript bs = Item.GetComponent<BoneScript> ();
-		bs.SetThrownBool (true);
+		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
 	}
 }
 

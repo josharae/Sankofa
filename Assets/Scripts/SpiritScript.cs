@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiritScript : BoneScript2 {
+public class SpiritScript : ObjectScript {
 
 	// Use this for initialization
 	void Start () {
