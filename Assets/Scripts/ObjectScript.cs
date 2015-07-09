@@ -8,9 +8,7 @@ public class ObjectScript : MonoBehaviour {
 	GameObject player;
 	public bool isCollected = false;
 	Vector3 OriginalPosition;
-	public Animator Explosion;
 	public bool hasBeenThrown;
-	private AudioSource audio;
 
 	void Start () {
 		player = GameObject.Find ("Player");
