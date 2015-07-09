@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class oware_ui_manager : MonoBehaviour {
 	
 	public List<Text> fields;
+	//private int pScore;
+	//private int dScore;
 
 	private Oware_Script_Game gScript;
 	private GameObject PositionHolder;
@@ -15,7 +17,8 @@ public class oware_ui_manager : MonoBehaviour {
 	public Text ScoreBoard;
 	private string deathTurn;
 	private string playerTurn;
-
+	
+	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < 23; i += 2) {
 			listHolder.Add (OwareObject.transform.GetChild(i).gameObject);
@@ -25,7 +28,8 @@ public class oware_ui_manager : MonoBehaviour {
 		TurnText.text = deathTurn;
 		gScript = OwareObject.GetComponent<Oware_Script_Game> ();
 	}
-
+	// Grocery List: Eggs, milk, steak, and buns.
+	// Update is called once per frame
 	void Update () {
 		//Debug.Log (listHolder [0].transform.childCount.ToString());
 		UpdateTurn();
@@ -71,6 +75,16 @@ public class oware_ui_manager : MonoBehaviour {
 		fields [10].text = gScript.b5children.Count.ToString();
 		fields [11].text = gScript.b6children.Count.ToString();
 	}
+	
+//	public void Score(int num) //negative number to add to Death, positive to add to Player
+//	{
+//		if (num == 2 || num == 3 || num == 0) {
+//			ScoreBoard.text = "<color=green>" + (pScore + num).ToString() +  "</color>" + " - " + "<color=red>" + dScore.ToString() + "</color>";
+//		}
+//		else if (num == -2 || num == -3) {
+//			ScoreBoard.text = "<color=green>" + pScore.ToString() + "</color>" + " - " + "<color=red>" + (dScore - num).ToString() + "</color>";
+//		}
+//	}
 }
 
 
