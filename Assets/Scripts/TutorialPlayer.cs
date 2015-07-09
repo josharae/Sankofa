@@ -5,7 +5,6 @@ public class TutorialPlayer : MonoBehaviour {
 	private float speed = 15f;
 	public GameObject Hand;
 	GameObject GameManager;
-	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
