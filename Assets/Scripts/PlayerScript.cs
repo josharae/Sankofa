@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour {
 		yRotation += mouseHorizontal;
 		xRotation += mouseVertical * -1;
 		transform.eulerAngles = new Vector3 (0, yRotation, 0);
-		
+
 		if (xRotation <= DownLimit && xRotation >= UpLimit) {
 			camera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
 		} else {
@@ -85,8 +85,7 @@ public class PlayerScript : MonoBehaviour {
 		hasObj = false;
 		ChangeBoneRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
-		BoneScript bs = Item.GetComponent<BoneScript> ();
-		bs.SetThrownBool (true);
+		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
 	}
 }
 
