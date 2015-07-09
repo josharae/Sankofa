@@ -22,11 +22,14 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 	void Update () {
 		if (!osg.isPlayerTurn) {
 			if (!osg.isMoving && !osg.isCollecting){
-				List<Transform> nextMove = null;
+				List<Transform> nextMove = FindBestOffensiveMove();
+				List<List<Transform>> nextBoard = GetPossibleBoard(nextMove);
 				int deathScore = FindBestScore();
-				int playerScore = GetPossibleLoss();
-				if (deathScore > playerScore){
-					nextMove = FindBestOffensiveMove();
+				int playerScore = GetPossibleLoss(nextBoard);
+				if (deathScore < playerScore){
+					nextMove = FindBestDefensiveMove();
+				}
+				else if (deathScore == playerScore && deathScore == 0){
 				}
 				if (nextMove == osg.b1children){
 					osg.MoveB1();
@@ -55,21 +58,10 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int index = osg.groups.IndexOf (nextMove);
 		List<List<Transform>> newBoard = osg.groups;
 		for (int i = index; i < size + index; i++) {
-			if (i < 11){
-				newBoard[i+1].Add(nextMove[i]);
-			}
-			else if (i >= 11 && i < 23) {
-				newBoard[i-11].Add(nextMove[i]);
-			}
-			else if (i>= 23 && i < 35) {
-				newBoard[i-23].Add(nextMove[i]);
-			}
-			else if (i >= 35 && i < 47){
-				newBoard[i-33].Add(nextMove[i]);
-			}
-			else {
-				newBoard[i-47].Add(nextMove[i]);
-			}
+			int j = i;
+			while (j >= 11)
+				j -= 12;
+			newBoard[j+1].Add(nextMove[i]);
 		}
 		newBoard [index].Clear ();
 		return newBoard;
@@ -120,6 +112,27 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			if (possibleScore > bestScore){
 				bestScore = possibleScore;
 				nextMove = list;
+			}
+		}
+		return nextMove;
+	}
+
+	public List<Transform> FindBestDefensiveMove(){
+		List<Transform> nextMove = null;
+		int bestDefense = 0;
+		for (int i = 6; i < 12; i++) {
+			List<Transform> list = osg.groups[i];
+			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
+			int possibleScore = GetPossibleLoss(possibleBoard);
+			if (possibleScore > bestDefense){
+				bestDefense = possibleScore;
+				List<Transform> playerMove = GetBestPlayerMove(possibleBoard);
+				List<List<Transform>> newBoard = GetPossibleBoard(playerMove);
+				int index = playerMove.Count + newBoard.IndexOf(playerMove);
+				while (index >= 12){
+					index -= 12;
+				}
+				nextMove = newBoard[index];
 			}
 		}
 		return nextMove;
