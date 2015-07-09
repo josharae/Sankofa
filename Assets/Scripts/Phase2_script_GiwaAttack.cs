@@ -3,9 +3,8 @@ using System.Collections;
 
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
-<<<<<<< HEAD
-	public GameObject Player;
-	private float MaxSpeed = 30000;
+	//public GameObject Player;
+	//private float MaxSpeed = 30000;
 	public GameObject Target;	
 	private bool isSlowing = false;
 	//private bool charge = true;
@@ -19,7 +18,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		else
 			isSlowing = false;
 	}
-=======
 	GameObject player;
 	public GameObject arenaPosition;
 	private float MaxSpeed = 20;
@@ -34,7 +32,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 //			isSlowing = true;
 //		isSlowing = false;
 //	}
->>>>>>> origin/master
 
 	void Start()
 	{
@@ -51,19 +48,15 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		//	charge = true;
 		if (isSlowing) // WHAT IS THE SLOWING CONDITION
 		{
-<<<<<<< HEAD
 			Vector3 val = rb.velocity;
 			rb.AddForce(Vector3.SmoothDamp(Vector3.forward,new Vector3(0,0,0),ref val,2F)); // HOW TO MAKE A REF
 		}
 		else //if(!isSlowing)//(charge) // What is the charging condition    (NOT SLOWING)
 		{
 			transform.LookAt(Target.transform);
-<<<<<<< HEAD
 			Vector3 localVel = transform.InverseTransformDirection(rb.velocity);
 			rb.AddForce (new Vector3(localVel.x, 0.0f, localVel.z) * MaxSpeed * Time.smoothDeltaTime);
-=======
 			rb.AddRelativeForce (Vector3.forward * MaxSpeed * Time.smoothDeltaTime);
-=======
 			if(!isChasing){
 				chargingTime = 5f;
 				if(isStunned){
@@ -85,8 +78,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 				//transform.Translate(MaxSpeed*Vector3.forward*Time.deltaTime);
 			}
 			//	this.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * MaxSpeed);
->>>>>>> origin/master
->>>>>>> origin/master
 		}
 	}
 

@@ -2458,15 +2458,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 425610, guid: be23412064bbf22429b4e920bf2f5df5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 878.299988
+      value: 911.400024
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: be23412064bbf22429b4e920bf2f5df5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 45.3400002
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: be23412064bbf22429b4e920bf2f5df5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 137.369995
+      value: 137.399994
       objectReference: {fileID: 0}
     - target: {fileID: 425610, guid: be23412064bbf22429b4e920bf2f5df5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4004,8 +4004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d42310bebd4734481fe31f25c34d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 501660009}
   Target: {fileID: 501660009}
+  arenaPosition: {fileID: 0}
 --- !u!1 &1617619151
 GameObject:
   m_ObjectHideFlags: 0
