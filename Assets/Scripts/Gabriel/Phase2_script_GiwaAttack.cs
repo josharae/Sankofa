@@ -5,7 +5,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	GameObject player, target;
 	public GameObject arenaPosition;
-	private float maxSpeed = 30;
+	private float maxSpeed = 30, hitPoints = 3;
 	private bool isStunned = false, isSleeping = true, isChasing = false;
 	Vector3 originalPosition;
 	Quaternion originalRotation;
@@ -19,7 +19,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		originalRotation = this.transform.rotation;
 		currentRate = initialRate;
 		target = player;
-
 	}
 
 	void FixedUpdate()
@@ -77,7 +76,15 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	}
 
 	void OnCollisionEnter(Collision other){
-		if (other.gameObject.tag == Tags.Boulder || other.gameObject.tag == Tags.Player) {
+		if (other.gameObject.tag == Tags.Boulder && other.gameObject.tag != Tags.Player) { //if boulder and not player
+			isStunned = true; //stun
+			hitPoints--; //-1 hitpoint
+			if(hitPoints == 0)
+			{
+				//congratulations message, win scene, something happens, etc.
+			}
+		}
+		else if (other.gameObject.tag == Tags.Boulder || other.gameObject.tag == Tags.Player) {
 			isStunned = true;
 			resetPosition();
 		}
