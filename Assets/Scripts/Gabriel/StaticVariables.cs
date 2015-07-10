@@ -27,10 +27,11 @@ public static class Tags
 
 public static class Scenes
 {
-	public const string MainScene = "terrainScene";
+	public const string MainScene = "mainTerrainScene";
 	public const string StartMenu = "ui_startMenu";
 	public const string FirstScene = "ui_loadScreen";
 	public const string LoadScene = "ui_loadSaves";
+	public const string TutorialScene = "tutorialScene";
 
 }
 

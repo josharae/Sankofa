@@ -1,32 +1,9 @@
-﻿//using UnityEngine;
-//
-//using System.Collections;
-//
-//public class EggScript : ObjectScript {
-//
-//	public Animator Explosion;
-//	private AudioSource audio;
-//	private bool hasBeenThrown;
-//	void Start(){
-//		Explosion.SetBool("Explode", false);
-//		Explosion = GetComponent<Animator> ();
-//	}
-//	
-//	void OnCollisionEnter(Collision other){
-//		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<ObjectScript>().hasBeenThrown) {
-//			Explosion.SetBool("Explode", true);
-//		}
-//	}
-//}
-
-//using UnityEngine;
-//
-using UnityEngine;
+﻿using UnityEngine;
 
 using System.Collections;
 
 public class EggScript : MonoBehaviour {
-	GameObject player;
+	GameObject player, background;
 	public bool isCollected = false;
 	Vector3 OriginalPosition;
 	public Animator Explosion;
@@ -35,6 +12,7 @@ public class EggScript : MonoBehaviour {
 	
 	void Start () {
 		player = GameObject.Find ("Player");
+		background = GameObject.Find ("Background");
 		OriginalPosition = this.transform.position;
 		hasBeenThrown = false;
 		Explosion.SetBool("Explode", false);
@@ -52,7 +30,13 @@ public class EggScript : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<EggScript> ().hasBeenThrown) {
 			this.GetComponent<AudioSource>().Play();
 			Explosion.SetBool ("Explode", true);
+			background.GetComponent<ColorChanger>().isChanging = true;
+			Invoke("loadNewScene",3.5f);
 		}
+	}
+
+	void loadNewScene(){
+		Application.LoadLevel(Scenes.MainScene);
 	}
 	
 	public void TeleportBack(){

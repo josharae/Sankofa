@@ -8,4 +8,6 @@ public class TempFade : MonoBehaviour {
 	{
 		mesh.SetActive (false);
 	}
+
+
 }

@@ -9,7 +9,7 @@ public class ui_changeScene : MonoBehaviour {
 
 	
 	public void StartGame() {
-		Application.LoadLevel (Scenes.MainScene);
+		Application.LoadLevel (Scenes.TutorialScene);
 	}
 
 	public void MainMenu() {
