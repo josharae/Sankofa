@@ -58,7 +58,7 @@ public class Moo : MonoBehaviour
 		Vector3 offset = new Vector3(originalPosition.x - newPosition.x,originalPosition.y - newPosition.y ,originalPosition.z - newPosition.z); // = (0.5 ; -0.3)
 		//float offsetLength =  Mathf.Sqrt(Mathf.Pow(offset.x,2) - Mathf.Pow(offset.z , 2));
 		// = (0.5 / 0.583 ; -0.3 / 0.583) =(0.857 ; -0.515) = 
-		//   
+
 
 		// JUST LEFT / RIGHT
 		//transform.LookAt(target[Index].transform);
