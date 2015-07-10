@@ -45,6 +45,10 @@ public class PlayerScript : MonoBehaviour {
 			moveDirection = new Vector3 (moveHorizontal, 0, moveVertical);
 			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
+
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				moveDirection.y = speed;
+			}
 		}
 		moveDirection.y -= gravity * Time.deltaTime;
 		playerController.Move (moveDirection * Time.deltaTime);
