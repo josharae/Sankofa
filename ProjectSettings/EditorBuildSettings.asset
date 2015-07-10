@@ -19,3 +19,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/tutorialScene.unity
   - enabled: 1
     path: Assets/_Scenes/Gabriel/MainTerrainScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/Oware_Build.unity
+  - enabled: 1
+    path: Assets/_Scenes/InventoryScene.unity
