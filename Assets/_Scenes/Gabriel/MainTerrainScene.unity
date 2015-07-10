@@ -1174,7 +1174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459896, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 47.6030006
+      value: 50.612999
       objectReference: {fileID: 0}
     - target: {fileID: 459896, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1198,7 +1198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459896, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
@@ -2347,8 +2347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollected: 0
-  hasBeenThrown: 0
   Explosion: {fileID: 0}
+  hasBeenThrown: 0
 --- !u!23 &667469401
 MeshRenderer:
   m_ObjectHideFlags: 0

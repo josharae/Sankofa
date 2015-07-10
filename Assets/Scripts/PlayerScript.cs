@@ -7,12 +7,14 @@ public class PlayerScript : MonoBehaviour {
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
-	float yRotation = 0f, xRotation = 0f;
+	float yRotation = 0f, xRotation = 0f, gravity = 20f;
 	public bool hasObj = false;
-	
-	
+	Vector3 moveDirection;
+	CharacterController playerController;
+
 	void Start () {
 		GameManager = GameObject.Find ("GameManager");
+		playerController = this.GetComponent<CharacterController> ();
 	}
 	
 	void FixedUpdate () {
@@ -39,10 +41,13 @@ public class PlayerScript : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 
-		Vector3 movement = (transform.forward * moveVertical + transform.right * moveHorizontal) * speed;
-			movement.y = GetComponent<Rigidbody> ().velocity.y;
-			GetComponent<Rigidbody> ().velocity =  (movement);
-
+		if (playerController.isGrounded) {
+			moveDirection = new Vector3 (moveHorizontal, 0, moveVertical);
+			moveDirection = transform.TransformDirection (moveDirection);
+			moveDirection *= speed;
+		}
+		moveDirection.y -= gravity * Time.deltaTime;
+		playerController.Move (moveDirection * Time.deltaTime);
 	}
 	
 	void Update(){

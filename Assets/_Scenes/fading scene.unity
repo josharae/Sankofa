@@ -174,7 +174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 55712569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a50d4e09bde8c4883842c69ccccf73, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f6314ceabd8645afdf767c30a12ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 55712569}
@@ -188,7 +188,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 195df3fb006bb634c8d3b5d9c199a3cf, type: 2}
+  - {fileID: 2100000, guid: ffd6c18b562d65245bc39cecfb2c318e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -273,7 +273,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 195df3fb006bb634c8d3b5d9c199a3cf, type: 2}
+  - {fileID: 2100000, guid: ffd6c18b562d65245bc39cecfb2c318e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 430660642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40fa360f54ad5154b8ac1bcb69b2ee48, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ec08ebd51050154a9ca7662453d886e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isCollected: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 490111966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b2f759f19beeb448bbbb719e4875fb, type: 3}
+  m_Script: {fileID: 11500000, guid: c0af851dc457b104988dffa44f93f4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Hand: {fileID: 621318769}
@@ -636,6 +636,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!1001 &1591826282
 Prefab:
   m_ObjectHideFlags: 0
@@ -751,6 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
 --- !u!114 &1912758565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +764,13 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
+  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1912758566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +782,9 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1912758567
 Transform:
   m_ObjectHideFlags: 0

@@ -83,7 +83,7 @@ public class TutorialPlayer : MonoBehaviour {
 		hasObj = false;
 		ChangeBoneRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 30);
-		BoneScript bs = Item.GetComponent<BoneScript> ();
+		EggScript bs = Item.GetComponent<EggScript> ();
 		bs.SetThrownBool (true);
 	}
 }
