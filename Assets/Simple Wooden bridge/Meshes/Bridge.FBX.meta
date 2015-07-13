@@ -1,19 +1,12 @@
 fileFormatVersion: 2
-guid: 56e6df5fa3506b74c818953289bcbe37
-timeCreated: 1436399113
-licenseType: Free
+guid: e62d60f4352419f42b47144832de4495
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
     4300000: base
-    9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 3
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -34,7 +27,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -48,7 +41,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -68,7 +61,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
