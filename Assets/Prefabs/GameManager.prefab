@@ -36,7 +36,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 192454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03d325840b98ff4e9fd0922a5d35595, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c01da324e9200945bca50d6a93f5a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 0}
