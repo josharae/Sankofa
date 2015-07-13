@@ -184,7 +184,11 @@ RectTransform:
   - {fileID: 614926406}
   - {fileID: 882495611}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 353334335}
+=======
+  - {fileID: 888680049}
+>>>>>>> origin/master
 =======
   - {fileID: 888680049}
 >>>>>>> origin/master
