@@ -13,15 +13,7 @@ public class fadingText : MonoBehaviour {
 	void Start () {
 		alpha = element.color.a;
 		InvokeRepeating ("fade", 0.0f, repeatRate);
-		InvokeRepeating ("print", 0.0f, repeatRate);
 	}
-
-	void print()
-		{
-			//Debug.Log (element.text);
-			Debug.Log ("public var is " + alpha.ToString());
-			//Debug.Log ("actual alpha is " + element.canvasRenderer.GetAlpha ().ToString ());
-		}
 
 	void fade(){
 		if(element.color.a >= .8f)
