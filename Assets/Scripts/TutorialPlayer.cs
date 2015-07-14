@@ -21,9 +21,7 @@ public class TutorialPlayer : MonoBehaviour {
 
 	void FixedUpdate(){
 		float mouseHorizontal = Input.GetAxis ("Mouse X");
-		float mouseVertical = Input.GetAxis ("Mouse Y");
 		yRotation += mouseHorizontal;
-		xRotation += mouseVertical * -1;
 		transform.eulerAngles = new Vector3 (0, yRotation, 0);
 		
 		if (xRotation <= DownLimit && xRotation >= UpLimit) {

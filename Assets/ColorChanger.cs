@@ -15,6 +15,10 @@ public class ColorChanger : MonoBehaviour {
 		}
 	}
 
+	public void startChanging(){
+		isChanging = true;
+	}
+
 	void changeColor(){
 		Color newColor = Color.black;
 		newColor.r = Random.Range (0.2f, 1);
