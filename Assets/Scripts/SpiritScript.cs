@@ -27,15 +27,15 @@ public class SpiritScript : MonoBehaviour {
 		this.GetComponent<AudioSource>().Play();
 		splish.SetBool("splash", true);
 		this.TeleportBack();
-		}
+		//}                                   <----- Altered by Max
 	}
 	
 	
-	public void TeleportBack(){
+	void TeleportBack(){
 		this.transform.position = OriginalPosition;
 	}
 	
-	public void SetThrownBool(bool thrown){
+	void SetThrownBool(bool thrown){
 		hasBeenThrown = thrown;
 	}
 }
