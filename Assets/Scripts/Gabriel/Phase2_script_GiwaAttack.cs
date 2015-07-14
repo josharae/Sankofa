@@ -62,7 +62,6 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		currentRate += Time.deltaTime;
 		float vel = Mathf.Lerp (0, maxSpeed, currentRate);
 		Vector3 movement = transform.forward * vel;
-		Debug.Log (vel);
 		movement.y = GetComponent<Rigidbody> ().velocity.y;
 		transform.position += transform.forward * maxSpeed * Time.deltaTime; 
 	}
@@ -78,6 +77,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == Tags.Boulder || other.gameObject.tag == Tags.Player) {
+			player.GetComponent<FadingScreen>().EndScene();
 			isStunned = true;
 			resetPosition();
 		}
