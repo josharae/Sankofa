@@ -36,6 +36,17 @@ public static class Scenes
 	public const string Oware = "owareScene";
 }
 
+public static class Build_Scenes
+{
+	public const string MainScene = "Giwa_Build";
+	public const string StartMenu = "StartMenu_Build";
+	public const string FirstScene = "Beginning_Build";
+	public const string LoadScene = "LoadSaves_Build";
+	public const string Inventory = "Inventory_Build";
+	public const string Tutorial = "tutorial_Build";
+	public const string Oware = "Oware_Build";
+}
+
 
 public class Game{
 	public  const bool isPaused = false;
