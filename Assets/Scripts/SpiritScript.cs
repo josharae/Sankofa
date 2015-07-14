@@ -28,8 +28,6 @@ public class SpiritScript : MonoBehaviour {
 		splish.SetBool("splash", true);
 		this.TeleportBack();
 		}
-	}
-	
 	
 	public void TeleportBack(){
 		this.transform.position = OriginalPosition;
