@@ -40,7 +40,6 @@ public class Oware_Script_Game : MonoBehaviour {
 	public GameObject b6;
 	public List<Transform> b6children = new List<Transform>();
 	public List<List<Transform>> groups = new List<List<Transform>> ();
-	private List<GameObject> parents;
 	private List<Transform> scoredMarbles;
 	private List<Vector3> topLocations = new List<Vector3>();
 	private List<Vector3> pitLocations = new List<Vector3>();
@@ -85,18 +84,6 @@ public class Oware_Script_Game : MonoBehaviour {
 		scoredMarbles = new List<Transform> ();
 		topLocations = SetTopLocations ();
 		pitLocations = SetPitLocations ();
-		parents.Add (a1);
-		parents.Add (a2);
-		parents.Add (a3);
-		parents.Add (a4);
-		parents.Add (a5);
-		parents.Add (a6);
-		parents.Add (b1);
-		parents.Add (b2);
-		parents.Add (b3);
-		parents.Add (b4);
-		parents.Add (b5);
-		parents.Add (b6);
 	}
 	
 	// Update is called once per frame
@@ -146,7 +133,7 @@ public class Oware_Script_Game : MonoBehaviour {
 						List<Transform> list = groups[i];
 						for (int j = 0; j < list.Count; j++){
 							Transform tran = list[j];
-							MoveDown(tran, pitLocations[i]);
+//							MoveDown(tran, pitLocations[i]);
 						}
 					}
 				} else {
@@ -208,7 +195,7 @@ public class Oware_Script_Game : MonoBehaviour {
 						List<Transform> list = groups[i];
 						for (int j = 0; j < list.Count; j++){
 							Transform tran = list[j];
-							MoveDown(tran, pitLocations[i]);
+//							MoveDown(tran, pitLocations[i]);
 						}
 					}
 				}
@@ -270,6 +257,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA1 () {
 		int size = a1children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a1children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -295,6 +286,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a1children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 11)
 					j -= 12;
@@ -320,6 +312,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA2 () {
 		int size = a2children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a2children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -345,6 +341,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a2children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 10)
 					j -= 12;
@@ -369,6 +366,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA3 () {
 		int size = a3children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a3children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -394,6 +395,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a3children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 9)
 					j -= 12;
@@ -418,6 +420,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA4 () {
 		int size = a4children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a4children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -442,6 +448,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a4children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 8)
 					j -= 12;
@@ -466,6 +473,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA5 () {
 		int size = a5children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a5children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -490,6 +501,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a5children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 7)
 					j -= 12;
@@ -514,6 +526,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveA6 () {
 		int size = a6children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = a6children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -538,6 +554,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = a6children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 6)
 					j -= 12;
@@ -562,6 +579,10 @@ public class Oware_Script_Game : MonoBehaviour {
 
 	public void MoveB1 () {
 		int size = b1children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b1children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -587,6 +608,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b1children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 5)
 					j -= 12;
@@ -611,6 +633,10 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	public void MoveB2 () {
 		int size = b2children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b2children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -636,6 +662,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b2children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 4)
 					j -= 12;
@@ -660,6 +687,10 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	public void MoveB3 () {
 		int size = b3children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b3children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
@@ -685,6 +716,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b3children[i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 3)
 					j -= 12;
@@ -709,6 +741,10 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	public void MoveB4 () {
 		int size = b4children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b4children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -733,6 +769,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b4children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 2)
 					j -= 12;
@@ -757,6 +794,10 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	public void MoveB5 () {
 		int size = b5children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b5children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -781,6 +822,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b5children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 1)
 					j -= 12;
@@ -805,6 +847,10 @@ public class Oware_Script_Game : MonoBehaviour {
 	
 	public void MoveB6 () {
 		int size = b6children.Count;
+		for (int a = 0; a < size; a++) {
+			Transform tran = b6children[a];
+			tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
+		}
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75) {
@@ -829,6 +875,7 @@ public class Oware_Script_Game : MonoBehaviour {
 			List<Transform> temp = new List<Transform>();
 			for (int i = 0; i < size; i++) {
 				Transform tran = b6children [i];
+				tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(false);
 				int j = i;
 				while (j >= 12)
 					j -= 12;

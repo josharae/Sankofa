@@ -17,6 +17,7 @@ TagManager:
   - InGameButtons
   - Fire
   - Ground
+  - Marble
   layers:
   - Default
   - TransparentFX
