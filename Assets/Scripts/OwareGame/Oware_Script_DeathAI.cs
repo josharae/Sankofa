@@ -30,6 +30,13 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 					nextMove = FindBestDefensiveMove();
 				}
 				else if (deathScore == playerScore && deathScore == 0){
+					nextMove = GetDangerMarbles();
+					if (nextMove == null){
+						nextMove = SetupPlayerMarblesForScore();
+						if (nextMove == null){
+							nextMove = GetLeastHarmfulMove();
+						}
+					}
 				}
 				if (nextMove == osg.b1children){
 					osg.MoveB1();
@@ -138,6 +145,53 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		return nextMove;
 	}
 
+	public List<Transform> GetDangerMarbles(){
+		List<List<Transform>> board = osg.groups;
+		List<List<Transform>> danger = new List<List<Transform>> ();
+		for (int i = 6; i < 12; i++) {
+			List<Transform> list = board[i];
+			if (list.Count == 1 || list.Count == 2){
+				danger.Add(list);
+			}
+		}
+		if (danger.Count > 0) {
+			int index = Random.Range (0, danger.Count);
+			return danger [index];
+		} else {
+			return null;
+		}
+	}
+
+	public List<Transform> SetupPlayerMarblesForScore(){
+		List<List<Transform>> board = osg.groups;
+		List<Transform> nextMove = null;
+		int bestScore = 0;
+		for (int i = 6; i < 12; i++) {
+			List<Transform> list = board[i];
+			List<List<Transform>> newBoard = GetPossibleBoard(list);
+			int size = list.Count;
+			int index = board.IndexOf(list) + size;
+			while (index >= 12){
+				index -= 12;
+			}
+			List<Transform> playerList = newBoard[index];
+			int marbles = 0;
+			int count = 0;
+			while (playerList.Count == 0 || playerList.Count == 1 && index < 6){
+				marbles = marbles + playerList.Count + 1;
+				count++;
+				index++;
+				playerList = newBoard[index];
+			}
+			int score = marbles + count;
+			if (bestScore < score){
+				bestScore = score;
+				nextMove = list;
+			}
+		}
+		return nextMove;
+	}
+
 	public int FindBestScore(){
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
@@ -177,5 +231,50 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			}
 		}
 		return bestPlayerMove;
+	}
+
+	public List<Transform> GetLeastHarmfulMove(){
+		List<List<Transform>> board = osg.groups;
+		int bestCount = 100000;
+		for (int i = 6; i < 12; i++) {
+			List<Transform> list = board[i];
+			List<List<Transform>> newBoard = GetPossibleBoard(list);
+			int count = 0;
+			for (int j = 6; j < 12; j++){
+				List<Transform> newList = newBoard[j];
+				int size = newList.Count;
+				if (size == 1 || size == 2){
+					count += size;
+				}
+			}
+			if (count < bestCount){
+				bestCount = count;
+			}
+		}
+		List<List<Transform>> lhMoves = new List<List<Transform>> ();
+		for (int k = 6; k < 12; k++) {
+			List<Transform> temp = board[k];
+			List<List<Transform>> tempBoard = GetPossibleBoard(temp);
+			int count = 0;
+			for (int l = 6; l < 12; l++){
+				List<Transform> check = tempBoard[l];
+				int size = check.Count;
+				if (size == 1 || size == 2){
+					count += size;
+				}
+			}
+			if (count == bestCount){
+				lhMoves.Add(temp);
+			}
+		}
+		List<Transform> nextMove = null;
+		int listSize = lhMoves.Count;
+		if (listSize > 1) {
+			int finalIndex = Random.Range (0, listSize);
+			nextMove = lhMoves[finalIndex];
+		} else {
+			nextMove = lhMoves[0];
+		}
+		return nextMove;
 	}
 }
