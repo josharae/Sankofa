@@ -4,8 +4,9 @@ using System.Collections;
 public class TutorialPlayer : MonoBehaviour {
 	private float speed = 15f;
 	public GameObject Hand;
-	GameObject GameManager;
+	GameObject GameManager, myCamera;
 	GameObject Item;
+	int DownLimit = 50, UpLimit = -30;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
 	Vector3 pos;
@@ -14,39 +15,31 @@ public class TutorialPlayer : MonoBehaviour {
 	void Start ()
 	{
 		GameManager = GameObject.Find ("GameManager");
+		myCamera = GameObject.Find ("Main Camera");
 		pos = Hand.transform.position;
 	}
-	
-	void FixedUpdate ()
-	{
-		if (hasObj) //move bone with player
-			Item.transform.position = pos;
-		
-		//rotation
+
+	void FixedUpdate(){
 		float mouseHorizontal = Input.GetAxis ("Mouse X");
 		float mouseVertical = Input.GetAxis ("Mouse Y");
 		yRotation += mouseHorizontal;
 		xRotation += mouseVertical * -1;
 		transform.eulerAngles = new Vector3 (0, yRotation, 0);
+		
+		if (xRotation <= DownLimit && xRotation >= UpLimit) {
+			myCamera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
+		} else {
+			if (xRotation > DownLimit)
+				xRotation = DownLimit;
+			if (xRotation < UpLimit)
+				xRotation = UpLimit;
+		}
 
-		
-		//movement
-		float moveVertical = Input.GetAxis ("Vertical");
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		
-		Vector3 movement = (transform.forward * moveVertical + transform.right * moveHorizontal) * speed;
-		movement.y = GetComponent<Rigidbody> ().velocity.y;
-		GetComponent<Rigidbody> ().velocity =  (movement);
-		
 	}
-	
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(1) && hasObj) 
-		{
-			ChangeBoneRigidBody (true);
-			hasObj = false;
-		}
+		if(hasObj)
+			Item.transform.position = Hand.transform.position;
 		if (Input.GetKeyDown (KeyCode.Space) && hasObj)
 		{
 			Throw ();
@@ -82,7 +75,7 @@ public class TutorialPlayer : MonoBehaviour {
 	{
 		hasObj = false;
 		ChangeBoneRigidBody(true);
-		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 30);
+		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 100);
 		EggScript bs = Item.GetComponent<EggScript> ();
 		bs.SetThrownBool (true);
 	}

@@ -15,4 +15,16 @@ public class ui_changeScene : MonoBehaviour {
 	public void MainMenu() {
 		Application.LoadLevel (Scenes.StartMenu);
 	}
+
+	public void Inventory() {
+		Application.LoadLevel (Scenes.Inventory);
+	}
+
+	public void Tutorial() {
+		Application.LoadLevel (Scenes.Tutorial);
+	}
+
+	public void Oware() {
+		Application.LoadLevel (Scenes.Oware);
+	}
 }

@@ -1,27 +1,4 @@
-﻿//using UnityEngine;
-//
-//using System.Collections;
-//
-//public class EggScript : ObjectScript {
-//
-//	public Animator Explosion;
-//	private AudioSource audio;
-//	private bool hasBeenThrown;
-//	void Start(){
-//		Explosion.SetBool("Explode", false);
-//		Explosion = GetComponent<Animator> ();
-//	}
-//	
-//	void OnCollisionEnter(Collision other){
-//		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<ObjectScript>().hasBeenThrown) {
-//			Explosion.SetBool("Explode", true);
-//		}
-//	}
-//}
-
-//using UnityEngine;
-//
-using UnityEngine;
+﻿using UnityEngine;
 
 using System.Collections;
 
@@ -32,13 +9,14 @@ public class EggScript : MonoBehaviour {
 	public Animator Explosion;
 	public bool hasBeenThrown;
 	private AudioSource audio;
-	
+	GameObject[] Sides;
 	void Start () {
 		player = GameObject.Find ("Player");
 		OriginalPosition = this.transform.position;
 		hasBeenThrown = false;
 		Explosion.SetBool("Explode", false);
 		Explosion = GetComponent<Animator> ();
+		Sides = GameObject.FindGameObjectsWithTag ("Ground");
 	}
 	
 	void OnMouseDown(){
@@ -52,6 +30,8 @@ public class EggScript : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<EggScript> ().hasBeenThrown) {
 			this.GetComponent<AudioSource>().Play();
 			Explosion.SetBool ("Explode", true);
+			foreach (GameObject side in Sides)
+				side.GetComponent<ColorChanger>().isChanging = true;
 		}
 	}
 	
