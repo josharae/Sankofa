@@ -41,7 +41,11 @@ public class EggScript : MonoBehaviour {
 	}
 
 	void StartGame(){
-		this.GetComponent<ui_changeScene> ().StartGame ();
+		if (this.GetComponent<SceneChanger_Build> () != null) {
+			this.GetComponent<SceneChanger_Build> ().StartGame ();
+		} else {
+			this.GetComponent<ui_changeScene> ().StartGame ();
+		}
 	}
 	
 	public void TeleportBack(){
