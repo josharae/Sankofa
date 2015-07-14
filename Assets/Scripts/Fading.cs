@@ -4,16 +4,21 @@ using System;
 
 public class Fading : MonoBehaviour
 {
-	public float fadeSpeed = 0.8f;   // the fading speed
-	private CanvasGroup can;		 // the texture's alpha value between 0 and 1
-	private int fadeDir = -1;		 // the direaction to fade: in = -1 or out 1
-
-	void Start()
+	Color objColor;
+	float changingRate = 0.001f;
+	float newAlpha = 1f;
+	void Start () 
 	{
-		can = GetComponent<CanvasGroup> ();
-		// fade out/ in the alpha value using a dirction, a speed and Time.deltatime to convert the operation to seconds
-		can.alpha += fadeDir * fadeSpeed * Time.deltaTime;
-		// force (clamp) the  number between 0 and 1 because GUI.color uses alpha values between 0 and 1
-		can.alpha = Mathf.Clamp01 (can.alpha);
+		objColor = this.GetComponent<MeshRenderer> ().material.color;
+	}
+
+	void Update(){
+		if (newAlpha > 0) {
+			newAlpha = Mathf.Lerp (1, 0, changingRate += Time.deltaTime);
+			Color newColor = objColor;
+			newColor.a = newAlpha;
+			this.GetComponent<MeshRenderer> ().material.color = newColor;
+		} else
+			this.gameObject.SetActive(false);
 	}
 }
