@@ -6,16 +6,15 @@ public class SpiritScript : MonoBehaviour {
 	GameObject player;
 	public bool isCollected = false;
 	Vector3 OriginalPosition;
-	public Animator Explosion;
 	private bool hasBeenThrown;
 	private AudioSource audio;
+	public Animator splish;
 	
 	void Start () {
 		player = GameObject.Find ("Player");
 		OriginalPosition = this.transform.position;
-		Explosion = GetComponent<Animator> ();
 		hasBeenThrown = false;
-		Explosion.SetBool("Explode", false);
+		splish = GetComponent<Animator> ();
 	}
 	
 	void OnMouseDown(){
@@ -25,11 +24,9 @@ public class SpiritScript : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision other){
-		if (other.gameObject.CompareTag ("Ground") && hasBeenThrown) {
-			this.GetComponent<AudioSource>().Play();
-			Explosion.SetBool("Explode", true);
-			
-			
+		this.GetComponent<AudioSource>().Play();
+		splish.SetBool("splash", true);
+		this.TeleportBack();
 		}
 	}
 	
