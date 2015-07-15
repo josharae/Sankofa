@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .691176474, g: .121972315, b: .121972315, a: 1}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: .568627477}
+  m_Sprite: {fileID: 21300000, guid: 9bfe8ba8787085545812531fdfa073b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -262,7 +262,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &497999156
 Transform:
   m_ObjectHideFlags: 0
@@ -345,6 +344,7 @@ GameObject:
   - 224: {fileID: 1049578152}
   - 222: {fileID: 1049578154}
   - 114: {fileID: 1049578153}
+  - 114: {fileID: 1049578155}
   m_Layer: 5
   m_Name: Top
   m_TagString: Untagged
@@ -401,6 +401,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1049578151}
+--- !u!114 &1049578155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049578151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1204073246
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +426,7 @@ GameObject:
   - 222: {fileID: 1204073249}
   - 114: {fileID: 1204073248}
   - 114: {fileID: 1204073247}
+  - 114: {fileID: 1204073251}
   m_Layer: 5
   m_Name: Bottom
   m_TagString: Untagged
@@ -481,6 +496,20 @@ RectTransform:
   m_AnchoredPosition: {x: -1.43051147e-06, y: -122.100006}
   m_SizeDelta: {x: 349.5, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &1204073251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204073246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1352424195
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +556,6 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1352424198
 MonoBehaviour:
