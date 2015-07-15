@@ -18,6 +18,7 @@ TagManager:
   - Fire
   - Ground
   - Marble
+  - Boulder
   layers:
   - Default
   - TransparentFX
