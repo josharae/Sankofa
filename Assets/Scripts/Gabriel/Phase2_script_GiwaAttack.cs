@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
+	public GameObject leftHP, midHP, rightHP;
 
 	GameObject player, target;
 	public GameObject arenaPosition, smokeParticle;
@@ -47,6 +48,13 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 				if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) > 5)
 					walkToTarget ();			
 			}
+		}
+		if (life < 1) {
+			midHP.SetActive (false);
+		} else if (life < 2) {
+			rightHP.SetActive (false);
+		} else if (life < 3) {
+			leftHP.SetActive(false);
 		}
 	}
 
