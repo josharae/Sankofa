@@ -2,15 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Skybox
+  m_Name: CameraSkybox
   m_Shader: {fileID: 10753, guid: 0000000000000000e000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -77,14 +78,15 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+    m_Floats:
       data:
         first:
-          name: _SpecGlossMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
       data:
         first:
           name: _Cutoff
@@ -95,24 +97,16 @@ Material:
         second: 0
       data:
         first:
-          name: _SrcBlend
-        second: 5
-      data:
-        first:
-          name: _DstBlend
-        second: 10
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
         first:
           name: _ZWrite
-        second: 0
+        second: 1
       data:
         first:
           name: _Glossiness
-        second: 0
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -132,7 +126,7 @@ Material:
       data:
         first:
           name: _Mode
-        second: 2
+        second: 0
       data:
         first:
           name: _Metallic
@@ -145,12 +139,4 @@ Material:
       data:
         first:
           name: _Color
-<<<<<<< HEAD
-        second: {r: .245817095, g: .20973143, b: .717656195, a: 1}
-=======
-        second: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> origin/master
-      data:
-        first:
-          name: _SpecColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: .690138221, g: .620275617, b: .552369237, a: 1}

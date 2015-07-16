@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ui_changeScene : MonoBehaviour {
+public class SceneChanger_Norm : MonoBehaviour {
 
 	public void LoadGameScene() {
 		Application.LoadLevel (Scenes.LoadScene);
