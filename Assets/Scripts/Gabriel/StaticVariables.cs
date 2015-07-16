@@ -22,6 +22,7 @@ public static class Tags
 	public const string PickupItem = "PickupItem";
 	public const string Boulder = "Boulder";
 	public const string WaterSpirit = "WaterSpirit";
+	public const string Giwa = "Giwa";
 }
 
 

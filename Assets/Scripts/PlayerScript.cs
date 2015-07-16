@@ -7,14 +7,17 @@ public class PlayerScript : MonoBehaviour {
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
+	public GameObject originalPosition;
 	float yRotation = 0f, xRotation = 0f, gravity = 20f;
 	public bool hasObj = false;
 	Vector3 moveDirection;
 	CharacterController playerController;
+	Quaternion originalRotation;
 
 	void Start () {
 		GameManager = GameObject.Find ("GameManager");
 		playerController = this.GetComponent<CharacterController> ();
+		originalRotation = this.transform.rotation;
 	}
 	
 	void FixedUpdate () {
@@ -95,6 +98,15 @@ public class PlayerScript : MonoBehaviour {
 		ChangeBoneRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
 		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
+	}
+
+	void OnCollisionEnter(Collision other){
+		if (other.gameObject.tag == Tags.Giwa) {
+			this.GetComponent<FadingScreen> ().EndScene ();
+			this.transform.position = originalPosition.transform.position;
+			this.transform.rotation = originalRotation;
+		}
+
 	}
 }
 
