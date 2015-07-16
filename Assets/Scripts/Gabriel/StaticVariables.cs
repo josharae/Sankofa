@@ -23,6 +23,8 @@ public static class Tags
 	public const string Boulder = "Boulder";
 	public const string WaterSpirit = "WaterSpirit";
 	public const string Giwa = "Giwa";
+	public const string Entrance = "Entrance";
+
 }
 
 public static class Scenes

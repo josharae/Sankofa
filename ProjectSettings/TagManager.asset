@@ -19,6 +19,7 @@ TagManager:
   - Ground
   - Marble
   - Boulder
+  - Entrance
   layers:
   - Default
   - TransparentFX

@@ -107,7 +107,10 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		finalMessage.text = won ? "You Won!!!" : "You Lost";
 		if (won)
 			finalMessage.color = Color.green;
+		else
+			life = 3;
 		Invoke("disableText",1.5f);
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
 	}
 
 	void OnCollisionEnter(Collision other){
