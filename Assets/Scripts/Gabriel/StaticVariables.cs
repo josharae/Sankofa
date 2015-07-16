@@ -25,7 +25,6 @@ public static class Tags
 	public const string Giwa = "Giwa";
 }
 
-
 public static class Scenes
 {
 	public const string MainScene = "MainTerrainScene";
@@ -33,8 +32,35 @@ public static class Scenes
 	public const string FirstScene = "ui_loadScreen";
 	public const string LoadScene = "ui_loadSaves";
 	public const string Inventory = "InventoryScene";
-	public const string Tutorial = "tutorialScene";
-	public const string Oware = "owareScene";
+	public const string TutorialScene = "tutorialScene";
+	public const string OwareScene = "owareScene";
+	public const string HutScene = "Hut_Interior";
+	public const string SpiritIntro = "Phase1_village_spiritintro";
+	public static void LoadGame(){
+		Application.LoadLevel (Scenes.MainScene);
+	}
+	public static void Hut()
+	{
+		Application.LoadLevel (Scenes.HutScene);
+	}
+	public static void SptIntro(){
+		Application.LoadLevel (Scenes.SpiritIntro);
+	}
+	public static void MainMenu(){
+		Application.LoadLevel (Scenes.StartMenu);
+	}
+	public static void Saves(){
+		Application.LoadLevel (Scenes.LoadScene);
+	}
+	public static void Inv(){
+		Application.LoadLevel (Scenes.Inventory);
+	}
+	public static void Tutorial(){
+		Application.LoadLevel (Scenes.TutorialScene);
+	}
+	public static void Oware(){
+		Application.LoadLevel (Scenes.OwareScene);
+	}
 }
 
 public static class Build_Scenes
@@ -53,3 +79,5 @@ public class Game{
 	public  const bool isPaused = false;
 
 }
+
+

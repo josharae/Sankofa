@@ -154,6 +154,7 @@ public class Oware_Script_Game : MonoBehaviour {
 				if (isCollecting) {
 					MoveCollectedPlayerMarbles (scoredMarbles);
 				} else if (!isMoving) {
+					/*
 					Oware_Script_DeathAI death = GetComponent<Oware_Script_DeathAI> ();
 					List<Transform> nextMove = death.Move ();
 					if (nextMove == b1children){
@@ -180,49 +181,50 @@ public class Oware_Script_Game : MonoBehaviour {
 						slot = "12";
 						isMoving = true;
 					}
-//					if (Input.GetKey (KeyCode.Y)) {
-//						if (b1children.Count > 0){
-//							isMoving = true;
-//							slot = "7";
-//						}
-//					}
-//					else if (Input.GetKey (KeyCode.T)) {
-//						if (b2children.Count > 0){
-//							isMoving = true;
-//							slot = "8";
-//						}
-//					}
-//					else if (Input.GetKey (KeyCode.R)) {
-//						if (b3children.Count > 0){
-//							isMoving = true;
-//							slot = "9";
-//						}
-//					}
-//					else if (Input.GetKey (KeyCode.E)) {
-//						if (b4children.Count > 0){
-//							isMoving = true;
-//							slot = "10";
-//						}
-//					}
-//					else if (Input.GetKey (KeyCode.W)) {
-//						if (b5children.Count > 0){
-//							isMoving = true;
-//							slot = "11";
-//						}
-//					}
-//					else if (Input.GetKey (KeyCode.Q)) {
-//						if (b6children.Count > 0){
-//							isMoving = true;
-//							slot = "12";
-//						}
-//					}
-//					for (int i = 0; i < 12; i++){
-//						List<Transform> list = groups[i];
-//						for (int j = 0; j < list.Count; j++){
-//							Transform tran = list[j];
-////							MoveDown(tran, pitLocations[i]);
-//						}
-//					}
+*/
+					if (Input.GetKey (KeyCode.Y)) {
+						if (b1children.Count > 0){
+							isMoving = true;
+							slot = "7";
+						}
+					}
+					else if (Input.GetKey (KeyCode.T)) {
+						if (b2children.Count > 0){
+							isMoving = true;
+							slot = "8";
+						}
+					}
+					else if (Input.GetKey (KeyCode.R)) {
+						if (b3children.Count > 0){
+							isMoving = true;
+							slot = "9";
+						}
+					}
+					else if (Input.GetKey (KeyCode.E)) {
+						if (b4children.Count > 0){
+							isMoving = true;
+							slot = "10";
+						}
+					}
+					else if (Input.GetKey (KeyCode.W)) {
+						if (b5children.Count > 0){
+							isMoving = true;
+							slot = "11";
+						}
+					}
+					else if (Input.GetKey (KeyCode.Q)) {
+						if (b6children.Count > 0){
+							isMoving = true;
+							slot = "12";
+						}
+					}
+					for (int i = 0; i < 12; i++){
+						List<Transform> list = groups[i];
+						for (int j = 0; j < list.Count; j++){
+							Transform tran = list[j];
+//							MoveDown(tran, pitLocations[i]);
+						}
+					}
 				}
 				else {
 					if (slot == "7")

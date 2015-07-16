@@ -5,8 +5,9 @@ using System;
 public class Fading : MonoBehaviour
 {
 	Color objColor;
-	float changingRate = 0.001f;
+	float changingRate = 0.02f;
 	float newAlpha = 1f;
+
 	void Start () 
 	{
 		objColor = this.GetComponent<MeshRenderer> ().material.color;
