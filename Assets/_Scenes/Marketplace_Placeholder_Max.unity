@@ -383,6 +383,8 @@ GameObject:
   - 33: {fileID: 430747186}
   - 64: {fileID: 430747185}
   - 23: {fileID: 430747184}
+  - 65: {fileID: 430747188}
+  - 114: {fileID: 430747189}
   m_Layer: 0
   m_Name: Jungle_Trigger
   m_TagString: Untagged
@@ -445,6 +447,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!65 &430747188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430747183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: -15.3069782, z: 9.99999905}
+  m_Center: {x: 0, y: 7.65347242, z: 6.22013147e-07}
+--- !u!114 &430747189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430747183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f88f1df835b82f4ab7c4324fecbcfba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &451263646
 GameObject:
   m_ObjectHideFlags: 0

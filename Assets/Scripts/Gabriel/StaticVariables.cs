@@ -38,6 +38,7 @@ public static class Scenes
 	public const string OwareScene = "owareScene";
 	public const string HutScene = "Hut_Interior";
 	public const string SpiritIntro = "Phase1_village_spiritintro";
+	public const string jungle = "newpeter";
 	public static void LoadGame(){
 		Application.LoadLevel (Scenes.MainScene);
 	}
@@ -62,6 +63,9 @@ public static class Scenes
 	}
 	public static void Oware(){
 		Application.LoadLevel (Scenes.OwareScene);
+	}
+	public static void Jungle(){
+		Application.LoadLevel (Scenes.jungle);
 	}
 }
 

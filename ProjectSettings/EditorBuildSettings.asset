@@ -37,3 +37,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/Hut_Interior.unity
   - enabled: 1
     path: Assets/_Scenes/Marketplace_Placeholder_Max.unity
+  - enabled: 1
+    path: Assets/_Scenes/Peter/newpeter.unity
