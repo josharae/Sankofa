@@ -1355,7 +1355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459896, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11486354, guid: 9773d6704cca1634dbfcf3af84948636, type: 2}
       propertyPath: originalPosition
@@ -3044,6 +3044,10 @@ Prefab:
       propertyPath: m_TagString
       value: Giwa
       objectReference: {fileID: 0}
+    - target: {fileID: 11450200, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
+      propertyPath: finalMessage
+      value: 
+      objectReference: {fileID: 1730455338}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c315269359ca504b82b361c6d930a50, type: 2}
   m_IsPrefabParent: 0
@@ -5490,11 +5494,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1065128896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 516.799561, y: -265.886993, z: 77.5143814}
+  m_LocalPosition: {x: 193.199997, y: 37.8600006, z: 208.899994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1116366653}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
 --- !u!1 &1086970230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,9 +5651,8 @@ Transform:
   - {fileID: 692153065}
   - {fileID: 1575995519}
   - {fileID: 100568026}
-  - {fileID: 1065128897}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!1001 &1132875408
 Prefab:
   m_ObjectHideFlags: 0
@@ -8126,6 +8129,87 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e349b6a927183154d9bf449b09b8e413, type: 2}
   m_PrefabInternal: {fileID: 893900005}
+--- !u!1 &1730455336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1730455337}
+  - 222: {fileID: 1730455339}
+  - 114: {fileID: 1730455338}
+  - 114: {fileID: 1730455340}
+  m_Layer: 5
+  m_Name: GiwaMissionMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1730455337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730455336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1912543049}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 70}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1730455338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730455336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Something happened
+--- !u!222 &1730455339
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730455336}
+--- !u!114 &1730455340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730455336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1747296522
 Prefab:
   m_ObjectHideFlags: 0
@@ -8347,6 +8431,7 @@ RectTransform:
   - {fileID: 1355957818}
   - {fileID: 2145345502}
   - {fileID: 575092494}
+  - {fileID: 1730455337}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}

@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
-	public GameObject leftHP, midHP, rightHP;
+	[SerializeField] GameObject leftHP, midHP, rightHP;
+	[SerializeField] private Text finalMessage;
+	[SerializeField] GameObject arenaPosition, dustParticle;
 
 	GameObject player, target;
-	public GameObject arenaPosition, smokeParticle;
 	private float maxSpeed = 30, life = 3;
 	private bool isStunned = false, isSleeping = true, isChasing = false, isAlive = true;
 	Vector3 originalPosition;
@@ -89,20 +91,35 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		life -= 1;
 		isStunned = true;
 		resetPosition();
-		if (life <= 0)
+		if (life <= 0) {
 			isAlive = false;
+			missionResultMessage(true);
+		}
+	}
+
+
+	void disableText(){
+		finalMessage.gameObject.SetActive(false);
+	}
+
+	void missionResultMessage(bool won = false){
+		finalMessage.gameObject.SetActive(true);
+		finalMessage.text = won ? "You Won!!!" : "You Lost";
+		if (won)
+			finalMessage.color = Color.green;
+		Invoke("disableText",1.5f);
 	}
 
 	void OnCollisionEnter(Collision other){
-
-		if (other.gameObject.tag == Tags.Boulder){
+		if (other.gameObject.tag == Tags.Boulder) {
 			Destroy (other.gameObject);
-			boulderHit();
-			GameObject newSmoke = (GameObject) Instantiate (smokeParticle, other.transform.position, this.transform.rotation);
-			Destroy(newSmoke,3f);
+			boulderHit ();
+			GameObject newSmoke = (GameObject)Instantiate (dustParticle, other.transform.position, this.transform.rotation);
+			Destroy (newSmoke, 3f);
+		} else if (other.gameObject.tag == Tags.Player) { 
+			resetPosition ();
+			missionResultMessage();
 		}
-		else if (other.gameObject.tag == Tags.Player) 
-			resetPosition();
 		else if (other.gameObject.tag == Tags.WaterSpirit) {
 			isSleeping = false;
 		}
