@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/Playable Build/StartMenu_Build.unity
   - enabled: 1
     path: Assets/_Scenes/Playable Build/tutorial_Build.unity
+  - enabled: 1
+    path: Assets/_Scenes/Hut_Interior.unity

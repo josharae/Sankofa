@@ -265,4 +265,19 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		}
 		return nextMove;
 	}
+
+//	private int GetIndexOf(List<List<Transform>> board, List<Transform> move){
+//		int index = -1;
+//		for (int i = 0; i < board.Count; i++) {
+//			List<Transform> list = board[i];
+//			int count = 0;
+//			for (int j = 0; j < list.Count; j++){
+//				if (j < move.Count){
+//					if (list[j] == move[j]){
+//
+//					}
+//				}
+//			}
+//		}
+//	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 
 
-public class Moo : MonoBehaviour 
+public class Phase2_script_AnimalManager : MonoBehaviour 
 {
 	public AudioClip clip;
 
@@ -11,17 +11,7 @@ public class Moo : MonoBehaviour
 	public GameObject One;
 	public GameObject Two;
 	public GameObject Three;
-	public GameObject Four;
-	public GameObject Five;
-	public GameObject Six;
-	public GameObject Seven;
-	public GameObject Eight;
-	public GameObject Nine;
-	public GameObject Ten;
-	public GameObject Eleven;
-	public GameObject Twelve;
-	public GameObject Thirteen;
-	public GameObject Fourteen;
+
 
 	private float speed = 0.1F;
 
@@ -41,17 +31,7 @@ public class Moo : MonoBehaviour
 		target[0] = One;
 		target[1] = Two;
 		target[2] = Three;
-		target[3] = Four;
-		target[4] = Five;
-		target[5] = Six;
-		target[6] = Seven;
-		target[7] = Eight;
-		target[8] = Nine;
-		target[9] = Ten;
-		target[10] = Eleven;
-		target[11] = Twelve;
-		target[12] = Thirteen;
-		target[13] = Fourteen;
+
 		//transform.rotation = Quaternion.Slerp(from.transform.rotation, to.transform.rotation, Time.time * speed);
 		Vector3 originalPosition = transform.position;
 		Vector3 newPosition = (target[Index].transform.position);
@@ -174,7 +154,7 @@ public class Moo : MonoBehaviour
 			//                 GO TO NEXT POST                                      print("swap");
 			//print("next");
 			Index += 1;
-			if(Index == 14)
+			if(Index == 3)
 				Index = 0;
 		}	
 
