@@ -35,8 +35,13 @@ public static class Scenes
 	public const string Inventory = "InventoryScene";
 	public const string Tutorial = "tutorialScene";
 	public const string Oware = "owareScene";
+	public const string HutScene = "Hut_Interior";
 	public static void LoadGame(){
 		Application.LoadLevel (Scenes.MainScene);
+	}
+	public static void Hut()
+	{
+		Application.LoadLevel (Scenes.HutScene);
 	}
 }
 
