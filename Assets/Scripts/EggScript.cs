@@ -10,6 +10,7 @@ public class EggScript : MonoBehaviour {
 	public bool hasBeenThrown;
 	private AudioSource audio;
 	public GameObject[] Sides;
+
 	void Start () {
 		player = GameObject.Find ("Player");
 		OriginalPosition = this.transform.position;
@@ -17,7 +18,7 @@ public class EggScript : MonoBehaviour {
 		Explosion.SetBool("Explode", false);
 		Explosion = GetComponent<Animator> ();
 		Sides = GameObject.FindGameObjectsWithTag ("Ground");
-		Debug.Log (Sides.Length);
+		Sides[0].GetComponent<ColorChanger> ().startChanging ();
 	}
 	
 	void OnMouseDown(){
@@ -31,11 +32,11 @@ public class EggScript : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<EggScript> ().hasBeenThrown) {
 			this.GetComponent<AudioSource> ().Play ();
 			Explosion.SetBool ("Explode", true);
-			Debug.Log (Sides.Length);
-			other.gameObject.GetComponentInChildren<ColorChanger> ().startChanging ();
-			foreach (GameObject side in Sides) {
-				side.GetComponent<ColorChanger> ().isChanging = true;
-			}
+			Debug.Log ("here");
+			GameObject.Find("Main Camera").GetComponent<ColorChanger> ().startChanging ();
+			//foreach (GameObject side in Sides) {
+			//	side.GetComponent<ColorChanger> ().isChanging = true;
+			//}
 			Invoke("StartGame",4f);
 		}
 	}

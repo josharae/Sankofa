@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class TutorialPlayer : MonoBehaviour {
-	private float speed = 15f;
+	public float eggSpeed = 3000f;
 	public GameObject Hand;
 	GameObject GameManager, myCamera;
 	GameObject Item;
