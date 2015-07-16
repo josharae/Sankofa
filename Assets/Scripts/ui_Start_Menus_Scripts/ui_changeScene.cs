@@ -20,10 +20,10 @@ public class ui_changeScene : MonoBehaviour {
 	}
 
 	public void Tutorial() {
-		Application.LoadLevel (Scenes.Tutorial);
+		Application.LoadLevel (Scenes.TutorialScene);
 	}
 
 	public void Oware() {
-		Application.LoadLevel (Scenes.Oware);
+		Application.LoadLevel (Scenes.OwareScene);
 	}
 }
