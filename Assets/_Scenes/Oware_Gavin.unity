@@ -3627,6 +3627,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281367344}
   - 114: {fileID: 1281367345}
+  - 114: {fileID: 1281367346}
   m_Layer: 0
   m_Name: Oware
   m_TagString: Untagged
@@ -3711,6 +3712,17 @@ MonoBehaviour:
   b5children: []
   b6: {fileID: 1092750381}
   b6children: []
+--- !u!114 &1281367346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281367343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475761c36dfd10443acf13c776072621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284990928
 GameObject:
   m_ObjectHideFlags: 0

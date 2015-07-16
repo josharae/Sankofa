@@ -16,11 +16,12 @@ public class Oware_Script_MarbleBehavior : MonoBehaviour {
 	}
 
 	void OnCollisonEnter(Collision other){
-		if (other.collider.gameObject.CompareTag ("Marble") && moving == true) {
-			Physics.IgnoreCollision(this.GetComponent<Collider>(), other.collider);
+		Destroy (other.gameObject);
+//		if (other.collider.gameObject.CompareTag ("Marble") && moving == true) {
+//			Physics.IgnoreCollision(this.GetComponent<Collider>(), other.collider);
 //			this.GetComponent<Rigidbody> ().useGravity = false;
 //			this.GetComponent<Rigidbody> ().detectCollisions = false;
-		}
+//		}
 	}
 
 	public void SetMovingBool(bool state){
