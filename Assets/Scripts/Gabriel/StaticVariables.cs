@@ -35,6 +35,9 @@ public static class Scenes
 	public const string Inventory = "InventoryScene";
 	public const string Tutorial = "tutorialScene";
 	public const string Oware = "owareScene";
+	public static void LoadGame(){
+		Application.LoadLevel (Scenes.MainScene);
+	}
 }
 
 public static class Build_Scenes
@@ -53,3 +56,5 @@ public class Game{
 	public  const bool isPaused = false;
 
 }
+
+
