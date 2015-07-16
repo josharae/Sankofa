@@ -19,6 +19,8 @@ TagManager:
   - Ground
   - Marble
   - Boulder
+  - DoorOpen
+  - DoorClose
   layers:
   - Default
   - TransparentFX
