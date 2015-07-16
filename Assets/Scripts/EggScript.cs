@@ -34,9 +34,6 @@ public class EggScript : MonoBehaviour {
 			Explosion.SetBool ("Explode", true);
 			Debug.Log ("here");
 			GameObject.Find("Main Camera").GetComponent<ColorChanger> ().startChanging ();
-			//foreach (GameObject side in Sides) {
-			//	side.GetComponent<ColorChanger> ().isChanging = true;
-			//}
 			Invoke("StartGame",4f);
 		}
 	}
