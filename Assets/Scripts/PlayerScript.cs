@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	[Range (1, 100)]public float speed = 15f;
+	public float speed = 15f, jumpSpeed = 15f;
 	public GameObject camera, Hand;
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
 	GameObject Item;
-	public GameObject originalPosition;
+	Vector3 originalPosition;
 	float yRotation = 0f, xRotation = 0f, gravity = 20f;
 	public bool hasObj = false;
 	Vector3 moveDirection;
@@ -15,8 +15,9 @@ public class PlayerScript : MonoBehaviour {
 	Quaternion originalRotation;
 
 	void Start () {
-		GameManager = GameObject.Find ("GameManager");
+		GameManager = GameObject.Find (Tags.GameManager);
 		playerController = this.GetComponent<CharacterController> ();
+		originalPosition = this.transform.position;
 		originalRotation = this.transform.rotation;
 	}
 	
@@ -50,16 +51,16 @@ public class PlayerScript : MonoBehaviour {
 			moveDirection *= speed;
 
 			if (Input.GetKeyDown(KeyCode.Space)) {
-				moveDirection.y = speed;
+				moveDirection.y = jumpSpeed;
 			}
 		}
 		moveDirection.y -= gravity * Time.deltaTime;
-		playerController.Move (moveDirection * Time.deltaTime);
+		playerController.Move (moveDirection * Time.fixedDeltaTime);
 	}
 	
 	void Update(){
 		if (Input.GetMouseButtonDown(1) && hasObj) {
-			ChangeBoneRigidBody (true);
+			ChangeObjectRigidBody (true);
 			hasObj = false;
 		}
 		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
@@ -67,7 +68,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 	
-	public void ChangeBoneRigidBody(bool Active){
+	public void ChangeObjectRigidBody(bool Active){
 		Item.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		Item.GetComponent<Rigidbody> ().useGravity = Active;
 		Item.GetComponent<Rigidbody> ().detectCollisions = Active;
@@ -83,7 +84,7 @@ public class PlayerScript : MonoBehaviour {
 			else {
 				hasObj = true;
 				Item = newItem;
-				ChangeBoneRigidBody(false);
+				ChangeObjectRigidBody(false);
 			}
 		}
 	}
@@ -95,7 +96,7 @@ public class PlayerScript : MonoBehaviour {
 	void Throw()
 	{
 		hasObj = false;
-		ChangeBoneRigidBody(true);
+		ChangeObjectRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
 		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
 	}
@@ -103,7 +104,8 @@ public class PlayerScript : MonoBehaviour {
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == Tags.Giwa) {
 			this.GetComponent<FadingScreen> ().EndScene ();
-			this.transform.position = originalPosition.transform.position;
+			this.GetComponent<CharacterController>().Move(Vector3.zero) ;
+			this.transform.position = originalPosition;
 			this.transform.rotation = originalRotation;
 		}
 

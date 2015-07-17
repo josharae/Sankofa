@@ -23,6 +23,7 @@ public static class Tags
 	public const string Boulder = "Boulder";
 	public const string WaterSpirit = "WaterSpirit";
 	public const string Giwa = "Giwa";
+	public const string GameManager = "GameManager";
 	public const string Entrance = "Entrance";
 
 }

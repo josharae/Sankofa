@@ -74,7 +74,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		currentRate += Time.deltaTime;
 		float vel = Mathf.Lerp (0, maxSpeed, currentRate);
 		Vector3 movement = transform.forward * vel;
-		movement.y = GetComponent<Rigidbody> ().velocity.y;
+		movement.y -= 20f * Time.deltaTime;
 		transform.position += transform.forward * maxSpeed * Time.deltaTime; 
 	}
 

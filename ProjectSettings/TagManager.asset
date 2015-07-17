@@ -21,6 +21,8 @@ TagManager:
   - Boulder
   - DoorOpen
   - DoorClose
+  - Entrance
+  - GameManager
   layers:
   - Default
   - TransparentFX
