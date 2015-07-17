@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	private float speed = 15f;
+	[Range (1, 100)]public float speed = 15f;
 	public GameObject camera, Hand;
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;

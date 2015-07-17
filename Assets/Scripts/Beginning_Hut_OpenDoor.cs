@@ -32,6 +32,19 @@ public class Beginning_Hut_OpenDoor : MonoBehaviour {
 		Transform tran = door.transform;
 		tran.Rotate(Vector3.up, 1.0f);
 		tran.position = new Vector3 (tran.position.x + 0.011f, tran.position.y, tran.position.z + 0.02f);
+		if (this.GetComponent<SceneChanger_Build> () != null) {
+			Invoke ("load_Build", 1.5f);
+		} else {
+			Invoke ("loading", 1.5f);
+		}
+	}
+
+	private void load_Build (){
+		Build_Scenes.LoadVillage ();
+	}
+
+	private void loading(){
+		Scenes.SptIntro ();
 	}
 
 	public void BeginOpening(){

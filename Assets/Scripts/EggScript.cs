@@ -40,9 +40,9 @@ public class EggScript : MonoBehaviour {
 
 	void StartGame(){
 		if (this.GetComponent<SceneChanger_Build> () != null) {
-			this.GetComponent<SceneChanger_Build> ().StartGame ();
+			Build_Scenes.LoadHut();
 		} else {
-			Scenes.Hut();
+			Scenes.LoadHut();
 		}
 	}
 	

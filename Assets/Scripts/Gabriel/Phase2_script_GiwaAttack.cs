@@ -56,7 +56,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		} else if (life < 2) {
 			rightHP.SetActive (false);
 		} else if (life < 3) {
-			leftHP.SetActive(false);
+			leftHP.SetActive (false);
 		}
 	}
 
@@ -105,17 +105,28 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	void missionResultMessage(bool won = false){
 		finalMessage.gameObject.SetActive(true);
 		finalMessage.text = won ? "You Won!!!" : "You Lost";
-		if (won)
+		if (won) {
 			finalMessage.color = Color.green;
-		else
+			Invoke ("owari", 1.5f);
+		}
+		else {
 			life = 3;
+			midHP.SetActive (false);
+			rightHP.SetActive (false);
+			leftHP.SetActive (false);
+		}
 		Invoke("disableText",1.5f);
 		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
+		GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting = false;
+	}
+
+	void owari(){
+		Build_Scenes.Oware();
 	}
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == Tags.Boulder) {
-			Destroy (other.gameObject);
+			other.gameObject.SetActive(false);
 			boulderHit ();
 			GameObject newSmoke = (GameObject)Instantiate (dustParticle, other.transform.position, this.transform.rotation);
 			Destroy (newSmoke, 3f);

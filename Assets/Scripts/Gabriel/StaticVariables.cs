@@ -39,12 +39,9 @@ public static class Scenes
 	public const string HutScene = "Hut_Interior";
 	public const string SpiritIntro = "Phase1_village_spiritintro";
 	public const string jungle = "newpeter";
+	public const string market = "Marketplace_Placeholder_Max";
 	public static void LoadGame(){
 		Application.LoadLevel (Scenes.MainScene);
-	}
-	public static void Hut()
-	{
-		Application.LoadLevel (Scenes.HutScene);
 	}
 	public static void SptIntro(){
 		Application.LoadLevel (Scenes.SpiritIntro);
@@ -64,20 +61,60 @@ public static class Scenes
 	public static void Oware(){
 		Application.LoadLevel (Scenes.OwareScene);
 	}
-	public static void Jungle(){
+	public static void LoadJungle(){
 		Application.LoadLevel (Scenes.jungle);
+	}
+	public static void LoadMarket(){
+		Application.LoadLevel (Scenes.market);
+	}
+	public static void LoadHut(){
+		Application.LoadLevel (Scenes.HutScene);
 	}
 }
 
 public static class Build_Scenes
 {
-	public const string MainScene = "Giwa_Build";
+	public const string MainScene = "MainTerrain_Build";
 	public const string StartMenu = "StartMenu_Build";
-	public const string FirstScene = "Beginning_Build";
+	public const string FirstScene = "LoadScreen_Build";
 	public const string LoadScene = "LoadSaves_Build";
 	public const string Inventory = "Inventory_Build";
-	public const string Tutorial = "tutorial_Build";
-	public const string Oware = "Oware_Build";
+	public const string tutorial = "Tutorial_Build";
+	public const string OwareScene = "Oware_Build";
+	public const string market = "Market_Build";
+	public const string village = "Village_Build";
+	public const string hut = "Hut_Build";
+	public const string jungle = "MainTerrain_Build";
+	public static void LoadGame(){
+		Application.LoadLevel (Build_Scenes.MainScene);
+	}
+	public static void MainMenu(){
+		Application.LoadLevel (Build_Scenes.StartMenu);
+	}
+	public static void Saves(){
+		Application.LoadLevel (Build_Scenes.LoadScene);
+	}
+	public static void Inv(){
+		Application.LoadLevel (Build_Scenes.Inventory);
+	}
+	public static void Tutorial(){
+		Application.LoadLevel (Build_Scenes.tutorial);
+	}
+	public static void Oware(){
+		Application.LoadLevel (Build_Scenes.OwareScene);
+	}
+	public static void LoadJungle(){
+		Application.LoadLevel (Build_Scenes.jungle);
+	}
+	public static void LoadMarket(){
+		Application.LoadLevel (Build_Scenes.market);
+	}
+	public static void LoadHut(){
+		Application.LoadLevel (Build_Scenes.hut);
+	} 
+	public static void LoadVillage(){
+		Application.LoadLevel (Build_Scenes.village);
+	}
 }
 
 

@@ -1484,6 +1484,7 @@ GameObject:
   - 65: {fileID: 1922986467}
   - 23: {fileID: 1922986466}
   - 114: {fileID: 1922986470}
+  - 114: {fileID: 1922986471}
   m_Layer: 0
   m_Name: DoorTrigger (Open)
   m_TagString: DoorOpen
@@ -1559,3 +1560,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 779626441}
   closeTrigger: {fileID: 810526880}
+--- !u!114 &1922986471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922986465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bb32ddecb62634ba7754b77fb42ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
