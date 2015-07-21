@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 779, y: 50.612999, z: 77.5143814}
+  m_LocalPosition: {x: 779, y: 45.5299988, z: 77.5143814}
   m_LocalScale: {x: 1, y: 3.12783861, z: 1}
   m_Children:
   - {fileID: 499026}
@@ -86,8 +86,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .730000019, z: .540000021}
+  m_LocalRotation: {x: -.0185866877, y: 0, z: 0, w: .999827266}
+  m_LocalPosition: {x: 0, y: .540000021, z: .540000021}
   m_LocalScale: {x: 1, y: .319709599, z: 1}
   m_Children: []
   m_Father: {fileID: 425168}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  jumpSpeed: 15
+  jumpSpeed: 8
   camera: {fileID: 191572}
   Hand: {fileID: 139116}
   hasObj: 0

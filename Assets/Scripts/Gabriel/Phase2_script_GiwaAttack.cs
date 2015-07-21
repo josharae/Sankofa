@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	GameObject player, target;
 	private float maxSpeed = 30, life = 3;
 	private bool isStunned = false, isSleeping = true, isChasing = false, isAlive = true;
+	public bool duelStarted = false;
 	Vector3 originalPosition;
 	Quaternion originalRotation;
 	float currentRate, initialRate = 0.02f, chargingTime = 5f;
@@ -23,12 +24,17 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		originalRotation = this.transform.rotation;
 		currentRate = initialRate;
 		target = player;
+		duelStarted = GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting;
 
+	}
+
+	public void startDuel(){
+		duelStarted = true;
 	}
 
 	void FixedUpdate()
 	{
-		if (isAlive) {
+		if (isAlive && duelStarted) {
 			if (Vector3.Distance (this.transform.position, target.transform.position) < 100) {
 				if (!isChasing) {
 					if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) < 5) {

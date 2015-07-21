@@ -37,14 +37,22 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+<<<<<<< HEAD
           name: _ParallaxMap
+=======
+          name: _EmissionMap
+>>>>>>> origin/master
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
+<<<<<<< HEAD
           name: _EmissionMap
+=======
+          name: _ParallaxMap
+>>>>>>> origin/master
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}

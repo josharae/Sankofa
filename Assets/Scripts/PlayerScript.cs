@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	public float speed = 15f, jumpSpeed = 15f;
+	[SerializeField] float speed = 15f, jumpSpeed = 15f;
 	public GameObject camera, Hand;
 	GameObject GameManager;
 	int DownLimit = 50, UpLimit = -30;
