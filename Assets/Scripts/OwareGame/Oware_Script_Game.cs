@@ -154,9 +154,10 @@ public class Oware_Script_Game : MonoBehaviour {
 				if (isCollecting) {
 					MoveCollectedPlayerMarbles (scoredMarbles);
 				} else if (!isMoving) {
-					/*
 					Oware_Script_DeathAI death = GetComponent<Oware_Script_DeathAI> ();
-					List<Transform> nextMove = death.Move ();
+					slot = death.Move ();
+					isMoving = true;
+/*
 					if (nextMove == b1children){
 						slot = "7";
 						isMoving = true;
@@ -182,6 +183,7 @@ public class Oware_Script_Game : MonoBehaviour {
 						isMoving = true;
 					}
 */
+/*
 					if (Input.GetKey (KeyCode.Y)) {
 						if (b1children.Count > 0){
 							isMoving = true;
@@ -225,7 +227,8 @@ public class Oware_Script_Game : MonoBehaviour {
 //							MoveDown(tran, pitLocations[i]);
 						}
 					}
-				}
+*/
+}
 				else {
 					if (slot == "7")
 						MoveB1 ();

@@ -15,33 +15,59 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 
 	}
 
-	public List<Transform> Move(){
-		List<Transform> nextMove = FindBestOffensiveMove();
-				if (nextMove != null){
-					List<List<Transform>> nextBoard = GetPossibleBoard(nextMove);
-					int deathScore = FindBestScore();
-					int playerScore = GetPossibleLoss(nextBoard);
-					if (deathScore < playerScore){
-						nextMove = FindBestDefensiveMove();
-					}
+	public string Move(){
+		int theIndex;
+		theIndex = FindBestOffensiveMove();
+		if (theIndex != -1){
+			List<List<Transform>> nextBoard = GetPossibleBoard(osg.groups[theIndex]);
+			int deathScore = FindBestScore();
+			int playerScore = GetPossibleLoss(nextBoard);
+			if (deathScore < playerScore){
+				theIndex = FindBestDefensiveMove();
+			}
+		}
+		else{
+			theIndex = GetDangerMarbles();
+			if (theIndex == -1){
+				theIndex = SetupPlayerMarblesForScore();
+				if (theIndex == -1){
+					theIndex = GetLeastHarmfulMove();
 				}
-				else{
-					nextMove = GetDangerMarbles();
-					if (nextMove == null){
-						//nextMove = SetupPlayerMarblesForScore();
-						if (nextMove == null){
-							nextMove = GetLeastHarmfulMove();
-						}
-					}
-				}
-				return nextMove;
+			}
+		}
+		string slot = "";
+		if (theIndex == 6){
+			slot = "7";
+		}
+		else if (theIndex == 7){
+			slot = "8";
+		}
+		else if (theIndex == 8){
+			slot = "9";
+		}
+		else if (theIndex == 9){
+			slot = "10";
+		}
+		else if (theIndex == 10){
+			slot = "11";
+		}
+		else if (theIndex == 11){
+			slot = "12";
+		}
+		return slot;
 	}
 
 	private List<List<Transform>> GetPossibleBoard(List<Transform> nextMove){
 		int size = nextMove.Count;
 		List<List<Transform>> newBoard = new List<List<Transform>> ();
-		newBoard.AddRange (osg.groups);
-		int index = newBoard.IndexOf (nextMove);
+		for (int a = 0; a < 12; a++) {
+			Transform[] temp1 = new Transform[osg.groups[a].Count];
+			osg.groups[a].CopyTo(temp1);
+			List<Transform> temp2 = new List<Transform>();
+			temp2.AddRange(temp1);
+			newBoard.Add(temp2);
+		}
+		int index = GetIndexOf (newBoard, nextMove);
 		int nextMoveIndex = 0;
 		for (int i = index; i < size + index; i++) {
 			int j = i;
@@ -56,7 +82,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 
 	private int GetPossibleScore(List<List<Transform>> possibleBoard, List<Transform> nextMove){
 		int size = nextMove.Count;
-		int index = possibleBoard.IndexOf (nextMove);
+		int index = GetIndexOf (possibleBoard, nextMove);
 		int finalIndex = size + index;
 		int possibleScore = 0;
 		List<Transform> endPosition;
@@ -89,47 +115,58 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		return possibleScore;
 	}
 
-	private List<Transform> FindBestOffensiveMove(){
-		List<Transform> nextMove = null;
+	private int FindBestOffensiveMove(){
+		int moveIndex = -1;
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = new List<Transform> ();
-			list.AddRange(osg.groups[i]);
+			Transform[] temp = new Transform[osg.groups[i].Count];
+			osg.groups[i].CopyTo(temp);
+			list.AddRange(temp);
+//			osg.groups[i].CopyTo(list);
 			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
 			int possibleScore = GetPossibleScore(possibleBoard, list);
 			if (possibleScore > bestScore){
 				bestScore = possibleScore;
-				nextMove = list;
+				moveIndex = i;
 			}
 		}
-		return nextMove;
+		return moveIndex;
 	}
 
-	private List<Transform> FindBestDefensiveMove(){
-		List<Transform> nextMove = null;
+	private int FindBestDefensiveMove(){
+		int nextIndex = -1;
 		int bestDefense = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = new List<Transform> ();
-			list.AddRange(osg.groups[i]);
+			Transform[] temp = new Transform[osg.groups[i].Count];
+			osg.groups[i].CopyTo(temp);
+			list.AddRange(temp);
 			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
 			int possibleScore = GetPossibleLoss(possibleBoard);
 			if (possibleScore > bestDefense){
 				bestDefense = possibleScore;
 				List<Transform> playerMove = GetBestPlayerMove(possibleBoard);
 				List<List<Transform>> newBoard = GetPossibleBoard(playerMove);
-				int index = playerMove.Count + newBoard.IndexOf(playerMove);
+				int index = playerMove.Count + GetIndexOf(newBoard, playerMove);
 				while (index >= 12){
 					index -= 12;
 				}
-				nextMove = newBoard[index];
+				nextIndex = index;
 			}
 		}
-		return nextMove;
+		return nextIndex;
 	}
 
-	private List<Transform> GetDangerMarbles(){
+	private int GetDangerMarbles(){
 		List<List<Transform>> board = new List<List<Transform>> ();
-		board.AddRange (osg.groups);
+		for (int a = 0; a < 12; a++) {
+			Transform[] temp1 = new Transform[osg.groups[a].Count];
+			osg.groups[a].CopyTo(temp1);
+			List<Transform> temp2 = new List<Transform>();
+			temp2.AddRange(temp1);
+			board.Add(temp2);
+		}
 		List<List<Transform>> danger = new List<List<Transform>> ();
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
@@ -140,22 +177,28 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		}
 		if (danger.Count > 0) {
 			int index = Random.Range (0, danger.Count);
-			return danger [index];
+			return index;
 		} else {
-			return null;
+			return -1;
 		}
 	}
 
-	private List<Transform> SetupPlayerMarblesForScore(){
+	private int SetupPlayerMarblesForScore(){
 		List<List<Transform>> board = new List<List<Transform>> ();
-		board.AddRange (osg.groups);
-		List<Transform> nextMove = null;
+		int nextIndex = -1;
+		for (int a = 0; a < 12; a++) {
+			Transform[] temp1 = new Transform[osg.groups[a].Count];
+			osg.groups[a].CopyTo(temp1);
+			List<Transform> temp2 = new List<Transform>();
+			temp2.AddRange(temp1);
+			board.Add(temp2);
+		}
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
 			List<List<Transform>> newBoard = GetPossibleBoard(list);
 			int size = list.Count;
-			int index = board.IndexOf(list) + size;
+			int index = GetIndexOf(board, list) + size;
 			while (index >= 12){
 				index -= 12;
 			}
@@ -172,17 +215,19 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			int score = marbles + count;
 			if (bestScore < score){
 				bestScore = score;
-				nextMove = list;
+				nextIndex = i;
 			}
 		}
-		return nextMove;
+		return nextIndex;
 	}
 
 	private int FindBestScore(){
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = new List<Transform> ();
-			list.AddRange(osg.groups[i]);
+			Transform[] temp = new Transform[osg.groups[i].Count];
+			osg.groups[i].CopyTo(temp);
+			list.AddRange(temp);
 			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
 			int possibleScore = GetPossibleScore(possibleBoard, list);
 			if (possibleScore > bestScore){
@@ -220,9 +265,15 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		return bestPlayerMove;
 	}
 
-	private List<Transform> GetLeastHarmfulMove(){
+	private int GetLeastHarmfulMove(){
 		List<List<Transform>> board = new List<List<Transform>> ();
-		board.AddRange (osg.groups);
+		for (int a = 0; a < 12; a++) {
+			Transform[] temp1 = new Transform[osg.groups[a].Count];
+			osg.groups[a].CopyTo(temp1);
+			List<Transform> temp2 = new List<Transform>();
+			temp2.AddRange(temp1);
+			board.Add(temp2);
+		}
 		int bestCount = 100000;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
@@ -257,27 +308,31 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		}
 		List<Transform> nextMove = null;
 		int listSize = lhMoves.Count;
+		int finalIndex;
 		if (listSize > 1) {
-			int finalIndex = Random.Range (0, listSize);
-			nextMove = lhMoves[finalIndex];
+			finalIndex = Random.Range (0, listSize) + 6;
 		} else {
-			nextMove = lhMoves[0];
+			finalIndex = 0;
 		}
-		return nextMove;
+		return finalIndex;
 	}
 
-//	private int GetIndexOf(List<List<Transform>> board, List<Transform> move){
-//		int index = -1;
-//		for (int i = 0; i < board.Count; i++) {
-//			List<Transform> list = board[i];
-//			int count = 0;
-//			for (int j = 0; j < list.Count; j++){
-//				if (j < move.Count){
-//					if (list[j] == move[j]){
-//
-//					}
-//				}
-//			}
-//		}
-//	}
+	private int GetIndexOf(List<List<Transform>> board, List<Transform> move){
+		int index = -1;
+		for (int i = 0; i < board.Count; i++) {
+			List<Transform> list = board[i];
+			int count = 0;
+			for (int j = 0; j < list.Count; j++){
+				if (j < move.Count){
+					if (list[j] == move[j]){
+						count++;
+					}
+				}
+			}
+			if (count == list.Count && count == move.Count){
+				index = i;
+			}
+		}
+		return index;
+	}
 }
