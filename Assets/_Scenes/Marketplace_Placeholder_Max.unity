@@ -159,7 +159,104 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 185.399994}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+--- !u!1 &106970955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 106970957}
+  - 82: {fileID: 106970956}
+  m_Layer: 0
+  m_Name: Accralate(Village Music or Marketplace)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &106970956
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106970955}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 875c815601c6b814e932bb96028d5f06, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .256999999
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &106970957
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106970955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1 &126992594
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +329,7 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 64.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &361297537
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +639,7 @@ Transform:
   m_LocalScale: {x: 30, y: 20, z: 37.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &611972402
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +742,7 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 76.6999969}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1111685857
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +815,7 @@ Transform:
   m_LocalScale: {x: 30, y: 20, z: 37.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1119686159
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +888,7 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 76.6999969}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1167031669
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +948,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &1269945597
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +1021,7 @@ Transform:
   m_LocalScale: {x: 30, y: 20, z: 37.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &1341098948
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1094,7 @@ Transform:
   m_LocalScale: {x: 2, y: 4, z: 76.6999969}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1348062962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1167,7 @@ Transform:
   m_LocalScale: {x: 30, y: 20, z: 37.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &1552774450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1256,7 @@ Transform:
   m_LocalScale: {x: 5, y: 3, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1 &1651686377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1329,7 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 228.75}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1718021233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,7 +1402,7 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 64.9000015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1 &1810653462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1970585467
 GameObject:
   m_ObjectHideFlags: 0
