@@ -31,4 +31,9 @@ public class SceneChanger_Build : MonoBehaviour {
 	{
 		Build_Scenes.LoadGame();
 	}
+
+	public void Beginning()
+	{
+		Build_Scenes.LoadScreen();
+	}
 }

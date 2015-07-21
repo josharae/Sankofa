@@ -116,6 +116,9 @@ public static class Build_Scenes
 	public static void LoadVillage(){
 		Application.LoadLevel (Build_Scenes.village);
 	}
+	public static void LoadScreen(){
+		Application.LoadLevel (Build_Scenes.FirstScene);
+	}
 }
 
 
