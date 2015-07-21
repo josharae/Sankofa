@@ -132,6 +132,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == Tags.Boulder) {
+			other.gameObject.GetComponent<AudioSource>().Play ();
 			other.gameObject.SetActive(false);
 			boulderHit ();
 			GameObject newSmoke = (GameObject)Instantiate (dustParticle, other.transform.position, this.transform.rotation);
