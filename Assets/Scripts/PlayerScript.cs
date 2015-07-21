@@ -63,7 +63,7 @@ public class PlayerScript : MonoBehaviour {
 			ChangeObjectRigidBody (true);
 			hasObj = false;
 		}
-		if (Input.GetKeyDown (KeyCode.Space) && hasObj) {
+		if (Input.GetKeyDown (KeyCode.T) && hasObj) {
 			Throw ();
 		}
 	}
@@ -97,7 +97,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		hasObj = false;
 		ChangeObjectRigidBody(true);
-		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 1000);
+		Item.GetComponent<Rigidbody>().AddForce (camera.transform.forward * 1000);
 		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
 	}
 
