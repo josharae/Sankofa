@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 87d32b63777a082428f203e0d0e3be61
+timeCreated: 1437443796
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box009
+    100004: Box010
+    100006: Box025
+    100008: Box026
+    100010: Box028
+    100012: Box030
+    100014: Box031
+    100016: Box032
+    100018: Box033
+    100020: Box034
+    100022: Box038
+    100024: Box039
+    100026: Box040
+    100028: Box043
+    100030: Box047
+    100032: Box048
+    100034: Box051
+    100036: Box052
+    100038: Box061
+    100040: Box062
+    100042: Box069
+    100044: Box072
+    100046: Box073
+    100048: Box074
+    100050: Box075
+    100052: Box076
+    100054: Box077
+    100056: Box078
+    100058: Box079
+    100060: Box080
+    100062: Box081
+    100064: Box082
+    100066: Box083
+    100068: Box084
+    100070: Box086
+    100072: Box087
+    100074: Box088
+    100076: Box090
+    100078: Box092
+    100080: Box093
+    100082: Box095
+    100084: Box097
+    100086: Box098
+    100088: Box099
+    100090: Box100
+    100092: Box101
+    100094: Box102
+    100096: Box110
+    100098: Box111
+    100100: Box112
+    100102: Box114
+    100104: Box115
+    100106: Box116
+    100108: Box119
+    100110: Box122
+    100112: Box123
+    100114: Box124
+    100116: Box125
+    100118: Box126
+    100120: Box127
+    100122: Box128
+    100124: Box130
+    100126: Box131
+    100128: Box132
+    100130: Box133
+    100132: Box134
+    100134: Box136
+    100136: Box137
+    100138: Box138
+    100140: Box139
+    100142: Box141
+    100144: Box142
+    100146: Box145
+    100148: Box146
+    100150: Box147
+    100152: Box150
+    100154: Box151
+    100156: Box152
+    100158: Box153
+    100160: Box155
+    100162: Box156
+    100164: Butresses
+    100166: Chapel
+    100168: Chapel Roof
+    100170: Chapel Windows
+    100172: Cutout Arches
+    100174: Death and Soldier Door Interiors
+    100176: Death Prison Door
+    100178: DONR Room
+    100180: Dutch Gov Well
+    100182: Dutch Kitchen
+    100184: Entrance Rail
+    100186: Esterno 2 Replacement
+    100188: Esterno 4
+    100190: Female Dungeon Hallway
+    100192: Female Dungeon Sign
+    100194: Governor's Courtyard Arches
+    100196: Governor's Floor
+    100198: Governor's Place
+    100200: Governor's Tower
+    100202: High Officer Mess
+    100204: Line015
+    100206: Line016
+    100208: Line018
+    100210: Main Building
+    100212: Male Dungeon
+    100214: Male Dungeon 1
+    100216: Male Dungeon DONR
+    100218: More Stairs
+    100220: Near Restaurant Floor
+    100222: Object045
+    100224: Object049
+    100226: Object051
+    100228: Object055
+    100230: Object069
+    100232: Object075
+    100234: Object076
+    100236: Object077
+    100238: Object080
+    100240: Object081
+    100242: Object083
+    100244: Object084
+    100246: Object085
+    100248: Object090
+    100250: Object091
+    100252: Object093
+    100254: Object096
+    100256: Object097
+    100258: Object098
+    100260: Object099
+    100262: Object100
+    100264: Object101
+    100266: Outside Walls
+    100268: pav_interno02
+    100270: Plaque
+    100272: Portuguese Church Sign
+    100274: Portuguese Governor Well
+    100276: Restaurant
+    100278: Restaurant Door
+    100280: Roofs
+    100282: SoldiersPrisonDoor
+    100284: Stairs to Watchtowers
+    100286: StraightStair001
+    100288: StraightStair002
+    100290: StraightStair003
+    100292: StraightStair004
+    100294: StraightStair005
+    100296: StraightStair006
+    100298: StraightStair007
+    100300: StraightStair008
+    100302: StraightStair009
+    100304: StraightStair010
+    100306: top_003
+    100308: torrino_inf
+    100310: Tube001
+    100312: UTypeStair001
+    100314: Watchtowers
+    100316: Windows
+    100318: Wood Floors
+    400000: //RootNode
+    400002: Box009
+    400004: Box010
+    400006: Box025
+    400008: Box026
+    400010: Box028
+    400012: Box030
+    400014: Box031
+    400016: Box032
+    400018: Box033
+    400020: Box034
+    400022: Box038
+    400024: Box039
+    400026: Box040
+    400028: Box043
+    400030: Box047
+    400032: Box048
+    400034: Box051
+    400036: Box052
+    400038: Box061
+    400040: Box062
+    400042: Box069
+    400044: Box072
+    400046: Box073
+    400048: Box074
+    400050: Box075
+    400052: Box076
+    400054: Box077
+    400056: Box078
+    400058: Box079
+    400060: Box080
+    400062: Box081
+    400064: Box082
+    400066: Box083
+    400068: Box084
+    400070: Box086
+    400072: Box087
+    400074: Box088
+    400076: Box090
+    400078: Box092
+    400080: Box093
+    400082: Box095
+    400084: Box097
+    400086: Box098
+    400088: Box099
+    400090: Box100
+    400092: Box101
+    400094: Box102
+    400096: Box110
+    400098: Box111
+    400100: Box112
+    400102: Box114
+    400104: Box115
+    400106: Box116
+    400108: Box119
+    400110: Box122
+    400112: Box123
+    400114: Box124
+    400116: Box125
+    400118: Box126
+    400120: Box127
+    400122: Box128
+    400124: Box130
+    400126: Box131
+    400128: Box132
+    400130: Box133
+    400132: Box134
+    400134: Box136
+    400136: Box137
+    400138: Box138
+    400140: Box139
+    400142: Box141
+    400144: Box142
+    400146: Box145
+    400148: Box146
+    400150: Box147
+    400152: Box150
+    400154: Box151
+    400156: Box152
+    400158: Box153
+    400160: Box155
+    400162: Box156
+    400164: Butresses
+    400166: Chapel
+    400168: Chapel Roof
+    400170: Chapel Windows
+    400172: Cutout Arches
+    400174: Death and Soldier Door Interiors
+    400176: Death Prison Door
+    400178: DONR Room
+    400180: Dutch Gov Well
+    400182: Dutch Kitchen
+    400184: Entrance Rail
+    400186: Esterno 2 Replacement
+    400188: Esterno 4
+    400190: Female Dungeon Hallway
+    400192: Female Dungeon Sign
+    400194: Governor's Courtyard Arches
+    400196: Governor's Floor
+    400198: Governor's Place
+    400200: Governor's Tower
+    400202: High Officer Mess
+    400204: Line015
+    400206: Line016
+    400208: Line018
+    400210: Main Building
+    400212: Male Dungeon
+    400214: Male Dungeon 1
+    400216: Male Dungeon DONR
+    400218: More Stairs
+    400220: Near Restaurant Floor
+    400222: Object045
+    400224: Object049
+    400226: Object051
+    400228: Object055
+    400230: Object069
+    400232: Object075
+    400234: Object076
+    400236: Object077
+    400238: Object080
+    400240: Object081
+    400242: Object083
+    400244: Object084
+    400246: Object085
+    400248: Object090
+    400250: Object091
+    400252: Object093
+    400254: Object096
+    400256: Object097
+    400258: Object098
+    400260: Object099
+    400262: Object100
+    400264: Object101
+    400266: Outside Walls
+    400268: pav_interno02
+    400270: Plaque
+    400272: Portuguese Church Sign
+    400274: Portuguese Governor Well
+    400276: Restaurant
+    400278: Restaurant Door
+    400280: Roofs
+    400282: SoldiersPrisonDoor
+    400284: Stairs to Watchtowers
+    400286: StraightStair001
+    400288: StraightStair002
+    400290: StraightStair003
+    400292: StraightStair004
+    400294: StraightStair005
+    400296: StraightStair006
+    400298: StraightStair007
+    400300: StraightStair008
+    400302: StraightStair009
+    400304: StraightStair010
+    400306: top_003
+    400308: torrino_inf
+    400310: Tube001
+    400312: UTypeStair001
+    400314: Watchtowers
+    400316: Windows
+    400318: Wood Floors
+    2300000: Box009
+    2300002: Box010
+    2300004: Box025
+    2300006: Box026
+    2300008: Box028
+    2300010: Box030
+    2300012: Box031
+    2300014: Box032
+    2300016: Box033
+    2300018: Box034
+    2300020: Box038
+    2300022: Box039
+    2300024: Box040
+    2300026: Box043
+    2300028: Box047
+    2300030: Box048
+    2300032: Box051
+    2300034: Box052
+    2300036: Box061
+    2300038: Box062
+    2300040: Box069
+    2300042: Box072
+    2300044: Box073
+    2300046: Box074
+    2300048: Box075
+    2300050: Box076
+    2300052: Box077
+    2300054: Box078
+    2300056: Box079
+    2300058: Box080
+    2300060: Box081
+    2300062: Box082
+    2300064: Box083
+    2300066: Box084
+    2300068: Box086
+    2300070: Box087
+    2300072: Box088
+    2300074: Box090
+    2300076: Box092
+    2300078: Box093
+    2300080: Box095
+    2300082: Box097
+    2300084: Box098
+    2300086: Box099
+    2300088: Box100
+    2300090: Box101
+    2300092: Box102
+    2300094: Box110
+    2300096: Box111
+    2300098: Box112
+    2300100: Box114
+    2300102: Box115
+    2300104: Box116
+    2300106: Box119
+    2300108: Box122
+    2300110: Box123
+    2300112: Box124
+    2300114: Box125
+    2300116: Box126
+    2300118: Box127
+    2300120: Box128
+    2300122: Box130
+    2300124: Box131
+    2300126: Box132
+    2300128: Box133
+    2300130: Box134
+    2300132: Box136
+    2300134: Box137
+    2300136: Box138
+    2300138: Box139
+    2300140: Box141
+    2300142: Box142
+    2300144: Box145
+    2300146: Box146
+    2300148: Box147
+    2300150: Box150
+    2300152: Box151
+    2300154: Box152
+    2300156: Box153
+    2300158: Box155
+    2300160: Box156
+    2300162: Butresses
+    2300164: Chapel
+    2300166: Chapel Roof
+    2300168: Chapel Windows
+    2300170: Cutout Arches
+    2300172: Death and Soldier Door Interiors
+    2300174: Death Prison Door
+    2300176: DONR Room
+    2300178: Dutch Gov Well
+    2300180: Dutch Kitchen
+    2300182: Entrance Rail
+    2300184: Esterno 2 Replacement
+    2300186: Esterno 4
+    2300188: Female Dungeon Hallway
+    2300190: Female Dungeon Sign
+    2300192: Governor's Courtyard Arches
+    2300194: Governor's Floor
+    2300196: Governor's Place
+    2300198: Governor's Tower
+    2300200: High Officer Mess
+    2300202: Main Building
+    2300204: Male Dungeon
+    2300206: Male Dungeon 1
+    2300208: Male Dungeon DONR
+    2300210: More Stairs
+    2300212: Near Restaurant Floor
+    2300214: Object045
+    2300216: Object049
+    2300218: Object051
+    2300220: Object055
+    2300222: Object069
+    2300224: Object075
+    2300226: Object076
+    2300228: Object077
+    2300230: Object080
+    2300232: Object081
+    2300234: Object083
+    2300236: Object084
+    2300238: Object085
+    2300240: Object090
+    2300242: Object091
+    2300244: Object093
+    2300246: Object096
+    2300248: Object097
+    2300250: Object098
+    2300252: Object099
+    2300254: Object100
+    2300256: Object101
+    2300258: Outside Walls
+    2300260: pav_interno02
+    2300262: Plaque
+    2300264: Portuguese Church Sign
+    2300266: Portuguese Governor Well
+    2300268: Restaurant
+    2300270: Restaurant Door
+    2300272: Roofs
+    2300274: SoldiersPrisonDoor
+    2300276: Stairs to Watchtowers
+    2300278: StraightStair001
+    2300280: StraightStair002
+    2300282: StraightStair003
+    2300284: StraightStair004
+    2300286: StraightStair005
+    2300288: StraightStair006
+    2300290: StraightStair007
+    2300292: StraightStair008
+    2300294: StraightStair009
+    2300296: StraightStair010
+    2300298: top_003
+    2300300: torrino_inf
+    2300302: Tube001
+    2300304: UTypeStair001
+    2300306: Watchtowers
+    2300308: Windows
+    2300310: Wood Floors
+    3300000: Box009
+    3300002: Box010
+    3300004: Box025
+    3300006: Box026
+    3300008: Box028
+    3300010: Box030
+    3300012: Box031
+    3300014: Box032
+    3300016: Box033
+    3300018: Box034
+    3300020: Box038
+    3300022: Box039
+    3300024: Box040
+    3300026: Box043
+    3300028: Box047
+    3300030: Box048
+    3300032: Box051
+    3300034: Box052
+    3300036: Box061
+    3300038: Box062
+    3300040: Box069
+    3300042: Box072
+    3300044: Box073
+    3300046: Box074
+    3300048: Box075
+    3300050: Box076
+    3300052: Box077
+    3300054: Box078
+    3300056: Box079
+    3300058: Box080
+    3300060: Box081
+    3300062: Box082
+    3300064: Box083
+    3300066: Box084
+    3300068: Box086
+    3300070: Box087
+    3300072: Box088
+    3300074: Box090
+    3300076: Box092
+    3300078: Box093
+    3300080: Box095
+    3300082: Box097
+    3300084: Box098
+    3300086: Box099
+    3300088: Box100
+    3300090: Box101
+    3300092: Box102
+    3300094: Box110
+    3300096: Box111
+    3300098: Box112
+    3300100: Box114
+    3300102: Box115
+    3300104: Box116
+    3300106: Box119
+    3300108: Box122
+    3300110: Box123
+    3300112: Box124
+    3300114: Box125
+    3300116: Box126
+    3300118: Box127
+    3300120: Box128
+    3300122: Box130
+    3300124: Box131
+    3300126: Box132
+    3300128: Box133
+    3300130: Box134
+    3300132: Box136
+    3300134: Box137
+    3300136: Box138
+    3300138: Box139
+    3300140: Box141
+    3300142: Box142
+    3300144: Box145
+    3300146: Box146
+    3300148: Box147
+    3300150: Box150
+    3300152: Box151
+    3300154: Box152
+    3300156: Box153
+    3300158: Box155
+    3300160: Box156
+    3300162: Butresses
+    3300164: Chapel
+    3300166: Chapel Roof
+    3300168: Chapel Windows
+    3300170: Cutout Arches
+    3300172: Death and Soldier Door Interiors
+    3300174: Death Prison Door
+    3300176: DONR Room
+    3300178: Dutch Gov Well
+    3300180: Dutch Kitchen
+    3300182: Entrance Rail
+    3300184: Esterno 2 Replacement
+    3300186: Esterno 4
+    3300188: Female Dungeon Hallway
+    3300190: Female Dungeon Sign
+    3300192: Governor's Courtyard Arches
+    3300194: Governor's Floor
+    3300196: Governor's Place
+    3300198: Governor's Tower
+    3300200: High Officer Mess
+    3300202: Main Building
+    3300204: Male Dungeon
+    3300206: Male Dungeon 1
+    3300208: Male Dungeon DONR
+    3300210: More Stairs
+    3300212: Near Restaurant Floor
+    3300214: Object045
+    3300216: Object049
+    3300218: Object051
+    3300220: Object055
+    3300222: Object069
+    3300224: Object075
+    3300226: Object076
+    3300228: Object077
+    3300230: Object080
+    3300232: Object081
+    3300234: Object083
+    3300236: Object084
+    3300238: Object085
+    3300240: Object090
+    3300242: Object091
+    3300244: Object093
+    3300246: Object096
+    3300248: Object097
+    3300250: Object098
+    3300252: Object099
+    3300254: Object100
+    3300256: Object101
+    3300258: Outside Walls
+    3300260: pav_interno02
+    3300262: Plaque
+    3300264: Portuguese Church Sign
+    3300266: Portuguese Governor Well
+    3300268: Restaurant
+    3300270: Restaurant Door
+    3300272: Roofs
+    3300274: SoldiersPrisonDoor
+    3300276: Stairs to Watchtowers
+    3300278: StraightStair001
+    3300280: StraightStair002
+    3300282: StraightStair003
+    3300284: StraightStair004
+    3300286: StraightStair005
+    3300288: StraightStair006
+    3300290: StraightStair007
+    3300292: StraightStair008
+    3300294: StraightStair009
+    3300296: StraightStair010
+    3300298: top_003
+    3300300: torrino_inf
+    3300302: Tube001
+    3300304: UTypeStair001
+    3300306: Watchtowers
+    3300308: Windows
+    3300310: Wood Floors
+    4300000: pav_interno02
+    4300002: torrino_inf
+    4300004: Female Dungeon Sign
+    4300006: Death and Soldier Door Interiors
+    4300008: Portuguese Church Sign
+    4300010: Restaurant Door
+    4300012: SoldiersPrisonDoor
+    4300014: Near Restaurant Floor
+    4300016: Chapel Roof
+    4300018: Chapel
+    4300020: Chapel Windows
+    4300022: Dutch Kitchen
+    4300024: More Stairs
+    4300026: Box009
+    4300028: Outside Walls
+    4300030: Box010
+    4300032: Esterno 4
+    4300034: Watchtowers
+    4300036: Object045
+    4300038: Esterno 2 Replacement
+    4300040: Entrance Rail
+    4300042: Object049
+    4300044: Object051
+    4300046: Butresses
+    4300048: Death Prison Door
+    4300050: Plaque
+    4300052: Object055
+    4300054: Box025
+    4300056: Box026
+    4300058: Box028
+    4300060: Box030
+    4300062: Box031
+    4300064: Box032
+    4300066: Box033
+    4300068: Box034
+    4300070: Governor's Place
+    4300072: Box038
+    4300074: Box039
+    4300076: Box040
+    4300078: Male Dungeon
+    4300080: Male Dungeon
+    4300082: Male Dungeon DONR
+    4300084: Cutout Arches
+    4300086: Stairs to Watchtowers
+    4300088: Box043
+    4300090: Box047
+    4300092: Box048
+    4300094: Object069
+    4300096: top_003
+    4300098: Female Dungeon Hallway
+    4300100: Box051
+    4300102: Box052
+    4300104: StraightStair001
+    4300106: DONR Room
+    4300108: Main Building
+    4300110: Box061
+    4300112: Box062
+    4300114: Governor's Courtyard Arches
+    4300116: High Officer Mess
+    4300118: Governor's Floor
+    4300120: Object075
+    4300122: StraightStair002
+    4300124: Tube001
+    4300126: Box069
+    4300128: Object076
+    4300130: Box072
+    4300132: Object077
+    4300134: Box073
+    4300136: Box074
+    4300138: Box075
+    4300140: Box076
+    4300142: Box077
+    4300144: Box078
+    4300146: Box079
+    4300148: Box080
+    4300150: Box081
+    4300152: Box082
+    4300154: Box083
+    4300156: Box084
+    4300158: Object080
+    4300160: Box086
+    4300162: Box087
+    4300164: StraightStair003
+    4300166: Box088
+    4300168: Box090
+    4300170: Box092
+    4300172: Box093
+    4300174: Object081
+    4300176: Box095
+    4300178: Box097
+    4300180: Box098
+    4300182: Box099
+    4300184: Box100
+    4300186: Box101
+    4300188: UTypeStair001
+    4300190: Box102
+    4300192: Portuguese Governor Well
+    4300194: Dutch Gov Well
+    4300196: Roofs
+    4300198: Box110
+    4300200: Restaurant
+    4300202: Box111
+    4300204: Box112
+    4300206: Box114
+    4300208: Box115
+    4300210: Box116
+    4300212: Box119
+    4300214: Governor's Tower
+    4300216: Object083
+    4300218: Box122
+    4300220: Object084
+    4300222: Box123
+    4300224: Box124
+    4300226: Object085
+    4300228: Box125
+    4300230: Box126
+    4300232: Box127
+    4300234: StraightStair004
+    4300236: StraightStair005
+    4300238: Object090
+    4300240: Box128
+    4300242: Box130
+    4300244: Object091
+    4300246: Box131
+    4300248: Box132
+    4300250: Box133
+    4300252: Box134
+    4300254: Box136
+    4300256: Box137
+    4300258: Object093
+    4300260: Box138
+    4300262: Box139
+    4300264: Wood Floors
+    4300266: StraightStair006
+    4300268: StraightStair007
+    4300270: StraightStair008
+    4300272: Box141
+    4300274: Box142
+    4300276: StraightStair009
+    4300278: Box145
+    4300280: Box146
+    4300282: Box147
+    4300284: Object096
+    4300286: Object097
+    4300288: Object098
+    4300290: Box150
+    4300292: Object099
+    4300294: StraightStair010
+    4300296: Box151
+    4300298: Box152
+    4300300: Box153
+    4300302: Windows
+    4300304: Box155
+    4300306: Box156
+    4300308: Object100
+    4300310: Object101
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

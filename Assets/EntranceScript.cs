@@ -35,7 +35,8 @@ public class EntranceScript : MonoBehaviour {
 		if (other.gameObject.tag == Tags.Player){
 		if (!isFighting) {
 			isFighting = true;
-			duelMenu.SetActive (true);			
+			duelMenu.SetActive (true);	
+			Time.timeScale = 0;
 		} else {
 			if(!GameObject.FindWithTag (Tags.Giwa).GetComponent<Phase2_script_GiwaAttack>().duelStarted && !duelMenu.activeInHierarchy){
 				GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
