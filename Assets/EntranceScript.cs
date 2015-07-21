@@ -14,7 +14,7 @@ public class EntranceScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public void activateLifeUI(){
@@ -23,9 +23,14 @@ public class EntranceScript : MonoBehaviour {
 		giwaLife.transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
 	}
 
+	public void resetTimeScale(){
+		Time.timeScale = 1;
+	}
+
 	public void startDuel(){
 		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = true;
 		activateLifeUI ();
+		resetTimeScale ();
 		foreach (GameObject boulder in boulders)
 			boulder.SetActive (true);
 

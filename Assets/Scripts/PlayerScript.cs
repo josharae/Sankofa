@@ -105,6 +105,7 @@ public class PlayerScript : MonoBehaviour {
 		if (other.gameObject.tag == Tags.Giwa) {
 			this.GetComponent<FadingScreen> ().EndScene ();
 			this.GetComponent<CharacterController>().Move(Vector3.zero) ;
+			this.GetComponent<CharacterController>().SimpleMove(Vector3.zero) ;
 			this.transform.position = originalPosition;
 			this.transform.rotation = originalRotation;
 		}
