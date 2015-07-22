@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CameraSkybox
-  m_Shader: {fileID: 10753, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: lambert15
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -93,10 +93,6 @@ Material:
         second: .5
       data:
         first:
-          name: PixelSnap
-        second: 0
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -139,4 +135,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .601203382, g: .623622179, b: .316109031, a: 1}
+        second: {r: .5, g: .5, b: .5, a: 1}

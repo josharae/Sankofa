@@ -40,7 +40,7 @@ public class EggScript : MonoBehaviour {
 
 	void StartGame(){
 		if (this.GetComponent<SceneChanger_Build> () != null) {
-			//GameObject.FindWithTag(Tags.StaticObject).GetComponent<GlobalVariablesScript>().loadingNewSCene();
+			Build_Scenes.showLoading();
 			Build_Scenes.LoadHut();
 		} else {
 			Scenes.LoadHut();

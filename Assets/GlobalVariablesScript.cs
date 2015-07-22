@@ -4,10 +4,6 @@ using System.Collections;
 public class GlobalVariablesScript : MonoBehaviour {
 	bool defeatedGiwa = false,eggIsBroken = false;
 	public GameObject loadingScreen;
-	// Use this for initialization
-	void Awake() {
-		DontDestroyOnLoad(transform.gameObject);
-	}
 
 	void Start () {
 	
@@ -20,6 +16,12 @@ public class GlobalVariablesScript : MonoBehaviour {
 
 	public void loadingNewSCene(){
 		loadingScreen.SetActive (true);
+		Invoke ("disableLoad", 0.7f);
+	}
+
+	//void OnLevelWasLoaded (){
+	void disableLoad(){
+		loadingScreen.SetActive (false);
 	}
 
 	public void giwaDefeated(){
