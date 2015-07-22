@@ -97,7 +97,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		hasObj = false;
 		ChangeObjectRigidBody(true);
-		Item.GetComponent<Rigidbody>().AddForce (camera.transform.forward * 1000);
+		Item.GetComponent<Rigidbody>().AddForce (camera.transform.forward * 3000);
 		Item.GetComponent<ObjectScript> ().SetThrownBool(true);
 	}
 
