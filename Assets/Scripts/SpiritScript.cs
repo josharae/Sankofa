@@ -11,6 +11,7 @@ public class SpiritScript : MonoBehaviour {
 	public Animator splish;
 	private bool isMoving;
 	private GameObject affectedObject;
+	public bool collided;
 	
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -29,8 +30,13 @@ public class SpiritScript : MonoBehaviour {
 //			player.GetComponent<PlayerScript>().getObject(this.gameObject);
 		}
 	}
+
+	void OnCollisionExit(Collision collisionInfo) {
+		collided = false;
+	}
 	
 	void OnCollisionEnter(Collision other){
+		collided = true;
 		this.GetComponent<AudioSource>().Play();
 		splish.SetBool("splash", true);
 		this.TeleportBack();
@@ -42,7 +48,7 @@ public class SpiritScript : MonoBehaviour {
 	
 	private void Pull(GameObject obj) {
 		if (isMoving){//Mathf.Abs(player.transform.position.x - obj.transform.position.x) > 0.5f && Mathf.Abs(player.transform.position.z - obj.transform.position.z) > 0.5f) {
-			Vector3 targetVector = new Vector3(player.transform.position.x, obj.transform.position.y, player.transform.position.z);
+		Vector3 targetVector = new Vector3(player.transform.position.x, obj.transform.position.y, player.transform.position.z);
 			obj.transform.position = Vector3.Lerp (player.transform.position, obj.transform.position, 0.015f);
 		}
 		else {
