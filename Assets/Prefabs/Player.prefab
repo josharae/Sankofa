@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  jumpSpeed: 8
+  jumpSpeed: 15
   camera: {fileID: 191572}
   Hand: {fileID: 139116}
   hasObj: 0

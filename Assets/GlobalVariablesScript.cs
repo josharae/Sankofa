@@ -16,11 +16,10 @@ public class GlobalVariablesScript : MonoBehaviour {
 
 	public void loadingNewSCene(){
 		loadingScreen.SetActive (true);
-		Invoke ("disableLoad", 0.7f);
+		//Invoke ("disableLoad", 0.7f);
 	}
 
-	//void OnLevelWasLoaded (){
-	void disableLoad(){
+	void OnLevelWasLoaded (){
 		loadingScreen.SetActive (false);
 	}
 
