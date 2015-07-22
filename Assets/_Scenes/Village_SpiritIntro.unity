@@ -5853,6 +5853,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 275a823a5e6e28344a86360997a7e96c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1536215409 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
+  m_PrefabInternal: {fileID: 1732830581}
+--- !u!54 &1536215410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536215409}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1543446570
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,7 +6867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
       propertyPath: m_TagString
