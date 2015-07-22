@@ -23,6 +23,7 @@ TagManager:
   - DoorClose
   - Entrance
   - GameManager
+  - staticObject
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GlobalVariablesScript : MonoBehaviour {
 	bool defeatedGiwa = false,eggIsBroken = false;
+	public GameObject loadingScreen;
 	// Use this for initialization
 	void Awake() {
 		DontDestroyOnLoad(transform.gameObject);
@@ -15,6 +16,10 @@ public class GlobalVariablesScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//GameObject.Find (fsdjkfl.GlobalObject).GetComponent<GlobalVariablesScript> ().giwaDefeated ();
+	}
+
+	public void loadingNewSCene(){
+		loadingScreen.SetActive (true);
 	}
 
 	public void giwaDefeated(){

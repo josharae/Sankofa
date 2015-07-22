@@ -25,6 +25,7 @@ public static class Tags
 	public const string Giwa = "Giwa";
 	public const string GameManager = "GameManager";
 	public const string Entrance = "Entrance";
+	public const string StaticObject = "staticObject";
 
 }
 
