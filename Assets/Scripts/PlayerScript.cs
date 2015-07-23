@@ -77,7 +77,6 @@ public class PlayerScript : MonoBehaviour {
 				speed -= 5;
 		}
 		else if (Input.GetKeyDown(KeyCode.Backspace)) {
-			Debug.Log(speed);
 			speed = 15;
 		}
 	}

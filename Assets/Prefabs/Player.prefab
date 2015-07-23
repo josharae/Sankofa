@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 425168}
   - 114: {fileID: 11430724}
-  - 136: {fileID: 13669200}
   - 23: {fileID: 2386662}
   - 143: {fileID: 14395672}
   - 114: {fileID: 11494410}
@@ -61,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 779, y: 45.5299988, z: 77.5143814}
+  m_LocalPosition: {x: 63, y: 45.5299988, z: 66.9000015}
   m_LocalScale: {x: 1, y: 3.12783861, z: 1}
   m_Children:
   - {fileID: 499026}
@@ -87,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191572}
   m_LocalRotation: {x: -.0185866877, y: 0, z: 0, w: .999827266}
-  m_LocalPosition: {x: 0, y: .540000021, z: .540000021}
+  m_LocalPosition: {x: 0, y: .540000021, z: -.254999995}
   m_LocalScale: {x: 1, y: .319709599, z: 1}
   m_Children: []
   m_Father: {fileID: 425168}
@@ -199,19 +198,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191572}
   m_Enabled: 1
---- !u!136 &13669200
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: .5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &14395672
 CharacterController:
   m_ObjectHideFlags: 1
@@ -224,8 +210,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1
   m_Radius: .5
-  m_SlopeLimit: 45
-  m_StepOffset: .300000012
+  m_SlopeLimit: 90
+  m_StepOffset: .800000012
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}

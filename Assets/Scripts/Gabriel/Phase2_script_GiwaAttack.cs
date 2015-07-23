@@ -10,66 +10,61 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	enum giwaStates {sleeping, charging, stunned, chasing,waiting, walkingback, dead};
 	giwaStates currentState;
 	GameObject player, target;
-	private float maxSpeed = 30, life = 3;
-	private bool isStunned = false, isSleeping = true, isChasing = false, isAlive = true;
+	private float maxSpeed = 30;
+	private int life = 3;
 	public bool duelStarted = false;
 	Vector3 originalPosition;
 	Quaternion originalRotation;
 	float currentRate, initialRate = 0.02f, chargingTime = 5f;
 
 
-	void Start()
-	{
-		player = GameObject.Find ("Player");
+	void Start(){
+		player = GameObject.FindWithTag (Tags.Player);
 		originalPosition = this.transform.position;
 		originalRotation = this.transform.rotation;
 		currentRate = initialRate;
-		target = player;
 		currentState = giwaStates.sleeping;
-		duelStarted = GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting;
-
 	}
 
 	public void startDuel(){
 		currentState = giwaStates.charging;
+		life = 3;
 		duelStarted = true;
 	}
 
 	void FixedUpdate()
 	{
 		switch (currentState) {
-			case giwaStates.stunned: {
+			case giwaStates.stunned: 
 				chargingTime = 8f;
 				currentState = giwaStates.walkingback;
-			}
 			break;
-			case giwaStates.charging: {
-				Invoke ("charge", chargingTime);
+			case giwaStates.charging: 
+				Invoke ("attackPlayer", chargingTime);
 				currentState = giwaStates.waiting;
-			}		
+
 			break;
-			case giwaStates.chasing:{
+			case giwaStates.chasing:
 				walkToTarget();
-			}
 			break;
-			case giwaStates.walkingback:{
+			case giwaStates.walkingback:
+			{
 				walkToTarget();
 				if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) < 5 && duelStarted){
 					this.transform.rotation = originalRotation;
+					this.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+					this.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 					currentState = giwaStates.charging;
-					}
+				}
 			}
 			break;
 		}
 
 	}
 
-	void charge()
-	{
-		isChasing = true;
-		isSleeping = false;
-		currentState = giwaStates.chasing;
+	void attackPlayer(){
 		target = player;
+		currentState = giwaStates.chasing;
 	}
 
 	void walkToTarget(){
@@ -82,7 +77,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		transform.position += transform.forward * maxSpeed * Time.deltaTime; 
 	}
 
-	void resetPosition(){
+	void resetVariables(){
 		this.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		this.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 		currentRate = initialRate;
@@ -90,23 +85,45 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		target = arenaPosition;
 	}
 
-	void boulderHit(){
-		life -= 1;
-		if (life < 1) {
+
+	void updateLifeUI(){
+		switch (life) {
+		case 0:
 			midHP.SetActive (false);
-		} else if (life < 2) {
+			break;
+		case 1:
 			rightHP.SetActive (false);
-		} else if (life < 3) {
+			break;
+		case 2:
 			leftHP.SetActive (false);
-		}
-		resetPosition ();
-		currentState = giwaStates.stunned;
-		if (life <= 0) {
-			currentState = giwaStates.dead;
-			missionResultMessage(true);
+			break;
 		}
 	}
 
+	void boulderHit(GameObject boulder){
+		boulder.GetComponent<AudioSource>().Play ();
+		boulder.SetActive(false);
+		GameObject newSmoke = (GameObject)Instantiate (dustParticle, boulder.transform.position, this.transform.rotation);
+		newSmoke.SetActive (true);
+		Destroy (newSmoke, 3f);
+
+		life -= 1;
+		if (life <= 0) {
+			currentState = giwaStates.dead;
+			missionResultMessage (true);
+		} else
+			currentState = giwaStates.stunned;
+		updateLifeUI ();
+		resetVariables ();
+	}
+
+	void wonBattle(){
+		resetVariables ();
+		this.transform.position = arenaPosition.transform.position;
+		this.transform.rotation = originalRotation;
+		currentState = giwaStates.waiting;
+		missionResultMessage();
+	}
 
 	void disableText(){
 		finalMessage.gameObject.SetActive(false);
@@ -120,32 +137,25 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 			Invoke ("loadOware", 1.5f);
 		}
 		else {
-			life = 3;
 			midHP.SetActive (false);
 			rightHP.SetActive (false);
 			leftHP.SetActive (false);
 		}
 		Invoke("disableText",1.5f);
-		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
-		GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting = false;
+		GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().battleEnded ();
 	}
 
-	void loadOware(){
+	public void loadOware(){
 		Build_Scenes.showLoading ();
 		Build_Scenes.Oware();
 	}
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == Tags.Boulder) {
-			other.gameObject.GetComponent<AudioSource>().Play ();
-			other.gameObject.SetActive(false);
-			boulderHit ();
-			GameObject newSmoke = (GameObject)Instantiate (dustParticle, other.transform.position, this.transform.rotation);
-			Destroy (newSmoke, 3f);
+			boulderHit (other.gameObject);
+
 		} else if (other.gameObject.tag == Tags.Player) { 
-			resetPosition ();
-			currentState = giwaStates.walkingback;
-			missionResultMessage();
+			wonBattle();
 		}
 		else if (other.gameObject.tag == Tags.WaterSpirit) {
 			currentState = giwaStates.charging;
