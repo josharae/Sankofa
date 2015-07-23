@@ -4,6 +4,7 @@ using System.Collections;
 public class Scene_Trigger_Market : MonoBehaviour {
 	
 	void OnTriggerEnter(){
+		Build_Scenes.showLoading ();
 		Build_Scenes.LoadMarket ();
 	}
 }

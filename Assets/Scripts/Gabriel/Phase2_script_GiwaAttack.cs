@@ -131,6 +131,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	}
 
 	void loadOware(){
+		Build_Scenes.showLoading ();
 		Build_Scenes.Oware();
 	}
 
