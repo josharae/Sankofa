@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class Oware_Script_DeathAI : MonoBehaviour {
@@ -19,7 +19,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int theIndex;
 		theIndex = FindBestOffensiveMove();
 		if (theIndex != -1){
-			List<List<Transform>> nextBoard = GetPossibleBoard(osg.groups[theIndex]);
+			List<List<Transform>> nextBoard = GetPossibleBoard(osg.groups, osg.groups[theIndex]);
 			int deathScore = FindBestScore();
 			int playerScore = GetPossibleLoss(nextBoard);
 			if (deathScore < playerScore){
@@ -36,33 +36,28 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			}
 		}
 		string slot = "";
-		if (theIndex == 6){
+		if (theIndex == 6) {
 			slot = "7";
-		}
-		else if (theIndex == 7){
+		} else if (theIndex == 7) {
 			slot = "8";
-		}
-		else if (theIndex == 8){
+		} else if (theIndex == 8) {
 			slot = "9";
-		}
-		else if (theIndex == 9){
+		} else if (theIndex == 9) {
 			slot = "10";
-		}
-		else if (theIndex == 10){
+		} else if (theIndex == 10) {
 			slot = "11";
-		}
-		else if (theIndex == 11){
+		} else if (theIndex == 11) {
 			slot = "12";
 		}
 		return slot;
 	}
 
-	private List<List<Transform>> GetPossibleBoard(List<Transform> nextMove){
+	private List<List<Transform>> GetPossibleBoard(List<List<Transform>> theBoard, List<Transform> nextMove){
 		int size = nextMove.Count;
 		List<List<Transform>> newBoard = new List<List<Transform>> ();
 		for (int a = 0; a < 12; a++) {
-			Transform[] temp1 = new Transform[osg.groups[a].Count];
-			osg.groups[a].CopyTo(temp1);
+			Transform[] temp1 = new Transform[theBoard[a].Count];
+			theBoard[a].CopyTo(temp1);
 			List<Transform> temp2 = new List<Transform>();
 			temp2.AddRange(temp1);
 			newBoard.Add(temp2);
@@ -124,7 +119,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			osg.groups[i].CopyTo(temp);
 			list.AddRange(temp);
 //			osg.groups[i].CopyTo(list);
-			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
+			List<List<Transform>> possibleBoard = GetPossibleBoard(osg.groups, list);
 			int possibleScore = GetPossibleScore(possibleBoard, list);
 			if (possibleScore > bestScore){
 				bestScore = possibleScore;
@@ -142,12 +137,12 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			Transform[] temp = new Transform[osg.groups[i].Count];
 			osg.groups[i].CopyTo(temp);
 			list.AddRange(temp);
-			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
+			List<List<Transform>> possibleBoard = GetPossibleBoard(osg.groups, list);
 			int possibleScore = GetPossibleLoss(possibleBoard);
 			if (possibleScore > bestDefense){
 				bestDefense = possibleScore;
 				List<Transform> playerMove = GetBestPlayerMove(possibleBoard);
-				List<List<Transform>> newBoard = GetPossibleBoard(playerMove);
+				List<List<Transform>> newBoard = GetPossibleBoard(possibleBoard, playerMove);
 				int index = playerMove.Count + GetIndexOf(newBoard, playerMove);
 				while (index >= 12){
 					index -= 12;
@@ -170,13 +165,18 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		List<List<Transform>> danger = new List<List<Transform>> ();
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
-			List<Transform> list2 = osg.b1children;
 			if (list.Count == 1 || list.Count == 2){
 				danger.Add(list);
 			}
 		}
-		if (danger.Count > 0) {
-			int index = Random.Range (0, danger.Count);
+		if (danger.Count > 1) {
+			int index1 = Random.Range (0, danger.Count);
+			List<Transform> list2 = danger[index1];
+			int index2 = GetIndexOf(osg.groups, list2);
+			return index2;
+		} else if (danger.Count > 0) {
+			List<Transform> list2 = danger[0];
+			int index = GetIndexOf(osg.groups, list2);
 			return index;
 		} else {
 			return -1;
@@ -196,7 +196,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int bestScore = 0;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
-			List<List<Transform>> newBoard = GetPossibleBoard(list);
+			List<List<Transform>> newBoard = GetPossibleBoard(osg.groups, list);
 			int size = list.Count;
 			int index = GetIndexOf(board, list) + size;
 			while (index >= 12){
@@ -205,12 +205,16 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			List<Transform> playerList = newBoard[index];
 			int marbles = 0;
 			int count = 0;
-			while (playerList.Count == 0 || playerList.Count == 1 && index < 6){
-				marbles = marbles + playerList.Count + 1;
-				count++;
-				index++;
-				if (index < 6)
-					playerList = newBoard[index];
+			while (index >= 0 && index < 6){
+				if (playerList.Count == 0 || playerList.Count == 1){
+					marbles = marbles + playerList.Count + 1;
+					count++;
+					index++;
+					if (index < 6)
+						playerList = newBoard[index];
+				}
+				else
+					index = -1;
 			}
 			int score = marbles + count;
 			if (bestScore < score){
@@ -228,7 +232,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			Transform[] temp = new Transform[osg.groups[i].Count];
 			osg.groups[i].CopyTo(temp);
 			list.AddRange(temp);
-			List<List<Transform>> possibleBoard = GetPossibleBoard(list);
+			List<List<Transform>> possibleBoard = GetPossibleBoard(osg.groups, list);
 			int possibleScore = GetPossibleScore(possibleBoard, list);
 			if (possibleScore > bestScore){
 				bestScore = possibleScore;
@@ -241,7 +245,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int bestPlayerScore = 0;
 		for (int i = 0; i < 6; i++){
 			List<Transform> playerMove = firstBoard[i];
-			List<List<Transform>> secondBoard = GetPossibleBoard(playerMove);
+			List<List<Transform>> secondBoard = GetPossibleBoard(firstBoard, playerMove);
 			int playerPoints = GetPossibleScore(secondBoard, playerMove);
 			if (bestPlayerScore < playerPoints){
 				bestPlayerScore = playerPoints;
@@ -255,7 +259,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		List<Transform> bestPlayerMove = null;
 		for (int i = 0; i < 6; i++){
 			List<Transform> playerMove = firstBoard[i];
-			List<List<Transform>> secondBoard = GetPossibleBoard(playerMove);
+			List<List<Transform>> secondBoard = GetPossibleBoard(firstBoard, playerMove);
 			int playerPoints = GetPossibleScore(secondBoard, playerMove);
 			if (bestPlayerScore < playerPoints){
 				bestPlayerScore = playerPoints;
@@ -277,23 +281,25 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int bestCount = 100000;
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
-			List<List<Transform>> newBoard = GetPossibleBoard(list);
+			List<List<Transform>> newBoard = GetPossibleBoard(osg.groups, list);
 			int count = 0;
-			for (int j = 6; j < 12; j++){
-				List<Transform> newList = newBoard[j];
-				int size = newList.Count;
-				if (size == 1 || size == 2){
-					count += size;
+			if (list.Count > 0){
+				for (int j = 6; j < 12; j++){
+					List<Transform> newList = newBoard[j];
+					int size = newList.Count;
+					if (size == 1 || size == 2){
+						count += size;
+					}
 				}
-			}
-			if (count < bestCount){
-				bestCount = count;
+				if (count < bestCount){
+					bestCount = count;
+				}
 			}
 		}
 		List<List<Transform>> lhMoves = new List<List<Transform>> ();
 		for (int k = 6; k < 12; k++) {
 			List<Transform> temp = board[k];
-			List<List<Transform>> tempBoard = GetPossibleBoard(temp);
+			List<List<Transform>> tempBoard = GetPossibleBoard(osg.groups, temp);
 			int count = 0;
 			for (int l = 6; l < 12; l++){
 				List<Transform> check = tempBoard[l];
@@ -311,8 +317,10 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 		int finalIndex;
 		if (listSize > 1) {
 			finalIndex = Random.Range (0, listSize) + 6;
-		} else {
+		} else if (listSize == 1) {
 			finalIndex = 0;
+		} else {
+			finalIndex = -1;
 		}
 		return finalIndex;
 	}
