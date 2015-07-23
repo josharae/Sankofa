@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EntranceScript : MonoBehaviour {
 	[SerializeField] GameObject giwaLife;
-	public GameObject duelMenu;
+	public GameObject duelMenu, limit;
 	GameObject[] boulders;
 	public bool isFighting = false;
 	// Use this for initialization
@@ -17,10 +17,10 @@ public class EntranceScript : MonoBehaviour {
 
 	}
 
-	public void activateLifeUI(){
-		giwaLife.SetActive (true);
-		giwaLife.transform.GetChild (0).gameObject.SetActive (true);
-		giwaLife.transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
+	public void activateLifeUI(bool activate = true){
+		giwaLife.SetActive (activate);
+		giwaLife.transform.GetChild (0).gameObject.SetActive (activate);
+		giwaLife.transform.GetChild (0).GetChild (0).gameObject.SetActive (activate);
 	}
 
 	public void resetTimeScale(){
@@ -28,7 +28,12 @@ public class EntranceScript : MonoBehaviour {
 	}
 
 	public void startDuel(){
+		GameObject.FindWithTag (Tags.Giwa).GetComponent<Phase2_script_GiwaAttack> ().startDuel ();
 		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = true;
+		Debug.Log (GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled);
+		limit.GetComponent<Collider> ().enabled = false;
+		duelMenu.SetActive (false);
+		isFighting = true;
 		activateLifeUI ();
 		resetTimeScale ();
 		foreach (GameObject boulder in boulders)
@@ -36,21 +41,21 @@ public class EntranceScript : MonoBehaviour {
 
 	}
 
+	public void cancelDuel(){
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
+		limit.GetComponent<Collider> ().enabled = true;
+		isFighting = false;
+		duelMenu.SetActive (false);
+		resetTimeScale ();
+		activateLifeUI (false);
+	}
+
 	void OnTriggerEnter(Collider other){
-		if (other.gameObject.tag == Tags.Player){
-		if (!isFighting) {
-			isFighting = true;
-			duelMenu.SetActive (true);	
-			Time.timeScale = 0;
-		} else {
-			if(!GameObject.FindWithTag (Tags.Giwa).GetComponent<Phase2_script_GiwaAttack>().duelStarted && !duelMenu.activeInHierarchy){
-				GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
-				isFighting = false;
-				giwaLife.SetActive (false);
-				giwaLife.transform.GetChild (0).gameObject.SetActive (false);
-				giwaLife.transform.GetChild (0).GetChild (0).gameObject.SetActive (false);
+		if (other.gameObject.tag == Tags.Player) {
+			if (!isFighting) {
+				duelMenu.SetActive (true);	
+				Time.timeScale = 0;
 			}
-		}
 		}
 	}
 }
