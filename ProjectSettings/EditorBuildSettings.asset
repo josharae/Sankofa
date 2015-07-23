@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/Playable Build 2.0/StartMenu_Build.unity
   - enabled: 1
     path: Assets/_Scenes/Playable Build 2.0/Tutorial_Build.unity
+  - enabled: 1
+    path: Assets/_Scenes/Playable Build 2.0/Castle_build.unity

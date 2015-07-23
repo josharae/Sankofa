@@ -40,6 +40,7 @@ public class Beginning_Hut_OpenDoor : MonoBehaviour {
 	}
 
 	private void load_Build (){
+		Build_Scenes.showLoading ();
 		Build_Scenes.LoadVillage ();
 	}
 
