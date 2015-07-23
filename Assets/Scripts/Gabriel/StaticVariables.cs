@@ -25,6 +25,7 @@ public static class Tags
 	public const string Giwa = "Giwa";
 	public const string GameManager = "GameManager";
 	public const string Entrance = "Entrance";
+	public const string StaticObject = "staticObject";
 
 }
 
@@ -118,6 +119,11 @@ public static class Build_Scenes
 	}
 	public static void LoadScreen(){
 		Application.LoadLevel (Build_Scenes.FirstScene);
+	}
+	public static void showLoading(){
+		GameObject staticObj = GameObject.FindWithTag (Tags.StaticObject);
+		if(staticObj != null)
+			staticObj.GetComponent<GlobalVariablesScript>().loadingNewSCene();
 	}
 }
 

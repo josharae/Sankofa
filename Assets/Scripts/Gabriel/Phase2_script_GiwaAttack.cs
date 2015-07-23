@@ -7,7 +7,8 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	[SerializeField] GameObject leftHP, midHP, rightHP;
 	[SerializeField] private Text finalMessage;
 	[SerializeField] GameObject arenaPosition, dustParticle;
-
+	enum giwaStates {sleeping, charging, stunned, chasing,waiting, walkingback, dead};
+	giwaStates currentState;
 	GameObject player, target;
 	private float maxSpeed = 30, life = 3;
 	private bool isStunned = false, isSleeping = true, isChasing = false, isAlive = true;
@@ -24,54 +25,51 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		originalRotation = this.transform.rotation;
 		currentRate = initialRate;
 		target = player;
+		currentState = giwaStates.sleeping;
 		duelStarted = GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting;
 
 	}
 
 	public void startDuel(){
+		currentState = giwaStates.charging;
 		duelStarted = true;
 	}
 
 	void FixedUpdate()
 	{
-		if (isAlive && duelStarted) {
-			if (Vector3.Distance (this.transform.position, target.transform.position) < 100) {
-				if (!isChasing) {
-					if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) < 5) {
-						this.transform.rotation = originalRotation;
-						chargingTime = 5f;
-						if (isStunned) {
-							chargingTime += 3f;
-							isStunned = false;
-						}
-						Invoke ("charge", chargingTime);
-					} else
-						walkToTarget ();
-				} else if (isChasing) {
-					walkToTarget ();
-				}
-			} else {
-				if (isChasing && !isSleeping)
-					resetPosition ();
-				if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) > 5)
-					walkToTarget ();			
+		switch (currentState) {
+			case giwaStates.stunned: {
+				chargingTime = 8f;
+				currentState = giwaStates.walkingback;
 			}
+			break;
+			case giwaStates.charging: {
+				Invoke ("charge", chargingTime);
+				currentState = giwaStates.waiting;
+			}		
+			break;
+			case giwaStates.chasing:{
+				walkToTarget();
+			}
+			break;
+			case giwaStates.walkingback:{
+				walkToTarget();
+				if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) < 5 && duelStarted){
+					this.transform.rotation = originalRotation;
+					currentState = giwaStates.charging;
+					}
+			}
+			break;
 		}
-		if (life < 1) {
-			midHP.SetActive (false);
-		} else if (life < 2) {
-			rightHP.SetActive (false);
-		} else if (life < 3) {
-			leftHP.SetActive (false);
-		}
+
 	}
 
 	void charge()
 	{
 		isChasing = true;
 		isSleeping = false;
+		currentState = giwaStates.chasing;
 		target = player;
-		CancelInvoke ();
 	}
 
 	void walkToTarget(){
@@ -88,17 +86,23 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		this.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		this.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 		currentRate = initialRate;
+		chargingTime = 5f;
 		target = arenaPosition;
-		isChasing = false;
-		isSleeping = true;
 	}
 
 	void boulderHit(){
 		life -= 1;
-		isStunned = true;
-		resetPosition();
+		if (life < 1) {
+			midHP.SetActive (false);
+		} else if (life < 2) {
+			rightHP.SetActive (false);
+		} else if (life < 3) {
+			leftHP.SetActive (false);
+		}
+		resetPosition ();
+		currentState = giwaStates.stunned;
 		if (life <= 0) {
-			isAlive = false;
+			currentState = giwaStates.dead;
 			missionResultMessage(true);
 		}
 	}
@@ -113,7 +117,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		finalMessage.text = won ? "You Won!!!" : "You Lost";
 		if (won) {
 			finalMessage.color = Color.green;
-			Invoke ("owari", 1.5f);
+			Invoke ("loadOware", 1.5f);
 		}
 		else {
 			life = 3;
@@ -126,7 +130,7 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().isFighting = false;
 	}
 
-	void owari(){
+	void loadOware(){
 		Build_Scenes.Oware();
 	}
 
@@ -139,10 +143,11 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 			Destroy (newSmoke, 3f);
 		} else if (other.gameObject.tag == Tags.Player) { 
 			resetPosition ();
+			currentState = giwaStates.walkingback;
 			missionResultMessage();
 		}
 		else if (other.gameObject.tag == Tags.WaterSpirit) {
-			isSleeping = false;
+			currentState = giwaStates.charging;
 		}
 	}
 }

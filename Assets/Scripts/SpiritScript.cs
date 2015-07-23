@@ -9,6 +9,9 @@ public class SpiritScript : MonoBehaviour {
 	private bool hasBeenThrown;
 	private AudioSource audio;
 	public Animator splish;
+	private bool isMoving;
+	private GameObject affectedObject;
+	public bool collided;
 	
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -16,18 +19,43 @@ public class SpiritScript : MonoBehaviour {
 		hasBeenThrown = false;
 		splish = GetComponent<Animator> ();
 	}
+
+	void Update () {
+		if (isMoving)
+			Pull (affectedObject);
+	}
 	
 	void OnMouseDown(){
 		if (Vector3.Distance (transform.position, player.transform.position) < 20 && !isCollected){
-			player.GetComponent<PlayerScript>().getObject(this.gameObject);
+//			player.GetComponent<PlayerScript>().getObject(this.gameObject);
 		}
+	}
+
+	void OnCollisionExit(Collision collisionInfo) {
+		collided = false;
 	}
 	
 	void OnCollisionEnter(Collision other){
+		collided = true;
 		this.GetComponent<AudioSource>().Play();
 		splish.SetBool("splash", true);
 		this.TeleportBack();
-		//}                                   <----- Altered by Max
+		if (other.gameObject.CompareTag ("EarthAffectedObject")) {
+			affectedObject = other.gameObject;
+			isMoving = true;
+		}
+	}
+	
+	private void Pull(GameObject obj) {
+		if (isMoving){//Mathf.Abs(player.transform.position.x - obj.transform.position.x) > 0.5f && Mathf.Abs(player.transform.position.z - obj.transform.position.z) > 0.5f) {
+		Vector3 targetVector = new Vector3(player.transform.position.x, obj.transform.position.y, player.transform.position.z);
+			obj.transform.position = Vector3.Lerp (player.transform.position, obj.transform.position, 0.015f);
+		}
+		else {
+			isMoving = false;
+			this.gameObject.SetActive (false);
+		}
+	
 	}
 	
 	
