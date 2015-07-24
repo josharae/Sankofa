@@ -27,11 +27,20 @@ public class EntranceScript : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 
+	public void battleEnded(){
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<MeshRenderer> ().enabled = false;
+		limit.GetComponent<Collider> ().enabled = true;
+		limit.GetComponent<MeshRenderer> ().enabled = true;
+		isFighting = false;
+	}
+
 	public void startDuel(){
 		GameObject.FindWithTag (Tags.Giwa).GetComponent<Phase2_script_GiwaAttack> ().startDuel ();
 		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = true;
-		Debug.Log (GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled);
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<MeshRenderer> ().enabled = true;
 		limit.GetComponent<Collider> ().enabled = false;
+		limit.GetComponent<MeshRenderer> ().enabled = false;
 		duelMenu.SetActive (false);
 		isFighting = true;
 		activateLifeUI ();
@@ -43,7 +52,10 @@ public class EntranceScript : MonoBehaviour {
 
 	public void cancelDuel(){
 		GameObject.FindWithTag (Tags.Entrance).GetComponent<Collider> ().enabled = false;
+		GameObject.FindWithTag (Tags.Entrance).GetComponent<MeshRenderer> ().enabled = false;
 		limit.GetComponent<Collider> ().enabled = true;
+		limit.GetComponent<MeshRenderer> ().enabled = true;
+
 		isFighting = false;
 		duelMenu.SetActive (false);
 		resetTimeScale ();

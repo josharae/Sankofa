@@ -78,6 +78,7 @@ public static class Scenes
 public static class Build_Scenes
 {
 	public const string MainScene = "MainTerrain_Build";
+	public const string CastleScene = "Castle_Build";
 	public const string StartMenu = "StartMenu_Build";
 	public const string FirstScene = "LoadScreen_Build";
 	public const string LoadScene = "LoadSaves_Build";
@@ -120,6 +121,9 @@ public static class Build_Scenes
 	}
 	public static void LoadScreen(){
 		Application.LoadLevel (Build_Scenes.FirstScene);
+	}
+	public static void LoadCastle(){
+		Application.LoadLevel (Build_Scenes.CastleScene);
 	}
 	public static void showLoading(){
 		GameObject staticObj = GameObject.FindWithTag (Tags.StaticObject);
