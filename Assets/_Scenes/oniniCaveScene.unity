@@ -400,8 +400,8 @@ MonoBehaviour:
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
-  gridWorldSize: {x: 170.199997, y: 121.330002}
-  nodeRadius: 2
+  gridWorldSize: {x: 202.850006, y: 143.100006}
+  nodeRadius: 1
 --- !u!4 &282426845
 Transform:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &449475742
 Transform:
   m_ObjectHideFlags: 0
