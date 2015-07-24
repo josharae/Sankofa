@@ -27,6 +27,11 @@ public class SceneChanger_Build : MonoBehaviour {
 		Build_Scenes.showLoading();
 		Build_Scenes.Tutorial ();
 	}
+
+	public void mainMenu() {
+		Build_Scenes.showLoading();
+		Build_Scenes.MainMenu ();
+	}
 	
 	public void Oware() {
 		Build_Scenes.showLoading();

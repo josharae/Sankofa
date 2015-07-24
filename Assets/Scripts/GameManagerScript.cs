@@ -13,8 +13,14 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) && !showingInventory){
+		if(Input.GetKeyDown(KeyCode.P) && !showingInventory){
 			pauseGame();
+		}
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			if(showingInventory)
+				showInventory ();
+			else
+				pauseGame();
 		}
 		if (Input.GetKeyDown (KeyCode.I) && !isPaused)
 			showInventory ();
