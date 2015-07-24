@@ -55,6 +55,21 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			slot = "11";
 		} else if (theIndex == 11) {
 			slot = "12";
+		} else {
+			theIndex = GetLeastHarmfulMove();
+			if (theIndex == 6) {
+				slot = "7";
+			} else if (theIndex == 7) {
+				slot = "8";
+			} else if (theIndex == 8) {
+				slot = "9";
+			} else if (theIndex == 9) {
+				slot = "10";
+			} else if (theIndex == 10) {
+				slot = "11";
+			} else if (theIndex == 11) {
+				slot = "12";
+			}
 		}
 		return slot;
 	}
