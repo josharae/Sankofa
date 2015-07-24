@@ -27,11 +27,18 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			}
 		}
 		else{
-			theIndex = GetDangerMarbles();
-			if (theIndex == -1){
-				theIndex = SetupPlayerMarblesForScore();
+			int playerScore = GetPossibleLoss(osg.groups);
+			int possibleIndex = FindBestDefensiveMove();
+			if (playerScore > 0 && possibleIndex != -1){
+				theIndex = FindBestDefensiveMove();
+			}
+			else{
+				theIndex = GetDangerMarbles();
 				if (theIndex == -1){
-					theIndex = GetLeastHarmfulMove();
+					theIndex = SetupPlayerMarblesForScore();
+					if (theIndex == -1){
+						theIndex = GetLeastHarmfulMove();
+					}
 				}
 			}
 		}
@@ -194,6 +201,7 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			board.Add(temp2);
 		}
 		int bestScore = 0;
+		List<int> slots = new List<int> ();
 		for (int i = 6; i < 12; i++) {
 			List<Transform> list = board[i];
 			List<List<Transform>> newBoard = GetPossibleBoard(osg.groups, list);
@@ -204,23 +212,23 @@ public class Oware_Script_DeathAI : MonoBehaviour {
 			}
 			List<Transform> playerList = newBoard[index];
 			int marbles = 0;
-			int count = 0;
 			while (index >= 0 && index < 6){
 				if (playerList.Count == 0 || playerList.Count == 1){
 					marbles = marbles + playerList.Count + 1;
-					count++;
-					index++;
 					if (index < 6)
 						playerList = newBoard[index];
 				}
-				else
-					index = -1;
+				index--;
 			}
-			int score = marbles + count;
-			if (bestScore < score){
+			int score = marbles;
+			if (bestScore <= score && score != 0){
 				bestScore = score;
-				nextIndex = i;
+				slots.Add(i);
 			}
+		}
+		if (slots.Count > 0) {
+			int slotIndex = Random.Range(0, slots.Count);
+			nextIndex = slots[slotIndex];
 		}
 		return nextIndex;
 	}

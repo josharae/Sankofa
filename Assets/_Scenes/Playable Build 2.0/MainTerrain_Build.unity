@@ -759,7 +759,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: c647fe7900b624719bacfe0cfa4108c9, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -862,7 +862,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 8bac004438f0044a0ac1eff386591cdf, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -1516,7 +1516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &255087390
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -2613,7 +2613,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255087389}
   m_LocalRotation: {x: 1.15202326e-07, y: -.707106829, z: -.707106829, w: -1.15202326e-07}
-  m_LocalPosition: {x: -274, y: 26.4885902, z: 58}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918958435}
@@ -3236,7 +3236,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 363357834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -500, y: 0, z: -200}
+  m_LocalPosition: {x: -203, y: 0, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 284170183}
@@ -3260,7 +3260,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 6bf349656637b4653a9a83ac9b413e13, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -4888,7 +4888,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483084800}
   m_LocalRotation: {x: 0, y: .999032974, z: 0, w: .0439679287}
-  m_LocalPosition: {x: -.0729999989, y: -9.39999962, z: -0}
+  m_LocalPosition: {x: -.0280000009, y: -6.80000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 538099665}
@@ -4899,11 +4899,11 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483084800}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d0315dd99cbd5840a4123900d9f73bd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -5078,7 +5078,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a8612c04f2244914b900143adc8caebd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -5584,7 +5584,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 9d785c78180b54bbbb6ade8b33c8af27, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -6771,9 +6771,9 @@ RectTransform:
   - {fileID: 287049219}
   m_Father: {fileID: 1215876896}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 297.899994, y: 250}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -102, y: -41}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &648470539
@@ -6815,8 +6815,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Oware
+      - m_Target: {fileID: 1704410428}
+        m_MethodName: loadOware
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15157,7 +15157,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 8fd1521ea300d49219698f1e8c16d714, type: 2}
-  m_TreeDistance: 100
+  m_TreeDistance: 1
   m_TreeBillboardDistance: 90
   m_TreeCrossFadeLength: 12.3000002
   m_TreeMaximumFullLODCount: 200
@@ -17310,6 +17310,12 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+--- !u!114 &1704410428 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11450200, guid: 8c315269359ca504b82b361c6d930a50,
+    type: 2}
+  m_PrefabInternal: {fileID: 918958434}
+  m_Script: {fileID: 11500000, guid: 02d42310bebd4734481fe31f25c34d0d, type: 3}
 --- !u!4 &1709703980 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 20c7905e3c2f24a76b4dcfd688f18cb4, type: 3}
@@ -17655,7 +17661,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 425168, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 32
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 425168, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17663,7 +17669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425168, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 28
+      value: 66.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 425168, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17689,14 +17695,6 @@ Prefab:
       propertyPath: originalBG
       value: 
       objectReference: {fileID: 1074492202}
-    - target: {fileID: 11430724, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
-      propertyPath: jumpSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 14395672, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
   m_IsPrefabParent: 0
