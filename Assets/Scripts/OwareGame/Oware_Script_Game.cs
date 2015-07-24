@@ -158,32 +158,6 @@ public class Oware_Script_Game : MonoBehaviour {
 					slot = death.Move ();
 					isMoving = true;
 /*
-					if (nextMove == b1children){
-						slot = "7";
-						isMoving = true;
-					}
-					else if (nextMove == b2children){
-						slot = "8";
-						isMoving = true;
-					}
-					else if (nextMove == b3children){
-						slot = "9";
-						isMoving = true;
-					}
-					else if (nextMove == b4children){
-						slot = "10";
-						isMoving = true;
-					}
-					else if (nextMove == b5children){
-						slot = "11";
-						isMoving = true;
-					}
-					else if (nextMove == b6children){
-						slot = "12";
-						isMoving = true;
-					}
-*/
-/*
 					if (Input.GetKey (KeyCode.Y)) {
 						if (b1children.Count > 0){
 							isMoving = true;
@@ -291,6 +265,11 @@ public class Oware_Script_Game : MonoBehaviour {
 			Transform tran = a1children[a];
 			//tran.gameObject.GetComponent<Oware_Script_MarbleBehavior>().SetMovingBool(true);
 		}
+		// Everything inside this if statement along with the Lists topLocations and pitLocations
+		// are for the purpose of the appearance of the marbles moving. This is true for every Move method in this script
+		// and can be eliminated should anyone decide to change the marble movement from being physics-based. The contents
+		// of the else statement keep track of what marbles are held in each slot and must be kept for the game to function
+		// corectly.
 		if (moves < size * 100) {
 			for (int i = 0; i < size; i++) {
 				if (moves >= i * 100 && moves < i * 100 + 75){
