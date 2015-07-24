@@ -26,7 +26,8 @@ public static class Tags
 	public const string GameManager = "GameManager";
 	public const string Entrance = "Entrance";
 	public const string StaticObject = "staticObject";
-
+	public const string onini = "onini";
+	public const string waypoint = "waypoint";
 }
 
 public static class Scenes
