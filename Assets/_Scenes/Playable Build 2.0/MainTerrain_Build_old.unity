@@ -7147,6 +7147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   giwaLife: {fileID: 1979677205}
   duelMenu: {fileID: 0}
+  limit: {fileID: 0}
   isFighting: 0
 --- !u!23 &741928647
 MeshRenderer:
