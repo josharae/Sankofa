@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class GlobalVariablesScript : MonoBehaviour {
+	public string previousScene, currentScene;
 	bool defeatedGiwa = false,eggIsBroken = false;
 	public GameObject loadingScreen;
 
 	void Start () {
-	
+		previousScene = currentScene = Application.loadedLevelName;
 	}
 	
 	// Update is called once per frame
@@ -19,6 +20,8 @@ public class GlobalVariablesScript : MonoBehaviour {
 	}
 
 	void OnLevelWasLoaded (){
+		previousScene = currentScene;
+		currentScene = Application.loadedLevelName;
 		Invoke ("disableLoad", 0.3f);
 	}
 

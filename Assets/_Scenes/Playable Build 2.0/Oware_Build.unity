@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &477239406
 MonoBehaviour:
@@ -3396,8 +3397,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5540,6 +5540,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281367344}
   - 114: {fileID: 1281367345}
+  - 114: {fileID: 1281367346}
   m_Layer: 0
   m_Name: Oware
   m_TagString: Untagged
@@ -5624,6 +5625,17 @@ MonoBehaviour:
   b5children: []
   b6: {fileID: 1092750381}
   b6children: []
+--- !u!114 &1281367346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281367343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475761c36dfd10443acf13c776072621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284990928
 GameObject:
   m_ObjectHideFlags: 0
@@ -7733,6 +7745,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1968782948
 Transform:
   m_ObjectHideFlags: 0
