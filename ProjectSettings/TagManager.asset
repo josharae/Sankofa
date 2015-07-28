@@ -24,6 +24,9 @@ TagManager:
   - Entrance
   - GameManager
   - staticObject
+  - onini
+  - VisionHitbox
+  - waypoint
   layers:
   - Default
   - TransparentFX

@@ -9,15 +9,15 @@ public class PlayerDetection : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag (Tags.Player);
 		onini = GameObject.FindGameObjectWithTag (Tags.onini);
 	}
-
+	
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject == player) {
 			Debug.Log ("Player collided with vision hitbox");
-
+			
 			Vector3 direction = other.transform.position - onini.transform.position;
-
+			
 			RaycastHit hit;
-
+			
 			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 20)) {
 				if (hit.collider.gameObject == player) {
 					Debug.Log ("Player seen by Onini");
@@ -27,11 +27,11 @@ public class PlayerDetection : MonoBehaviour {
 	}
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject == player) {
-
+			
 			Vector3 direction = other.transform.position - onini.transform.position;
-
+			
 			RaycastHit hit;
-
+			
 			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 20)) {
 				if (hit.collider.gameObject == player) {
 					Debug.Log("Player seen by Onini");

@@ -3,14 +3,29 @@ using System.Collections;
 
 public class Unit : MonoBehaviour {
 	
-	
-	public Transform target;
+	public CurrentTarget currentTarget;
+	private Transform target;
 	float speed = 5;
 	Vector3[] path;
 	int targetIndex;
+	bool followingPath = true;
 	
 	void Start() {
+		target = currentTarget.transform;
 		PathRequestManager.RequestPath(transform.position,target.position, OnPathFound);
+	}
+
+	void RequestAnotherPath() {
+		target = currentTarget.transform;
+		PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
+	}
+
+	public void Update() {
+		if (!followingPath) {
+			target = currentTarget.transform;
+			followingPath = true;
+			PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
+		}
 	}
 	
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful) {
@@ -29,7 +44,8 @@ public class Unit : MonoBehaviour {
 				targetIndex ++;
 				if (targetIndex >= path.Length) {
 					//Point where Onini has reached final waypoint
-
+					currentTarget.nextWaypoint ();
+					followingPath = false;
 					yield break;
 				}
 				currentWaypoint = path[targetIndex];

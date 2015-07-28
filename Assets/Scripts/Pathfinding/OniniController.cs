@@ -9,8 +9,6 @@ public class OniniController : MonoBehaviour {
 	void Awake() {
 		Waypoints.MakeWaypoints ();
 		moveTo = 0;
-		Quaternion rotateTo = Quaternion.LookRotation((Waypoints.waypointslist [moveTo].transform.position - transform.position));
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotateSpeed);
 	}
 
 	void Update () {
