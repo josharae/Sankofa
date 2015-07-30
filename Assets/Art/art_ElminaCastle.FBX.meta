@@ -165,6 +165,102 @@ ModelImporter:
     100314: Watchtowers
     100316: Windows
     100318: Wood Floors
+    100320: Cannon
+    100322: Cannon001
+    100324: Cannon002
+    100326: Cannon003
+    100328: Cannon004
+    100330: Cannon005
+    100332: Cannon006
+    100334: Cannon007
+    100336: Cannon008
+    100338: Cannon009
+    100340: Cannon010
+    100342: Floor Courtyard
+    100344: Floor Entrance Balcony
+    100346: Floor Governor's Courtyard
+    100348: Floor Governor's Courtyard Second Floor
+    100350: Floor Male Dungeon
+    100352: Floor Male Dungeon DONR
+    100354: Floor Outside Entrance
+    100356: Floor Restaurant Courtyard
+    100358: Floor Second Floor
+    100360: Floor Stairs to Floor Two
+    100362: Floor Third Floor
+    100364: Door
+    100366: Door 1
+    100368: Door 2
+    100370: Door 3
+    100372: Door 4
+    100374: Door 5
+    100376: Door 6
+    100378: Door018
+    100380: Door019
+    100382: Door021
+    100384: Door022
+    100386: Door023
+    100388: Door024
+    100390: Door025
+    100392: Door026
+    100394: Door027
+    100396: Door028
+    100398: Door029
+    100400: Door03
+    100402: Door030
+    100404: Door031
+    100406: Door032
+    100408: Door033
+    100410: Door034
+    100412: Door035
+    100414: Door036
+    100416: Door037
+    100418: Door038
+    100420: Door039
+    100422: Door04
+    100424: Door040
+    100426: Door041
+    100428: Door042
+    100430: Door043
+    100432: Door044
+    100434: Door045
+    100436: Door046
+    100438: Door047
+    100440: Door048
+    100442: Door049
+    100444: Door05
+    100446: Door050
+    100448: Door051
+    100450: Door052
+    100452: Door053
+    100454: Door06
+    100456: Door07
+    100458: Door17
+    100460: Hills
+    100462: Plane014
+    100464: Plane015
+    100466: Plane016
+    100468: Plane017
+    100470: Plane018
+    100472: Plane019
+    100474: Plane020
+    100476: Plane021
+    100478: Plane022
+    100480: Plane023
+    100482: Plane024
+    100484: Plane025
+    100486: Plane026
+    100488: Plane027
+    100490: Plane028
+    100492: Plane029
+    100494: Plane030
+    100496: Plane031
+    100498: Plane032
+    100500: Plane033
+    100502: Plane034
+    100504: Plane035
+    100506: Plane036
+    100508: Plane037
+    100510: Walls
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -325,6 +421,102 @@ ModelImporter:
     400314: Watchtowers
     400316: Windows
     400318: Wood Floors
+    400320: Cannon
+    400322: Cannon001
+    400324: Cannon002
+    400326: Cannon003
+    400328: Cannon004
+    400330: Cannon005
+    400332: Cannon006
+    400334: Cannon007
+    400336: Cannon008
+    400338: Cannon009
+    400340: Cannon010
+    400342: Floor Courtyard
+    400344: Floor Entrance Balcony
+    400346: Floor Governor's Courtyard
+    400348: Floor Governor's Courtyard Second Floor
+    400350: Floor Male Dungeon
+    400352: Floor Male Dungeon DONR
+    400354: Floor Outside Entrance
+    400356: Floor Restaurant Courtyard
+    400358: Floor Second Floor
+    400360: Floor Stairs to Floor Two
+    400362: Floor Third Floor
+    400364: Door
+    400366: Door 1
+    400368: Door 2
+    400370: Door 3
+    400372: Door 4
+    400374: Door 5
+    400376: Door 6
+    400378: Door018
+    400380: Door019
+    400382: Door021
+    400384: Door022
+    400386: Door023
+    400388: Door024
+    400390: Door025
+    400392: Door026
+    400394: Door027
+    400396: Door028
+    400398: Door029
+    400400: Door03
+    400402: Door030
+    400404: Door031
+    400406: Door032
+    400408: Door033
+    400410: Door034
+    400412: Door035
+    400414: Door036
+    400416: Door037
+    400418: Door038
+    400420: Door039
+    400422: Door04
+    400424: Door040
+    400426: Door041
+    400428: Door042
+    400430: Door043
+    400432: Door044
+    400434: Door045
+    400436: Door046
+    400438: Door047
+    400440: Door048
+    400442: Door049
+    400444: Door05
+    400446: Door050
+    400448: Door051
+    400450: Door052
+    400452: Door053
+    400454: Door06
+    400456: Door07
+    400458: Door17
+    400460: Hills
+    400462: Plane014
+    400464: Plane015
+    400466: Plane016
+    400468: Plane017
+    400470: Plane018
+    400472: Plane019
+    400474: Plane020
+    400476: Plane021
+    400478: Plane022
+    400480: Plane023
+    400482: Plane024
+    400484: Plane025
+    400486: Plane026
+    400488: Plane027
+    400490: Plane028
+    400492: Plane029
+    400494: Plane030
+    400496: Plane031
+    400498: Plane032
+    400500: Plane033
+    400502: Plane034
+    400504: Plane035
+    400506: Plane036
+    400508: Plane037
+    400510: Walls
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -481,6 +673,102 @@ ModelImporter:
     2300306: Watchtowers
     2300308: Windows
     2300310: Wood Floors
+    2300312: Cannon
+    2300314: Cannon001
+    2300316: Cannon002
+    2300318: Cannon003
+    2300320: Cannon004
+    2300322: Cannon005
+    2300324: Cannon006
+    2300326: Cannon007
+    2300328: Cannon008
+    2300330: Cannon009
+    2300332: Cannon010
+    2300334: Floor Courtyard
+    2300336: Floor Entrance Balcony
+    2300338: Floor Governor's Courtyard
+    2300340: Floor Governor's Courtyard Second Floor
+    2300342: Floor Male Dungeon
+    2300344: Floor Male Dungeon DONR
+    2300346: Floor Outside Entrance
+    2300348: Floor Restaurant Courtyard
+    2300350: Floor Second Floor
+    2300352: Floor Stairs to Floor Two
+    2300354: Floor Third Floor
+    2300356: Door
+    2300358: Door 1
+    2300360: Door 2
+    2300362: Door 3
+    2300364: Door 4
+    2300366: Door 5
+    2300368: Door 6
+    2300370: Door018
+    2300372: Door019
+    2300374: Door021
+    2300376: Door022
+    2300378: Door023
+    2300380: Door024
+    2300382: Door025
+    2300384: Door026
+    2300386: Door027
+    2300388: Door028
+    2300390: Door029
+    2300392: Door03
+    2300394: Door030
+    2300396: Door031
+    2300398: Door032
+    2300400: Door033
+    2300402: Door034
+    2300404: Door035
+    2300406: Door036
+    2300408: Door037
+    2300410: Door038
+    2300412: Door039
+    2300414: Door04
+    2300416: Door040
+    2300418: Door041
+    2300420: Door042
+    2300422: Door043
+    2300424: Door044
+    2300426: Door045
+    2300428: Door046
+    2300430: Door047
+    2300432: Door048
+    2300434: Door049
+    2300436: Door05
+    2300438: Door050
+    2300440: Door051
+    2300442: Door052
+    2300444: Door053
+    2300446: Door06
+    2300448: Door07
+    2300450: Door17
+    2300452: Hills
+    2300454: Plane014
+    2300456: Plane015
+    2300458: Plane016
+    2300460: Plane017
+    2300462: Plane018
+    2300464: Plane019
+    2300466: Plane020
+    2300468: Plane021
+    2300470: Plane022
+    2300472: Plane023
+    2300474: Plane024
+    2300476: Plane025
+    2300478: Plane026
+    2300480: Plane027
+    2300482: Plane028
+    2300484: Plane029
+    2300486: Plane030
+    2300488: Plane031
+    2300490: Plane032
+    2300492: Plane033
+    2300494: Plane034
+    2300496: Plane035
+    2300498: Plane036
+    2300500: Plane037
+    2300502: Walls
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -637,6 +925,102 @@ ModelImporter:
     3300306: Watchtowers
     3300308: Windows
     3300310: Wood Floors
+    3300312: Cannon
+    3300314: Cannon001
+    3300316: Cannon002
+    3300318: Cannon003
+    3300320: Cannon004
+    3300322: Cannon005
+    3300324: Cannon006
+    3300326: Cannon007
+    3300328: Cannon008
+    3300330: Cannon009
+    3300332: Cannon010
+    3300334: Floor Courtyard
+    3300336: Floor Entrance Balcony
+    3300338: Floor Governor's Courtyard
+    3300340: Floor Governor's Courtyard Second Floor
+    3300342: Floor Male Dungeon
+    3300344: Floor Male Dungeon DONR
+    3300346: Floor Outside Entrance
+    3300348: Floor Restaurant Courtyard
+    3300350: Floor Second Floor
+    3300352: Floor Stairs to Floor Two
+    3300354: Floor Third Floor
+    3300356: Door
+    3300358: Door 1
+    3300360: Door 2
+    3300362: Door 3
+    3300364: Door 4
+    3300366: Door 5
+    3300368: Door 6
+    3300370: Door018
+    3300372: Door019
+    3300374: Door021
+    3300376: Door022
+    3300378: Door023
+    3300380: Door024
+    3300382: Door025
+    3300384: Door026
+    3300386: Door027
+    3300388: Door028
+    3300390: Door029
+    3300392: Door03
+    3300394: Door030
+    3300396: Door031
+    3300398: Door032
+    3300400: Door033
+    3300402: Door034
+    3300404: Door035
+    3300406: Door036
+    3300408: Door037
+    3300410: Door038
+    3300412: Door039
+    3300414: Door04
+    3300416: Door040
+    3300418: Door041
+    3300420: Door042
+    3300422: Door043
+    3300424: Door044
+    3300426: Door045
+    3300428: Door046
+    3300430: Door047
+    3300432: Door048
+    3300434: Door049
+    3300436: Door05
+    3300438: Door050
+    3300440: Door051
+    3300442: Door052
+    3300444: Door053
+    3300446: Door06
+    3300448: Door07
+    3300450: Door17
+    3300452: Hills
+    3300454: Plane014
+    3300456: Plane015
+    3300458: Plane016
+    3300460: Plane017
+    3300462: Plane018
+    3300464: Plane019
+    3300466: Plane020
+    3300468: Plane021
+    3300470: Plane022
+    3300472: Plane023
+    3300474: Plane024
+    3300476: Plane025
+    3300478: Plane026
+    3300480: Plane027
+    3300482: Plane028
+    3300484: Plane029
+    3300486: Plane030
+    3300488: Plane031
+    3300490: Plane032
+    3300492: Plane033
+    3300494: Plane034
+    3300496: Plane035
+    3300498: Plane036
+    3300500: Plane037
+    3300502: Walls
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -793,7 +1177,672 @@ ModelImporter:
     4300306: Box156
     4300308: Object100
     4300310: Object101
+    4300312: Floor Stairs to Floor Two
+    4300314: Floor Second Floor
+    4300316: Floor Third Floor
+    4300318: Floor Restaurant Courtyard
+    4300320: Cannon
+    4300322: Cannon001
+    4300324: Cannon002
+    4300326: Cannon003
+    4300328: Cannon004
+    4300330: Cannon005
+    4300332: Cannon006
+    4300334: Cannon007
+    4300336: Cannon008
+    4300338: Cannon009
+    4300340: Cannon010
+    4300342: Floor Governor's Courtyard Second Floor
+    4300344: Floor Male Dungeon
+    4300346: Floor Male Dungeon DONR
+    4300348: Floor Outside Entrance
+    4300350: Floor Governor's Courtyard
+    4300352: Floor Entrance Balcony
+    4300354: Floor Courtyard
+    4300356: Door03
+    4300358: Door05
+    4300360: Door06
+    4300362: Door07
+    4300364: Door04
+    4300366: Door17
+    4300368: Door
+    4300370: Door018
+    4300372: Door019
+    4300374: Door021
+    4300376: Door
+    4300378: Door
+    4300380: Door022
+    4300382: Door023
+    4300384: Door024
+    4300386: Door025
+    4300388: Door026
+    4300390: Door027
+    4300392: Door028
+    4300394: Door029
+    4300396: Door
+    4300398: Door030
+    4300400: Door031
+    4300402: Door032
+    4300404: Door033
+    4300406: Door034
+    4300408: Door035
+    4300410: Door
+    4300412: Door036
+    4300414: Door037
+    4300416: Door038
+    4300418: Door039
+    4300420: Plane014
+    4300422: Plane015
+    4300424: Plane016
+    4300426: Plane017
+    4300428: Plane018
+    4300430: Plane019
+    4300432: Plane020
+    4300434: Plane021
+    4300436: Plane022
+    4300438: Plane023
+    4300440: Plane024
+    4300442: Plane025
+    4300444: Plane026
+    4300446: Plane027
+    4300448: Plane028
+    4300450: Plane029
+    4300452: Plane030
+    4300454: Plane031
+    4300456: Plane032
+    4300458: Plane033
+    4300460: Plane034
+    4300462: Plane035
+    4300464: Plane036
+    4300466: Plane037
+    4300468: Door040
+    4300470: Door
+    4300472: Door041
+    4300474: Door042
+    4300476: Door043
+    4300478: Door044
+    4300480: Door045
+    4300482: Door046
+    4300484: Door047
+    4300486: Door048
+    4300488: Door049
+    4300490: Door050
+    4300492: Door051
+    4300494: Door052
+    4300496: Door053
+    4300498: Hills
+    4300500: Door
+    4300502: Walls
+    6400000: Box009
+    6400002: Box010
+    6400004: Box025
+    6400006: Box026
+    6400008: Box028
+    6400010: Box030
+    6400012: Box031
+    6400014: Box032
+    6400016: Box033
+    6400018: Box034
+    6400020: Box038
+    6400022: Box039
+    6400024: Box040
+    6400026: Box051
+    6400028: Box052
+    6400030: Box061
+    6400032: Box062
+    6400034: Box069
+    6400036: Box073
+    6400038: Box074
+    6400040: Box075
+    6400042: Box076
+    6400044: Box077
+    6400046: Box078
+    6400048: Box079
+    6400050: Box080
+    6400052: Box081
+    6400054: Box082
+    6400056: Box083
+    6400058: Box084
+    6400060: Box086
+    6400062: Box087
+    6400064: Box090
+    6400066: Box092
+    6400068: Box093
+    6400070: Box095
+    6400072: Box097
+    6400074: Box098
+    6400076: Box099
+    6400078: Box100
+    6400080: Box101
+    6400082: Box102
+    6400084: Box110
+    6400086: Box111
+    6400088: Box112
+    6400090: Box114
+    6400092: Box115
+    6400094: Box116
+    6400096: Box119
+    6400098: Box122
+    6400100: Box123
+    6400102: Box125
+    6400104: Box126
+    6400106: Box127
+    6400108: Box128
+    6400110: Box130
+    6400112: Box131
+    6400114: Box132
+    6400116: Box133
+    6400118: Box134
+    6400120: Box136
+    6400122: Box137
+    6400124: Box138
+    6400126: Box139
+    6400128: Box141
+    6400130: Box142
+    6400132: Box145
+    6400134: Box146
+    6400136: Box147
+    6400138: Box150
+    6400140: Box152
+    6400142: Box153
+    6400144: Box155
+    6400146: Box156
+    6400148: Butresses
+    6400150: Cannon
+    6400152: Cannon001
+    6400154: Cannon002
+    6400156: Cannon003
+    6400158: Cannon004
+    6400160: Cannon005
+    6400162: Cannon006
+    6400164: Cannon007
+    6400166: Cannon008
+    6400168: Cannon009
+    6400170: Cannon010
+    6400172: Chapel
+    6400174: Chapel Roof
+    6400176: Chapel Windows
+    6400178: Cutout Arches
+    6400180: Death and Soldier Door Interiors
+    6400182: Death Prison Door
+    6400184: DONR Room
+    6400186: Dutch Gov Well
+    6400188: Dutch Kitchen
+    6400190: Entrance Rail
+    6400192: Esterno 2 Replacement
+    6400194: Esterno 4
+    6400196: Female Dungeon Hallway
+    6400198: Female Dungeon Sign
+    6400200: Floor Courtyard
+    6400202: Floor Entrance Balcony
+    6400204: Floor Governor's Courtyard
+    6400206: Floor Governor's Courtyard Second Floor
+    6400208: Floor Male Dungeon
+    6400210: Floor Male Dungeon DONR
+    6400212: Floor Outside Entrance
+    6400214: Floor Restaurant Courtyard
+    6400216: Floor Second Floor
+    6400218: Floor Stairs to Floor Two
+    6400220: Floor Third Floor
+    6400222: Governor's Courtyard Arches
+    6400224: Governor's Floor
+    6400226: Governor's Place
+    6400228: Governor's Tower
+    6400230: High Officer Mess
+    6400232: Main Building
+    6400234: Male Dungeon
+    6400236: Male Dungeon 1
+    6400238: Male Dungeon DONR
+    6400240: Near Restaurant Floor
+    6400242: Object045
+    6400244: Object049
+    6400246: Object051
+    6400248: Object055
+    6400250: Object075
+    6400252: Object076
+    6400254: Object077
+    6400256: Object080
+    6400258: Object081
+    6400260: Object083
+    6400262: Object084
+    6400264: Object085
+    6400266: Object090
+    6400268: Object091
+    6400270: Object093
+    6400272: Object096
+    6400274: Object097
+    6400276: Object098
+    6400278: Object099
+    6400280: Object100
+    6400282: Object101
+    6400284: Outside Walls
+    6400286: pav_interno02
+    6400288: Plaque
+    6400290: Portuguese Church Sign
+    6400292: Portuguese Governor Well
+    6400294: Restaurant
+    6400296: Restaurant Door
+    6400298: Roofs
+    6400300: Stairs to Watchtowers
+    6400302: StraightStair001
+    6400304: StraightStair002
+    6400306: StraightStair003
+    6400308: StraightStair004
+    6400310: StraightStair005
+    6400312: StraightStair006
+    6400314: StraightStair007
+    6400316: StraightStair008
+    6400318: StraightStair009
+    6400320: StraightStair010
+    6400322: top_003
+    6400324: torrino_inf
+    6400326: Tube001
+    6400328: Watchtowers
+    6400330: Windows
+    6400332: Wood Floors
+    6400334: Box151
+    6400336: Door
+    6400338: Door 1
+    6400340: Door 2
+    6400342: Door 3
+    6400344: Door 4
+    6400346: Door 5
+    6400348: Door 6
+    6400350: Door018
+    6400352: Door019
+    6400354: Door021
+    6400356: Door022
+    6400358: Door023
+    6400360: Door024
+    6400362: Door025
+    6400364: Door026
+    6400366: Door027
+    6400368: Door028
+    6400370: Door029
+    6400372: Door03
+    6400374: Door030
+    6400376: Door031
+    6400378: Door032
+    6400380: Door033
+    6400382: Door034
+    6400384: Door035
+    6400386: Door036
+    6400388: Door037
+    6400390: Door038
+    6400392: Door039
+    6400394: Door04
+    6400396: Door040
+    6400398: Door041
+    6400400: Door042
+    6400402: Door043
+    6400404: Door044
+    6400406: Door045
+    6400408: Door046
+    6400410: Door047
+    6400412: Door048
+    6400414: Door049
+    6400416: Door05
+    6400418: Door050
+    6400420: Door051
+    6400422: Door052
+    6400424: Door053
+    6400426: Door06
+    6400428: Door07
+    6400430: Door17
+    6400432: Hills
+    6400434: Plane014
+    6400436: Plane015
+    6400438: Plane016
+    6400440: Plane017
+    6400442: Plane018
+    6400444: Plane019
+    6400446: Plane020
+    6400448: Plane021
+    6400450: Plane022
+    6400452: Plane023
+    6400454: Plane024
+    6400456: Plane025
+    6400458: Plane026
+    6400460: Plane027
+    6400462: Plane028
+    6400464: Plane029
+    6400466: Plane030
+    6400468: Plane031
+    6400470: Plane032
+    6400472: Plane033
+    6400474: Plane034
+    6400476: Plane035
+    6400478: Plane036
+    6400480: Plane037
+    6400482: SoldiersPrisonDoor
+    6400484: Box009
+    6400486: Box010
+    6400488: Box025
+    6400490: Box026
+    6400492: Box028
+    6400494: Box030
+    6400496: Box031
+    6400498: Box032
+    6400500: Box033
+    6400502: Box034
+    6400504: Box038
+    6400506: Box039
+    6400508: Box040
+    6400510: Box051
+    6400512: Box052
+    6400514: Box061
+    6400516: Box062
+    6400518: Box069
+    6400520: Box073
+    6400522: Box074
+    6400524: Box075
+    6400526: Box075
+    6400528: Box076
+    6400530: Box077
+    6400532: Box078
+    6400534: Box079
+    6400536: Box080
+    6400538: Box081
+    6400540: Box082
+    6400542: Box083
+    6400544: Box084
+    6400546: Box086
+    6400548: Box087
+    6400550: Box090
+    6400552: Box092
+    6400554: Box093
+    6400556: Box095
+    6400558: Box097
+    6400560: Box098
+    6400562: Box099
+    6400564: Box100
+    6400566: Box101
+    6400568: Box102
+    6400570: Box110
+    6400572: Box111
+    6400574: Box112
+    6400576: Box114
+    6400578: Box115
+    6400580: Box116
+    6400582: Box119
+    6400584: Box122
+    6400586: Box123
+    6400588: Box125
+    6400590: Box126
+    6400592: Box127
+    6400594: Box128
+    6400596: Box130
+    6400598: Box131
+    6400600: Box132
+    6400602: Box133
+    6400604: Box134
+    6400606: Box136
+    6400608: Box137
+    6400610: Box138
+    6400612: Box139
+    6400614: Box141
+    6400616: Box142
+    6400618: Box145
+    6400620: Box146
+    6400622: Box147
+    6400624: Box150
+    6400626: Box151
+    6400628: Box151
+    6400630: Box152
+    6400632: Box153
+    6400634: Box155
+    6400636: Box156
+    6400638: Butresses
+    6400640: Cannon
+    6400642: Cannon001
+    6400644: Cannon002
+    6400646: Cannon003
+    6400648: Cannon004
+    6400650: Cannon005
+    6400652: Cannon006
+    6400654: Cannon007
+    6400656: Cannon008
+    6400658: Cannon009
+    6400660: Cannon010
+    6400662: Chapel
+    6400664: Chapel Roof
+    6400666: Chapel Windows
+    6400668: Cutout Arches
+    6400670: Death and Soldier Door Interiors
+    6400672: Death Prison Door
+    6400674: DONR Room
+    6400676: Door
+    6400678: Door
+    6400680: Door 1
+    6400682: Door 1
+    6400684: Door 2
+    6400686: Door 2
+    6400688: Door 3
+    6400690: Door 3
+    6400692: Door 4
+    6400694: Door 4
+    6400696: Door 5
+    6400698: Door 5
+    6400700: Door 6
+    6400702: Door 6
+    6400704: Door018
+    6400706: Door018
+    6400708: Door019
+    6400710: Door019
+    6400712: Door021
+    6400714: Door021
+    6400716: Door022
+    6400718: Door022
+    6400720: Door023
+    6400722: Door023
+    6400724: Door024
+    6400726: Door024
+    6400728: Door025
+    6400730: Door025
+    6400732: Door026
+    6400734: Door026
+    6400736: Door027
+    6400738: Door027
+    6400740: Door028
+    6400742: Door028
+    6400744: Door029
+    6400746: Door029
+    6400748: Door03
+    6400750: Door03
+    6400752: Door030
+    6400754: Door030
+    6400756: Door031
+    6400758: Door031
+    6400760: Door032
+    6400762: Door032
+    6400764: Door033
+    6400766: Door033
+    6400768: Door034
+    6400770: Door034
+    6400772: Door035
+    6400774: Door035
+    6400776: Door036
+    6400778: Door036
+    6400780: Door037
+    6400782: Door037
+    6400784: Door038
+    6400786: Door038
+    6400788: Door039
+    6400790: Door039
+    6400792: Door04
+    6400794: Door04
+    6400796: Door040
+    6400798: Door040
+    6400800: Door041
+    6400802: Door041
+    6400804: Door042
+    6400806: Door042
+    6400808: Door043
+    6400810: Door043
+    6400812: Door044
+    6400814: Door044
+    6400816: Door045
+    6400818: Door045
+    6400820: Door046
+    6400822: Door046
+    6400824: Door047
+    6400826: Door047
+    6400828: Door048
+    6400830: Door048
+    6400832: Door049
+    6400834: Door049
+    6400836: Door05
+    6400838: Door05
+    6400840: Door050
+    6400842: Door050
+    6400844: Door051
+    6400846: Door051
+    6400848: Door052
+    6400850: Door052
+    6400852: Door053
+    6400854: Door053
+    6400856: Door06
+    6400858: Door06
+    6400860: Door07
+    6400862: Door07
+    6400864: Door17
+    6400866: Door17
+    6400868: Dutch Gov Well
+    6400870: Dutch Kitchen
+    6400872: Entrance Rail
+    6400874: Esterno 2 Replacement
+    6400876: Esterno 4
+    6400878: Female Dungeon Hallway
+    6400880: Female Dungeon Sign
+    6400882: Floor Courtyard
+    6400884: Floor Entrance Balcony
+    6400886: Floor Governor's Courtyard
+    6400888: Floor Governor's Courtyard Second Floor
+    6400890: Floor Male Dungeon
+    6400892: Floor Male Dungeon DONR
+    6400894: Floor Outside Entrance
+    6400896: Floor Restaurant Courtyard
+    6400898: Floor Second Floor
+    6400900: Floor Stairs to Floor Two
+    6400902: Floor Third Floor
+    6400904: Governor's Courtyard Arches
+    6400906: Governor's Floor
+    6400908: Governor's Place
+    6400910: Governor's Tower
+    6400912: High Officer Mess
+    6400914: Hills
+    6400916: Line015
+    6400918: Line016
+    6400920: Line018
+    6400922: Main Building
+    6400924: Male Dungeon
+    6400926: Male Dungeon 1
+    6400928: Male Dungeon DONR
+    6400930: Near Restaurant Floor
+    6400932: Object045
+    6400934: Object049
+    6400936: Object051
+    6400938: Object055
+    6400940: Object075
+    6400942: Object076
+    6400944: Object077
+    6400946: Object080
+    6400948: Object081
+    6400950: Object083
+    6400952: Object084
+    6400954: Object085
+    6400956: Object090
+    6400958: Object091
+    6400960: Object093
+    6400962: Object096
+    6400964: Object097
+    6400966: Object098
+    6400968: Object099
+    6400970: Object100
+    6400972: Object101
+    6400974: Outside Walls
+    6400976: pav_interno02
+    6400978: Plaque
+    6400980: Portuguese Church Sign
+    6400982: Portuguese Governor Well
+    6400984: Restaurant
+    6400986: Restaurant Door
+    6400988: Restaurant Door
+    6400990: Roofs
+    6400992: SoldiersPrisonDoor
+    6400994: SoldiersPrisonDoor
+    6400996: Stairs to Watchtowers
+    6400998: StraightStair001
+    6401000: StraightStair002
+    6401002: StraightStair003
+    6401004: StraightStair004
+    6401006: StraightStair005
+    6401008: StraightStair006
+    6401010: StraightStair007
+    6401012: StraightStair008
+    6401014: StraightStair009
+    6401016: StraightStair010
+    6401018: top_003
+    6401020: torrino_inf
+    6401022: Tube001
+    6401024: Watchtowers
+    6401026: Windows
+    6401028: Wood Floors
+    6401030: Walls
+    6401032: Walls
+    6401034: Walls
     9500000: //RootNode
+    11400000: Box075
+    11400002: Box151
+    11400004: Door
+    11400006: Door 1
+    11400008: Door 2
+    11400010: Door 3
+    11400012: Door 4
+    11400014: Door 5
+    11400016: Door 6
+    11400018: Door018
+    11400020: Door019
+    11400022: Door021
+    11400024: Door022
+    11400026: Door023
+    11400028: Door024
+    11400030: Door025
+    11400032: Door026
+    11400034: Door027
+    11400036: Door028
+    11400038: Door029
+    11400040: Door03
+    11400042: Door030
+    11400044: Door031
+    11400046: Door032
+    11400048: Door033
+    11400050: Door034
+    11400052: Door035
+    11400054: Door036
+    11400056: Door037
+    11400058: Door038
+    11400060: Door039
+    11400062: Door04
+    11400064: Door040
+    11400066: Door041
+    11400068: Door042
+    11400070: Door043
+    11400072: Door044
+    11400074: Door045
+    11400076: Door046
+    11400078: Door047
+    11400080: Door048
+    11400082: Door049
+    11400084: Door05
+    11400086: Door050
+    11400088: Door051
+    11400090: Door052
+    11400092: Door053
+    11400094: Door06
+    11400096: Door07
+    11400098: Door17
+    11400100: SoldiersPrisonDoor
   materials:
     importMaterials: 1
     materialName: 0
@@ -803,10 +1852,6 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -819,7 +1864,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
