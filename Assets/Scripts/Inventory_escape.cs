@@ -6,7 +6,8 @@ public class Inventory_escape : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.LoadLevel(Scenes.MainScene);
+			string sceneToLoad = GameObject.FindWithTag(Tags.StaticObject).GetComponent<GlobalVariablesScript>().previousScene;
+			Application.LoadLevel(sceneToLoad);
 		}
 	}
 }

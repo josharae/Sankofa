@@ -140,7 +140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300502, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300502, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
       propertyPath: m_CastShadows
@@ -149,6 +149,10 @@ Prefab:
     - target: {fileID: 2300502, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100510, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}

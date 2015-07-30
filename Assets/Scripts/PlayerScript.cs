@@ -59,12 +59,25 @@ public class PlayerScript : MonoBehaviour {
 	}
 	
 	void Update(){
+
 		if (Input.GetMouseButtonDown(1) && hasObj) {
 			ChangeObjectRigidBody (true);
 			hasObj = false;
 		}
 		if (Input.GetKeyDown (KeyCode.T) && hasObj) {
 			Throw ();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Z)) {
+			if(speed < 80)
+				speed += 5;
+		}
+		else if (Input.GetKeyDown(KeyCode.X)) {
+			if(speed > 15)
+				speed -= 5;
+		}
+		else if (Input.GetKeyDown(KeyCode.Backspace)) {
+			speed = 15;
 		}
 	}
 	
