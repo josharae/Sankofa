@@ -34,6 +34,9 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if (Vector3.Distance (this.transform.position, arenaPosition.transform.position) > 250 || Vector3.Distance (this.transform.position, player.transform.position) > 250 && duelStarted) {
+			endDuel();
+		}
 		switch (currentState) {
 			case giwaStates.stunned: 
 				chargingTime = 8f;
@@ -75,6 +78,14 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 		Vector3 movement = transform.forward * vel;
 		movement.y -= 20f * Time.deltaTime;
 		transform.position += transform.forward * maxSpeed * Time.deltaTime; 
+	}
+
+	void endDuel(){
+		resetVariables ();
+		this.transform.position = arenaPosition.transform.position;
+		this.transform.rotation = originalRotation;
+		currentState = giwaStates.waiting;
+		GameObject.Find ("EntranceTrigger").GetComponent<EntranceScript> ().battleEnded ();
 	}
 
 	void resetVariables(){
