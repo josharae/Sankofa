@@ -98,6 +98,7 @@ GameObject:
   - 33: {fileID: 3998808}
   - 65: {fileID: 3998807}
   - 23: {fileID: 3998806}
+  - 114: {fileID: 3998810}
   m_Layer: 0
   m_Name: Onini_trigger
   m_TagString: Untagged
@@ -136,7 +137,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 3998805}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -160,6 +161,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!114 &3998810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3998805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a10745fcb17eb46a0a2019da44f94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &15188982
 Prefab:
   m_ObjectHideFlags: 0

@@ -89,6 +89,7 @@ public static class Build_Scenes
 	public const string village = "Village_Build";
 	public const string hut = "Hut_Build";
 	public const string jungle = "MainTerrain_Build";
+	public const string onini = "onini_Build";
 	public static void LoadGame(){
 		Application.LoadLevel (Build_Scenes.MainScene);
 	}
@@ -124,6 +125,9 @@ public static class Build_Scenes
 	}
 	public static void LoadCastle(){
 		Application.LoadLevel (Build_Scenes.CastleScene);
+	}
+	public static void LoadOnini(){
+		Application.LoadLevel (Build_Scenes.onini);
 	}
 	public static void showLoading(){
 		GameObject staticObj = GameObject.FindWithTag (Tags.StaticObject);
