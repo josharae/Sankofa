@@ -23,13 +23,13 @@ public class Unit : MonoBehaviour {
 	public void Update() {
 		if (!followingPath) {
 			target = currentTarget.transform;
-			followingPath = true;
 			PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
 		}
 	}
 	
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful) {
 		if (pathSuccessful) {
+			followingPath = true;
 			path = newPath;
 			StopCoroutine("FollowPath");
 			StartCoroutine("FollowPath");
@@ -44,6 +44,8 @@ public class Unit : MonoBehaviour {
 				targetIndex ++;
 				if (targetIndex >= path.Length) {
 					//Point where Onini has reached final waypoint
+					targetIndex = 0;
+					path = new Vector3[0];
 					currentTarget.nextWaypoint ();
 					followingPath = false;
 					yield break;
