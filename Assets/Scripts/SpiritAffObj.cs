@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiritAffObj : MonoBehaviour {
+public class MusicSpirit : MonoBehaviour {
 	public AudioClip clip;
 	// Use this for initialization
 	void Start () {
