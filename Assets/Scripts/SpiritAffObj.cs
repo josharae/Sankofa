@@ -2,16 +2,14 @@
 using System.Collections;
 
 public class SpiritAffObj : MonoBehaviour {
-
+	public AudioClip clip;
 	// Use this for initialization
 	void Start () {
 	
 	}
 
 	void OnCollisionEnter(Collision other){
-		if (other.gameObject.CompareTag ("Spirit")) {
-			//action
-		}
+		AudioSource.PlayClipAtPoint(clip, transform.position);
 	}
 
 	// Update is called once per frame
