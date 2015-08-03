@@ -18,7 +18,7 @@ public class PlayerDetection : MonoBehaviour {
 			
 			RaycastHit hit;
 			
-			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 20)) {
+			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 40)) {
 				if (hit.collider.gameObject == player) {
 					Debug.Log ("Player seen by Onini");
 				}
@@ -32,7 +32,7 @@ public class PlayerDetection : MonoBehaviour {
 			
 			RaycastHit hit;
 			
-			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 20)) {
+			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 40)) {
 				if (hit.collider.gameObject == player) {
 					Debug.Log("Player seen by Onini");
 				}
