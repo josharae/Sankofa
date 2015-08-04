@@ -570,6 +570,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11430724, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 112c9cf9aa29ff34b99ccbd0a4836c2b, type: 2}
   m_IsPrefabParent: 0
@@ -800,8 +804,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 826825068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.05819988, y: -2, z: -10.4910002}
-  m_LocalScale: {x: 1.2303108, y: 1.80901611, z: 1.2456125}
+  m_LocalPosition: {x: 2.05819988, y: -3.54259992, z: -10.4910002}
+  m_LocalScale: {x: 1.2303108, y: 2.10542989, z: 1.2456125}
   m_Children:
   - {fileID: 1445711591}
   - {fileID: 1717301101}
