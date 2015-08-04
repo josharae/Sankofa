@@ -38,7 +38,7 @@ public class TutorialPlayer : MonoBehaviour {
 	{
 		if(hasObj)
 			Item.transform.position = Hand.transform.position;
-		if (Input.GetKeyDown (KeyCode.Space) && hasObj)
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown (1) && hasObj)
 		{
 			Throw ();
 		}

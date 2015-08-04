@@ -22,14 +22,14 @@ public class EggScript : MonoBehaviour {
 	}
 	
 	void OnMouseDown(){
-		if (Vector3.Distance (transform.position, player.transform.position) < 20 && !isCollected) {
+		if (Vector3.Distance (transform.position, player.transform.position) < 20 && !isCollected && !hasBeenThrown) {
 			player.GetComponent<TutorialPlayer> ().getObject (this.gameObject);
 			
 		}
 	}
 	
 	void OnCollisionEnter(Collision other){
-		if (other.gameObject.CompareTag ("Ground") && this.GetComponent<EggScript> ().hasBeenThrown) {
+		if (other.gameObject.CompareTag ("Ground") && hasBeenThrown) {
 			this.GetComponent<AudioSource> ().Play ();
 			Explosion.SetBool ("Explode", true);
 			Debug.Log ("here");
