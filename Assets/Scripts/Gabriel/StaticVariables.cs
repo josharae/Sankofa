@@ -137,8 +137,10 @@ public static class Build_Scenes
 }
 
 
-public class Game{
-	public  const bool isPaused = false;
+public class ItemNames{
+	public const string Marble = "Marble";
+	public const string Mask = "Mask";
+	public const string Tusk = "Tusk";
 
 }
 

@@ -7,7 +7,7 @@ public class InventoryScript : MonoBehaviour {
 	List<GameObject> Inventory = new List<GameObject>();
 	GameObject Panel;
 	public Text itemList;
-	bool isShowing = true;
+	private int marbles = 0, masks = 0;
 	// Use this for initialization
 	void Start () {
 		Panel = GameObject.Find ("Inventory");
@@ -24,13 +24,12 @@ public class InventoryScript : MonoBehaviour {
 	// Update is called once per frame
 	public void AddItem(GameObject newItem){
 		Inventory.Add (newItem);
-		//Destroy (newItem);
-		newItem.SetActive (false);
-		setPanelText ();
-	}
-
-	public void ShowInventory(){
-		isShowing = !isShowing;
-		Panel.gameObject.SetActive (isShowing);
+		Destroy (newItem);
+		if (newItem.name = ItemNames.Mask) {
+			masks += 1;
+		} else if (newItem.name = ItemNames.Marble) {
+			marbles += 1;
+		} else
+			Inventory.Add (newItem);
 	}
 }
