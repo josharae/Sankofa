@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 public class InventoryScript : MonoBehaviour {
 	List<GameObject> Inventory = new List<GameObject>();
-	GameObject Panel;
+	GameObject GameManager;
 	public Text itemList;
 	private int marbles = 0, masks = 0;
 	// Use this for initialization
 	void Start () {
-		Panel = GameObject.Find ("Inventory");
+		GameManager = GameObject.Find ("GameManager");
 	}
 
 	void setPanelText(){
@@ -25,11 +25,12 @@ public class InventoryScript : MonoBehaviour {
 	public void AddItem(GameObject newItem){
 		Inventory.Add (newItem);
 		Destroy (newItem);
-		if (newItem.name = ItemNames.Mask) {
+		if (newItem.name == ItemNames.Mask) {
 			masks += 1;
-		} else if (newItem.name = ItemNames.Marble) {
+		} else if (newItem.name == ItemNames.Marble) {
 			marbles += 1;
 		} else
 			Inventory.Add (newItem);
+		GameManager.GetComponent<GameManagerScript> ().setItemsText (marbles, masks);
 	}
 }

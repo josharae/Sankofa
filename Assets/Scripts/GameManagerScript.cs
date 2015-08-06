@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
+
 public class GameManagerScript : MonoBehaviour {
 
 	bool isPaused = false, showingInventory = false;
+	public Text marbleText, maskText;
 	GameObject[] InGameButtons;
 	public GameObject PausePanel, InventoryPanel;
 	// Use this for initialization
 	void Start () {
 		InGameButtons = GameObject.FindGameObjectsWithTag ("InGameButtons");
+
 	}
 	
 	// Update is called once per frame
@@ -33,6 +37,10 @@ public class GameManagerScript : MonoBehaviour {
 		Time.timeScale = showingInventory ? 0 : 1;
 	}
 
+	public void setItemsText(int marbles, int masks){
+		marbleText.text = "Marbles x " + marbles;
+		maskText.text = "Masks x " + masks;
+	}
 
 	public void pauseGame(){
 		isPaused = !isPaused;
