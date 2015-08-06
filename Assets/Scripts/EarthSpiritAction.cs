@@ -4,38 +4,30 @@ using System.Collections;
 public class EarthSpiritAction : MonoBehaviour {
 
 	public GameObject player;
-	private bool isMoving;
 	private GameObject affectedObject;
-	public Material invisible;
+	//public Material invisible;
 
+	private Vector3 targetVector;
 	// Use this for initialization
 	void Start () {
-		isMoving = false;
-		affectedObject = null;
+		affectedObject = new GameObject();
+		targetVector = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (isMoving)
 			Pull (affectedObject);
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag ("EarthAffectedObject")) {
 			affectedObject = other.gameObject;
-			isMoving = true;
-			GetComponent<Renderer>().material = invisible;
+			//GetComponent<Renderer>().material = invisible;
+			Vector3 targetVector = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
 		}
 	}
 
 	private void Pull(GameObject obj) {
-		if (Mathf.Abs(player.transform.position.x - obj.transform.position.x) > 0.5f && Mathf.Abs(player.transform.position.z - obj.transform.position.z) > 0.5f) {
-			Vector3 targetVector = new Vector3(player.transform.position.x, obj.transform.position.y, player.transform.position.z);
-			obj.transform.position = Vector3.Lerp (transform.position, targetVector, 0.015f);
-		}
-		else {
-			isMoving = false;
-			this.gameObject.SetActive (false);
-		}
+			obj.transform.position = Vector3.Lerp (transform.position, targetVector, .015f);
 	}
 }
