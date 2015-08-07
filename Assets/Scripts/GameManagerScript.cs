@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour {
 
 	bool isPaused = false, showingInventory = false;
 	public Text marbleText, maskText;
+	int marbles =0, masks= 0;
 	GameObject[] InGameButtons;
 	public GameObject PausePanel, InventoryPanel;
 	// Use this for initialization
@@ -37,7 +38,16 @@ public class GameManagerScript : MonoBehaviour {
 		Time.timeScale = showingInventory ? 0 : 1;
 	}
 
-	public void setItemsText(int marbles, int masks){
+	public void updateCollectibleCount(bool isMarble = true){
+		if (isMarble)
+			marbles += 1;
+		else
+			masks += 1;
+
+		setItemsText ();
+	}
+
+	private void setItemsText(){
 		marbleText.text = "Marbles: " + marbles + "/20";
 		maskText.text = "Masks x " + masks;
 	}

@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2386662}
   - 143: {fileID: 14395672}
   - 114: {fileID: 11494410}
+  - 114: {fileID: 11487794}
+  - 114: {fileID: 11407174}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -60,7 +62,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63, y: 45.5299988, z: 66.9000015}
+  m_LocalPosition: {x: 0, y: -5.65999985, z: -18.5499992}
   m_LocalScale: {x: 1, y: 3.12783861, z: 1}
   m_Children:
   - {fileID: 499026}
@@ -162,6 +164,17 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191572}
   m_Enabled: 1
+--- !u!114 &11407174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9977179f5627fef48a56c635d0817442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,10 +187,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  jumpSpeed: 15
+  jumpSpeed: 10
   camera: {fileID: 191572}
   Hand: {fileID: 139116}
   hasObj: 0
+--- !u!114 &11487794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf99d4e9abe4c634e9b6ee9e73db243e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11494410
 MonoBehaviour:
   m_ObjectHideFlags: 1
