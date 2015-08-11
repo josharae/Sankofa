@@ -16,9 +16,9 @@ public class InventoryScript : MonoBehaviour {
 		Inventory.Add (newItem);
 		Destroy (newItem);
 		if (newItem.name == ItemNames.Mask) {
-			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount(false);
+			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount(newItem.transform.position, false);
 		} else if (newItem.name == ItemNames.Marble) {
-			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount();
+			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount(newItem.transform.position);
 		} else
 			Inventory.Add (newItem);
 

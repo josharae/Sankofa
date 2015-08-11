@@ -139,6 +139,7 @@ public static class Build_Scenes
 
 public class ItemNames{
 	public const string Marble = "Marble";
+	public const string GameManager = "GameManager";
 	public const string Mask = "Mask";
 	public const string Tusk = "Tusk";
 
