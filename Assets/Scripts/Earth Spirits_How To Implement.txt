@@ -1,0 +1,7 @@
+Steps:
+
+1. Put a "Spirit Rock" Prefab whereever you want it
+
+2. Put a "Rock Spirit" Prefab anywhere in the scene
+
+3. Make the Rock Spirit the public "Spirit" variable for the Spirit Rock's Spirit Object Script
