@@ -7,7 +7,8 @@ public class GameManagerScript : MonoBehaviour {
 	bool isPaused = false, showingInventory = false;
 
 	public Text marbleText, maskText;
-	int marbles =0, masks= 0, currentLevel;
+	public int marbles =0;
+	int masks= 0, currentLevel;
 	GameObject[] InGameButtons;
 	public GameObject PausePanel, InventoryPanel;
 	// Use this for initialization

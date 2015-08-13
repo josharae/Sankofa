@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Phase2_script_GiwaAttack : MonoBehaviour
 {
 	[SerializeField] GameObject leftHP, midHP, rightHP;
-	[SerializeField] private Text finalMessage;
+	[SerializeField] private Text finalMessage, collectText;
 	[SerializeField] GameObject arenaPosition, dustParticle;
 	enum giwaStates {sleeping, charging, stunned, chasing,waiting, walkingback, dead};
 	giwaStates currentState;
@@ -157,8 +157,20 @@ public class Phase2_script_GiwaAttack : MonoBehaviour
 	}
 
 	public void loadOware(){
-		Build_Scenes.showLoading ();
-		Build_Scenes.Oware();
+		if (GameObject.Find (ItemNames.GameManager).GetComponent<GameManagerScript> ().marbles == 24) {
+			Build_Scenes.showLoading ();
+			Build_Scenes.Oware ();
+		} else
+			showCollectMarblesText ();
+	}
+
+	void showCollectMarblesText(){
+		collectText.gameObject.SetActive (true);
+		Invoke ("disableCollectText", 3f);
+	}
+
+	void disableCollectText(){
+		collectText.gameObject.SetActive (false);
 	}
 
 	void OnCollisionEnter(Collision other){
