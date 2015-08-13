@@ -66,7 +66,7 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.T) && hasObj) {
 			Throw ();
 		}
-		if (Input.GetKeyDown (KeyCode.Z) && speed<80) {
+		if (Input.GetKeyDown (KeyCode.L) && speed<80) {
 			speed += 10;
 		}
 		if (Input.GetKeyDown (KeyCode.Backspace)) {

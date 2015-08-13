@@ -56,8 +56,8 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	private void setItemsText(){
-		marbleText.text = "Marbles: " + marbles + "/20";
-		maskText.text = "Masks x " + masks;
+		marbleText.text = "Marbles: " + marbles + "/24";
+		maskText.text = "Masks: " + masks + "/8";
 	}
 
 	public void pauseGame(){
