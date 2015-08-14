@@ -34,19 +34,27 @@ class ModelProcessor extends AssetPostprocessor
 
           else if(values[i] == "wall")
           {
-            go.GetComponent.<Renderer>().enabled = false;
-            go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
-            go.GetComponent.<Renderer>().receiveShadows = false;
+            makeInvisible(go);
             // Debug.Log("Wall added");
           }
-          
+
           else if(values[i] == "navmesh")
           {
-            go.GetComponent.<Renderer>().enabled = false;
-            go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
-            go.GetComponent.<Renderer>().receiveShadows = false;
+            makeInvisible(go);
             go.GetComponent.<MeshCollider>().enabled = false;
             Debug.Log("Navmesh added");
+          }
+
+          else if(values[i] == "zone")
+          {
+            makeInvisible(go);
+            go.AddComponent(Scripts_ZoneEntered);
+            go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.name;
+            go.GetComponent(Scripts_ZoneEntered).fadeTime = 3.0;
+            go.GetComponent.<MeshCollider>().convex = true;
+            go.GetComponent.<MeshCollider>().isTrigger = true;
+            go.tag = "Zone";
+            Debug.Log("Added zone");
           }
       }   
   }
@@ -56,5 +64,12 @@ class ModelProcessor extends AssetPostprocessor
     // Debug.Log("Number of arc doors: " + arcDoors);
     // Debug.Log("Number of doors: " + numberOfDoors);
 
+  }
+
+  function makeInvisible(go: GameObject)
+  {
+    go.GetComponent.<Renderer>().enabled = false;
+    go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
+    go.GetComponent.<Renderer>().receiveShadows = false;
   }
 }
