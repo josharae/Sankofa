@@ -1,0 +1,59 @@
+Phase4_object_zonemarking - This is a 'zone' of the castle. The script Scripts_zoneentered
+holds the message that you want to appear on the screen when the player walks into the zone.
+The style parameter holds the text style stuff for the text that appears when you walk into
+the zone. Fadetime is how long the text stays on the screen before disappearing. Fadespeed
+is how fast the text fades. Hasentered is a boolean that holds whether the player is in the
+zone and should be ignored.
+
+ALL OBJECTS THAT ARE ZONES SHOULD BE MARKED WITH A 'Zone' TAG
+
+
+Phase4_objects_fadetest - This is just a normal object that will fade in and out of the scene.
+The parameter fadespeed affects how fast the objects fade and the parameter resident zone
+should be set to the Phase4_object_zonemarking that the object is in. If the player walks into
+the zone set, the object will fade out.
+
+Phase4_objects_visibilitybutton - This is the button that you press that causes the object set
+to fade out when the player clicks the button. Objecttofade holds the object that the button
+will cause to fade. Fadespeed determines how fast the object will fade. Willfade is a boolean
+that holds the status of the button and should not be touched.
+
+ALL OBJECTS THAT ARE BUTTONS SHOULD BE MARKED WITH A 'Button' TAG
+
+
+Scripts_interactscript - This is a script attached to the player that allows for the player
+to click on the button to cause the object attached to the button to fade.
+
+MINIMAP RELATED STUFF =====================================================
+
+Phase4_Objects_mapcam - This is the camera that displays the minimap. In Camera settings,
+make sure the Culling Mask is set to Minimap ONLY. The Projection should also be set to
+Orthographic. The script Scripts_mapFollowScript should be attachec to this camera.
+
+Scripts_mapFollowScript - The player parameter should be set to the player. Maps is an array
+containing the 3 parts of the minimap in this case, the size should be 3 and the three elements
+should be set to the first floor, second floor, and third floor respectively. currentMap
+should represent the floor that the player starts on and should be set as such. PersonTexture
+is the icon on the minimap that shows where the player is standing, I used a small blue circle
+as a placeholder.
+
+Phase4_objects_mapfloor1(2,3) - These Objects are the minimaps, I scaled them up to the size
+of the map and separated them with the first floor on the bottom and the third floor on top.
+The materials attached to them, mapMat(1,2,3) have the minimap images on them.
+
+Phase4_objects_betweenFloors - This is an object with two children. Its purpose it to change
+the current state of the minimap when a player changes floors. Each child has one collider in
+it with the istrigger box checked. They should be next to each other. Both children have the script
+Scripts_switchMinimap attached to them. This object should be duplicated and placed on the
+stairways so that the mapcam knows when to change the current floor. This object comes with
+two colliders and they should be used together. One collider should switch to the floor that
+it is nearest and the other one should switch to the floor on the other side. This allows
+for the floor to change when the player is going down as well as up the stairs.
+
+Scripts_switchMinimap - This script allows the mapcam to change which floor it is displaying.
+The map cam parameter should be set to the mapcam. The toFloor parameter should be set to
+the floor that is closest to the collider.
+
+Other changes - I am going to begin messing with the player and all of the movement scripts to
+make it more lifelike, there may be a few changes implemented, such as head bobbing and a
+locked cursor.
