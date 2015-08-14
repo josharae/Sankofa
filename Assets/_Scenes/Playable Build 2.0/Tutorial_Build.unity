@@ -1913,6 +1913,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1575827234}
   ItemSprite: {fileID: 825403008}
+--- !u!114 &1085828200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085828195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc8c87b73f54ec41bc1226f50db77f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1217125975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3480,7 @@ GameObject:
   - 4: {fileID: 2113736997}
   - 114: {fileID: 2113736996}
   - 114: {fileID: 2113736998}
+  - 114: {fileID: 2113736999}
   m_Layer: 0
   m_Name: GlobalVariablesObject
   m_TagString: staticObject
@@ -3513,3 +3525,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcf5c683646be845b237e78ff32e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2113736999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113736995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f24c52566d18af4da5b88af4ecba96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textFile: 

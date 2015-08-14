@@ -17,12 +17,6 @@ public class GameManagerScript : MonoBehaviour {
 
 	}
 
-	void OnLevelWasLoaded(int level) {
-		this.GetComponent<SpawnManager> ().checkCollectedItems (level);
-	}
-
-
-	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.P) && !showingInventory){
@@ -51,9 +45,8 @@ public class GameManagerScript : MonoBehaviour {
 		else
 			masks += 1;
 
-		this.GetComponent<SpawnManager> ().addCollectedItem (itemPosition);
-
 		setItemsText ();
+		this.GetComponent<SpawnManager> ().addCollectedItem (itemPosition);
 	}
 
 	private void setItemsText(){

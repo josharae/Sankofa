@@ -7,6 +7,13 @@ public class SpawnManager : MonoBehaviour {
 	Dictionary<int, int> itemsToCollect = new Dictionary<int, int>();
 	int currentLevel = 0;
 
+
+	void OnLevelWasLoaded(int level) {
+		currentLevel = level;
+		checkCollectedItems ();
+	}
+
+
 	public void addCollectedItem(Vector3 itemPosition){
 		if (collectedItems.ContainsKey (currentLevel))
 			collectedItems [currentLevel].Add (itemPosition);
@@ -18,8 +25,7 @@ public class SpawnManager : MonoBehaviour {
 		itemsToCollect [currentLevel] -= 1;
 	}
 
-	public void checkCollectedItems(int level){
-		currentLevel = level;
+	public void checkCollectedItems(){
 		GameObject[] collectibles = GameObject.FindGameObjectsWithTag (Tags.Collectible);
 		if (collectedItems.ContainsKey (currentLevel) && itemsToCollect.ContainsKey(currentLevel)){
 			if(itemsToCollect[currentLevel] > 0) {

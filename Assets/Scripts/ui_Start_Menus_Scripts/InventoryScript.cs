@@ -8,19 +8,20 @@ public class InventoryScript : MonoBehaviour {
 	GameObject GameManager;
 	// Use this for initialization
 	void Start () {
-		GameManager = GameObject.Find ("GameManager");
+		GameManager = GameObject.Find (ItemNames.GameManager);
 	}
 	
 	// Update is called once per frame
 	public void AddItem(GameObject newItem){
 		Inventory.Add (newItem);
-		Destroy (newItem);
+		Vector3 position = newItem.transform.position;
 		if (newItem.name == ItemNames.Mask) {
-			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount(newItem.transform.position, false);
+			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount (position, false);
 		} else if (newItem.name == ItemNames.Marble) {
-			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount(newItem.transform.position);
-		} else
-			Inventory.Add (newItem);
+			GameManager.GetComponent<GameManagerScript> ().updateCollectibleCount (position);
+		}
+
+		Destroy (newItem);
 
 	}
 }
