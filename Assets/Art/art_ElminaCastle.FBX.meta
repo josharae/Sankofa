@@ -261,6 +261,34 @@ ModelImporter:
     100506: Plane036
     100508: Plane037
     100510: Walls
+    100512: Box159
+    100514: Chapel Second Floor Floor
+    100516: Male Dungeon Second Floor
+    100518: Object102
+    100520: Object103
+    100522: Object104
+    100524: Object105
+    100526: Object106
+    100528: Navmesh First Floor
+    100530: cop_interno_2
+    100532: esterno_02
+    100534: esterno_4
+    100536: INTERNO_03
+    100538: Object02
+    100540: pav_A
+    100542: PAV_B
+    100544: PAV_C
+    100546: top_02
+    100548: Box160
+    100550: Object107
+    100552: Object108
+    100554: Object109
+    100556: Object110
+    100558: Object111
+    100560: Object112
+    100562: Object113
+    100564: Box161
+    100566: Box162
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -517,6 +545,34 @@ ModelImporter:
     400506: Plane036
     400508: Plane037
     400510: Walls
+    400512: Box159
+    400514: Chapel Second Floor Floor
+    400516: Male Dungeon Second Floor
+    400518: Object102
+    400520: Object103
+    400522: Object104
+    400524: Object105
+    400526: Object106
+    400528: Navmesh First Floor
+    400530: cop_interno_2
+    400532: esterno_02
+    400534: esterno_4
+    400536: INTERNO_03
+    400538: Object02
+    400540: pav_A
+    400542: PAV_B
+    400544: PAV_C
+    400546: top_02
+    400548: Box160
+    400550: Object107
+    400552: Object108
+    400554: Object109
+    400556: Object110
+    400558: Object111
+    400560: Object112
+    400562: Object113
+    400564: Box161
+    400566: Box162
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -769,6 +825,25 @@ ModelImporter:
     2300498: Plane036
     2300500: Plane037
     2300502: Walls
+    2300504: Box159
+    2300506: Chapel Second Floor Floor
+    2300508: Male Dungeon Second Floor
+    2300510: Object102
+    2300512: Object103
+    2300514: Object104
+    2300516: Object105
+    2300518: Object106
+    2300520: Navmesh First Floor
+    2300522: Box160
+    2300524: Object107
+    2300526: Object108
+    2300528: Object109
+    2300530: Object110
+    2300532: Object111
+    2300534: Object112
+    2300536: Object113
+    2300538: Box161
+    2300540: Box162
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1021,6 +1096,25 @@ ModelImporter:
     3300498: Plane036
     3300500: Plane037
     3300502: Walls
+    3300504: Box159
+    3300506: Chapel Second Floor Floor
+    3300508: Male Dungeon Second Floor
+    3300510: Object102
+    3300512: Object103
+    3300514: Object104
+    3300516: Object105
+    3300518: Object106
+    3300520: Navmesh First Floor
+    3300522: Box160
+    3300524: Object107
+    3300526: Object108
+    3300528: Object109
+    3300530: Object110
+    3300532: Object111
+    3300534: Object112
+    3300536: Object113
+    3300538: Box161
+    3300540: Box162
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1273,6 +1367,25 @@ ModelImporter:
     4300498: Hills
     4300500: Door
     4300502: Walls
+    4300504: Male Dungeon Second Floor
+    4300506: Chapel Second Floor Floor
+    4300508: Box159
+    4300510: Object102
+    4300512: Object103
+    4300514: Object104
+    4300516: Object105
+    4300518: Object106
+    4300520: Navmesh First Floor
+    4300522: Object107
+    4300524: Object108
+    4300526: Object109
+    4300528: Object110
+    4300530: Object111
+    4300532: Object112
+    4300534: Object113
+    4300536: Box160
+    4300538: Box161
+    4300540: Box162
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -1791,6 +1904,30 @@ ModelImporter:
     6401030: Walls
     6401032: Walls
     6401034: Walls
+    6401036: Box159
+    6401038: Box159
+    6401040: Chapel Second Floor Floor
+    6401042: Chapel Second Floor Floor
+    6401044: Male Dungeon Second Floor
+    6401046: Male Dungeon Second Floor
+    6401048: Object102
+    6401050: Object102
+    6401052: Object103
+    6401054: Object103
+    6401056: Object104
+    6401058: Object105
+    6401060: Object106
+    6401062: Navmesh First Floor
+    6401064: Box160
+    6401066: Object107
+    6401068: Object108
+    6401070: Object109
+    6401072: Object110
+    6401074: Object111
+    6401076: Object112
+    6401078: Object113
+    6401080: Box161
+    6401082: Box162
     9500000: //RootNode
     11400000: Box075
     11400002: Box151

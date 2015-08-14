@@ -12,8 +12,7 @@ function Start() {
 }
 
 function Update() {
-
-
+    Cursor.lockState = CursorLockMode.Locked;
     var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     var hit: RaycastHit;
     var fwd : Vector3 = GetComponent.<Camera>().transform.TransformDirection(Vector3.forward);
