@@ -54,7 +54,7 @@ class ModelProcessor extends AssetPostprocessor
             go.GetComponent.<MeshCollider>().convex = true;
             go.GetComponent.<MeshCollider>().isTrigger = true;
             go.tag = "Zone";
-            Debug.Log("Added zone");
+            Debug.Log("Added zone " + go.transform.name);
           }
       }   
   }

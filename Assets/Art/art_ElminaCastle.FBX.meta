@@ -289,6 +289,22 @@ ModelImporter:
     100562: Object113
     100564: Box161
     100566: Box162
+    100568: Courtyard
+    100570: Object115
+    100572: Object116
+    100574: Object117
+    100576: Object118
+    100578: 'Courtyard '
+    100580: Portuguese Chapel
+    100582: Door of No Return
+    100584: Male Dungeon 2
+    100586: Governor's Courtyard
+    100588: Restaurant Courtyard
+    100590: Courtyard Zone
+    100592: Door of No Return Zone
+    100594: Male Dungeon Zone
+    100596: Portuguese Chapel Zone
+    100598: Restaurant Courtyard Zone
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -573,6 +589,22 @@ ModelImporter:
     400562: Object113
     400564: Box161
     400566: Box162
+    400568: Courtyard
+    400570: Object115
+    400572: Object116
+    400574: Object117
+    400576: Object118
+    400578: 'Courtyard '
+    400580: Portuguese Chapel
+    400582: Door of No Return
+    400584: Male Dungeon 2
+    400586: Governor's Courtyard
+    400588: Restaurant Courtyard
+    400590: Courtyard Zone
+    400592: Door of No Return Zone
+    400594: Male Dungeon Zone
+    400596: Portuguese Chapel Zone
+    400598: Restaurant Courtyard Zone
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -844,6 +876,22 @@ ModelImporter:
     2300536: Object113
     2300538: Box161
     2300540: Box162
+    2300542: Courtyard
+    2300544: Object115
+    2300546: Object116
+    2300548: Object117
+    2300550: Object118
+    2300552: 'Courtyard '
+    2300554: Portuguese Chapel
+    2300556: Door of No Return
+    2300558: Male Dungeon 2
+    2300560: Governor's Courtyard
+    2300562: Restaurant Courtyard
+    2300564: Courtyard Zone
+    2300566: Door of No Return Zone
+    2300568: Male Dungeon Zone
+    2300570: Portuguese Chapel Zone
+    2300572: Restaurant Courtyard Zone
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1115,6 +1163,22 @@ ModelImporter:
     3300536: Object113
     3300538: Box161
     3300540: Box162
+    3300542: Courtyard
+    3300544: Object115
+    3300546: Object116
+    3300548: Object117
+    3300550: Object118
+    3300552: 'Courtyard '
+    3300554: Portuguese Chapel
+    3300556: Door of No Return
+    3300558: Male Dungeon 2
+    3300560: Governor's Courtyard
+    3300562: Restaurant Courtyard
+    3300564: Courtyard Zone
+    3300566: Door of No Return Zone
+    3300568: Male Dungeon Zone
+    3300570: Portuguese Chapel Zone
+    3300572: Restaurant Courtyard Zone
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1386,6 +1450,22 @@ ModelImporter:
     4300536: Box160
     4300538: Box161
     4300540: Box162
+    4300542: Object115
+    4300544: Object116
+    4300546: Object117
+    4300548: Object118
+    4300550: Courtyard
+    4300552: 'Courtyard '
+    4300554: Portuguese Chapel
+    4300556: Male Dungeon
+    4300558: Door of No Return
+    4300560: Governor's Courtyard
+    4300562: Restaurant Courtyard
+    4300564: Portuguese Chapel Zone
+    4300566: Male Dungeon Zone
+    4300568: Door of No Return Zone
+    4300570: Courtyard Zone
+    4300572: Restaurant Courtyard Zone
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -1928,6 +2008,22 @@ ModelImporter:
     6401078: Object113
     6401080: Box161
     6401082: Box162
+    6401084: Courtyard
+    6401086: Object115
+    6401088: Object116
+    6401090: Object117
+    6401092: Object118
+    6401094: 'Courtyard '
+    6401096: Portuguese Chapel
+    6401098: Door of No Return
+    6401100: Male Dungeon 2
+    6401102: Governor's Courtyard
+    6401104: Restaurant Courtyard
+    6401106: Courtyard Zone
+    6401108: Door of No Return Zone
+    6401110: Male Dungeon Zone
+    6401112: Portuguese Chapel Zone
+    6401114: Restaurant Courtyard Zone
     9500000: //RootNode
     11400000: Box075
     11400002: Box151
@@ -1980,6 +2076,19 @@ ModelImporter:
     11400096: Door07
     11400098: Door17
     11400100: SoldiersPrisonDoor
+    11400102: Courtyard
+    11400104: 'Courtyard '
+    11400106: Portuguese Chapel
+    11400108: Door of No Return
+    11400110: Male Dungeon
+    11400112: Governor's Courtyard
+    11400114: Male Dungeon 2
+    11400116: Restaurant Courtyard
+    11400118: Courtyard Zone
+    11400120: Door of No Return Zone
+    11400122: Male Dungeon Zone
+    11400124: Portuguese Chapel Zone
+    11400126: Restaurant Courtyard Zone
   materials:
     importMaterials: 1
     materialName: 0
@@ -1989,6 +2098,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5

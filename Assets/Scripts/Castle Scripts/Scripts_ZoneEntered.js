@@ -28,7 +28,7 @@ function OnTriggerEnter(other: Collider) {
 		
 		StopCoroutine("FadeOut");
 		StartCoroutine("FadeOut");
-		Debug.Log("In");
+		Debug.Log("In " + zoneDescription);
 	}
 }
 
@@ -36,6 +36,8 @@ function OnTriggerExit(other: Collider) {
 	StopCoroutine("FadeOut");
 	color.a = 0;
 	hasEntered = false;
+	Debug.Log("Out " + zoneDescription);
+
 }
 
 function OnGUI() {
