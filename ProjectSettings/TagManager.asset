@@ -28,6 +28,7 @@ TagManager:
   - VisionHitbox
   - waypoint
   - Zone
+  - SubtitleText
   layers:
   - Default
   - TransparentFX
