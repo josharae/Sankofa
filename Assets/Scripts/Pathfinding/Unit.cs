@@ -26,6 +26,12 @@ public class Unit : MonoBehaviour {
 			PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
 		}
 	}
+
+	public void goToPlayer() {
+		currentTarget.goToPlayer ();
+		target = currentTarget.transform;
+		PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
+	}
 	
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful) {
 		if (pathSuccessful) {

@@ -101,6 +101,12 @@ public class Pathfinding : MonoBehaviour {
 			directionOld = directionNew;
 		}
 
+		for (int i = 1; i < waypoints.Count - 1; i++) {
+			if (Physics.Raycast (waypoints[i-1], waypoints[i+1], Mathf.Infinity)) {
+				waypoints.RemoveAt (i);
+				i--;
+			}
+		}
 		return waypoints.ToArray();
 	}
 	
