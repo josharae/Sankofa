@@ -12,7 +12,6 @@ public class PlayerDetection : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject == player) {
-			Debug.Log ("Player collided with vision hitbox");
 			
 			Vector3 direction = other.transform.position - onini.transform.position;
 			
@@ -20,7 +19,7 @@ public class PlayerDetection : MonoBehaviour {
 			
 			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 40)) {
 				if (hit.collider.gameObject == player) {
-					Debug.Log ("Player seen by Onini");
+					Debug.Log ("Player seen by Onini (initial)");
 				}
 			}
 		}
@@ -34,7 +33,7 @@ public class PlayerDetection : MonoBehaviour {
 			
 			if (Physics.Raycast (onini.transform.position, direction.normalized, out hit, 40)) {
 				if (hit.collider.gameObject == player) {
-					Debug.Log("Player seen by Onini");
+					Debug.Log("Player seen by Onini (continuous)");
 				}
 			}
 		}

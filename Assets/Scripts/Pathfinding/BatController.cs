@@ -35,8 +35,11 @@ public class BatController : MonoBehaviour {
 		}
 	}
 
+	public void RotateAroundPlayer() {
+		//where you at
+	}
+
 	void OnTriggerEnter(Collider other) {
-		Debug.Log ("OnTriggerEnter called");
 		if (toggle) {
 			toggle = false;
 		} else {
