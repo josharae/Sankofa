@@ -8,15 +8,15 @@ class ModelProcessor extends AssetPostprocessor
   static var arcDoors = 0;
   function OnPostprocessGameObjectWithUserProperties(go : GameObject, propNames : String[], values : System.Object[])
   {
-      for (var i : int = 0; i < propNames.Length; i++)
+    for (var i : int = 0; i < propNames.Length; i++)
+    {
+      var propName : String = propNames[i];
+      var value : Object = values[i];
+      if(values[i] == "square_door")
       {
-          var propName : String = propNames[i];
-          var value : Object = values[i];
-          if(values[i] == "square_door")
-          {
-            go.AddComponent(Door);
-            go.GetComponent(Door).glowMat = Resources.Load("square_door_red") as Material;
-            go.GetComponent(Door).currentMat = Resources.Load("square_door") as Material;
+        go.AddComponent(Door);
+        go.GetComponent(Door).glowMat = Resources.Load("square_door_red") as Material;
+        go.GetComponent(Door).currentMat = Resources.Load("square_door") as Material;
             // Debug.Log("Square door added");
             squareDoors++;
             numberOfDoors++;
@@ -49,17 +49,33 @@ class ModelProcessor extends AssetPostprocessor
           {
             makeInvisible(go);
             go.AddComponent(Scripts_ZoneEntered);
-            go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.name;
             go.GetComponent(Scripts_ZoneEntered).fadeTime = 3.0;
             go.GetComponent.<MeshCollider>().convex = true;
             go.GetComponent.<MeshCollider>().isTrigger = true;
             go.tag = "Zone";
-            Debug.Log("Added zone");
+            // Debug.Log("Added zone");
+            if (go.transform.root != go.transform)
+            {
+              go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.root.name;
+              // Debug.Log(go.name + " is a child with root " + go.transform.root.name);
+            }
+            else
+            {
+              go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.name;
+            }
           }
-      }   
-  }
 
-  static function OnPostprocessAllAssets (importedAssets : String[], deletedAssets : String[], movedAssets : String[], movedFromAssetPaths : String[]) {
+          else if(values[i] == "zoneGroup")
+          {
+            go.AddComponent(MeshCollider);
+            Debug.Log("Root here at " + go.transform.name);
+            checkChildren(go);
+          }
+
+        }   
+      }
+
+      static function OnPostprocessAllAssets (importedAssets : String[], deletedAssets : String[], movedAssets : String[], movedFromAssetPaths : String[]) {
     // Debug.Log("Number of square doors: " + squareDoors);
     // Debug.Log("Number of arc doors: " + arcDoors);
     // Debug.Log("Number of doors: " + numberOfDoors);
@@ -71,5 +87,13 @@ class ModelProcessor extends AssetPostprocessor
     go.GetComponent.<Renderer>().enabled = false;
     go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
     go.GetComponent.<Renderer>().receiveShadows = false;
+  }
+
+  function checkChildren(go: GameObject)
+  {
+    if (go.transform.childCount > 0)
+    {
+      Debug.Log("Child here");
+    }
   }
 }
