@@ -289,22 +289,99 @@ ModelImporter:
     100562: Object113
     100564: Box161
     100566: Box162
-    100568: Courtyard
-    100570: Object115
-    100572: Object116
-    100574: Object117
-    100576: Object118
-    100578: 'Courtyard '
-    100580: Portuguese Chapel
-    100582: Door of No Return
-    100584: Male Dungeon 2
-    100586: Governor's Courtyard
-    100588: Restaurant Courtyard
-    100590: Courtyard Zone
-    100592: Door of No Return Zone
-    100594: Male Dungeon Zone
-    100596: Portuguese Chapel Zone
-    100598: Restaurant Courtyard Zone
+    100568: Courtyard Zone
+    100570: Door of No Return Zone
+    100572: Governor's Courtyard
+    100574: Male Dungeon Zone
+    100576: Object115
+    100578: Object116
+    100580: Object117
+    100582: Object118
+    100584: Portuguese Chapel Zone
+    100586: Restaurant Courtyard Zone
+    100588: Object 121
+    100590: Object119
+    100592: Object120
+    100594: Box163
+    100596: Object121
+    100598: Object122
+    100600: Object123
+    100602: Object124
+    100604: Object125
+    100606: Object126
+    100608: Object127
+    100610: Object128
+    100612: Object129
+    100614: Object130
+    100616: Object131
+    100618: Object132
+    100620: Object133
+    100622: Object134
+    100624: Object135
+    100626: Object136
+    100628: Object137
+    100630: Object138
+    100632: Object139
+    100634: Object140
+    100636: Object141
+    100638: Object142
+    100640: Object143
+    100642: Object144
+    100644: Object145
+    100646: Object146
+    100648: Box164
+    100650: Box165
+    100652: First Male Dungeon Zone
+    100654: Governor's Courtyard Zone
+    100656: Second Male Dungeon Zone
+    100658: Door055
+    100660: Door056
+    100662: Door057
+    100664: Box003
+    100666: Box015
+    100668: Box016
+    100670: Box018
+    100672: Box056
+    100674: Box060
+    100676: Box089
+    100678: Box148
+    100680: Box154
+    100682: Box157
+    100684: Box158
+    100686: Camera003
+    100688: Compass001
+    100690: Daylight001
+    100692: Door054
+    100694: Floor Female Dungeon
+    100696: interno 003
+    100698: interno 2
+    100700: interno_02
+    100702: Line011
+    100704: Line013
+    100706: Male Dungeon DONR 1
+    100708: Object021
+    100710: Object026
+    100712: Object027
+    100714: Object036
+    100716: Object037
+    100718: Object044
+    100720: Object047
+    100722: Object054
+    100724: Object060
+    100726: Object072
+    100728: Object074
+    100730: Object078
+    100732: Object082
+    100734: PhysCamera001
+    100736: PhysCamera001.Target
+    100738: Plane002
+    100740: QuadPatch001
+    100742: Shape001
+    100744: Sky002
+    100746: StraightStair002.LeftRail
+    100748: StraightStair002.RightRail
+    100750: Sun001
+    100752: Top Camera
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -589,22 +666,99 @@ ModelImporter:
     400562: Object113
     400564: Box161
     400566: Box162
-    400568: Courtyard
-    400570: Object115
-    400572: Object116
-    400574: Object117
-    400576: Object118
-    400578: 'Courtyard '
-    400580: Portuguese Chapel
-    400582: Door of No Return
-    400584: Male Dungeon 2
-    400586: Governor's Courtyard
-    400588: Restaurant Courtyard
-    400590: Courtyard Zone
-    400592: Door of No Return Zone
-    400594: Male Dungeon Zone
-    400596: Portuguese Chapel Zone
-    400598: Restaurant Courtyard Zone
+    400568: Courtyard Zone
+    400570: Door of No Return Zone
+    400572: Governor's Courtyard
+    400574: Male Dungeon Zone
+    400576: Object115
+    400578: Object116
+    400580: Object117
+    400582: Object118
+    400584: Portuguese Chapel Zone
+    400586: Restaurant Courtyard Zone
+    400588: Object 121
+    400590: Object119
+    400592: Object120
+    400594: Box163
+    400596: Object121
+    400598: Object122
+    400600: Object123
+    400602: Object124
+    400604: Object125
+    400606: Object126
+    400608: Object127
+    400610: Object128
+    400612: Object129
+    400614: Object130
+    400616: Object131
+    400618: Object132
+    400620: Object133
+    400622: Object134
+    400624: Object135
+    400626: Object136
+    400628: Object137
+    400630: Object138
+    400632: Object139
+    400634: Object140
+    400636: Object141
+    400638: Object142
+    400640: Object143
+    400642: Object144
+    400644: Object145
+    400646: Object146
+    400648: Box164
+    400650: Box165
+    400652: First Male Dungeon Zone
+    400654: Governor's Courtyard Zone
+    400656: Second Male Dungeon Zone
+    400658: Door055
+    400660: Door056
+    400662: Door057
+    400664: Box003
+    400666: Box015
+    400668: Box016
+    400670: Box018
+    400672: Box056
+    400674: Box060
+    400676: Box089
+    400678: Box148
+    400680: Box154
+    400682: Box157
+    400684: Box158
+    400686: Camera003
+    400688: Compass001
+    400690: Daylight001
+    400692: Door054
+    400694: Floor Female Dungeon
+    400696: interno 003
+    400698: interno 2
+    400700: interno_02
+    400702: Line011
+    400704: Line013
+    400706: Male Dungeon DONR 1
+    400708: Object021
+    400710: Object026
+    400712: Object027
+    400714: Object036
+    400716: Object037
+    400718: Object044
+    400720: Object047
+    400722: Object054
+    400724: Object060
+    400726: Object072
+    400728: Object074
+    400730: Object078
+    400732: Object082
+    400734: PhysCamera001
+    400736: PhysCamera001.Target
+    400738: Plane002
+    400740: QuadPatch001
+    400742: Shape001
+    400744: Sky002
+    400746: StraightStair002.LeftRail
+    400748: StraightStair002.RightRail
+    400750: Sun001
+    400752: Top Camera
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -876,22 +1030,60 @@ ModelImporter:
     2300536: Object113
     2300538: Box161
     2300540: Box162
-    2300542: Courtyard
-    2300544: Object115
-    2300546: Object116
-    2300548: Object117
-    2300550: Object118
-    2300552: 'Courtyard '
-    2300554: Portuguese Chapel
-    2300556: Door of No Return
-    2300558: Male Dungeon 2
-    2300560: Governor's Courtyard
-    2300562: Restaurant Courtyard
-    2300564: Courtyard Zone
-    2300566: Door of No Return Zone
-    2300568: Male Dungeon Zone
-    2300570: Portuguese Chapel Zone
-    2300572: Restaurant Courtyard Zone
+    2300542: Courtyard Zone
+    2300544: Door of No Return Zone
+    2300546: Governor's Courtyard
+    2300548: Male Dungeon Zone
+    2300550: Object115
+    2300552: Object116
+    2300554: Object117
+    2300556: Object118
+    2300558: Portuguese Chapel Zone
+    2300560: Restaurant Courtyard Zone
+    2300562: Object 121
+    2300564: Object119
+    2300566: Object120
+    2300568: Box163
+    2300570: Object121
+    2300572: Object122
+    2300574: Object123
+    2300576: Object124
+    2300578: Object125
+    2300580: Object126
+    2300582: Object127
+    2300584: Object128
+    2300586: Object129
+    2300588: Object130
+    2300590: Object131
+    2300592: Object132
+    2300594: Object133
+    2300596: Object134
+    2300598: Object135
+    2300600: Object136
+    2300602: Object137
+    2300604: Object138
+    2300606: Object139
+    2300608: Object140
+    2300610: Object141
+    2300612: Object142
+    2300614: Object143
+    2300616: Object144
+    2300618: Object145
+    2300620: Object146
+    2300622: Box164
+    2300624: Box165
+    2300626: First Male Dungeon Zone
+    2300628: Governor's Courtyard Zone
+    2300630: Door055
+    2300632: Door056
+    2300634: Door057
+    2300636: Box148
+    2300638: Door054
+    2300640: Floor Female Dungeon
+    2300642: Male Dungeon DONR 1
+    2300644: Object021
+    2300646: Object082
+    2300648: Plane002
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1163,22 +1355,60 @@ ModelImporter:
     3300536: Object113
     3300538: Box161
     3300540: Box162
-    3300542: Courtyard
-    3300544: Object115
-    3300546: Object116
-    3300548: Object117
-    3300550: Object118
-    3300552: 'Courtyard '
-    3300554: Portuguese Chapel
-    3300556: Door of No Return
-    3300558: Male Dungeon 2
-    3300560: Governor's Courtyard
-    3300562: Restaurant Courtyard
-    3300564: Courtyard Zone
-    3300566: Door of No Return Zone
-    3300568: Male Dungeon Zone
-    3300570: Portuguese Chapel Zone
-    3300572: Restaurant Courtyard Zone
+    3300542: Courtyard Zone
+    3300544: Door of No Return Zone
+    3300546: Governor's Courtyard
+    3300548: Male Dungeon Zone
+    3300550: Object115
+    3300552: Object116
+    3300554: Object117
+    3300556: Object118
+    3300558: Portuguese Chapel Zone
+    3300560: Restaurant Courtyard Zone
+    3300562: Object 121
+    3300564: Object119
+    3300566: Object120
+    3300568: Box163
+    3300570: Object121
+    3300572: Object122
+    3300574: Object123
+    3300576: Object124
+    3300578: Object125
+    3300580: Object126
+    3300582: Object127
+    3300584: Object128
+    3300586: Object129
+    3300588: Object130
+    3300590: Object131
+    3300592: Object132
+    3300594: Object133
+    3300596: Object134
+    3300598: Object135
+    3300600: Object136
+    3300602: Object137
+    3300604: Object138
+    3300606: Object139
+    3300608: Object140
+    3300610: Object141
+    3300612: Object142
+    3300614: Object143
+    3300616: Object144
+    3300618: Object145
+    3300620: Object146
+    3300622: Box164
+    3300624: Box165
+    3300626: First Male Dungeon Zone
+    3300628: Governor's Courtyard Zone
+    3300630: Door055
+    3300632: Door056
+    3300634: Door057
+    3300636: Box148
+    3300638: Door054
+    3300640: Floor Female Dungeon
+    3300642: Male Dungeon DONR 1
+    3300644: Object021
+    3300646: Object082
+    3300648: Plane002
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1454,18 +1684,56 @@ ModelImporter:
     4300544: Object116
     4300546: Object117
     4300548: Object118
-    4300550: Courtyard
-    4300552: 'Courtyard '
-    4300554: Portuguese Chapel
-    4300556: Male Dungeon
-    4300558: Door of No Return
-    4300560: Governor's Courtyard
-    4300562: Restaurant Courtyard
-    4300564: Portuguese Chapel Zone
-    4300566: Male Dungeon Zone
-    4300568: Door of No Return Zone
-    4300570: Courtyard Zone
-    4300572: Restaurant Courtyard Zone
+    4300550: Portuguese Chapel Zone
+    4300552: Male Dungeon Zone
+    4300554: Door of No Return Zone
+    4300556: Courtyard Zone
+    4300558: Governor's Courtyard
+    4300560: Restaurant Courtyard Zone
+    4300562: Object 121
+    4300564: Object119
+    4300566: Object120
+    4300568: Object146
+    4300570: Object145
+    4300572: Object144
+    4300574: Object143
+    4300576: Object142
+    4300578: Object141
+    4300580: Object140
+    4300582: Object139
+    4300584: Object138
+    4300586: Object137
+    4300588: Object136
+    4300590: Object135
+    4300592: Object134
+    4300594: Object133
+    4300596: Object132
+    4300598: Object131
+    4300600: Object130
+    4300602: Object129
+    4300604: Object128
+    4300606: Object127
+    4300608: Object126
+    4300610: Object125
+    4300612: Object124
+    4300614: Object123
+    4300616: Object122
+    4300618: Object121
+    4300620: Box163
+    4300622: First Male Dungeon Zone
+    4300624: Governor's Courtyard Zone
+    4300626: Box164
+    4300628: Box165
+    4300630: Door055
+    4300632: Door056
+    4300634: Door057
+    4300636: Object021
+    4300638: Object082
+    4300640: Box148
+    4300642: Plane002
+    4300644: Door054
+    4300646: Floor Female Dungeon
+    4300648: Male Dungeon DONR
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2008,22 +2276,62 @@ ModelImporter:
     6401078: Object113
     6401080: Box161
     6401082: Box162
-    6401084: Courtyard
-    6401086: Object115
-    6401088: Object116
-    6401090: Object117
-    6401092: Object118
-    6401094: 'Courtyard '
-    6401096: Portuguese Chapel
-    6401098: Door of No Return
-    6401100: Male Dungeon 2
-    6401102: Governor's Courtyard
-    6401104: Restaurant Courtyard
-    6401106: Courtyard Zone
-    6401108: Door of No Return Zone
-    6401110: Male Dungeon Zone
-    6401112: Portuguese Chapel Zone
-    6401114: Restaurant Courtyard Zone
+    6401084: Courtyard Zone
+    6401086: Door of No Return Zone
+    6401088: Governor's Courtyard
+    6401090: Male Dungeon Zone
+    6401092: Object115
+    6401094: Object116
+    6401096: Object117
+    6401098: Object118
+    6401100: Portuguese Chapel Zone
+    6401102: Restaurant Courtyard Zone
+    6401104: Object 121
+    6401106: Object119
+    6401108: Object120
+    6401110: Box163
+    6401112: Object121
+    6401114: Object122
+    6401116: Object123
+    6401118: Object124
+    6401120: Object125
+    6401122: Object126
+    6401124: Object127
+    6401126: Object128
+    6401128: Object129
+    6401130: Object130
+    6401132: Object131
+    6401134: Object132
+    6401136: Object133
+    6401138: Object134
+    6401140: Object135
+    6401142: Object136
+    6401144: Object137
+    6401146: Object138
+    6401148: Object139
+    6401150: Object140
+    6401152: Object141
+    6401154: Object142
+    6401156: Object143
+    6401158: Object144
+    6401160: Object145
+    6401162: Object146
+    6401164: Box164
+    6401166: Box165
+    6401168: First Male Dungeon Zone
+    6401170: Governor's Courtyard Zone
+    6401172: Second Male Dungeon Zone
+    6401174: Door055
+    6401176: Door056
+    6401178: Door057
+    6401180: Box148
+    6401182: Door054
+    6401184: Floor Female Dungeon
+    6401186: Male Dungeon DONR 1
+    6401188: Object021
+    6401190: Object082
+    6401192: Plane002
+    7400000: Take 001
     9500000: //RootNode
     11400000: Box075
     11400002: Box151
@@ -2076,19 +2384,50 @@ ModelImporter:
     11400096: Door07
     11400098: Door17
     11400100: SoldiersPrisonDoor
-    11400102: Courtyard
-    11400104: 'Courtyard '
-    11400106: Portuguese Chapel
-    11400108: Door of No Return
-    11400110: Male Dungeon
-    11400112: Governor's Courtyard
-    11400114: Male Dungeon 2
-    11400116: Restaurant Courtyard
-    11400118: Courtyard Zone
-    11400120: Door of No Return Zone
-    11400122: Male Dungeon Zone
-    11400124: Portuguese Chapel Zone
-    11400126: Restaurant Courtyard Zone
+    11400102: Courtyard Zone
+    11400104: Door of No Return Zone
+    11400106: Governor's Courtyard
+    11400108: Male Dungeon Zone
+    11400110: Portuguese Chapel Zone
+    11400112: Restaurant Courtyard Zone
+    11400114: Object 121
+    11400116: Object119
+    11400118: Object120
+    11400120: Box163
+    11400122: Object121
+    11400124: Object122
+    11400126: Object123
+    11400128: Object124
+    11400130: Object125
+    11400132: Object126
+    11400134: Object127
+    11400136: Object128
+    11400138: Object129
+    11400140: Object130
+    11400142: Object131
+    11400144: Object132
+    11400146: Object133
+    11400148: Object134
+    11400150: Object135
+    11400152: Object136
+    11400154: Object137
+    11400156: Object138
+    11400158: Object139
+    11400160: Object140
+    11400162: Object141
+    11400164: Object142
+    11400166: Object143
+    11400168: Object144
+    11400170: Object145
+    11400172: Object146
+    11400174: Box164
+    11400176: Box165
+    11400178: First Male Dungeon Zone
+    11400180: Governor's Courtyard Zone
+    11400182: Door055
+    11400184: Door056
+    11400186: Door057
+    11400188: Door054
   materials:
     importMaterials: 1
     materialName: 0

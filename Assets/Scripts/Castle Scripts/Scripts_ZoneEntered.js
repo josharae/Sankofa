@@ -8,12 +8,14 @@ var style: GUIStyle;
 var fadeTime: float;
 var fadeSpeed: float;
 var hasEntered = false;
+var root = ""; 
 
 private var color: Color;
 private var timeOnScreen = 2;
 
 function Start () {
 	color = Color.white;
+	style.fontSize = 20;
 }
 
 function FadeOut() {
@@ -23,27 +25,26 @@ function FadeOut() {
 }
 
 function OnTriggerEnter(other: Collider) {
-	if(other.tag == "Player") {
+	if((other.tag == "Player") && hasEntered == false) {
 		hasEntered = true;
 		
 		StopCoroutine("FadeOut");
 		StartCoroutine("FadeOut");
-		Debug.Log("In " + zoneDescription);
+		// Debug.Log("In " + transform.name);
 	}
 }
+
 
 function OnTriggerExit(other: Collider) {
 	StopCoroutine("FadeOut");
 	color.a = 0;
 	hasEntered = false;
-	Debug.Log("Out " + zoneDescription);
-
 }
 
 function OnGUI() {
 	GUI.color = color;
 	if(hasEntered) {
-		GUI.Label (Rect (0, Screen.height/10, Screen.width, 50), zoneDescription, style);
+		GUI.Label (Rect (50, Screen.height/10, Screen.width, 50), zoneDescription, style);
 	}
 }
 

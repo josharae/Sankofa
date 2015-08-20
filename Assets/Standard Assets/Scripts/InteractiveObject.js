@@ -14,7 +14,7 @@ function Glow() {
 		return;
 	isGlowing = true;
 	GetComponent.<Renderer>().material = glowMat;
-	// Debug.Log(glowMat);
+	// Debug.Log("Interacting!");
 	GetComponent.<Renderer>().material.color = Color.red;
 }
 

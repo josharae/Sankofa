@@ -16,7 +16,7 @@ function Update () {
 
 function Interact(v : Vector3, r : Quaternion, t : Transform)
 {
-	if(isInteracting)
+	if(isInteracting) 
 		return;
 	isInteracting = true;
 
@@ -40,5 +40,5 @@ function Open(rotate : Vector3, time : float)
         yield;
     }
 
-	isInteracting = false;
+    isInteracting = false;
 }
