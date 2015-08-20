@@ -11,7 +11,7 @@ public class DialogManager : MonoBehaviour {
 	GameObject textObject, player;
 	Text textField;
 	List <string> dialogue = new List<string>();
-	
+	List <string> currentPhrase = new List<string>();
 	int currentIndex = 0, phraseIndex = 0;
 	string defaultText;
 	bool isFinished = false, dialogStarted = false;
@@ -23,26 +23,28 @@ public class DialogManager : MonoBehaviour {
 	}
 	
 	public void LoadandStartDialog(string fileName, string objName){
-		string line;
-		defaultText = objName + ":\n";
-		StreamReader theReader = new StreamReader("Subtitles\\"+fileName);
+		if (!dialogStarted) {
+			string line;
+			defaultText = objName + ":\n";
+			StreamReader theReader = new StreamReader ("Subtitles\\" + fileName);
 		
-		do {
-			line = theReader.ReadLine ();
-			if(line != null && line.Length != 0)
-				dialogue.Add (line);		
-		} while (line != null);
+			do {
+				line = theReader.ReadLine ();
+				if (line != null && line.Length != 0)
+					dialogue.Add (line);		
+			} while (line != null);
 		
-		theReader.Close();	
-		startDialog ();
+			theReader.Close ();	
+			startDialog ();
+		}
 	}
 	
 	public void nextPhrase(){
 		if (dialogStarted) {
 			CancelInvoke ("showSubtitle");
-			if (phraseIndex < dialogue [currentIndex].Length) {
+			if (phraseIndex < currentPhrase.Count) {
 				textField.text = defaultText + dialogue [currentIndex];
-				phraseIndex = dialogue [currentIndex].Length;
+				phraseIndex = currentPhrase.Count;
 				if(currentIndex == dialogue.Count - 1)
 					buttonText(true);
 			} else if (currentIndex < dialogue.Count - 1) {
@@ -76,6 +78,7 @@ public class DialogManager : MonoBehaviour {
 	
 	void startDialog(){ //works both to start a new dialog or go to next phrase
 		dialogStarted = true;
+		currentPhrase = new List<string> (dialogue [currentIndex].Split (' '));
 		textField.text = defaultText;
 		dialogButton.gameObject.SetActive (true);
 		buttonText ();
@@ -99,14 +102,13 @@ public class DialogManager : MonoBehaviour {
 	
 	void showSubtitle(){
 		isFinished = false;
-		if (phraseIndex < dialogue [currentIndex].Length) {
-			textField.text += dialogue [currentIndex] [phraseIndex];
+		if (phraseIndex < currentPhrase.Count) {
+			textField.text += currentPhrase[phraseIndex] + " ";
 			phraseIndex += 1;
 		} else {
 			if(currentIndex == dialogue.Count - 1)
 				buttonText(true);
 			CancelInvoke ("showSubtitle");
-			phraseIndex = 0;
 		}
 	}
 }
