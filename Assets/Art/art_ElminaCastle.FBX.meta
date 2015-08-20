@@ -382,6 +382,13 @@ ModelImporter:
     100748: StraightStair002.RightRail
     100750: Sun001
     100752: Top Camera
+    100754: Box166
+    100756: Box167
+    100758: Box168
+    100760: Female Dungeon Zone
+    100762: Object147
+    100764: Box169
+    100766: Box170
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -759,6 +766,13 @@ ModelImporter:
     400748: StraightStair002.RightRail
     400750: Sun001
     400752: Top Camera
+    400754: Box166
+    400756: Box167
+    400758: Box168
+    400760: Female Dungeon Zone
+    400762: Object147
+    400764: Box169
+    400766: Box170
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1084,6 +1098,13 @@ ModelImporter:
     2300644: Object021
     2300646: Object082
     2300648: Plane002
+    2300650: Box166
+    2300652: Box167
+    2300654: Box168
+    2300656: Object147
+    2300658: //RootNode
+    2300660: Box169
+    2300662: Box170
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1409,6 +1430,13 @@ ModelImporter:
     3300644: Object021
     3300646: Object082
     3300648: Plane002
+    3300650: Box166
+    3300652: Box167
+    3300654: Box168
+    3300656: Object147
+    3300658: //RootNode
+    3300660: Box169
+    3300662: Box170
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1734,6 +1762,12 @@ ModelImporter:
     4300644: Door054
     4300646: Floor Female Dungeon
     4300648: Male Dungeon DONR
+    4300650: Object147
+    4300652: Box166
+    4300654: Box168
+    4300656: Box167
+    4300658: Box169
+    4300660: Box170
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2331,6 +2365,14 @@ ModelImporter:
     6401188: Object021
     6401190: Object082
     6401192: Plane002
+    6401194: Box166
+    6401196: Box167
+    6401198: Box168
+    6401200: Female Dungeon Zone
+    6401202: Object147
+    6401204: //RootNode
+    6401206: Box169
+    6401208: Box170
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075
@@ -2428,6 +2470,13 @@ ModelImporter:
     11400184: Door056
     11400186: Door057
     11400188: Door054
+    11400190: Box166
+    11400192: Box167
+    11400194: Box168
+    11400196: Object147
+    11400198: //RootNode
+    11400200: Box169
+    11400202: Box170
   materials:
     importMaterials: 1
     materialName: 0
