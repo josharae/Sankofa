@@ -28,6 +28,7 @@ TagManager:
   - OniniCheckLocation
   - Zone
   - SubtitleText
+  - Bat
   layers:
   - Default
   - TransparentFX

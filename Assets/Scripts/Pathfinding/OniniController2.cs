@@ -9,6 +9,8 @@ public class OniniController2 : MonoBehaviour {
 	public Vector3 currentTarget;
 	public Transform playerLocation;
 
+	public float oniniCheckRange;
+
 	NavMeshAgent agent;
 
 	List<Vector3> locations = new List<Vector3> ();
@@ -19,7 +21,6 @@ public class OniniController2 : MonoBehaviour {
 
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
-		locations = GenerateLocationsToLook ();
 		followingNoise = false;
 		checkingLocation = false;
 	}
@@ -28,12 +29,23 @@ public class OniniController2 : MonoBehaviour {
 	void Update () {
 
 		if (!followingNoise && !checkingLocation) {
+			locations = GenerateLocationsToLook();
 			int numLoc = UnityEngine.Random.Range (0, locations.Count);
-			currentTarget = locations[numLoc];
+
+			try {
+				currentTarget = locations[numLoc];
+			}
+			catch (ArgumentOutOfRangeException e) {
+				UnityEngine.Debug.Log ("More hiding spots need to be placed so the player is always in range of at least one");
+			}
+
 			checkingLocation = true;
 		}
 
 		if (followingNoise) {
+			if (Vector3.Distance (transform.position, currentTarget) < 5) {
+				followingNoise = false;
+			}
 
 		} else if (checkingLocation) {
 			if (Vector3.Distance (transform.position, currentTarget) < 2) {
@@ -49,10 +61,16 @@ public class OniniController2 : MonoBehaviour {
 		List<Vector3> _locations = new List<Vector3> ();
 		GameObject[] locationsToCheck = GameObject.FindGameObjectsWithTag ("OniniCheckLocation");
 		for (int i = 0; i < locationsToCheck.Length; i++) {
-			if (Vector3.Distance (locationsToCheck[i].transform.position, playerLocation.position) < 50) {
+			if (Vector3.Distance (locationsToCheck[i].transform.position, playerLocation.position) < oniniCheckRange) {
 				_locations.Add (locationsToCheck[i].transform.position);
 			}
 		}
 		return _locations;
+	}
+
+	public void followNoise(Vector3 noiseLocation) {
+		currentTarget = noiseLocation;
+		followingNoise = true;
+		checkingLocation = false;
 	}
 }
