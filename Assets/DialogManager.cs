@@ -63,6 +63,8 @@ public class DialogManager : MonoBehaviour {
 		isFinished = true;
 		defaultText = "";
 		currentIndex = 0;
+		dialogue = new List<string>();
+		currentPhrase = new List<string>();
 		dialogStarted = false;
 		dialogButton.gameObject.SetActive (false);
 	}

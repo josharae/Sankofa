@@ -9,7 +9,6 @@ public class EggScript : MonoBehaviour {
 	public Animator Explosion;
 	public bool hasBeenThrown;
 	private AudioSource audio;
-	public GameObject[] Sides;
 
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -17,8 +16,6 @@ public class EggScript : MonoBehaviour {
 		hasBeenThrown = false;
 		Explosion.SetBool("Explode", false);
 		Explosion = GetComponent<Animator> ();
-		Sides = GameObject.FindGameObjectsWithTag ("Ground");
-		Sides[0].GetComponent<ColorChanger> ().startChanging ();
 	}
 	
 	void OnMouseDown(){
