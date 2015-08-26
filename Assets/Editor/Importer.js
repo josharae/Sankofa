@@ -61,6 +61,7 @@ class ModelProcessor extends AssetPostprocessor
             }
             else
             {
+              Debug.Log("Zone here at " + go.transform.name);
               go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.name;
             }
           }

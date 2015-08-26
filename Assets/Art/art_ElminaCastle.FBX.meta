@@ -389,6 +389,15 @@ ModelImporter:
     100762: Object147
     100764: Box169
     100766: Box170
+    100768: Box171
+    100770: Box172
+    100772: B145ox171
+    100774: Board Room Zone
+    100776: Dutch Chapel Zonezone
+    100778: Dutch Chapel Zone
+    100780: Female Dungeon Hallway 1
+    100782: Object148
+    100784: Object149
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -773,6 +782,15 @@ ModelImporter:
     400762: Object147
     400764: Box169
     400766: Box170
+    400768: Box171
+    400770: Box172
+    400772: B145ox171
+    400774: Board Room Zone
+    400776: Dutch Chapel Zonezone
+    400778: Dutch Chapel Zone
+    400780: Female Dungeon Hallway 1
+    400782: Object148
+    400784: Object149
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1105,6 +1123,15 @@ ModelImporter:
     2300658: //RootNode
     2300660: Box169
     2300662: Box170
+    2300664: Box171
+    2300666: Box172
+    2300668: B145ox171
+    2300670: Board Room Zone
+    2300672: Dutch Chapel Zonezone
+    2300674: Dutch Chapel Zone
+    2300676: Female Dungeon Hallway 1
+    2300678: Object148
+    2300680: Object149
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1437,6 +1464,15 @@ ModelImporter:
     3300658: //RootNode
     3300660: Box169
     3300662: Box170
+    3300664: Box171
+    3300666: Box172
+    3300668: B145ox171
+    3300670: Board Room Zone
+    3300672: Dutch Chapel Zonezone
+    3300674: Dutch Chapel Zone
+    3300676: Female Dungeon Hallway 1
+    3300678: Object148
+    3300680: Object149
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1768,6 +1804,15 @@ ModelImporter:
     4300656: Box167
     4300658: Box169
     4300660: Box170
+    4300662: Box171
+    4300664: Box172
+    4300666: B145ox171
+    4300668: Dutch Chapel Zonezone
+    4300670: Board Room Zone
+    4300672: Female Dungeon Hallway
+    4300674: Dutch Chapel Zone
+    4300676: Object148
+    4300678: Object149
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2373,6 +2418,15 @@ ModelImporter:
     6401204: //RootNode
     6401206: Box169
     6401208: Box170
+    6401210: Box171
+    6401212: Box172
+    6401214: B145ox171
+    6401216: Board Room Zone
+    6401218: Dutch Chapel Zonezone
+    6401220: Dutch Chapel Zone
+    6401222: Female Dungeon Hallway 1
+    6401224: Object148
+    6401226: Object149
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075
@@ -2477,6 +2531,10 @@ ModelImporter:
     11400198: //RootNode
     11400200: Box169
     11400202: Box170
+    11400204: Board Room Zone
+    11400206: Dutch Chapel Zonezone
+    11400208: Dutch Chapel Zone
+    11400210: Object149
   materials:
     importMaterials: 1
     materialName: 0
