@@ -194,6 +194,26 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400442, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -84.3700027
+      objectReference: {fileID: 0}
+    - target: {fileID: 400442, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56.8699989
+      objectReference: {fileID: 0}
+    - target: {fileID: 100190, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100770, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100694, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87d32b63777a082428f203e0d0e3be61, type: 3}
   m_IsPrefabParent: 0
@@ -238,7 +258,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 14393242, guid: 29aef6c643e6e3c40a4553b3a6d498f8, type: 2}
       propertyPath: m_StepOffset
-      value: .600000024
+      value: .610000014
       objectReference: {fileID: 0}
     - target: {fileID: 131542, guid: 29aef6c643e6e3c40a4553b3a6d498f8, type: 2}
       propertyPath: m_TagString
