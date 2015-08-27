@@ -3,8 +3,9 @@
 using System.Collections;
 
 public class EggScript : MonoBehaviour {
-	GameObject player;
+	GameObject player, tutorialCamera;
 	public bool isCollected = false;
+	public GameObject worldPieces;
 	Vector3 OriginalPosition;
 	public Animator Explosion;
 	public bool hasBeenThrown;
@@ -12,6 +13,7 @@ public class EggScript : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.Find ("Player");
+		tutorialCamera = GameObject.Find ("Main Camera");
 		OriginalPosition = this.transform.position;
 		hasBeenThrown = false;
 		Explosion.SetBool("Explode", false);
@@ -30,9 +32,15 @@ public class EggScript : MonoBehaviour {
 			this.GetComponent<AudioSource> ().Play ();
 			Explosion.SetBool ("Explode", true);
 			Debug.Log ("here");
-			GameObject.Find("Main Camera").GetComponent<ColorChanger> ().startChanging ();
-			Invoke("StartGame",4f);
+			tutorialCamera.GetComponent<ColorChanger> ().startChanging ();
+			Invoke("showPieces",4f);
 		}
+	}
+
+	void showPieces(){
+		Destroy (this.gameObject);
+		worldPieces.gameObject.SetActive (true);
+		tutorialCamera.GetComponent<ColorChanger> ().setColorToDefault ();
 	}
 
 	void StartGame(){

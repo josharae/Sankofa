@@ -30,6 +30,7 @@ public static class Tags
 	public const string waypoint = "waypoint";
 	public const string subtitles = "SubtitleText";
 	public const string Bat = "Bat";
+	public const string cosmicEgg = "CosmicEgg";
 }
 
 public static class Scenes

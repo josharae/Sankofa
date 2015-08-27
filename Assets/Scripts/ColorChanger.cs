@@ -9,8 +9,8 @@ public class ColorChanger : MonoBehaviour {
 
 
 	void Start(){
-		if(isSkyBox)
-			GameObject.Find("Main Camera").GetComponent<Skybox> ().material.color = Color.black;
+		if (isSkyBox)
+			setColorToDefault ();
 	}
 	// Update is called once per frame
 	void Update () {
@@ -34,5 +34,11 @@ public class ColorChanger : MonoBehaviour {
 		else
 			this.GetComponent<MeshRenderer> ().material.color = newColor;
 		
+	}
+
+	public void setColorToDefault(){
+		GameObject.Find("Main Camera").GetComponent<Skybox> ().material.color = Color.black;
+		CancelInvoke ();
+		isChanging = false;
 	}
 }

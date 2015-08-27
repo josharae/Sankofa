@@ -2,42 +2,73 @@
 using System.Collections;
 
 public class TutorialPlayer : MonoBehaviour {
-	public float eggSpeed = 3000f;
+	public float eggSpeed = 3000f,speed = 15f;
 	public GameObject Hand;
 	GameObject GameManager, myCamera;
 	GameObject Item;
 	int DownLimit = 50, UpLimit = -30;
 	float yRotation = 0f, xRotation = 0f;
 	public bool hasObj = false;
-	Vector3 pos;
-	
+	Vector3 pos, moveDirection;
+	CharacterController playerController;
 	
 	void Start ()
 	{
 		GameManager = GameObject.Find ("GameManager");
 		myCamera = GameObject.Find ("Main Camera");
+		playerController = this.GetComponent<CharacterController> ();
 		pos = Hand.transform.position;
 	}
 
 	void FixedUpdate(){
+//		if(hasObj)
+//			Item.transform.position = Hand.transform.position;
+//		float mouseHorizontal = Input.GetAxis ("Mouse X");
+//		yRotation += mouseHorizontal;
+//		transform.eulerAngles = new Vector3 (0, yRotation, 0);
+//		
+//		if (xRotation <= DownLimit && xRotation >= UpLimit) {
+//			//myCamera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
+//			this.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
+//		} else {
+//			if (xRotation > DownLimit)
+//				xRotation = DownLimit;
+//			if (xRotation < UpLimit)
+//				xRotation = UpLimit;
+//		}
+		if (hasObj) //move bone with player
+			Item.transform.position = Hand.transform.position;
+		
+		//rotation
 		float mouseHorizontal = Input.GetAxis ("Mouse X");
+		float mouseVertical = Input.GetAxis ("Mouse Y");
 		yRotation += mouseHorizontal;
+		xRotation += mouseVertical * -1;
 		transform.eulerAngles = new Vector3 (0, yRotation, 0);
 		
 		if (xRotation <= DownLimit && xRotation >= UpLimit) {
-			myCamera.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
+			this.transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
 		} else {
 			if (xRotation > DownLimit)
 				xRotation = DownLimit;
 			if (xRotation < UpLimit)
 				xRotation = UpLimit;
 		}
+		
+		//movement
+		float moveVertical = Input.GetAxis ("Vertical");
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		
+		if (playerController.isGrounded) {
+			moveDirection = new Vector3 (moveHorizontal, 0, moveVertical);
+			moveDirection = transform.TransformDirection (moveDirection);
+			moveDirection *= speed;
+		}
+		playerController.Move (moveDirection * Time.fixedDeltaTime);
 
 	}
 	void Update()
 	{
-		if(hasObj)
-			Item.transform.position = Hand.transform.position;
 		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown (1) && hasObj)
 		{
 			Throw ();
@@ -55,13 +86,11 @@ public class TutorialPlayer : MonoBehaviour {
 		{
 			if(newItem.tag == Tags.Collectible){
 				GameManager.GetComponent<ItemPanelScript>().ShowItemPanel(newItem);
-				this.GetComponent<InventoryScript>().AddItem(newItem);
+				//this.GetComponent<InventoryScript>().AddItem(newItem);
 			}
-			else {
 				hasObj = true;
 				Item = newItem;
 				ChangeBoneRigidBody(false);
-			}
 		}
 	}
 	
@@ -74,8 +103,10 @@ public class TutorialPlayer : MonoBehaviour {
 		hasObj = false;
 		ChangeBoneRigidBody(true);
 		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 100);
-		EggScript bs = Item.GetComponent<EggScript> ();
-		bs.SetThrownBool (true);
+		if (Item.tag == Tags.cosmicEgg) {
+			EggScript bs = Item.GetComponent<EggScript> ();
+			bs.SetThrownBool (true);
+		}	
 	}
 }
 
