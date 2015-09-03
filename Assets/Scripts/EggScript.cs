@@ -5,7 +5,7 @@ using System.Collections;
 public class EggScript : MonoBehaviour {
 	GameObject player, tutorialCamera;
 	public bool isCollected = false;
-	public GameObject worldPieces;
+	public GameObject worldPieces, worldManager;
 	Vector3 OriginalPosition;
 	public Animator Explosion;
 	public bool hasBeenThrown;
@@ -14,6 +14,8 @@ public class EggScript : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find ("Player");
 		tutorialCamera = GameObject.Find ("Main Camera");
+		worldManager = GameObject.Find ("worldManager");
+		worldManager.SetActive (false);
 		OriginalPosition = this.transform.position;
 		hasBeenThrown = false;
 		Explosion.SetBool("Explode", false);
@@ -27,7 +29,7 @@ public class EggScript : MonoBehaviour {
 		}
 	}
 	
-	void OnCollisionEnter(Collision other){
+	void OnTriggerEnter(Collider other){
 		if (other.gameObject.CompareTag ("Ground") && hasBeenThrown) {
 			this.GetComponent<AudioSource> ().Play ();
 			Explosion.SetBool ("Explode", true);
@@ -39,6 +41,7 @@ public class EggScript : MonoBehaviour {
 
 	void showPieces(){
 		Destroy (this.gameObject);
+		worldManager.SetActive (true);
 		worldPieces.gameObject.SetActive (true);
 		tutorialCamera.GetComponent<ColorChanger> ().setColorToDefault ();
 	}

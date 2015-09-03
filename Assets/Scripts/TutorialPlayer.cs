@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class TutorialPlayer : MonoBehaviour {
-	public float eggSpeed = 3000f,speed = 15f;
+	float eggSpeed = 100f,speed = 15f, piecesSpeed = 1000f;
 	public GameObject Hand;
 	GameObject GameManager, myCamera;
 	GameObject Item;
@@ -100,13 +100,18 @@ public class TutorialPlayer : MonoBehaviour {
 	
 	void Throw()
 	{
+		float objSpeed = 0;
 		hasObj = false;
 		ChangeBoneRigidBody(true);
-		Item.GetComponent<Rigidbody>().AddRelativeForce (this.transform.forward * 100);
 		if (Item.tag == Tags.cosmicEgg) {
 			EggScript bs = Item.GetComponent<EggScript> ();
 			bs.SetThrownBool (true);
+			objSpeed = eggSpeed;
 		}	
+		else
+			objSpeed = piecesSpeed;
+		Debug.Log (this.transform.forward);
+		Item.GetComponent<Rigidbody>().AddForce (this.transform.forward * objSpeed,ForceMode.Acceleration);
 	}
 }
 
