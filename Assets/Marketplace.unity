@@ -172,7 +172,7 @@ GameObject:
   - 218: {fileID: 262777854}
   - 154: {fileID: 262777853}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: InnerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -918,7 +918,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958618200}
   m_LocalRotation: {x: 0, y: .554938316, z: 0, w: .831891537}
-  m_LocalPosition: {x: 93.5536957, y: -31.8495598, z: 41.0989914}
+  m_LocalPosition: {x: 93.5999985, y: -34.5, z: 41.0999985}
   m_LocalScale: {x: 15.1489868, y: 5.36467838, z: 4.57893753}
   m_Children: []
   m_Father: {fileID: 1956614906}
@@ -991,7 +991,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1996875936}
   m_LocalRotation: {x: 0, y: .261330098, z: 0, w: .965249479}
-  m_LocalPosition: {x: 79.7136993, y: -31.8495598, z: 58.8089828}
+  m_LocalPosition: {x: 79.6999969, y: -34.5, z: 58.7999992}
   m_LocalScale: {x: 15.1489878, y: 5.36467838, z: 4.57893753}
   m_Children: []
   m_Father: {fileID: 1956614906}
