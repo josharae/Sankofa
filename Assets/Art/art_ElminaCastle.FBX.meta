@@ -398,6 +398,10 @@ ModelImporter:
     100780: Female Dungeon Hallway 1
     100782: Object148
     100784: Object149
+    100786: Minimap
+    100788: Minimap Floor 1
+    100790: Minimap Floor 2
+    100792: Minimap Floor 3
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -791,6 +795,10 @@ ModelImporter:
     400780: Female Dungeon Hallway 1
     400782: Object148
     400784: Object149
+    400786: Minimap
+    400788: Minimap Floor 1
+    400790: Minimap Floor 2
+    400792: Minimap Floor 3
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1132,6 +1140,10 @@ ModelImporter:
     2300676: Female Dungeon Hallway 1
     2300678: Object148
     2300680: Object149
+    2300682: Minimap
+    2300684: Minimap Floor 1
+    2300686: Minimap Floor 2
+    2300688: Minimap Floor 3
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1473,6 +1485,10 @@ ModelImporter:
     3300676: Female Dungeon Hallway 1
     3300678: Object148
     3300680: Object149
+    3300682: Minimap
+    3300684: Minimap Floor 1
+    3300686: Minimap Floor 2
+    3300688: Minimap Floor 3
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1813,6 +1829,10 @@ ModelImporter:
     4300674: Dutch Chapel Zone
     4300676: Object148
     4300678: Object149
+    4300680: Minimap
+    4300682: Minimap Floor 1
+    4300684: Minimap Floor 2
+    4300686: Minimap Floor 3
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2427,6 +2447,10 @@ ModelImporter:
     6401222: Female Dungeon Hallway 1
     6401224: Object148
     6401226: Object149
+    6401228: Minimap
+    6401230: Minimap Floor 1
+    6401232: Minimap Floor 2
+    6401234: Minimap Floor 3
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075

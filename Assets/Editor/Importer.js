@@ -65,10 +65,17 @@ class ModelProcessor extends AssetPostprocessor
               go.GetComponent(Scripts_ZoneEntered).zoneDescription = go.transform.name;
             }
           }
-
+          else if(values[i] == "minimap")
+          {
+            Debug.Log("Minimap added");
+            go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
+            go.GetComponent.<Renderer>().receiveShadows = false;
+            go.layer = LayerMask.NameToLayer("Minimap");
+            Debug.Log(go.layer);
+            go.GetComponent.<MeshCollider>().enabled = false;
+          }
           else if(values[i] == "zoneGroup")
           {
-            go.AddComponent(MeshCollider);
             Debug.Log("Root here at " + go.transform.name);
             checkChildren(go);
           }

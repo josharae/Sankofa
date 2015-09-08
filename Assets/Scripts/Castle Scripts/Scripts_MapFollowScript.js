@@ -11,6 +11,14 @@ private var position: Rect;
 
 function Start () {
     currentMap = 0;
+    
+    if (maps.length > 1)
+    {
+        for (var i = 1; i < maps.length; i++) 
+        {
+            maps[i].GetComponent.<Renderer>().enabled = false;
+        }
+    } 
 }
 
 function Update () {
@@ -25,8 +33,8 @@ function OnGUI() {
     if(miniMap.enabled == true)
     {
         var objPos = GetComponent.<Camera>().WorldToViewportPoint(player.transform.position);
-        
-        var meAngle = player.transform.eulerAngles.y ;
+
+        var meAngle = player.transform.eulerAngles.y - 180;
         var guiRotationMatrix: Matrix4x4 = GUI.matrix; // set up for GUI rotation
         var pivotMe : Vector2;
         pivotMe.x = Screen.width * (miniMap.rect.x + (objPos.x * miniMap.rect.width));
