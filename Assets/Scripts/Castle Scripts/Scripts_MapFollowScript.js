@@ -11,14 +11,6 @@ private var position: Rect;
 
 function Start () {
     currentMap = 0;
-    
-    if (maps.length > 1)
-    {
-        for (var i = 1; i < maps.length; i++) 
-        {
-            maps[i].GetComponent.<Renderer>().enabled = false;
-        }
-    } 
 }
 
 function Update () {
@@ -27,6 +19,23 @@ function Update () {
     if (Input.GetButtonDown("MiniMapToggle")) {
         miniMap.enabled = !miniMap.enabled;
     }
+}
+
+function changeCurrentMap()
+{
+    if (maps.length > 1)
+    {
+        for (var i = 0; i < maps.length; i++) 
+        {
+            if (i == currentMap) {
+                return;
+            }
+            else
+            {
+                maps[i].GetComponent.<Renderer>().enabled = false;
+            }   
+        }
+    } 
 }
 
 function OnGUI() {
@@ -50,3 +59,31 @@ function OnGUI() {
 }
 
 // Tutorial used for this script found at https://www.hive-rd.com/blog/unity3d-basic-minimap-tutorial/
+
+
+
+// #pragma strict
+
+// var player: GameObject;
+// var maps: GameObject[];
+// var currentMap: int;
+// var personTexture: Texture;
+
+// private var camDisplacement = 100;
+// private var position: Rect;
+
+// function Start () {
+//     currentMap = 0;
+//     position = Rect(148, Screen.height - 122, 15, 15);
+// }
+
+// function Update () {
+//     this.transform.position = new Vector3(player.transform.position.x, 
+//         maps[currentMap].transform.position.y + camDisplacement,player.transform.position.z);
+
+// }
+
+// function OnGUI() {
+
+//     GUI.DrawTexture(position, personTexture);
+// }
