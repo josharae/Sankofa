@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 
 
 class ModelProcessor extends AssetPostprocessor
@@ -71,7 +71,6 @@ class ModelProcessor extends AssetPostprocessor
             go.GetComponent.<Renderer>().shadowCastingMode = go.GetComponent.<Renderer>().shadowCastingMode.Off;
             go.GetComponent.<Renderer>().receiveShadows = false;
             go.layer = LayerMask.NameToLayer("Minimap");
-            Debug.Log(go.layer);
             go.GetComponent.<MeshCollider>().enabled = false;
           }
           else if(values[i] == "zoneGroup")

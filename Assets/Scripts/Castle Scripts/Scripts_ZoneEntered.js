@@ -9,6 +9,7 @@ var fadeTime: float;
 var fadeSpeed: float;
 var hasEntered = false;
 var root = ""; 
+var sunLight : Light;
 
 private var color: Color;
 private var timeOnScreen = 2;
@@ -27,7 +28,11 @@ function FadeOut() {
 function OnTriggerEnter(other: Collider) {
 	if((other.tag == "Player") && hasEntered == false) {
 		hasEntered = true;
-		
+		if (sunLight)
+		{
+
+			sunLight.enabled = false;
+		}
 		StopCoroutine("FadeOut");
 		StartCoroutine("FadeOut");
 		// Debug.Log("In " + transform.name);
@@ -37,6 +42,9 @@ function OnTriggerEnter(other: Collider) {
 
 function OnTriggerExit(other: Collider) {
 	StopCoroutine("FadeOut");
+	if (sunLight)
+		{	sunLight.enabled = true;}
+
 	color.a = 0;
 	hasEntered = false;
 }

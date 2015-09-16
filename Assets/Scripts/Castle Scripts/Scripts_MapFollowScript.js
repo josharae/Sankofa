@@ -11,31 +11,78 @@ private var position: Rect;
 
 function Start () {
     currentMap = 0;
+    for (var i = 0; i < maps.length; i++) 
+    {
+        if (i == currentMap) {
+            // Debug.Log(maps[i] + "Enabled");
+            maps[i].GetComponent.<Renderer>().enabled = true;
+        }
+        else
+        {
+            maps[i].GetComponent.<Renderer>().enabled = false;
+        }   
+    }
+
 }
 
 function Update () {
     transform.position.x = player.transform.position.x;
     transform.position.z = player.transform.position.z;
-    if (Input.GetButtonDown("MiniMapToggle")) {
+    if (Input.GetButtonDown("MiniMapToggle" )) {
         miniMap.enabled = !miniMap.enabled;
+    }
+
+    // if (Input.GetButtonDown("SwitchMap")) {
+    //     changeCurrentMap();
+    // }
+}
+
+function incrementMap()
+{
+    if (maps.length > 1)
+    {
+        currentMap++;
+        if (currentMap > maps.length - 1)
+        {
+            currentMap = 0;
+        }
     }
 }
 
 function changeCurrentMap()
 {
-    if (maps.length > 1)
+    incrementMap();
+    for (var i = 0; i < maps.length; i++) 
     {
-        for (var i = 0; i < maps.length; i++) 
-        {
-            if (i == currentMap) {
-                return;
-            }
-            else
-            {
-                maps[i].GetComponent.<Renderer>().enabled = false;
-            }   
+        if (i == currentMap) {
+            Debug.Log(maps[i] + "Enabled");
+            maps[i].GetComponent.<Renderer>().enabled = true;
         }
-    } 
+        else
+        {
+            maps[i].GetComponent.<Renderer>().enabled = false;
+        }   
+    }
+}
+
+function currentFloor() {
+    return currentMap + 1;
+}
+
+function switchMap(floor: int) {
+    // First floor index 0, second index 1, etc
+    currentMap = floor - 1;
+    for (var i = 0; i < maps.length; i++) 
+    {
+        if (i == currentMap) {
+            // Debug.Log(maps[i] + "Enabled");
+            maps[i].GetComponent.<Renderer>().enabled = true;
+        }
+        else
+        {
+            maps[i].GetComponent.<Renderer>().enabled = false;
+        }   
+    }
 }
 
 function OnGUI() {
