@@ -10,7 +10,6 @@ TagManager:
   - MarketBarrier
   - Barrier
   - Collectible
-  - Player
   - EarthAffectedObject
   - Giwa
   - MusicAffectedObject
@@ -39,7 +38,7 @@ TagManager:
   - 
   - Unwalkable
   - Minimap
-  - 
+  - Hide
   - 
   - 
   - 

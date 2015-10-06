@@ -402,6 +402,77 @@ ModelImporter:
     100788: Minimap Floor 1
     100790: Minimap Floor 2
     100792: Minimap Floor 3
+    100794: Death Prison Entrance
+    100796: Door 7
+    100798: Door 8
+    100800: To First Floor
+    100802: To Second Floor
+    100804: To Third Floor
+    100806: Courtyard Zone Piece 01
+    100808: Courtyard Zone Piece 02
+    100810: Courtyard Zone Piece 03
+    100812: Courtyard Zone Piece 04
+    100814: Female Dungeon Zone Piece01
+    100816: Female Dungeon Zone Piece02
+    100818: Female Dungeon Zone Piece03
+    100820: Female Dungeon Zone Piece04
+    100822: Female Dungeon Zone Piece05
+    100824: Female Dungeon Zone Piece06
+    100826: Restaurant Courtyard Zone Piece 01
+    100828: Restaurant Courtyard Zone Piece 02
+    100830: Restaurant Courtyard Zone Piece 03
+    100832: Restaurant Courtyard Zone Piece 04
+    100834: Restaurant Courtyard Zone Piece 05
+    100836: Restaurant Courtyard Zone Piece 06
+    100838: Restaurant Courtyard Zone Piece 07
+    100840: Restaurant Courtyard Zone Piece 08
+    100842: Restaurant Courtyard Zone Piece 09
+    100844: Restaurant Courtyard Zone Piece 10
+    100846: Restaurant Courtyard Zone Piece 11
+    100848: Restaurant Courtyard Zone Piece 12
+    100850: Restaurant Courtyard Zone Piece 13
+    100852: Restaurant Courtyard Zone Piece 14
+    100854: Restaurant Courtyard Zone Piece 15
+    100856: Restaurant Courtyard Zone Piece 16
+    100858: Restaurant Courtyard Zone Piece 17
+    100860: Restaurant Courtyard Zone Piece 18
+    100862: Restaurant Courtyard Zone Piece 19
+    100864: Restaurant Courtyard Zone Piece 20
+    100866: Restaurant Courtyard Zone Piece 21
+    100868: Restaurant Courtyard Zone Piece 22
+    100870: Restaurant Courtyard Zone Piece 23
+    100872: Restaurant Courtyard Zone Piece 24
+    100874: Restaurant Courtyard Zone Piece 25
+    100876: Restaurant Courtyard Zone Piece 26
+    100878: Restaurant Courtyard Zone Piece 27
+    100880: Second Male Dungeon Zone Piece 01
+    100882: Second Male Dungeon Zone Piece 02
+    100884: Arch on Second Floor
+    100886: Courtyard Facing Governor Wall
+    100888: Dutch Chapel Entryway
+    100890: Dutch Well Courtyard
+    100892: Entryway  Arches
+    100894: Floor Main Quarters Third Floor
+    100896: Front Facing Governor Wall
+    100898: Governor's Courtyard Facing Dutch Chapel Wall
+    100900: Main Quarters Divider
+    100902: Main Quarters Entrance Arch
+    100904: Ouside Butresses
+    100906: Plaque Holder
+    100908: Plaque to Dutch Governor
+    100910: Second Floor Building
+    100912: Stairs on Second Floor
+    100914: Stairs to Dutch Chapel
+    100916: Stairs to Main Quarters
+    100918: Stairs to Second Floor
+    100920: Stairs to Third Floor
+    100922: Third Floor Facing Governor Wall
+    100924: Second Floor Male Dungeon DONR
+    100926: Male Dungeon DONR First Wall
+    100928: DONR Top
+    100930: DONR Top_MeshPart0
+    100932: DONR Top_MeshPart1
+    100934: Male Dungeon DONR Wall
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -799,6 +870,77 @@ ModelImporter:
     400788: Minimap Floor 1
     400790: Minimap Floor 2
     400792: Minimap Floor 3
+    400794: Death Prison Entrance
+    400796: Door 7
+    400798: Door 8
+    400800: To First Floor
+    400802: To Second Floor
+    400804: To Third Floor
+    400806: Courtyard Zone Piece 01
+    400808: Courtyard Zone Piece 02
+    400810: Courtyard Zone Piece 03
+    400812: Courtyard Zone Piece 04
+    400814: Female Dungeon Zone Piece01
+    400816: Female Dungeon Zone Piece02
+    400818: Female Dungeon Zone Piece03
+    400820: Female Dungeon Zone Piece04
+    400822: Female Dungeon Zone Piece05
+    400824: Female Dungeon Zone Piece06
+    400826: Restaurant Courtyard Zone Piece 01
+    400828: Restaurant Courtyard Zone Piece 02
+    400830: Restaurant Courtyard Zone Piece 03
+    400832: Restaurant Courtyard Zone Piece 04
+    400834: Restaurant Courtyard Zone Piece 05
+    400836: Restaurant Courtyard Zone Piece 06
+    400838: Restaurant Courtyard Zone Piece 07
+    400840: Restaurant Courtyard Zone Piece 08
+    400842: Restaurant Courtyard Zone Piece 09
+    400844: Restaurant Courtyard Zone Piece 10
+    400846: Restaurant Courtyard Zone Piece 11
+    400848: Restaurant Courtyard Zone Piece 12
+    400850: Restaurant Courtyard Zone Piece 13
+    400852: Restaurant Courtyard Zone Piece 14
+    400854: Restaurant Courtyard Zone Piece 15
+    400856: Restaurant Courtyard Zone Piece 16
+    400858: Restaurant Courtyard Zone Piece 17
+    400860: Restaurant Courtyard Zone Piece 18
+    400862: Restaurant Courtyard Zone Piece 19
+    400864: Restaurant Courtyard Zone Piece 20
+    400866: Restaurant Courtyard Zone Piece 21
+    400868: Restaurant Courtyard Zone Piece 22
+    400870: Restaurant Courtyard Zone Piece 23
+    400872: Restaurant Courtyard Zone Piece 24
+    400874: Restaurant Courtyard Zone Piece 25
+    400876: Restaurant Courtyard Zone Piece 26
+    400878: Restaurant Courtyard Zone Piece 27
+    400880: Second Male Dungeon Zone Piece 01
+    400882: Second Male Dungeon Zone Piece 02
+    400884: Arch on Second Floor
+    400886: Courtyard Facing Governor Wall
+    400888: Dutch Chapel Entryway
+    400890: Dutch Well Courtyard
+    400892: Entryway  Arches
+    400894: Floor Main Quarters Third Floor
+    400896: Front Facing Governor Wall
+    400898: Governor's Courtyard Facing Dutch Chapel Wall
+    400900: Main Quarters Divider
+    400902: Main Quarters Entrance Arch
+    400904: Ouside Butresses
+    400906: Plaque Holder
+    400908: Plaque to Dutch Governor
+    400910: Second Floor Building
+    400912: Stairs on Second Floor
+    400914: Stairs to Dutch Chapel
+    400916: Stairs to Main Quarters
+    400918: Stairs to Second Floor
+    400920: Stairs to Third Floor
+    400922: Third Floor Facing Governor Wall
+    400924: Second Floor Male Dungeon DONR
+    400926: Male Dungeon DONR First Wall
+    400928: DONR Top
+    400930: DONR Top_MeshPart0
+    400932: DONR Top_MeshPart1
+    400934: Male Dungeon DONR Wall
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1144,6 +1286,76 @@ ModelImporter:
     2300684: Minimap Floor 1
     2300686: Minimap Floor 2
     2300688: Minimap Floor 3
+    2300690: Death Prison Entrance
+    2300692: Door 7
+    2300694: Door 8
+    2300696: To First Floor
+    2300698: To Second Floor
+    2300700: To Third Floor
+    2300702: Courtyard Zone Piece 01
+    2300704: Courtyard Zone Piece 02
+    2300706: Courtyard Zone Piece 03
+    2300708: Courtyard Zone Piece 04
+    2300710: Female Dungeon Zone Piece01
+    2300712: Female Dungeon Zone Piece02
+    2300714: Female Dungeon Zone Piece03
+    2300716: Female Dungeon Zone Piece04
+    2300718: Female Dungeon Zone Piece05
+    2300720: Female Dungeon Zone Piece06
+    2300722: Restaurant Courtyard Zone Piece 01
+    2300724: Restaurant Courtyard Zone Piece 02
+    2300726: Restaurant Courtyard Zone Piece 03
+    2300728: Restaurant Courtyard Zone Piece 04
+    2300730: Restaurant Courtyard Zone Piece 05
+    2300732: Restaurant Courtyard Zone Piece 06
+    2300734: Restaurant Courtyard Zone Piece 07
+    2300736: Restaurant Courtyard Zone Piece 08
+    2300738: Restaurant Courtyard Zone Piece 09
+    2300740: Restaurant Courtyard Zone Piece 10
+    2300742: Restaurant Courtyard Zone Piece 11
+    2300744: Restaurant Courtyard Zone Piece 12
+    2300746: Restaurant Courtyard Zone Piece 13
+    2300748: Restaurant Courtyard Zone Piece 14
+    2300750: Restaurant Courtyard Zone Piece 15
+    2300752: Restaurant Courtyard Zone Piece 16
+    2300754: Restaurant Courtyard Zone Piece 17
+    2300756: Restaurant Courtyard Zone Piece 18
+    2300758: Restaurant Courtyard Zone Piece 19
+    2300760: Restaurant Courtyard Zone Piece 20
+    2300762: Restaurant Courtyard Zone Piece 21
+    2300764: Restaurant Courtyard Zone Piece 22
+    2300766: Restaurant Courtyard Zone Piece 23
+    2300768: Restaurant Courtyard Zone Piece 24
+    2300770: Restaurant Courtyard Zone Piece 25
+    2300772: Restaurant Courtyard Zone Piece 26
+    2300774: Restaurant Courtyard Zone Piece 27
+    2300776: Second Male Dungeon Zone Piece 01
+    2300778: Second Male Dungeon Zone Piece 02
+    2300780: Arch on Second Floor
+    2300782: Courtyard Facing Governor Wall
+    2300784: Dutch Chapel Entryway
+    2300786: Dutch Well Courtyard
+    2300788: Entryway  Arches
+    2300790: Floor Main Quarters Third Floor
+    2300792: Front Facing Governor Wall
+    2300794: Governor's Courtyard Facing Dutch Chapel Wall
+    2300796: Main Quarters Divider
+    2300798: Main Quarters Entrance Arch
+    2300800: Ouside Butresses
+    2300802: Plaque Holder
+    2300804: Plaque to Dutch Governor
+    2300806: Second Floor Building
+    2300808: Stairs on Second Floor
+    2300810: Stairs to Dutch Chapel
+    2300812: Stairs to Main Quarters
+    2300814: Stairs to Second Floor
+    2300816: Stairs to Third Floor
+    2300818: Third Floor Facing Governor Wall
+    2300820: Second Floor Male Dungeon DONR
+    2300822: Male Dungeon DONR First Wall
+    2300824: DONR Top_MeshPart0
+    2300826: DONR Top_MeshPart1
+    2300828: Male Dungeon DONR Wall
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1489,6 +1701,76 @@ ModelImporter:
     3300684: Minimap Floor 1
     3300686: Minimap Floor 2
     3300688: Minimap Floor 3
+    3300690: Death Prison Entrance
+    3300692: Door 7
+    3300694: Door 8
+    3300696: To First Floor
+    3300698: To Second Floor
+    3300700: To Third Floor
+    3300702: Courtyard Zone Piece 01
+    3300704: Courtyard Zone Piece 02
+    3300706: Courtyard Zone Piece 03
+    3300708: Courtyard Zone Piece 04
+    3300710: Female Dungeon Zone Piece01
+    3300712: Female Dungeon Zone Piece02
+    3300714: Female Dungeon Zone Piece03
+    3300716: Female Dungeon Zone Piece04
+    3300718: Female Dungeon Zone Piece05
+    3300720: Female Dungeon Zone Piece06
+    3300722: Restaurant Courtyard Zone Piece 01
+    3300724: Restaurant Courtyard Zone Piece 02
+    3300726: Restaurant Courtyard Zone Piece 03
+    3300728: Restaurant Courtyard Zone Piece 04
+    3300730: Restaurant Courtyard Zone Piece 05
+    3300732: Restaurant Courtyard Zone Piece 06
+    3300734: Restaurant Courtyard Zone Piece 07
+    3300736: Restaurant Courtyard Zone Piece 08
+    3300738: Restaurant Courtyard Zone Piece 09
+    3300740: Restaurant Courtyard Zone Piece 10
+    3300742: Restaurant Courtyard Zone Piece 11
+    3300744: Restaurant Courtyard Zone Piece 12
+    3300746: Restaurant Courtyard Zone Piece 13
+    3300748: Restaurant Courtyard Zone Piece 14
+    3300750: Restaurant Courtyard Zone Piece 15
+    3300752: Restaurant Courtyard Zone Piece 16
+    3300754: Restaurant Courtyard Zone Piece 17
+    3300756: Restaurant Courtyard Zone Piece 18
+    3300758: Restaurant Courtyard Zone Piece 19
+    3300760: Restaurant Courtyard Zone Piece 20
+    3300762: Restaurant Courtyard Zone Piece 21
+    3300764: Restaurant Courtyard Zone Piece 22
+    3300766: Restaurant Courtyard Zone Piece 23
+    3300768: Restaurant Courtyard Zone Piece 24
+    3300770: Restaurant Courtyard Zone Piece 25
+    3300772: Restaurant Courtyard Zone Piece 26
+    3300774: Restaurant Courtyard Zone Piece 27
+    3300776: Second Male Dungeon Zone Piece 01
+    3300778: Second Male Dungeon Zone Piece 02
+    3300780: Arch on Second Floor
+    3300782: Courtyard Facing Governor Wall
+    3300784: Dutch Chapel Entryway
+    3300786: Dutch Well Courtyard
+    3300788: Entryway  Arches
+    3300790: Floor Main Quarters Third Floor
+    3300792: Front Facing Governor Wall
+    3300794: Governor's Courtyard Facing Dutch Chapel Wall
+    3300796: Main Quarters Divider
+    3300798: Main Quarters Entrance Arch
+    3300800: Ouside Butresses
+    3300802: Plaque Holder
+    3300804: Plaque to Dutch Governor
+    3300806: Second Floor Building
+    3300808: Stairs on Second Floor
+    3300810: Stairs to Dutch Chapel
+    3300812: Stairs to Main Quarters
+    3300814: Stairs to Second Floor
+    3300816: Stairs to Third Floor
+    3300818: Third Floor Facing Governor Wall
+    3300820: Second Floor Male Dungeon DONR
+    3300822: Male Dungeon DONR First Wall
+    3300824: DONR Top_MeshPart0
+    3300826: DONR Top_MeshPart1
+    3300828: Male Dungeon DONR Wall
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -1833,6 +2115,76 @@ ModelImporter:
     4300682: Minimap Floor 1
     4300684: Minimap Floor 2
     4300686: Minimap Floor 3
+    4300688: Death Prison Entrance
+    4300690: Door
+    4300692: Door
+    4300694: To Second Floor
+    4300696: To First Floor
+    4300698: To Third Floor
+    4300700: Courtyard Zone Piece 01
+    4300702: Courtyard Zone Piece 02
+    4300704: Courtyard Zone Piece 03
+    4300706: Courtyard Zone Piece 04
+    4300708: Second Male Dungeon Zone Piece 01
+    4300710: Second Male Dungeon Zone Piece 02
+    4300712: Female Dungeon Zone Piece06
+    4300714: Female Dungeon Zone Piece01
+    4300716: Female Dungeon Zone Piece03
+    4300718: Female Dungeon Zone Piece02
+    4300720: Female Dungeon Zone Piece04
+    4300722: Female Dungeon Zone Piece05
+    4300724: Restaurant Courtyard Zone Piece 01
+    4300726: Restaurant Courtyard Zone Piece 02
+    4300728: Restaurant Courtyard Zone Piece 03
+    4300730: Restaurant Courtyard Zone Piece 04
+    4300732: Restaurant Courtyard Zone Piece 05
+    4300734: Restaurant Courtyard Zone Piece 06
+    4300736: Restaurant Courtyard Zone Piece 07
+    4300738: Restaurant Courtyard Zone Piece 08
+    4300740: Restaurant Courtyard Zone Piece 09
+    4300742: Restaurant Courtyard Zone Piece 10
+    4300744: Restaurant Courtyard Zone Piece 11
+    4300746: Restaurant Courtyard Zone Piece 12
+    4300748: Restaurant Courtyard Zone Piece 13
+    4300750: Restaurant Courtyard Zone Piece 14
+    4300752: Restaurant Courtyard Zone Piece 15
+    4300754: Restaurant Courtyard Zone Piece 16
+    4300756: Restaurant Courtyard Zone Piece 17
+    4300758: Restaurant Courtyard Zone Piece 18
+    4300760: Restaurant Courtyard Zone Piece 19
+    4300762: Restaurant Courtyard Zone Piece 20
+    4300764: Restaurant Courtyard Zone Piece 21
+    4300766: Restaurant Courtyard Zone Piece 22
+    4300768: Restaurant Courtyard Zone Piece 23
+    4300770: Restaurant Courtyard Zone Piece 24
+    4300772: Restaurant Courtyard Zone Piece 25
+    4300774: Restaurant Courtyard Zone Piece 27
+    4300776: Restaurant Courtyard Zone Piece 26
+    4300778: Ouside Butresses
+    4300780: Courtyard Facing Governor Wall
+    4300782: Dutch Chapel Entryway
+    4300784: Stairs to Dutch Chapel
+    4300786: Main Quarters Entrance Arch
+    4300788: Plaque to Dutch Governor
+    4300790: Plaque Holder
+    4300792: Entryway  Arches
+    4300794: Arch on Second Floor
+    4300796: Stairs to Third Floor
+    4300798: Stairs on Second Floor
+    4300800: Second Floor Building
+    4300802: Stairs to Second Floor
+    4300804: Dutch Well Courtyard
+    4300806: Stairs to Main Quarters
+    4300808: Main Quarters Divider
+    4300810: Front Facing Governor Wall
+    4300812: Floor Main Quarters Third Floor
+    4300814: Governor's Courtyard Facing Dutch Chapel Wall
+    4300816: Third Floor Facing Governor Wall
+    4300818: Second Floor Male Dungeon DONR
+    4300820: Male Dungeon DONR First Wall
+    4300822: DONR Top_MeshPart0
+    4300824: DONR Top_MeshPart1
+    4300826: Male Dungeon DONR Wall
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2451,6 +2803,76 @@ ModelImporter:
     6401230: Minimap Floor 1
     6401232: Minimap Floor 2
     6401234: Minimap Floor 3
+    6401236: Death Prison Entrance
+    6401238: Door 7
+    6401240: Door 8
+    6401242: To First Floor
+    6401244: To Second Floor
+    6401246: To Third Floor
+    6401248: Courtyard Zone Piece 01
+    6401250: Courtyard Zone Piece 02
+    6401252: Courtyard Zone Piece 03
+    6401254: Courtyard Zone Piece 04
+    6401256: Female Dungeon Zone Piece01
+    6401258: Female Dungeon Zone Piece02
+    6401260: Female Dungeon Zone Piece03
+    6401262: Female Dungeon Zone Piece04
+    6401264: Female Dungeon Zone Piece05
+    6401266: Female Dungeon Zone Piece06
+    6401268: Restaurant Courtyard Zone Piece 01
+    6401270: Restaurant Courtyard Zone Piece 02
+    6401272: Restaurant Courtyard Zone Piece 03
+    6401274: Restaurant Courtyard Zone Piece 04
+    6401276: Restaurant Courtyard Zone Piece 05
+    6401278: Restaurant Courtyard Zone Piece 06
+    6401280: Restaurant Courtyard Zone Piece 07
+    6401282: Restaurant Courtyard Zone Piece 08
+    6401284: Restaurant Courtyard Zone Piece 09
+    6401286: Restaurant Courtyard Zone Piece 10
+    6401288: Restaurant Courtyard Zone Piece 11
+    6401290: Restaurant Courtyard Zone Piece 12
+    6401292: Restaurant Courtyard Zone Piece 13
+    6401294: Restaurant Courtyard Zone Piece 14
+    6401296: Restaurant Courtyard Zone Piece 15
+    6401298: Restaurant Courtyard Zone Piece 16
+    6401300: Restaurant Courtyard Zone Piece 17
+    6401302: Restaurant Courtyard Zone Piece 18
+    6401304: Restaurant Courtyard Zone Piece 19
+    6401306: Restaurant Courtyard Zone Piece 20
+    6401308: Restaurant Courtyard Zone Piece 21
+    6401310: Restaurant Courtyard Zone Piece 22
+    6401312: Restaurant Courtyard Zone Piece 23
+    6401314: Restaurant Courtyard Zone Piece 24
+    6401316: Restaurant Courtyard Zone Piece 25
+    6401318: Restaurant Courtyard Zone Piece 26
+    6401320: Restaurant Courtyard Zone Piece 27
+    6401322: Second Male Dungeon Zone Piece 01
+    6401324: Second Male Dungeon Zone Piece 02
+    6401326: Arch on Second Floor
+    6401328: Courtyard Facing Governor Wall
+    6401330: Dutch Chapel Entryway
+    6401332: Dutch Well Courtyard
+    6401334: Entryway  Arches
+    6401336: Floor Main Quarters Third Floor
+    6401338: Front Facing Governor Wall
+    6401340: Governor's Courtyard Facing Dutch Chapel Wall
+    6401342: Main Quarters Divider
+    6401344: Main Quarters Entrance Arch
+    6401346: Ouside Butresses
+    6401348: Plaque Holder
+    6401350: Plaque to Dutch Governor
+    6401352: Second Floor Building
+    6401354: Stairs on Second Floor
+    6401356: Stairs to Dutch Chapel
+    6401358: Stairs to Main Quarters
+    6401360: Stairs to Second Floor
+    6401362: Stairs to Third Floor
+    6401364: Third Floor Facing Governor Wall
+    6401366: Second Floor Male Dungeon DONR
+    6401368: Male Dungeon DONR First Wall
+    6401370: DONR Top_MeshPart0
+    6401372: DONR Top_MeshPart1
+    6401374: Male Dungeon DONR Wall
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075
@@ -2559,6 +2981,47 @@ ModelImporter:
     11400206: Dutch Chapel Zonezone
     11400208: Dutch Chapel Zone
     11400210: Object149
+    11400212: Door 7
+    11400214: Door 8
+    11400216: Courtyard Zone Piece 01
+    11400218: Courtyard Zone Piece 02
+    11400220: Courtyard Zone Piece 03
+    11400222: Courtyard Zone Piece 04
+    11400224: Female Dungeon Zone Piece01
+    11400226: Female Dungeon Zone Piece02
+    11400228: Female Dungeon Zone Piece03
+    11400230: Female Dungeon Zone Piece04
+    11400232: Female Dungeon Zone Piece05
+    11400234: Female Dungeon Zone Piece06
+    11400236: Restaurant Courtyard Zone Piece 01
+    11400238: Restaurant Courtyard Zone Piece 02
+    11400240: Restaurant Courtyard Zone Piece 03
+    11400242: Restaurant Courtyard Zone Piece 04
+    11400244: Restaurant Courtyard Zone Piece 05
+    11400246: Restaurant Courtyard Zone Piece 06
+    11400248: Restaurant Courtyard Zone Piece 07
+    11400250: Restaurant Courtyard Zone Piece 08
+    11400252: Restaurant Courtyard Zone Piece 09
+    11400254: Restaurant Courtyard Zone Piece 10
+    11400256: Restaurant Courtyard Zone Piece 11
+    11400258: Restaurant Courtyard Zone Piece 12
+    11400260: Restaurant Courtyard Zone Piece 13
+    11400262: Restaurant Courtyard Zone Piece 14
+    11400264: Restaurant Courtyard Zone Piece 15
+    11400266: Restaurant Courtyard Zone Piece 16
+    11400268: Restaurant Courtyard Zone Piece 17
+    11400270: Restaurant Courtyard Zone Piece 18
+    11400272: Restaurant Courtyard Zone Piece 19
+    11400274: Restaurant Courtyard Zone Piece 20
+    11400276: Restaurant Courtyard Zone Piece 21
+    11400278: Restaurant Courtyard Zone Piece 22
+    11400280: Restaurant Courtyard Zone Piece 23
+    11400282: Restaurant Courtyard Zone Piece 24
+    11400284: Restaurant Courtyard Zone Piece 25
+    11400286: Restaurant Courtyard Zone Piece 26
+    11400288: Restaurant Courtyard Zone Piece 27
+    11400290: Second Male Dungeon Zone Piece 01
+    11400292: Second Male Dungeon Zone Piece 02
   materials:
     importMaterials: 1
     materialName: 0

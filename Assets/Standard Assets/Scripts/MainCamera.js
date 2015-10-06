@@ -9,9 +9,11 @@ function Awake() {
 }
 
 function Start() {
-}
+        //Set Cursor to not be visible
+        Cursor.visible = false;
+    }
 
-function Update() {
+    function Update() {
     // Cursor.lockState = CursorLockMode.Locked;
     var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     var hit: RaycastHit;
@@ -22,22 +24,22 @@ function Update() {
           io.SendMessage("Glow");
           if (previousObject && previousObject != io)
           {
-             previousObject.SendMessage("UnGlow");
-         }
-         previousObject = io;
+           previousObject.SendMessage("UnGlow");
+       }
+       previousObject = io;
 
-         if (Input.GetButtonDown("Fire1"))
-         {
-            io.Interact(transform.position + fwd + Vector3(0,1,0), Quaternion.Euler(270,0,0), transform);
-        }
+       if (Input.GetButtonDown("Fire1"))
+       {
+        io.Interact(transform.position + fwd + Vector3(0,1,0), Quaternion.Euler(270,0,0), transform);
     }
+}
 }
 else
 {
-   if (previousObject)
-   {
-      previousObject.SendMessage("UnGlow");
-  }
+ if (previousObject)
+ {
+  previousObject.SendMessage("UnGlow");
+}
 }
 }
 

@@ -9,7 +9,7 @@ var fadeTime: float;
 var fadeSpeed: float;
 var hasEntered = false;
 var root = ""; 
-var sunLight : Light;
+var roomLight: GameObject;
 
 private var color: Color;
 private var timeOnScreen = 2;
@@ -17,6 +17,10 @@ private var timeOnScreen = 2;
 function Start () {
 	color = Color.white;
 	style.fontSize = 20;
+    if (roomLight)
+    {
+        roomLight.active = false;
+    }
 }
 
 function FadeOut() {
@@ -28,10 +32,9 @@ function FadeOut() {
 function OnTriggerEnter(other: Collider) {
 	if((other.tag == "Player") && hasEntered == false) {
 		hasEntered = true;
-		if (sunLight)
+		if (roomLight)
 		{
-
-			sunLight.enabled = false;
+			roomLight.active = true;
 		}
 		StopCoroutine("FadeOut");
 		StartCoroutine("FadeOut");
@@ -42,8 +45,8 @@ function OnTriggerEnter(other: Collider) {
 
 function OnTriggerExit(other: Collider) {
 	StopCoroutine("FadeOut");
-	if (sunLight)
-		{	sunLight.enabled = true;}
+	if (roomLight)
+		{	roomLight.active = false;}
 
 	color.a = 0;
 	hasEntered = false;

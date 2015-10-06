@@ -1,12 +1,12 @@
 // Take shadows out of minimap.
 
-Minimap Switch between floors.
+// Minimap Switch between floors.
 
 Moat brown
-Change concrete to white/beige/ish
-Draw on minimap images "red lines" for the doors. How to represent door on a minimap? Openings.
+// Change concrete to white/beige/ish
+// Draw on minimap images "red lines" for the doors. How to represent door on a minimap? Openings.
 
-Make darks even darker.
+// Make darks even darker.
 Light each room as you walk into them, turn them off as you walk out. 12 o'clock, no shadows at all.
 
 White with moss of the castle layout.

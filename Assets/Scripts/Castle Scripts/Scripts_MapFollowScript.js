@@ -31,38 +31,6 @@ function Update () {
     if (Input.GetButtonDown("MiniMapToggle" )) {
         miniMap.enabled = !miniMap.enabled;
     }
-
-    // if (Input.GetButtonDown("SwitchMap")) {
-    //     changeCurrentMap();
-    // }
-}
-
-function incrementMap()
-{
-    if (maps.length > 1)
-    {
-        currentMap++;
-        if (currentMap > maps.length - 1)
-        {
-            currentMap = 0;
-        }
-    }
-}
-
-function changeCurrentMap()
-{
-    incrementMap();
-    for (var i = 0; i < maps.length; i++) 
-    {
-        if (i == currentMap) {
-            Debug.Log(maps[i] + "Enabled");
-            maps[i].GetComponent.<Renderer>().enabled = true;
-        }
-        else
-        {
-            maps[i].GetComponent.<Renderer>().enabled = false;
-        }   
-    }
 }
 
 function currentFloor() {
