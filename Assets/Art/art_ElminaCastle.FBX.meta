@@ -473,6 +473,14 @@ ModelImporter:
     100930: DONR Top_MeshPart0
     100932: DONR Top_MeshPart1
     100934: Male Dungeon DONR Wall
+    100936: DONR
+    100938: DONR Stairs
+    100940: Entry Room
+    100942: Entry Room Floor
+    100944: Floor Bathroom Plaza
+    100946: Floor Bridge Support
+    100948: Female Dungeon Connecteed to Hallway
+    100950: Female Dungeon Hallway001
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -941,6 +949,14 @@ ModelImporter:
     400930: DONR Top_MeshPart0
     400932: DONR Top_MeshPart1
     400934: Male Dungeon DONR Wall
+    400936: DONR
+    400938: DONR Stairs
+    400940: Entry Room
+    400942: Entry Room Floor
+    400944: Floor Bathroom Plaza
+    400946: Floor Bridge Support
+    400948: Female Dungeon Connecteed to Hallway
+    400950: Female Dungeon Hallway001
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1356,6 +1372,15 @@ ModelImporter:
     2300824: DONR Top_MeshPart0
     2300826: DONR Top_MeshPart1
     2300828: Male Dungeon DONR Wall
+    2300830: DONR
+    2300832: DONR Stairs
+    2300834: Entry Room
+    2300836: Entry Room Floor
+    2300838: Floor Bathroom Plaza
+    2300840: Floor Bridge Support
+    2300842: Female Dungeon Connecteed to Hallway
+    2300844: Female Dungeon Hallway001
+    2300846: DONR Top
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1771,6 +1796,15 @@ ModelImporter:
     3300824: DONR Top_MeshPart0
     3300826: DONR Top_MeshPart1
     3300828: Male Dungeon DONR Wall
+    3300830: DONR
+    3300832: DONR Stairs
+    3300834: Entry Room
+    3300836: Entry Room Floor
+    3300838: Floor Bathroom Plaza
+    3300840: Floor Bridge Support
+    3300842: Female Dungeon Connecteed to Hallway
+    3300844: Female Dungeon Hallway001
+    3300846: DONR Top
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -2185,6 +2219,15 @@ ModelImporter:
     4300822: DONR Top_MeshPart0
     4300824: DONR Top_MeshPart1
     4300826: Male Dungeon DONR Wall
+    4300828: DONR
+    4300830: DONR Stairs
+    4300832: Floor Bathroom Plaza
+    4300834: Floor Bridge Support
+    4300836: Entry Room
+    4300838: Entry Room Floor
+    4300840: Female Dungeon Hallway001
+    4300842: Female Dungeon Connecteed to Hallway
+    4300844: DONR Top
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2873,6 +2916,15 @@ ModelImporter:
     6401370: DONR Top_MeshPart0
     6401372: DONR Top_MeshPart1
     6401374: Male Dungeon DONR Wall
+    6401376: DONR
+    6401378: DONR Stairs
+    6401380: Entry Room
+    6401382: Entry Room Floor
+    6401384: Floor Bathroom Plaza
+    6401386: Floor Bridge Support
+    6401388: Female Dungeon Connecteed to Hallway
+    6401390: Female Dungeon Hallway001
+    6401392: DONR Top
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075
