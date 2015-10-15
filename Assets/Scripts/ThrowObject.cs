@@ -12,7 +12,7 @@ public class ThrowObject : MonoBehaviour {
 	void Start ()
 	{
 		rb = this.GetComponent<Rigidbody> ();
-		speed = 5.0f;;
+		speed = 5.0f;
 		hasBeenThrown = false;
 	}
 	

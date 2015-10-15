@@ -35,7 +35,7 @@ public class EggScript : MonoBehaviour {
 			Explosion.SetBool ("Explode", true);
 			Debug.Log ("here");
 			tutorialCamera.GetComponent<ColorChanger> ().startChanging ();
-			Invoke("showPieces",4f);
+			Invoke("startGame",4f);
 		}
 	}
 
@@ -46,7 +46,7 @@ public class EggScript : MonoBehaviour {
 		tutorialCamera.GetComponent<ColorChanger> ().setColorToDefault ();
 	}
 
-	void StartGame(){
+	void startGame(){
 		if (this.GetComponent<SceneChanger_Build> () != null) {
 			Build_Scenes.showLoading();
 			Build_Scenes.LoadHut();

@@ -14,7 +14,6 @@ public class GameManagerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		InGameButtons = GameObject.FindGameObjectsWithTag ("InGameButtons");
-
 	}
 
 	// Update is called once per frame
