@@ -29,16 +29,6 @@ function UnGlow() {
 
 function Interact(v : Vector3, r : Quaternion, t : Transform) {
 	Debug.Log("Interactable object!");
-
-	// if (audiosource)
-	// {
-	// 	if(audiosource.isPlaying)
-	// 		return;
-	// 	MainCamera.Interrupted();
-	// 	MainCamera.audioGameObject = gameObject;
-	// 	audiosource.time = 0;
-	// 	audiosource.Play();
-	// } 
 }
 
 function Update () {

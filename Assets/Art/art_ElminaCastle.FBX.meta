@@ -481,6 +481,18 @@ ModelImporter:
     100946: Floor Bridge Support
     100948: Female Dungeon Connecteed to Hallway
     100950: Female Dungeon Hallway001
+    100952: Entry Room Floor001
+    100954: Female Dungeon Connected to Hallway
+    100956: TopoSurface001
+    100958: TopoSurface002
+    100960: Prison of Death Zone
+    100962: Soldier's Prison Zone
+    100964: Entrance Zone
+    100966: Entry Room Front
+    100968: Male Dungeon DONR Back Wall
+    100970: Room Before DONR
+    100972: Room Before DONR Top
+    100974: DONR Gate
     400000: //RootNode
     400002: Box009
     400004: Box010
@@ -957,6 +969,18 @@ ModelImporter:
     400946: Floor Bridge Support
     400948: Female Dungeon Connecteed to Hallway
     400950: Female Dungeon Hallway001
+    400952: Entry Room Floor001
+    400954: Female Dungeon Connected to Hallway
+    400956: TopoSurface001
+    400958: TopoSurface002
+    400960: Prison of Death Zone
+    400962: Soldier's Prison Zone
+    400964: Entrance Zone
+    400966: Entry Room Front
+    400968: Male Dungeon DONR Back Wall
+    400970: Room Before DONR
+    400972: Room Before DONR Top
+    400974: DONR Gate
     2300000: Box009
     2300002: Box010
     2300004: Box025
@@ -1381,6 +1405,16 @@ ModelImporter:
     2300842: Female Dungeon Connecteed to Hallway
     2300844: Female Dungeon Hallway001
     2300846: DONR Top
+    2300848: Entry Room Floor001
+    2300850: Female Dungeon Connected to Hallway
+    2300852: Prison of Death Zone
+    2300854: Soldier's Prison Zone
+    2300856: Entrance Zone
+    2300858: Entry Room Front
+    2300860: Male Dungeon DONR Back Wall
+    2300862: Room Before DONR
+    2300864: Room Before DONR Top
+    2300866: DONR Gate
     3300000: Box009
     3300002: Box010
     3300004: Box025
@@ -1805,6 +1839,16 @@ ModelImporter:
     3300842: Female Dungeon Connecteed to Hallway
     3300844: Female Dungeon Hallway001
     3300846: DONR Top
+    3300848: Entry Room Floor001
+    3300850: Female Dungeon Connected to Hallway
+    3300852: Prison of Death Zone
+    3300854: Soldier's Prison Zone
+    3300856: Entrance Zone
+    3300858: Entry Room Front
+    3300860: Male Dungeon DONR Back Wall
+    3300862: Room Before DONR
+    3300864: Room Before DONR Top
+    3300866: DONR Gate
     4300000: pav_interno02
     4300002: torrino_inf
     4300004: Female Dungeon Sign
@@ -2228,6 +2272,16 @@ ModelImporter:
     4300840: Female Dungeon Hallway001
     4300842: Female Dungeon Connecteed to Hallway
     4300844: DONR Top
+    4300846: Female Dungeon Connected to Hallway
+    4300848: Entry Room Floor001
+    4300850: Prison of Death Zone
+    4300852: Soldier's Prison Zone
+    4300854: Entrance Zone
+    4300856: Entry Room Front
+    4300858: Male Dungeon DONR Back Wall
+    4300860: Room Before DONR
+    4300862: Room Before DONR Top
+    4300864: DONR Gate
     6400000: Box009
     6400002: Box010
     6400004: Box025
@@ -2925,6 +2979,16 @@ ModelImporter:
     6401388: Female Dungeon Connecteed to Hallway
     6401390: Female Dungeon Hallway001
     6401392: DONR Top
+    6401394: Entry Room Floor001
+    6401396: Female Dungeon Connected to Hallway
+    6401398: Prison of Death Zone
+    6401400: Soldier's Prison Zone
+    6401402: Entrance Zone
+    6401404: Entry Room Front
+    6401406: Male Dungeon DONR Back Wall
+    6401408: Room Before DONR
+    6401410: Room Before DONR Top
+    6401412: DONR Gate
     7400000: Take 001
     9500000: //RootNode
     11400000: Box075
@@ -3074,6 +3138,9 @@ ModelImporter:
     11400288: Restaurant Courtyard Zone Piece 27
     11400290: Second Male Dungeon Zone Piece 01
     11400292: Second Male Dungeon Zone Piece 02
+    11400294: Prison of Death Zone
+    11400296: Soldier's Prison Zone
+    11400298: Entrance Zone
   materials:
     importMaterials: 1
     materialName: 0
